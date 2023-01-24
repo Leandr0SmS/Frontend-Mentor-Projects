@@ -6,7 +6,7 @@ This Repo is to share my solutions of Frontend Mentor Challenges.
 
 ## Table Contents
 
-1. Skilled e-learning landing page
+1. [Skilled e-learning landing page](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/skilled-elearning-landing-page)
 
 ## Acknowledgments
 
