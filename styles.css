@@ -1,0 +1,56 @@
+:root {
+    --background: #3b3b4f;
+    --div: #1b1b32;
+    --font: #f5f6f7;
+    --background-mouseover: #5f5f6e;
+    --div-mouseover: #31313f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--font);
+    font-family: monospace, Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--div);
+    padding: 1rem;
+}
+
+.heading {
+    margin: 0;
+}
+
+.challenge-card {
+    background-color: var(--div);
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 29rem;
+    border-radius: 2rem;
+}
+
+.project-link {
+    text-decoration: none;
+}
+
+.project-img {
+    width: 25rem;
+    border-radius: 2rem;
+}
+
+.project-img:hover {
+    border: 3px solid red;
+}
+
+.project-title {
+    text-decoration: none;
+    color: var(--font);
+    text-align: center;
+    margin: 0;
+    margin-top: 1rem;
+}
