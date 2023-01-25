@@ -37,3 +37,15 @@ header {
     bottom: 8rem;
     opacity: 0.68;
 }
+
+.info {
+    width: 25rem;
+    margin-left: 10rem;
+    margin-top: 10rem;
+}
+
+.info > h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
