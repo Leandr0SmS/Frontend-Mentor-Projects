@@ -1,6 +1,6 @@
-root {
+:root {
     --backgroundColor1: #FFFFFF;
-    --backgroundColor2: #83869A;
+    --backgroundColor2: #666CA3;
     --heading: #13183F;
     --text: #83869A;
     --getStarted: #F74780;
@@ -15,6 +15,7 @@ body {
     margin: 0;
     background-color: #F2F2F2;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(180deg, var(--backgroundColor1) 0%, #F0F1FF 100%);
 }
 
 footer {
