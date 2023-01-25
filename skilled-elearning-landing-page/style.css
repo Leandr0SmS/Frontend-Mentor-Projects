@@ -27,25 +27,33 @@ footer {
 header {
     display: flex;
     justify-content: space-between;
-    margin: 2rem 10rem;
+    margin: 2rem 8rem;
 }
 
 #image {
     position: absolute;
-    width: 50rem;
-    left: 35rem;
-    bottom: 8rem;
+    width: 45rem;
+    left: 37rem;
+    bottom: 11rem;
     opacity: 0.68;
 }
 
 .info {
-    width: 25rem;
-    margin-left: 10rem;
+    width: 24.5rem;
+    margin-left: 8rem;
     margin-top: 10rem;
 }
 
 .info > h1 {
     font-size: 3rem;
     font-weight: 800;
+}
+
+.info > p {
+    color: var(--text);
+}
+
+.grid-courses {
+    margin-top: 10rem;
 }
 
