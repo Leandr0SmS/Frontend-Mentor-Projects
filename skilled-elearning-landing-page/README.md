@@ -48,22 +48,15 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project.
+Use responsevi images with html.
 
-To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+    <picture>
+        <source media="(max-width: 375px)" srcset="./assets/image-hero-mobile.webp" />
+        <source media="(max-width: 768px)" srcset="./assets/image-hero-tablet.webp" />
+        <img src="./assets/image-hero-desktop.webp" alt="image-hero" />
+    </picture>
 ```
 
 ### Continued development
