@@ -65,3 +65,16 @@ footer {
     color: var(--text);
 }
 
+.grid-courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.grid-divs {
+    width: 15rem;
+    height: 13rem;
+    background-color: whitesmoke;
+    margin: 0;
+}
+
