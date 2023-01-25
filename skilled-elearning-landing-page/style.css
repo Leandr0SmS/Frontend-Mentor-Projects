@@ -31,10 +31,8 @@ header {
 }
 
 #image {
-    position: absolute;
+    position: relative;
     width: 45rem;
-    left: 37rem;
-    bottom: 11rem;
     opacity: 0.68;
 }
 
