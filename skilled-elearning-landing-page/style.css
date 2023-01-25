@@ -16,8 +16,24 @@ body {
     background-color: #F2F2F2;
     font-family: 'Plus Jakarta Sans', sans-serif;
     background: linear-gradient(180deg, var(--backgroundColor1) 0%, #F0F1FF 100%);
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 footer {
     background-color: #13183F;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 10rem;
+}
+
+#image {
+    position: absolute;
+    width: 50rem;
+    left: 35rem;
+    bottom: 8rem;
+    opacity: 0.68;
 }
