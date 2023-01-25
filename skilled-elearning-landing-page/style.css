@@ -46,8 +46,14 @@ footer {
 
 #image {
     position: relative;
-    width: 45rem;
+    width: 50rem;
+    bottom: 6rem;
+    left: 8rem;
     opacity: 0.68;
+}
+
+#logo-dark {
+    margin: 2rem 0 0 8rem;
 }
 
 .info {
@@ -66,15 +72,17 @@ footer {
 }
 
 .grid-courses {
+    width: 60rem;
+    margin: 5rem auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
+    gap: 1rem;
 }
 
 .grid-divs {
     width: 15rem;
     height: 13rem;
-    background-color: whitesmoke;
     margin: 0;
 }
 
