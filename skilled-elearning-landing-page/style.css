@@ -83,6 +83,11 @@ footer {
     grid-template-rows: 1fr 1fr;
 }
 
+#first {
+    background: linear-gradient(180deg, #F02AA6 0%, #FF6F48 100%);
+    color: var(--backgroundColor1);
+}
+
 .courses {
     height: 17rem;
     margin: 1.5rem 1rem;
