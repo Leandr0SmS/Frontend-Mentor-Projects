@@ -18,7 +18,7 @@ body {
     overflow-y: scroll;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 45% 5%;
+    grid-template-rows: 45rem 55rem 5rem;
 }
 
 header {
@@ -75,16 +75,29 @@ footer {
 }
 
 .grid-courses {
-    width: 60rem;
-    margin: 5rem auto;
+    width: 65rem;
+    height: 45rem;
+    margin: 3rem auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
-    gap: 1rem;
 }
 
 .courses {
-    background-color:var(--backgroundColor1)
+    height: 17rem;
+    margin: 1.5rem 1rem;
+    background-color:var(--backgroundColor1);
+    border-radius: 0.75rem;
+}
+
+.courses > img {
+    position: relative;
+    bottom: 1.5rem;
+    left: 1rem;
+}
+
+.courses > h3, .courses > p, .courses > a {
+    margin: 0 1rem 1rem 1rem;
 }
 
 
