@@ -13,9 +13,7 @@
 
 body {
     margin: 0;
-    background-color: #F2F2F2;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background: linear-gradient(180deg, var(--backgroundColor1) 0%, #F0F1FF 100%);
     overflow-x: hidden;
     overflow-y: scroll;
     display: grid;
@@ -36,6 +34,7 @@ aside {
 main {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
+    background: linear-gradient(180deg, var(--backgroundColor1) 0%, #F0F1FF 100%);
 }
 
 footer {
@@ -84,9 +83,8 @@ footer {
     gap: 1rem;
 }
 
-.grid-divs {
-    width: 15rem;
-    height: 13rem;
-    margin: 0;
+.courses {
+    background-color:var(--backgroundColor1)
 }
+
 
