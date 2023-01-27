@@ -34,7 +34,11 @@ aside {
 main {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
-    background: linear-gradient(180deg, var(--backgroundColor1) 0%, #F0F1FF 100%);
+    background: linear-gradient(
+        180deg, 
+        var(--backgroundColor1) 0%,
+        #F0F1FF 100%
+    );
 }
 
 footer {
@@ -84,7 +88,11 @@ footer {
 }
 
 #first {
-    background: linear-gradient(180deg, #F02AA6 0%, #FF6F48 100%);
+    background: linear-gradient(
+        180deg,
+        #F02AA6 0%, 
+        #FF6F48 100%
+    );
     color: var(--backgroundColor1);
     padding: 3rem 3rem;
 }
@@ -127,4 +135,22 @@ footer {
     position: relative;
     left: 60%;
     margin-top: 1.5rem;
+}
+
+.btn-header {
+    background: linear-gradient(
+        180deg, 
+        #F02AA6 0%, 
+        #FF6F48 100%
+    );
+    color: var(--backgroundColor1);
+}
+
+.btn-footer {
+    background: linear-gradient(
+        180deg, 
+        #4851FF,
+        #F02AA6
+    );
+    color: var(--backgroundColor1);
 }
