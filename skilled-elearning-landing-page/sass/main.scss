@@ -38,6 +38,10 @@ body {
             @media only screen and (max-width: 735px) {
                 margin: 1.5rem 0 0 4rem;
             }
+            @media only screen and (max-width: 490px) {
+                margin: 1.5rem 0 0 2rem;
+                width: 5rem;
+            }
         }
         .info {
             width: 24.5rem;
@@ -55,18 +59,29 @@ body {
                 margin-left: 4rem;
                 margin-top: 4rem;
             }
+            @media only screen and (max-width: 490px) {
+                width: 18rem;
+                margin-left: 2rem;
+                margin-top: 3rem;
+            }
             h1 {
                 font-size: 3rem;
                 font-weight: 800;
                 @media only screen and (max-width: 980px) {
                     font-size: 2.5rem;
                 }
+                @media only screen and (max-width: 490px) {
+                    font-size: 2rem;
+                }
             }
             p {
+                color: $text;
                 @media only screen and (max-width: 980px) {
                     font-size: 0.9rem;
                 }
-                color: $text;
+                @media only screen and (max-width: 490px) {
+                    font-size: 0.95rem;
+                }
             }
         }
         .btn-header {
@@ -78,6 +93,9 @@ body {
             color: $backgroundColor1;
             &:hover {
                 opacity: 0.68;
+            }
+            @media only screen and (max-width: 490px) {
+                margin-top: 1rem;;
             }
         }
     }
@@ -107,12 +125,16 @@ body {
                 bottom: 20%;
                 left: 0;
                 width: 40rem;
-                opacity: 1;
             }
             @media only screen and (max-width: 735px) {
                 bottom: 20%;
                 margin: 0 auto;
                 width: 30rem;
+                opacity: 1;
+            }
+            @media only screen and (max-width: 490px){
+                left: -1rem;
+                width: 25rem;
                 opacity: 1;
             }
         }
@@ -136,6 +158,11 @@ body {
             @media only screen and (max-width: 630px) {
                 bottom: 31rem;
                 left: 21rem;
+            }
+            @media only screen and (max-width: 490px) {
+                bottom: 30.5rem;
+                left: 13rem;
+                padding: 0.7rem 1.5rem;
             }
         }
     }
@@ -172,6 +199,10 @@ body {
                 grid-template-rows: repeat(6, 1fr);
                 width: 23rem;
                 height: 48rem;
+            }
+            @media only screen and (max-width: 490px) {
+                width: 20rem;
+                height: 45rem;
             }
             #first {
                 background: linear-gradient(
@@ -238,6 +269,9 @@ body {
             grid-column: 1 / -1;
             grid-row: 4 / -1;
             padding: 1rem 2.5rem;
+        }
+        @media only screen and (max-width: 490px) {
+            padding: 1rem 1.8rem;
         }
         .btn-footer {
             background: linear-gradient(

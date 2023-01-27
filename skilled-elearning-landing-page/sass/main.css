@@ -47,6 +47,12 @@ body header #logo-dark {
     margin: 1.5rem 0 0 4rem;
   }
 }
+@media only screen and (max-width: 490px) {
+  body header #logo-dark {
+    margin: 1.5rem 0 0 2rem;
+    width: 5rem;
+  }
+}
 body header .info {
   width: 24.5rem;
   margin-left: 10rem;
@@ -70,6 +76,13 @@ body header .info {
     margin-top: 4rem;
   }
 }
+@media only screen and (max-width: 490px) {
+  body header .info {
+    width: 18rem;
+    margin-left: 2rem;
+    margin-top: 3rem;
+  }
+}
 body header .info h1 {
   font-size: 3rem;
   font-weight: 800;
@@ -77,6 +90,11 @@ body header .info h1 {
 @media only screen and (max-width: 980px) {
   body header .info h1 {
     font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 490px) {
+  body header .info h1 {
+    font-size: 2rem;
   }
 }
 body header .info p {
@@ -87,12 +105,22 @@ body header .info p {
     font-size: 0.9rem;
   }
 }
+@media only screen and (max-width: 490px) {
+  body header .info p {
+    font-size: 0.95rem;
+  }
+}
 body header .btn-header {
   background: linear-gradient(180deg, #F02AA6 0%, #FF6F48 100%);
   color: #FFFFFF;
 }
 body header .btn-header:hover {
   opacity: 0.68;
+}
+@media only screen and (max-width: 490px) {
+  body header .btn-header {
+    margin-top: 1rem;
+  }
 }
 body aside {
   grid-column: 2/-1;
@@ -129,7 +157,6 @@ body aside #image {
     bottom: 20%;
     left: 0;
     width: 40rem;
-    opacity: 1;
   }
 }
 @media only screen and (max-width: 735px) {
@@ -137,6 +164,13 @@ body aside #image {
     bottom: 20%;
     margin: 0 auto;
     width: 30rem;
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 490px) {
+  body aside #image {
+    left: -1rem;
+    width: 25rem;
     opacity: 1;
   }
 }
@@ -166,6 +200,13 @@ body aside .btn-aside:hover {
   body aside .btn-aside {
     bottom: 31rem;
     left: 21rem;
+  }
+}
+@media only screen and (max-width: 490px) {
+  body aside .btn-aside {
+    bottom: 30.5rem;
+    left: 13rem;
+    padding: 0.7rem 1.5rem;
   }
 }
 body main {
@@ -206,6 +247,12 @@ body main .grid-courses {
     grid-template-rows: repeat(6, 1fr);
     width: 23rem;
     height: 48rem;
+  }
+}
+@media only screen and (max-width: 490px) {
+  body main .grid-courses {
+    width: 20rem;
+    height: 45rem;
   }
 }
 body main .grid-courses #first {
@@ -279,6 +326,11 @@ body footer {
     grid-column: 1/-1;
     grid-row: 4/-1;
     padding: 1rem 2.5rem;
+  }
+}
+@media only screen and (max-width: 490px) {
+  body footer {
+    padding: 1rem 1.8rem;
   }
 }
 body footer .btn-footer {
