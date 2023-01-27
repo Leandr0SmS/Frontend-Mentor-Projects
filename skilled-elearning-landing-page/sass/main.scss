@@ -25,11 +25,17 @@ body {
         grid-row: 1 / 2;
         #logo-dark {
             margin: 1.5rem 0 0 10rem;
+            @media only screen and (max-width: 1050px) {
+                margin: 1.5rem 0 0 5rem;
+            }
         }
         .info {
             width: 24.5rem;
             margin-left: 10rem;
             margin-top: 10rem;
+            @media only screen and (max-width: 1050px) {
+                margin-left: 5rem;
+            }
             h1 {
                 font-size: 3rem;
                 font-weight: 800;
@@ -60,6 +66,14 @@ body {
             left: 10%;
             opacity: 0.68;
             z-index: 0;
+            @media only screen and (max-width: 1300px) {
+                left: -10%;
+            }
+            @media only screen and (max-width: 1050px) {
+                bottom: 25%;
+                left: 0;
+                width: 50rem;
+            }
         }
         .btn-aside {
             background-color: $heading;
@@ -70,6 +84,9 @@ body {
             z-index: 1;
             &:hover {
                 background-color: $backgroundColor2; 
+            }
+            @media only screen and (max-width: 1300px) {
+                left: 50%;
             }
         }
     }
@@ -88,6 +105,9 @@ body {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr 1fr;
+            @media only screen and (max-width: 1300px) {
+                width: 60rem;
+            }
             #first {
                 background: linear-gradient(
                     180deg,
@@ -133,6 +153,9 @@ body {
         justify-content: space-between;
         align-items: center;
         padding: 1rem 10rem;
+        @media only screen and (max-width: 1050px) {
+            padding: 1rem 5rem;
+        }
         .btn-footer {
             background: linear-gradient(
                 180deg, 

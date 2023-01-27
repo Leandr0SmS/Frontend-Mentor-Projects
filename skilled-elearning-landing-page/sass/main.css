@@ -26,10 +26,20 @@ body header {
 body header #logo-dark {
   margin: 1.5rem 0 0 10rem;
 }
+@media only screen and (max-width: 1050px) {
+  body header #logo-dark {
+    margin: 1.5rem 0 0 5rem;
+  }
+}
 body header .info {
   width: 24.5rem;
   margin-left: 10rem;
   margin-top: 10rem;
+}
+@media only screen and (max-width: 1050px) {
+  body header .info {
+    margin-left: 5rem;
+  }
 }
 body header .info h1 {
   font-size: 3rem;
@@ -57,6 +67,18 @@ body aside #image {
   opacity: 0.68;
   z-index: 0;
 }
+@media only screen and (max-width: 1300px) {
+  body aside #image {
+    left: -10%;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  body aside #image {
+    bottom: 25%;
+    left: 0;
+    width: 50rem;
+  }
+}
 body aside .btn-aside {
   background-color: #13183F;
   color: #FFFFFF;
@@ -67,6 +89,11 @@ body aside .btn-aside {
 }
 body aside .btn-aside:hover {
   background-color: #666CA3;
+}
+@media only screen and (max-width: 1300px) {
+  body aside .btn-aside {
+    left: 50%;
+  }
 }
 body main {
   grid-column: 1/-1;
@@ -80,6 +107,11 @@ body main .grid-courses {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr;
+}
+@media only screen and (max-width: 1300px) {
+  body main .grid-courses {
+    width: 60rem;
+  }
 }
 body main .grid-courses #first {
   background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
@@ -120,6 +152,11 @@ body footer {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
+}
+@media only screen and (max-width: 1050px) {
+  body footer {
+    padding: 1rem 5rem;
+  }
 }
 body footer .btn-footer {
   background: linear-gradient(180deg, #4851FF, #F02AA6);
