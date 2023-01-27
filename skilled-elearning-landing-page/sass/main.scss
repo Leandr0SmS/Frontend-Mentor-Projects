@@ -63,13 +63,13 @@ body {
                     #F02AA6 0%, 
                     #FF6F48 100%
                 );
-                color: var(--backgroundColor1);
+                color: $backgroundColor1;
                 padding: 3rem 3rem;
             }
             .courses {
                 height: 17rem;
                 margin: 1.5rem 1rem;
-                background-color:var(--backgroundColor1);
+                background-color: $backgroundColor1;
                 border-radius: 0.75rem;
                 img {
                     position: relative;
@@ -83,7 +83,7 @@ body {
                     height: 6.5rem
                 }
                 a {
-                    color: var(--getStarted);
+                    color: $getStarted;
                 }
             }
         }
@@ -107,8 +107,8 @@ body {
 }
 
 .btn-aside {
-    background-color: var(--heading);
-    color: var(--backgroundColor1);
+    background-color: $heading;
+    color: $backgroundColor1;
     position: relative;
     left: 60%;
     margin-top: 1.5rem;
@@ -120,7 +120,7 @@ body {
         #F02AA6 0%, 
         #FF6F48 100%
     );
-    color: var(--backgroundColor1);
+    color: $backgroundColor1;
 }
 
 .btn-footer {
@@ -129,5 +129,5 @@ body {
         #4851FF,
         #F02AA6
     );
-    color: var(--backgroundColor1);
+    color: $backgroundColor1;
 }
