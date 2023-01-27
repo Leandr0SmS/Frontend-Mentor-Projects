@@ -130,7 +130,7 @@ body {
             @media only screen and (max-width: 980px) {
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: 1fr 1fr 1fr;
-                width: 40rem;
+                width: 47rem;
                 height: 48rem;
             }
             #first {
@@ -142,6 +142,10 @@ body {
                 color: $backgroundColor1;
                 font-size: 1.3rem;
                 padding: 2rem 2rem 1rem 2rem;
+                @media only screen and (max-width: 980px) {
+                    font-size: 1rem;
+                    padding: 3rem 2rem 1rem 2.5rem;
+                }
             }
             .courses {
                 height: 20rem;
@@ -185,6 +189,9 @@ body {
         align-items: center;
         padding: 1rem 10rem;
         @media only screen and (max-width: 1050px) {
+            padding: 1rem 5rem;
+        }
+        @media only screen and (max-width: 980px) {
             padding: 1rem 5rem;
         }
         .btn-footer {

@@ -146,7 +146,7 @@ body main .grid-courses {
   body main .grid-courses {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 1fr 1fr;
-    width: 40rem;
+    width: 47rem;
     height: 48rem;
   }
 }
@@ -155,6 +155,12 @@ body main .grid-courses #first {
   color: #FFFFFF;
   font-size: 1.3rem;
   padding: 2rem 2rem 1rem 2rem;
+}
+@media only screen and (max-width: 980px) {
+  body main .grid-courses #first {
+    font-size: 1rem;
+    padding: 3rem 2rem 1rem 2.5rem;
+  }
 }
 body main .grid-courses .courses {
   height: 20rem;
@@ -201,6 +207,11 @@ body footer {
   padding: 1rem 10rem;
 }
 @media only screen and (max-width: 1050px) {
+  body footer {
+    padding: 1rem 5rem;
+  }
+}
+@media only screen and (max-width: 980px) {
   body footer {
     padding: 1rem 5rem;
   }
