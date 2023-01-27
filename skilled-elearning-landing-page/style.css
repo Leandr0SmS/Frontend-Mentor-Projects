@@ -18,7 +18,7 @@ body {
     overflow-y: scroll;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 45rem 55rem 5rem;
+    grid-template-rows: 43rem 55rem 5rem;
 }
 
 header {
@@ -40,7 +40,7 @@ main {
 footer {
     grid-column: 1 / -1;
     grid-row: 3 / -1;
-    background-color: #13183F;
+    background-color: var(--heading);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,13 +50,13 @@ footer {
 #image {
     position: relative;
     width: 50rem;
-    bottom: 6rem;
-    left: 8rem;
+    bottom: 25%;
+    left: 20%;
     opacity: 0.68;
 }
 
 #logo-dark {
-    margin: 2rem 0 0 8rem;
+    margin: 1.5rem 0 0 8rem;
 }
 
 .info {
@@ -86,6 +86,7 @@ footer {
 #first {
     background: linear-gradient(180deg, #F02AA6 0%, #FF6F48 100%);
     color: var(--backgroundColor1);
+    padding: 3rem 3rem;
 }
 
 .courses {
@@ -111,4 +112,19 @@ footer {
 
 .courses > a {
     color: var(--getStarted);
+}
+
+.btn {
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-weight: bold;
+}
+
+.btn-aside {
+    background-color: var(--heading);
+    color: var(--backgroundColor1);
+    position: relative;
+    left: 60%;
+    margin-top: 1.5rem;
 }
