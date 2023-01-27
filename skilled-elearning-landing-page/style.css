@@ -102,7 +102,13 @@ footer {
 }
 
 .courses > h3, .courses > p, .courses > a {
-    margin: 0 1rem 1rem 1rem;
+    margin: 0 1rem 1rem 1.5rem;
 }
 
+.courses > p {
+    height: 6.5rem
+}
 
+.courses > a {
+    color: var(--getStarted);
+}
