@@ -42,6 +42,9 @@ body header .btn-header {
   background: linear-gradient(180deg, #F02AA6 0%, #FF6F48 100%);
   color: #FFFFFF;
 }
+body header .btn-header:hover {
+  opacity: 0.68;
+}
 body aside {
   grid-column: 2/-1;
   grid-row: 1/2;
@@ -121,4 +124,7 @@ body footer {
 body footer .btn-footer {
   background: linear-gradient(180deg, #4851FF, #F02AA6);
   color: #FFFFFF;
+}
+body footer .btn-footer:hover {
+  background: linear-gradient(180deg, #8a8fec, #e891c8);
 }/*# sourceMappingURL=main.css.map */

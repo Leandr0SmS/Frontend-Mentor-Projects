@@ -45,6 +45,9 @@ body {
                 #FF6F48 100%
             );
             color: $backgroundColor1;
+            &:hover {
+                opacity: 0.68;
+            }
         }
     }
     aside {
@@ -137,6 +140,13 @@ body {
                 #F02AA6
             );
             color: $backgroundColor1;
+            &:hover {
+                background: linear-gradient(
+                180deg, 
+                #8a8fec,
+                #e891c8
+            );
+            }
         }
     }
 }
