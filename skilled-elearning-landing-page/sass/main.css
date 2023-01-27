@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+.btn {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -30,6 +38,10 @@ body header .info h1 {
 body header .info p {
   color: #83869A;
 }
+body header .btn-header {
+  background: linear-gradient(180deg, #F02AA6 0%, #FF6F48 100%);
+  color: #FFFFFF;
+}
 body aside {
   grid-column: 2/-1;
   grid-row: 1/2;
@@ -40,6 +52,18 @@ body aside #image {
   bottom: 30%;
   left: 10%;
   opacity: 0.68;
+  z-index: 0;
+}
+body aside .btn-aside {
+  background-color: #13183F;
+  color: #FFFFFF;
+  position: relative;
+  left: 60%;
+  margin-top: 1.5rem;
+  z-index: 1;
+}
+body aside .btn-aside:hover {
+  background-color: #666CA3;
 }
 body main {
   grid-column: 1/-1;
@@ -94,28 +118,7 @@ body footer {
   align-items: center;
   padding: 1rem 10rem;
 }
-
-.btn {
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  font-weight: bold;
-}
-
-.btn-aside {
-  background-color: #13183F;
-  color: #FFFFFF;
-  position: relative;
-  left: 60%;
-  margin-top: 1.5rem;
-}
-
-.btn-header {
-  background: linear-gradient(180deg, #F02AA6 0%, #FF6F48 100%);
-  color: #FFFFFF;
-}
-
-.btn-footer {
+body footer .btn-footer {
   background: linear-gradient(180deg, #4851FF, #F02AA6);
   color: #FFFFFF;
 }/*# sourceMappingURL=main.css.map */
