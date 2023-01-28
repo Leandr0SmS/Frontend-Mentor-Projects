@@ -36,7 +36,7 @@ body header {
   grid-row: 1/2;
 }
 body header #logo-dark {
-  margin: 1.5rem 0 0 10rem;
+  margin: 2rem 0 0 11rem;
 }
 @media only screen and (max-width: 1050px) {
   body header #logo-dark {
@@ -57,7 +57,7 @@ body header #logo-dark {
 body header .info {
   width: 29rem;
   margin-left: 10rem;
-  margin-top: 10rem;
+  margin-top: 13rem;
 }
 @media only screen and (max-width: 1050px) {
   body header .info {
