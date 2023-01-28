@@ -19,7 +19,7 @@ body {
     overflow-y: scroll;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 43rem 55rem 5rem;
+    grid-template-rows: 55rem 55rem 5rem;
     @media only screen and (max-width: 980px) {
         grid-template-rows: 37rem 70rem 5rem;
     }
@@ -44,7 +44,7 @@ body {
             }
         }
         .info {
-            width: 24.5rem;
+            width: 29rem;
             margin-left: 10rem;
             margin-top: 10rem;
             @media only screen and (max-width: 1050px) {
@@ -65,8 +65,9 @@ body {
                 margin-top: 3rem;
             }
             h1 {
-                font-size: 3rem;
+                font-size: 3.5rem;
                 font-weight: 800;
+                color: $heading;
                 @media only screen and (max-width: 980px) {
                     font-size: 2.5rem;
                 }
@@ -75,7 +76,9 @@ body {
                 }
             }
             p {
+                font-size: 1.2rem;
                 color: $text;
+                padding-bottom: 2rem;
                 @media only screen and (max-width: 980px) {
                     font-size: 0.9rem;
                 }
@@ -108,9 +111,9 @@ body {
         }
         #image {
             position: relative;
-            width: 60rem;
-            bottom: 30%;
-            left: 10%;
+            width: 68rem;
+            bottom: 28%;
+            left: 0%;
             z-index: 0;
             @media only screen and (max-width: 1300px) {
                 left: -10%;

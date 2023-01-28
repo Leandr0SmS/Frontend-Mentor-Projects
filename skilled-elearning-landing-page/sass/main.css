@@ -17,7 +17,7 @@ body {
   overflow-y: scroll;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 43rem 55rem 5rem;
+  grid-template-rows: 55rem 55rem 5rem;
 }
 @media only screen and (max-width: 980px) {
   body {
@@ -54,7 +54,7 @@ body header #logo-dark {
   }
 }
 body header .info {
-  width: 24.5rem;
+  width: 29rem;
   margin-left: 10rem;
   margin-top: 10rem;
 }
@@ -84,8 +84,9 @@ body header .info {
   }
 }
 body header .info h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
+  color: #13183F;
 }
 @media only screen and (max-width: 980px) {
   body header .info h1 {
@@ -98,7 +99,9 @@ body header .info h1 {
   }
 }
 body header .info p {
+  font-size: 1.2rem;
   color: #83869A;
+  padding-bottom: 2rem;
 }
 @media only screen and (max-width: 980px) {
   body header .info p {
@@ -134,9 +137,9 @@ body aside {
 }
 body aside #image {
   position: relative;
-  width: 60rem;
-  bottom: 30%;
-  left: 10%;
+  width: 68rem;
+  bottom: 28%;
+  left: 0%;
   z-index: 0;
 }
 @media only screen and (max-width: 1300px) {
