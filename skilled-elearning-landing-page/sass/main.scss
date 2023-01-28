@@ -111,7 +111,6 @@ body {
             width: 60rem;
             bottom: 30%;
             left: 10%;
-            opacity: 0.68;
             z-index: 0;
             @media only screen and (max-width: 1300px) {
                 left: -10%;
@@ -130,12 +129,10 @@ body {
                 bottom: 20%;
                 margin: 0 auto;
                 width: 30rem;
-                opacity: 1;
             }
             @media only screen and (max-width: 490px){
                 left: -1rem;
                 width: 25rem;
-                opacity: 1;
             }
         }
         .btn-aside {
