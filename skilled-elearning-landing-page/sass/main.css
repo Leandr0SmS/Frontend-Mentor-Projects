@@ -7,6 +7,7 @@
   padding: 1rem 2rem;
   border-radius: 2rem;
   font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -178,7 +179,7 @@ body aside .btn-aside {
   background-color: #13183F;
   color: #FFFFFF;
   position: relative;
-  left: 60%;
+  left: 55%;
   margin-top: 1.5rem;
   z-index: 1;
 }
