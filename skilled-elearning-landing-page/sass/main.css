@@ -56,8 +56,8 @@ body header #logo-dark {
 }
 body header .info {
   width: 29rem;
-  margin-left: 10rem;
-  margin-top: 13rem;
+  margin-left: 11rem;
+  margin-top: 12rem;
 }
 @media only screen and (max-width: 1050px) {
   body header .info {
@@ -293,6 +293,9 @@ body main .grid-courses .courses h3 {
 }
 body main .grid-courses .courses p {
   height: 7.5rem;
+  width: 17rem;
+  line-height: 1.6rem;
+  color: #83869A;
 }
 @media only screen and (max-width: 980px) {
   body main .grid-courses .courses p {

@@ -46,8 +46,8 @@ body {
         }
         .info {
             width: 29rem;
-            margin-left: 10rem;
-            margin-top: 13rem;
+            margin-left: 11rem;
+            margin-top: 12rem;
             @media only screen and (max-width: 1050px) {
                 margin-left: 5rem;
             }
@@ -241,6 +241,9 @@ body {
                 }
                 p {
                     height: 7.5rem;
+                    width: 17rem;
+                    line-height: 1.6rem;
+                    color: $text;
                     @media only screen and (max-width: 980px) {
                         height: 6rem
                     }
