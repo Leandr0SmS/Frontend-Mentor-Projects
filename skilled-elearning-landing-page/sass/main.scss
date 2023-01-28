@@ -20,7 +20,7 @@ body {
     overflow-y: scroll;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 55rem 55rem 5rem;
+    grid-template-rows: 52rem 55rem 7rem;
     @media only screen and (max-width: 980px) {
         grid-template-rows: 37rem 70rem 5rem;
     }
