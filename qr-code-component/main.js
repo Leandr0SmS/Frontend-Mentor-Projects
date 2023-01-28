@@ -1,16 +1,15 @@
 
-
-export class Img extends React.Component {
+class Img extends React.Component {
     render() {
         return (
             <picture>
-                <img src={src} alt="QR-Code"></img>
+                <img src="./images/image-qr-code.png" alt="QR-Code"></img>
             </picture>
         );
     }
 }
 
-export class Text extends React.Component {
+class Text extends React.Component {
     render() {
         return (
             <div>
@@ -20,3 +19,16 @@ export class Text extends React.Component {
         )
     }
 }
+
+function App() {
+    return (
+        <div className="card">
+            <Img />
+            <Text />
+        </div>
+    )
+}
+
+const app = document.getElementById('app');
+const root = ReactDOM.createRoot(app);
+root.render(<App />);
