@@ -30,8 +30,15 @@ header {
     background-color: var(--div);
     padding: 2rem;
     margin: 2rem auto;
-    width: 29rem;
+    width: 30rem;
     border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.project-link > img {
+    object-fit: cover;
+    height: 15rem;
 }
 
 .project-link {
