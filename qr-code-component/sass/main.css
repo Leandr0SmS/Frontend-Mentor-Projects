@@ -48,6 +48,7 @@ body {
   font-size: 15px;
   line-height: 19px;
   letter-spacing: 0.1875px;
+  color: hsl(220deg, 15%, 55%);
 }
 
 .attribution {
