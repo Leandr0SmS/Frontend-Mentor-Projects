@@ -2,9 +2,7 @@
 class Img extends React.Component {
     render() {
         return (
-            <picture>
-                <img src="./images/image-qr-code.png" alt="QR-Code"></img>
-            </picture>
+            <img id="image" src="./images/image-qr-code.png" alt="QR-Code"></img>
         );
     }
 }
@@ -12,7 +10,7 @@ class Img extends React.Component {
 class Text extends React.Component {
     render() {
         return (
-            <div>
+            <div className="div-text">
                 <h2 className="title">Improve your front-end skills by building projects</h2>
                 <p className="text">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
             </div>

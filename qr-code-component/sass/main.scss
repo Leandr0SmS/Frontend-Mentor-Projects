@@ -1,0 +1,59 @@
+@import "./base";
+
+
+ * {
+    box-sizing: border-box;
+}   
+
+body {
+    margin: 0;
+    background-color: $light-gray;
+    font-family: 'Outfit';
+}
+
+.card {
+    background-color: $white;
+    height: 497px;
+    width: 320px;
+    @extend %center;
+    border-radius: 20px;
+    margin: 152px auto;
+}
+
+#image {
+    object-fit: cover;
+    height: 288px;
+    width: 288px;
+    @extend %center;
+    margin: 16px;
+    margin-bottom: 0;
+    border-radius: 10px;
+}
+
+.div-text {
+    @extend %center;
+    margin: 1rem;
+    text-align: center;
+    width: 270px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    color: $dark-blue;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 0.1875px;
+}
+
+.attribution {
+    font-size: 11px; text-align: center; 
+    a { 
+        color: hsl(228, 45%, 44%); 
+    }
+}
