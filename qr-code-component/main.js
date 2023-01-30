@@ -11,7 +11,7 @@ class Text extends React.Component {
     render() {
         return (
             <div className="div-text">
-                <h2 className="title">Improve your front-end skills by building projects</h2>
+                <h1 className="title">Improve your front-end skills by building projects</h1>
                 <p className="text">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
             </div>
         )
