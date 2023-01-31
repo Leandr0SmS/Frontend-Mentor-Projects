@@ -2,7 +2,7 @@
 class Img extends React.Component {
     render() {
         return (
-            <img id="image" src="./images/image-qr-code.png" alt="QR-Code"></img>
+            <img id="image" src="./images/image-qr-code.png" alt="QR code to frontendmentor.io"></img>
         );
     }
 }

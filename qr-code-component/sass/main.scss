@@ -18,6 +18,7 @@ body {
     @extend %center;
     border-radius: 20px;
     margin: 152px auto;
+    @extend %flex--center
 }
 
 #image {
@@ -25,16 +26,17 @@ body {
     height: 288px;
     width: 288px;
     @extend %center;
-    margin: 16px;
+    margin: 0 16px;
     margin-bottom: 0;
     border-radius: 10px;
 }
 
 .div-text {
     @extend %center;
-    margin: 1rem;
+    margin: 0.5rem 1rem;
     text-align: center;
     width: 270px;
+    @extend %flex--center
 }
 
 .title {
@@ -50,6 +52,7 @@ body {
     line-height: 19px;
     letter-spacing: 0.1875px;
     color: $grayish-blue;
+    margin-top: 0;
 }
 
 .attribution {

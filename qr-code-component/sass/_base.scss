@@ -6,3 +6,10 @@ $dark-blue: hsl(218, 44%, 22%);
 %center {
     margin: 0 auto;
 }
+
+%flex--center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
