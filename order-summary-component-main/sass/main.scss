@@ -1,4 +1,4 @@
-@import "./base"
+@import "./base";
 
 *{
     box-sizing: border-box;
@@ -6,6 +6,10 @@
 
 body{
     margin: 0;
+    background-color: $pale-blue;
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .attribution { 
