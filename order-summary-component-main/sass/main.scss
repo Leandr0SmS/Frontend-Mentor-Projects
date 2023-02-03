@@ -23,7 +23,12 @@ body{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 220px 477px;
+    margin: 102px auto;
 }
+
+.cmpnt-img > img {
+    border-radius: 20px 20px 0px 0px;
+} 
 
 .attribution { 
     font-size: 11px; text-align: center; 
