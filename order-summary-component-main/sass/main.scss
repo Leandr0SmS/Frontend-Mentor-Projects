@@ -25,42 +25,73 @@ body{
     grid-template-columns: auto;
     grid-template-rows: 220px 477px;
     margin: 102px auto;
+    .cmpnt-img > img {
+        border-radius: 20px 20px 0px 0px;
+    }
+    .cmpnt-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        .title {
+            font-weight: 900;
+            font-size: 28px;
+        }
+        .sub-title {
+            width: 354px;
+            color: $desaturated-blue;
+            text-align: center;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+    .plan {
+        background-color: $very-pale-blue;
+        width: 354px;
+        height: 98px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        .plan-type-price {
+            margin-left: 1.5rem;
+            margin-right: 5.5rem;
+            .plan-type{
+                font-weight: 900;
+                font-size: 16px;
+                line-height: 21px;
+            }
+            .plan-price {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                color: $desaturated-blue;
+            }
+        }
+        .plan-change {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 19px; 
+            color: $bright-blue;
+            text-decoration-line: underline;
+        }
+    }
+    .btn {
+        width: 354px;
+        height: 50px;
+        background: $bright-blue;
+        border: none;
+        box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+        border-radius: 11px;
+        font-weight: 900;
+        font-size: 15px;
+        line-height: 20px;
+        color: $very-pale-blue;
+    }
 }
 
-.cmpnt-img > img {
-    border-radius: 20px 20px 0px 0px;
-} 
-
-.cmpnt-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.cmpnt-text > p {
-    font-weight: 900;
-    font-size: 28px;
-}
-
-.cmpnt-text > p {
-    width: 354px;
-    color: $desaturated-blue;
-    text-align: center;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-}
-
-.plan {
-    background-color: $very-pale-blue;
-    width: 354px;
-    height: 98px;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-}
 
 .attribution { 
     font-size: 11px; text-align: center; 
