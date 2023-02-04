@@ -28,6 +28,37 @@ body {
   border-radius: 20px 20px 0px 0px;
 }
 
+.cmpnt-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cmpnt-text > p {
+  font-weight: 900;
+  font-size: 28px;
+}
+
+.cmpnt-text > p {
+  width: 354px;
+  color: hsl(224deg, 23%, 55%);
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.plan {
+  background-color: hsl(225deg, 100%, 98%);
+  width: 354px;
+  height: 98px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
