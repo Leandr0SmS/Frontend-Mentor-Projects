@@ -28,6 +28,7 @@ body {
     width: 327px;
     height: 567px;
     grid-template-rows: 160px 407px;
+    grid-template-columns: 327px;
     margin: 71px auto;
   }
 }
@@ -80,26 +81,42 @@ body {
   align-items: center;
   border-radius: 10px;
 }
+@media only screen and (max-width: 520px) {
+  .component .plan {
+    width: 279px;
+    height: 81px;
+  }
+}
 .component .plan .music-icon {
   margin-left: 0.3rem;
+}
+@media only screen and (max-width: 520px) {
+  .component .plan .music-icon {
+    margin-left: 0;
+  }
 }
 .component .plan .plan-type-price {
   margin-left: 1.3rem;
   margin-right: 5.5rem;
+  font-size: 16px;
+  line-height: 21px;
+}
+@media only screen and (max-width: 520px) {
+  .component .plan .plan-type-price {
+    font-size: 14px;
+    margin-left: 1rem;
+    margin-right: 3rem;
+  }
 }
 .component .plan .plan-type-price .plan-type {
   font-weight: 900;
-  font-size: 16px;
-  line-height: 21px;
   margin: 0;
   margin-bottom: 0.3rem;
 }
 .component .plan .plan-type-price .plan-price {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  color: hsl(224deg, 23%, 55%);
   margin: 0;
+  color: hsl(224deg, 23%, 55%);
 }
 .component .plan .plan-change {
   font-weight: 700;
@@ -108,6 +125,11 @@ body {
   color: hsl(245deg, 75%, 52%);
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+@media only screen and (max-width: 520px) {
+  .component .plan .plan-change {
+    font-size: 13px;
+  }
 }
 .component .plan .plan-change:hover {
   color: #766CF1;
@@ -126,6 +148,13 @@ body {
   font-size: 15px;
   line-height: 20px;
   color: hsl(225deg, 100%, 98%);
+}
+@media only screen and (max-width: 520px) {
+  .component .btn {
+    width: 279px;
+    height: 50px;
+    margin: 1.5rem;
+  }
 }
 .component .btn:hover {
   background-color: #766CF1;

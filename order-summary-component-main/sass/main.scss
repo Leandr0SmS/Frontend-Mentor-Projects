@@ -29,6 +29,7 @@ body{
         width: 327px;
         height: 567px;
         grid-template-rows: 160px 407px;
+        grid-template-columns: 327px;
         margin: 71px auto;
     }
     .cmpnt-img > img {
@@ -73,25 +74,35 @@ body{
         display: flex;
         align-items: center;
         border-radius: 10px;
+        @media only screen and (max-width: 520px) {
+            width: 279px;
+            height: 81px;
+        }
         .music-icon{
             margin-left: 0.3rem;
+            @media only screen and (max-width: 520px) {
+                margin-left: 0;
+            }
         }
         .plan-type-price {
             margin-left: 1.3rem;
             margin-right: 5.5rem;
+            font-size: 16px;
+            line-height: 21px;
+            @media only screen and (max-width: 520px) {
+                font-size: 14px;
+                margin-left: 1rem;
+                margin-right: 3rem;
+            }
             .plan-type{
                 font-weight: 900;
-                font-size: 16px;
-                line-height: 21px;
                 margin: 0;
                 margin-bottom: 0.3rem;
             }
             .plan-price {
                 font-weight: 500;
-                font-size: 16px;
-                line-height: 21px;
-                color: $desaturated-blue;
                 margin: 0;
+                color: $desaturated-blue;
             }
         }
         .plan-change {
@@ -100,6 +111,9 @@ body{
             line-height: 19px; 
             color: $bright-blue;
             text-decoration-line: underline;
+            @media only screen and (max-width: 520px) {
+                font-size: 13px;
+            }
             &:hover {
                 color: $hover-color;
                 text-decoration: none;
@@ -119,6 +133,11 @@ body{
         font-size: 15px;
         line-height: 20px;
         color: $very-pale-blue;
+        @media only screen and (max-width: 520px) {
+            width: 279px;
+            height: 50px;
+            margin: 1.5rem;
+        }
         &:hover {
             background-color: $hover-color;
             cursor: pointer;
