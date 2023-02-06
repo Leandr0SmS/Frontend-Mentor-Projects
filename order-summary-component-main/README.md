@@ -1,6 +1,8 @@
 # Frontend Mentor - Order summary card solution
 
 This is a solution to the [Order summary card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+ 
+ <br>
 
 ## Table of contents
 
@@ -12,59 +14,73 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
   - [What I learned](#what-i-learned)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
+ 
+ <br>
+ 
 ## Overview
-
+ 
+ <br>
+ 
 ### The challenge
 
 Users should be able to:
 
 - See hover states for interactive elements
-
+ 
+ <br>
+ 
 ### Links
 
 - Solution URL: [https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/order-summary-component-main](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/order-summary-component-main)
 - Live Site URL: [https://leandr0sms.github.io/Frontend-Mentor-Projects/order-summary-component-main/index.html](https://leandr0sms.github.io/Frontend-Mentor-Projects/order-summary-component-main/index.html)
-
+ 
+ <br>
+ 
 ## My process
-
+ 
+ <br>
+ 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
+- SASS
+ 
+ <br>
+ 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- Background position and size. 
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+```
+
+- Center div at body using flexbox
+```css
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+ 
+ <br>
+ 
 ## Author
 
 - Frontend Mentor - [@Leandr0SmS](https://www.frontendmentor.io/profile/Leandr0SmS)
-
+ 
+ <br>
+ 
 ## Acknowledgments
 
-(MDN)[https://developer.mozilla.org/]
-(W3School)[https://www.w3schools.com/]
+- (MDN)[https://developer.mozilla.org/]
+- (W3School)[https://www.w3schools.com/]
+- (Sandree)[https://github.com/sandro21-glitch]
+- (Hassiai)[https://github.com/Hassiai]
