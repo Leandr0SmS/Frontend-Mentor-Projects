@@ -57,16 +57,16 @@ Users should be able to:
 ```css
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: top;
 ```
 
 - Center div at body using flexbox
 ```css
 body{
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 ```
  
