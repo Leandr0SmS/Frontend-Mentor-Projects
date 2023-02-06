@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/order-summary-component-main](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/order-summary-component-main)
+- Live Site URL: [https://leandr0sms.github.io/Frontend-Mentor-Projects/order-summary-component-main/index.html](https://leandr0sms.github.io/Frontend-Mentor-Projects/order-summary-component-main/index.html)
 
 ## My process
 
