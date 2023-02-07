@@ -41,6 +41,6 @@ It was good to practice using components.
 
 ## Acknowledgments
 
-(MDN)[https://developer.mozilla.org/]
-(W3School)[https://www.w3schools.com/]
+- (MDN)[https://developer.mozilla.org/]
+- (W3School)[https://www.w3schools.com/]
 
