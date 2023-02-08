@@ -21,7 +21,13 @@ function Footer (props) {
 
 function App () {
     return (
-        <Footer name="Leandro Simões" />
+        <div>
+            <Main 
+                heading="Equilibrium #3429" 
+                text="Our Equilibrium collection promotes balance and calm."
+            />
+            <Footer name="Leandro Simões" />
+        </div>
     )
 }
 
