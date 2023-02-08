@@ -69,10 +69,10 @@ function Main (props) {
 
 function Footer (props) {
     return (
-        <div>
+        <footer>
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
             Coded by <a href="#">{props.name}</a>.
-        </div>
+        </footer>
     )
 }
 
@@ -91,7 +91,7 @@ function App () {
     });
     
     return (
-        <div>
+        <div className="app">
             {mainData}
             {footerData}
         </div>
