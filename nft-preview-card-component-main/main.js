@@ -9,8 +9,8 @@ const data = [
         price_time: {
             price: 0.041,
             time: 3
-        }
-
+        },
+        avatarName: "Jules Wyvern"
     }
 ]
 
@@ -32,13 +32,27 @@ function Price_Time (props) {
     )
 }
 
+function Avatar (props) {
+    return (
+        <div className="avatar-div">
+            <img className="avatar-img" src="./images/image-avatar.png" />
+            <p className="avatar-text">Creation of {props.avatarName}</p>
+        </div>
+    )
+}
+
 function Main (props) {
 
-    const price_time = data.map((obj) => {
+    const priceTimeData = data.map((obj) => {
         return <Price_Time 
                     price={obj.price_time.price}
                     time={obj.price_time.time} />
     });
+
+    const avatarData = data.map((obj) => {
+        return <Avatar avatarName={obj.avatarName} />
+    });
+
 
     return (
         <main>
@@ -46,7 +60,8 @@ function Main (props) {
                 <img/>
                 <h1 className="heading">{props.heading}</h1>
                 <p className="text">{props.text}</p>
-                {price_time}
+                {priceTimeData}
+                {avatarData}
             </div>
         </main>
     )
