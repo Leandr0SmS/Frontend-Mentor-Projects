@@ -1,3 +1,17 @@
+
+// Data
+
+const data = [
+    {
+        heading: "Equilibrium #3429",
+        text: "Our Equilibrium collection promotes balance and calm.",
+        author: "Leandro Simões"
+    }
+]
+
+
+//  Components
+
 function Main (props) {
     return (
         <main>
@@ -19,17 +33,29 @@ function Footer (props) {
     )
 }
 
+
+// App
+
 function App () {
+    const mainData = data.map((obj) => {
+        return <Main
+                    heading={obj.heading}
+                    text={obj.text}/>
+    });
+
+    const footerData = data.map((obj) => {
+        return <Footer name={obj.author}/>
+    });
+    
     return (
         <div>
-            <Main 
-                heading="Equilibrium #3429" 
-                text="Our Equilibrium collection promotes balance and calm."
-            />
-            <Footer name="Leandro Simões" />
+            {mainData}
+            {footerData}
         </div>
     )
 }
+
+// Render
 
 const app = document.getElementById('root');
 const root = ReactDOM.createRoot(app);
