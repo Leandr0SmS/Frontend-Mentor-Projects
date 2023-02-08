@@ -1,3 +1,14 @@
+function Main (props) {
+    return (
+        <main>
+            <div clasName="nft">
+                <img/>
+                <h1 className="heading">{props.heading}</h1>
+                <p clasName="text">{props.text}</p>
+            </div>
+        </main>
+    )
+}
 
 function Footer (props) {
     return (
