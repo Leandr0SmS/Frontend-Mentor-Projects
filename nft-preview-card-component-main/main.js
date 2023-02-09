@@ -3,14 +3,24 @@
 
 const data = [
     {
-        heading: "Equilibrium #3429",
-        text: "Our Equilibrium collection promotes balance and calm.",
-        author: "Leandro Simões",
+        main: {
+            id: "01",
+            heading: "Equilibrium #3429",
+            text: "Our Equilibrium collection promotes balance and calm.",
+        },
+        footer: {
+            id: "02",
+            author: "Leandro Simões"
+        },
         price_time: {
+            id: "03",
             price: 0.041,
             time: 3
         },
-        avatarName: "Jules Wyvern"
+        avatar: {
+            id: "04",
+            avatarName: "Jules Wyvern"
+        }
     }
 ]
 
@@ -45,12 +55,15 @@ function Main (props) {
 
     const priceTimeData = data.map((obj) => {
         return <Price_Time 
+                    key={obj.price_time.id}
                     price={obj.price_time.price}
                     time={obj.price_time.time} />
     });
 
     const avatarData = data.map((obj) => {
-        return <Avatar avatarName={obj.avatarName} />
+        return <Avatar 
+                    key={obj.avatar.id}
+                    avatarName={obj.avatar.avatarName} />
     });
 
 
@@ -82,12 +95,15 @@ function Footer (props) {
 function App () {
     const mainData = data.map((obj) => {
         return <Main
-                    heading={obj.heading}
-                    text={obj.text}/>
+                    key={obj.main.id}
+                    heading={obj.main.heading}
+                    text={obj.main.text}/>
     });
 
     const footerData = data.map((obj) => {
-        return <Footer name={obj.author}/>
+        return <Footer
+                    key={obj.footer.id} 
+                    name={obj.footer.author}/>
     });
     
     return (
