@@ -1,5 +1,14 @@
 @import "./base";
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $very-dark-blue-main-BG;
+    margin: 0;
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 

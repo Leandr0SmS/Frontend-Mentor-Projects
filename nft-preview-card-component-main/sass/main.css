@@ -1,6 +1,15 @@
 /*(main BG)*/
 /*(card BG)*/
 /*(line)*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(217deg, 54%, 11%);
+  margin: 0;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
