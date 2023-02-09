@@ -1,4 +1,3 @@
-
 // Data
 
 const data = [
@@ -23,7 +22,6 @@ const data = [
         }
     }
 ]
-
 
 //  Components
 
@@ -52,21 +50,19 @@ function Avatar (props) {
 }
 
 function Main (props) {
-
+    //extract data creating jsx Price_Time element
     const priceTimeData = data.map((obj) => {
         return <Price_Time 
                     key={obj.price_time.id}
                     price={obj.price_time.price}
                     time={obj.price_time.time} />
     });
-
+    //extract data creating jsx Avatar element
     const avatarData = data.map((obj) => {
         return <Avatar 
                     key={obj.avatar.id}
                     avatarName={obj.avatar.avatarName} />
     });
-
-
     return (
         <main>
             <div className="nft">
@@ -78,7 +74,7 @@ function Main (props) {
             </div>
         </main>
     )
-}
+};
 
 function Footer (props) {
     return (
@@ -91,21 +87,20 @@ function Footer (props) {
 
 
 // App
-
 function App () {
+    //extract data creating jsx Main element
     const mainData = data.map((obj) => {
         return <Main
                     key={obj.main.id}
                     heading={obj.main.heading}
                     text={obj.main.text}/>
     });
-
+    //extract data creating jsx Footer element
     const footerData = data.map((obj) => {
         return <Footer
                     key={obj.footer.id} 
                     name={obj.footer.author}/>
     });
-    
     return (
         <div className="app">
             {mainData}
@@ -115,7 +110,6 @@ function App () {
 }
 
 // Render
-
 const app = document.getElementById('root');
 const root = ReactDOM.createRoot(app);
 root.render(<App />);
