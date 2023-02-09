@@ -8,14 +8,30 @@
 body {
   background-color: hsl(217deg, 54%, 11%);
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .nft {
   background-color: hsl(216deg, 50%, 16%);
+  padding: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .nft-img {
   width: 19rem;
+  border-radius: 8px;
+}
+
+.heading {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.text {
+  color: hsl(215deg, 51%, 70%);
 }
 
 .attribution {
