@@ -10,11 +10,18 @@ body {
   margin: 0;
 }
 
+.nft {
+  background-color: hsl(216deg, 50%, 16%);
+}
+
+.nft-img {
+  width: 19rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
-
 .attribution a {
   color: hsl(228deg, 45%, 44%);
 }/*# sourceMappingURL=main.css.map */

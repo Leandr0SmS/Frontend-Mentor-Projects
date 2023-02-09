@@ -9,11 +9,20 @@ body {
     margin: 0;
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+.nft {
+    background-color: $very-dark-blue-card-BG;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+.nft-img {
+    //width: 302px;
+    width: 19rem;
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    a { 
+        color: hsl(228, 45%, 44%); 
+    }
 }
