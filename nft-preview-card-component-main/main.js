@@ -107,8 +107,12 @@ function App () {
     });
     return (
         <div className="app">
-            {mainData}
+            <div className="nft-div">
+                {mainData}
+            </div>
+            <div className="footer-div">
             {footerData}
+            </div>
         </div>
     )
 }

@@ -12,6 +12,24 @@ body {
   margin: 0;
 }
 
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 97% 3%;
+}
+
+.nft-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nft {
   background-color: hsl(216deg, 50%, 16%);
   padding: 1.5em;
