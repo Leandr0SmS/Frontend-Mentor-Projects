@@ -57,6 +57,7 @@ body {
 .price-time {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.7em;
 }
 .price-time .price-div {
   display: flex;
@@ -80,16 +81,18 @@ body {
   align-items: center;
   padding: 0.7em;
   border-top: 1px solid hsl(215deg, 32%, 27%);
+  gap: 1em;
 }
 
 .avatar-img {
-  width: 3rem;
+  width: 2rem;
   border: 1px solid hsl(0deg, 0%, 100%);
   border-radius: 50%;
 }
 
 .avatar-text {
   color: hsl(215deg, 51%, 70%);
+  margin: 0;
 }
 .avatar-text span {
   color: hsl(0deg, 0%, 100%);

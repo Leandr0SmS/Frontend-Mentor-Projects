@@ -45,8 +45,8 @@ function Avatar (props) {
         <div className="avatar-div">
             <img className="avatar-img" src="./images/image-avatar.png" />
             <p className="avatar-text">
-                Creation of    
-                <span>{props.avatarName}</span>
+                Creation of     
+                <span>{` ${props.avatarName}`}</span>
             </p>
         </div>
     )
