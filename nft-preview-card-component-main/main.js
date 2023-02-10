@@ -29,12 +29,12 @@ function Price_Time (props) {
     return (
         <div className="price-time">
             <div className="price-div">
-                <img className="eth-icon" src="./images/icon-ethereum.svg" />
-                <p className="price">{props.price}ETH</p>
+                <img src="./images/icon-ethereum.svg" />
+                <p>{props.price}ETH</p>
             </div>
             <div className="time-div">
-                <img className="time-icon" src="./images/icon-clock.svg" />
-                <p className="time" >{props.time} days left</p>
+                <img src="./images/icon-clock.svg" />
+                <p>{props.time} days left</p>
             </div>
         </div>
     )
@@ -44,7 +44,10 @@ function Avatar (props) {
     return (
         <div className="avatar-div">
             <img className="avatar-img" src="./images/image-avatar.png" />
-            <p className="avatar-text">Creation of {props.avatarName}</p>
+            <p className="avatar-text">
+                Creation of    
+                <span>{props.avatarName}</span>
+            </p>
         </div>
     )
 }

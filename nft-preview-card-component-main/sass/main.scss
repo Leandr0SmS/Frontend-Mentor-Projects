@@ -1,4 +1,7 @@
 @import "./base";
+@import url(
+    'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap'
+);
 
 * {
     box-sizing: border-box;
@@ -6,18 +9,16 @@
 
 body {
     background-color: $very-dark-blue-main-BG;
+    font-family: 'Outfit', sans-serif;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 //Card
 .nft {
     background-color: $very-dark-blue-card-BG;
-    padding: 1rem;
+    padding: 1.5em;
     width: fit-content;
+    border-radius: 1em;
 }
 
 .nft-img {
@@ -26,11 +27,55 @@ body {
 }
 
 .heading {
-    color: $white
+    color: $white;
+    font-size: 1.2em;
 }
 
 .text {
    color: $soft-blue;
+   width: 19rem;
+   font-size: 1.1em;
+}
+
+.price-time {
+    display: flex;
+    justify-content: space-between;
+    .price-div {
+        display: flex;
+        align-items: center;
+        p {
+            color: $cyan;
+        }
+    }
+    .time-div {
+        display: flex;
+        align-items: center;
+        p {
+            color: $soft-blue;
+        }
+    }
+}
+
+
+
+//avatar
+
+.avatar-div {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-img {
+    width: 3rem;
+    border: 1px solid $white;
+    border-radius: 50%;
+}
+
+.avatar-text {
+    color: $soft-blue;
+    span {
+        color: $white;
+    }
 }
 
 .attribution { 

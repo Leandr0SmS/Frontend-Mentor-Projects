@@ -1,24 +1,23 @@
 /*(main BG)*/
 /*(card BG)*/
 /*(line)*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 * {
   box-sizing: border-box;
 }
 
 body {
   background-color: hsl(217deg, 54%, 11%);
+  font-family: "Outfit", sans-serif;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .nft {
   background-color: hsl(216deg, 50%, 16%);
-  padding: 1rem;
+  padding: 1.5em;
   width: -moz-fit-content;
   width: fit-content;
+  border-radius: 1em;
 }
 
 .nft-img {
@@ -28,10 +27,50 @@ body {
 
 .heading {
   color: hsl(0deg, 0%, 100%);
+  font-size: 1.2em;
 }
 
 .text {
   color: hsl(215deg, 51%, 70%);
+  width: 19rem;
+  font-size: 1.1em;
+}
+
+.price-time {
+  display: flex;
+  justify-content: space-between;
+}
+.price-time .price-div {
+  display: flex;
+  align-items: center;
+}
+.price-time .price-div p {
+  color: hsl(178deg, 100%, 50%);
+}
+.price-time .time-div {
+  display: flex;
+  align-items: center;
+}
+.price-time .time-div p {
+  color: hsl(215deg, 51%, 70%);
+}
+
+.avatar-div {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-img {
+  width: 3rem;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+
+.avatar-text {
+  color: hsl(215deg, 51%, 70%);
+}
+.avatar-text span {
+  color: hsl(0deg, 0%, 100%);
 }
 
 .attribution {
