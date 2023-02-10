@@ -55,20 +55,22 @@ function Main (props) {
         return <Price_Time 
                     key={obj.price_time.id}
                     price={obj.price_time.price}
-                    time={obj.price_time.time} />
+                    time={obj.price_time.time}    
+                />
     });
     //extract data creating jsx Avatar element
     const avatarData = data.map((obj) => {
         return <Avatar 
                     key={obj.avatar.id}
-                    avatarName={obj.avatar.avatarName} />
+                    avatarName={obj.avatar.avatarName} 
+                />
     });
     return (
         <main>
             <div className="nft">
-                <img/>
-                <h1 className="heading">{props.heading}</h1>
-                <p className="text">{props.text}</p>
+                <img className="nft-img" src=".\images\image-equilibrium.jpg"/>
+                <h1 className="heading">{props.item.main.heading}</h1>
+                <p className="text">{props.item.main.text}</p>
                 {priceTimeData}
                 {avatarData}
             </div>
@@ -92,8 +94,7 @@ function App () {
     const mainData = data.map((obj) => {
         return <Main
                     key={obj.main.id}
-                    heading={obj.main.heading}
-                    text={obj.main.text}/>
+                    item={obj}/>
     });
     //extract data creating jsx Footer element
     const footerData = data.map((obj) => {
