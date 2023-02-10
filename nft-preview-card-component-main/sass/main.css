@@ -43,6 +43,7 @@ body {
 .price-time .price-div {
   display: flex;
   align-items: center;
+  gap: 0.7em;
 }
 .price-time .price-div p {
   color: hsl(178deg, 100%, 50%);
@@ -50,6 +51,7 @@ body {
 .price-time .time-div {
   display: flex;
   align-items: center;
+  gap: 0.7em;
 }
 .price-time .time-div p {
   color: hsl(215deg, 51%, 70%);
@@ -58,6 +60,8 @@ body {
 .avatar-div {
   display: flex;
   align-items: center;
+  padding: 0.7em;
+  border-top: 1px solid hsl(215deg, 32%, 27%);
 }
 
 .avatar-img {

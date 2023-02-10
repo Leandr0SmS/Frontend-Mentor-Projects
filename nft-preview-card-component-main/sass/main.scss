@@ -43,6 +43,7 @@ body {
     .price-div {
         display: flex;
         align-items: center;
+        gap: 0.7em;
         p {
             color: $cyan;
         }
@@ -50,6 +51,7 @@ body {
     .time-div {
         display: flex;
         align-items: center;
+        gap: 0.7em;
         p {
             color: $soft-blue;
         }
@@ -63,6 +65,8 @@ body {
 .avatar-div {
     display: flex;
     align-items: center;
+    padding: 0.7em;
+    border-top: 1px solid $very-dark-blue-line;
 }
 
 .avatar-img {
