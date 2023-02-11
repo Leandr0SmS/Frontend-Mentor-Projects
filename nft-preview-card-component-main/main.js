@@ -93,7 +93,7 @@ function Footer (props) {
 
 // App
 function App () {
-    //extract data creating jsx Main element
+    //extract data creating jsx Main element using {obj}
     const mainData = data.map((obj) => {
         return <Main
                     key={obj.main.id}
