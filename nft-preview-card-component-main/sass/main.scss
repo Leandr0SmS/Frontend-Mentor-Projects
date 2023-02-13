@@ -44,6 +44,7 @@ body {
     border-radius: 1em;
     height: 19rem;
     background-color: $cyan;
+    cursor: pointer;
     .nft-icon {
         position: absolute;
         right: 8rem;
@@ -67,6 +68,10 @@ body {
 .heading {
     color: $white;
     font-size: 1.2em;
+    &:hover {
+        color: $cyan;
+        cursor: pointer;
+    }
 }
 
 .text {
@@ -120,6 +125,10 @@ body {
     margin: 0;
     span {
         color: $white;
+        &:hover {
+            color: $cyan;
+            cursor: pointer;
+        }
     }
 }
 
