@@ -15,7 +15,7 @@ body {
 .app {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 97% 3%;
+  grid-template-rows: 99% 1%;
 }
 
 .nft-div {
