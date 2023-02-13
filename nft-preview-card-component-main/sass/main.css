@@ -38,6 +38,15 @@ body {
   border-radius: 1em;
 }
 
+.images-container {
+  position: relative;
+}
+.images-container .nft-icon {
+  position: absolute;
+  right: 8rem;
+  bottom: 8rem;
+}
+
 .nft-img {
   width: 19rem;
   border-radius: 8px;

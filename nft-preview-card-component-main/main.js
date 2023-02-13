@@ -30,7 +30,7 @@ function Price_Time (props) {
         <div className="price-time">
             <div className="price-div">
                 <img src="./images/icon-ethereum.svg" />
-                <p>{props.price}ETH</p>
+                <p>{props.price} ETH</p>
             </div>
             <div className="time-div">
                 <img src="./images/icon-clock.svg" />
@@ -71,7 +71,10 @@ function Main (props) {
     return (
         <main>
             <div className="nft">
-                <img className="nft-img" src=".\images\image-equilibrium.jpg"/>
+                <div className="images-container">
+                    <img className="nft-img" src=".\images\image-equilibrium.jpg"/>
+                    <img className="nft-icon" src=".\images\icon-view.svg"/>
+                </div>
                 <h1 className="heading">{props.item.main.heading}</h1>
                 <p className="text">{props.item.main.text}</p>
                 {priceTimeData}
