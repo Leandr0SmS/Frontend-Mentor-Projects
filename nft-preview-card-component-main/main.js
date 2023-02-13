@@ -86,7 +86,7 @@ function Main (props) {
 
 function Footer (props) {
     return (
-        <footer>
+        <footer className="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
             Coded by <a href="#">{props.name}</a>.
         </footer>
