@@ -49,9 +49,7 @@ Users should be able to:
 
 ### What I learned
 
-Use .map() to collect data from a obj
-
-To see how you can add code snippets, see below:
+- Use .map() to collect data from a obj.
 
 ```js
 
@@ -93,6 +91,16 @@ const mainData = data.map((obj) => {
                 key={obj.main.id}
                 item={obj}/>
 });
+
+```
+
+- Adjacent sibling selector, selects all elements that are the adjacent siblings of a specified element.
+
+```CSS
+
+.nft-img:hover + .nft-icon {
+    visibility: visible;
+} 
 
 ```
 
