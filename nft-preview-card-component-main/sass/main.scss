@@ -41,18 +41,22 @@ body {
 
 .images-container {
     position: relative;
+    background-color: $cyan;
+    border-radius: 1em;
+    height: fit-content;
     .nft-icon {
         position: absolute;
         right: 8rem;
         bottom: 8rem;
     }
 }
- 
- 
 
 .nft-img {
     width: 19rem;
     border-radius: 8px;
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .heading {
