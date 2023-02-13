@@ -40,15 +40,15 @@ body {
 
 .images-container {
   position: relative;
-  background-color: hsl(178deg, 100%, 50%);
   border-radius: 1em;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 19rem;
+  background-color: hsl(178deg, 100%, 50%);
 }
 .images-container .nft-icon {
   position: absolute;
   right: 8rem;
   bottom: 8rem;
+  visibility: hidden;
 }
 
 .nft-img {
@@ -57,6 +57,10 @@ body {
 }
 .nft-img:hover {
   opacity: 0.5;
+}
+
+.nft-img:hover + .nft-icon {
+  visibility: visible;
 }
 
 .heading {
