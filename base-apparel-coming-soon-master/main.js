@@ -17,11 +17,11 @@ function Footer (props) {
 }
 
 function App () {
-    <div className="app">
-        <Footer
-            name="Leandro Simões"
-        />
-    </div>
+    return (
+        <div className="app">
+            <Footer name="Leandro Simões" />
+        </div>
+    )
 }
 
 // Render
