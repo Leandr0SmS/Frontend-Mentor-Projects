@@ -49,7 +49,7 @@ function Main () {
 
 function App () {
     return (
-        <div>
+        <div className="app">
             <Header />
             <img 
                 className="hero--image"
