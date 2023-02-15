@@ -1,1 +1,20 @@
-/*# sourceMappingURL=main.css.map */
+/*Primary*/
+/*Neutral*/
+/*Gradients*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/*Footer*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}/*# sourceMappingURL=main.css.map */

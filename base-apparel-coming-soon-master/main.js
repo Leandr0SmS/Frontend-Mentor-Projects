@@ -7,20 +7,30 @@
   Email Address
  */
 
-function Footer (props) {
+function Header () {
     return (
-        <footer className="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-            Coded by <a href="#">{props.name}</a>.
-        </footer>
+        <img
+            src=".\images\logo.svg"
+            alt="logo Base Apparel" 
+        />
+    )
+}
+
+function Main () {
+    return (
+        <main>
+            <h1>
+                WE'RE
+                <span> COMING SOON</span> 
+            </h1>
+            <p></p>
+        </main>
     )
 }
 
 function App () {
     return (
-        <div className="app">
-            <Footer name="Leandro Simões" />
-        </div>
+        <Header />
     )
 }
 
