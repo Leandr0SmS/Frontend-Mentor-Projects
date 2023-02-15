@@ -1,8 +1,9 @@
 
 function Header () {
     return (
-        <header>
-            <img
+        <header className="header">
+            <img 
+                className="header--img"
                 src=".\images\logo.svg"
                 alt="logo Base Apparel" 
             />
@@ -12,14 +13,16 @@ function Header () {
 
 function Form() {
     return (
-        <form>
+        <form className="form">
             <input 
-                type="text"
+                className="email--input"
+                type="email"
                 placeholder="Email Address"
                 required
             ></input>
-            <button>
+            <button className="form--button">
                 <img 
+                    className="form--button--icon"
                     src=".\images\icon-arrow.svg"
                     alt="Arrow icon"
                 />
