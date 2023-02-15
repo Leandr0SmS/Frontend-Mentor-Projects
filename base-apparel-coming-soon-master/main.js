@@ -1,18 +1,30 @@
-/*
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
- */
 
 function Header () {
     return (
-        <img
-            src=".\images\logo.svg"
-            alt="logo Base Apparel" 
-        />
+        <header>
+            <img
+                src=".\images\logo.svg"
+                alt="logo Base Apparel" 
+            />
+        </header>
+    )
+}
+
+function Form() {
+    return (
+        <form>
+            <input 
+                type="text"
+                placeholder="Email Address"
+                required
+            ></input>
+            <button>
+                <img 
+                    src=".\images\icon-arrow.svg"
+                    alt="Arrow icon"
+                />
+            </button>
+        </form>
     )
 }
 
@@ -23,14 +35,25 @@ function Main () {
                 WE'RE
                 <span> COMING SOON</span> 
             </h1>
-            <p></p>
+            <p>
+                Hello fellow shoppers! We're currently building our new fashion store. 
+                Add your email below to stay up-to-date with announcements and our launch deals.
+            </p>
+            <Form />
         </main>
     )
 }
 
 function App () {
     return (
-        <Header />
+        <div>
+            <Header />
+            <img
+                src="./images/hero-desktop.jpg"
+                alt="top-model of Base Apparel"
+            />
+            <Main />
+        </div>
     )
 }
 
