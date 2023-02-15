@@ -33,12 +33,12 @@ function Form() {
 
 function Main () {
     return (
-        <main>
-            <h1>
+        <main className="main">
+            <h1 className="main--heading">
                 WE'RE
-                <span> COMING SOON</span> 
+                <span className="main--heading--span"> COMING SOON</span> 
             </h1>
-            <p>
+            <p className="main--text">
                 Hello fellow shoppers! We're currently building our new fashion store. 
                 Add your email below to stay up-to-date with announcements and our launch deals.
             </p>
@@ -51,7 +51,8 @@ function App () {
     return (
         <div>
             <Header />
-            <img
+            <img 
+                className="hero--image"
                 src="./images/hero-desktop.jpg"
                 alt="top-model of Base Apparel"
             />
