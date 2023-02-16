@@ -51,11 +51,13 @@ function App () {
     return (
         <div className="app">
             <Header />
-            <img 
-                className="hero--image"
-                src="./images/hero-desktop.jpg"
-                alt="top-model of Base Apparel"
-            />
+            <div className="hero--image-div">
+                <img 
+                    className="hero--image"
+                    src="./images/hero-desktop.jpg"
+                    alt="top-model of Base Apparel"
+                />
+            </div>
             <Main />
         </div>
     )
