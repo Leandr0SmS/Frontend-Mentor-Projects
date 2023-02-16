@@ -35,8 +35,8 @@ function Main () {
     return (
         <main className="main">
             <h1 className="main--heading">
-                WE'RE
-                <span className="main--heading--span"> COMING SOON</span> 
+                WE'RE <br/>
+                <span> COMING SOON</span> 
             </h1>
             <p className="main--text">
                 Hello fellow shoppers! We're currently building our new fashion store. 

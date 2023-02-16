@@ -35,6 +35,25 @@ body {
     grid-row: 5 / -1;
 }
 
+.main--heading {
+    font-weight: 300;
+    font-size: 4rem;
+    color: $desaturatedRed;
+    letter-spacing: 1.08rem;
+    line-height: 4.43rem;
+    span {
+        font-weight: 600;
+        color: $darkGrayish; 
+    }
+}
+
+.main--text {
+    font-weight: 400;
+    line-height: 1.74rem;
+    color: $desaturatedRed;
+    max-width: 27.75rem;
+}
+
 .hero--image-div {
     grid-column: 8 / -1;
     grid-row: 1 / -1;
