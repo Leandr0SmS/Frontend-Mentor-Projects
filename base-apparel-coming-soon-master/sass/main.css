@@ -67,6 +67,7 @@ body {
   border-radius: 2.5rem;
   width: 27.81rem;
   height: 3.5rem;
+  color: hsl(0deg, 36%, 70%);
 }
 
 .form--button {
