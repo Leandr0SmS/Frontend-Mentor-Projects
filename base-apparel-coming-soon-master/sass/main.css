@@ -36,6 +36,7 @@ body {
 }
 
 .main--heading {
+  margin: 0;
   font-weight: 300;
   font-size: 4rem;
   color: hsl(0deg, 36%, 70%);
@@ -54,13 +55,29 @@ body {
   max-width: 27.75rem;
 }
 
+.form {
+  width: 27.8rem;
+  height: 3.5rem;
+  position: relative;
+}
+
 .email--input {
-  padding: 1.5em;
   font-weight: 400;
-  line-height: 28px;
   border: 1px solid hsl(0deg, 36%, 70%);
   border-radius: 2.5rem;
   width: 27.81rem;
+  height: 3.5rem;
+}
+
+.form--button {
+  position: absolute;
+  right: -0.5rem;
+  top: 0;
+  width: 6.25rem;
+  height: 3.5rem;
+  border-radius: 2.5rem;
+  border: none;
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
 }
 
 .hero--image-div {
@@ -69,6 +86,6 @@ body {
 }
 
 .hero--image {
-  width: 38rem;
+  width: 38.12rem;
   height: 50rem;
 }/*# sourceMappingURL=main.css.map */
