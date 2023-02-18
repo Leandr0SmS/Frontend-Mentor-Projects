@@ -50,7 +50,6 @@ function Main () {
 function App () {
     return (
         <div className="app">
-            <Header />
             <div className="hero--image-div">
                 <img 
                     className="hero--image"
@@ -58,6 +57,7 @@ function App () {
                     alt="top-model of Base Apparel"
                 />
             </div>
+            <Header />
             <Main />
         </div>
     )
