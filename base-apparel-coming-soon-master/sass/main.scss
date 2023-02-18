@@ -69,8 +69,15 @@ body {
     border-radius: 2.5rem;
     width: 27.81rem;
     height: 3.5rem;
-    color: $desaturatedRed;
+    background-color: #FFF4F4;
+    opacity: 0.6;
 }
+
+::placeholder {
+    color: $desaturatedRed;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-left: 2em;
+  }
 
 .form--button {
     position: absolute;
@@ -85,6 +92,8 @@ body {
         hsl(0, 80%, 86%), 
         hsl(0, 74%, 74%)
     );
+    box-shadow: 0px 15px 20px 
+        rgba(198, 110, 110, 0.247569);
 }
 
 .hero--image-div {
@@ -92,6 +101,8 @@ body {
     grid-row: 1 / -1;
 }
 .hero--image {
-    width: 38.12rem;
+    width: 100%;
+    max-width: 45rem;//38.12rem;
     height: 50rem;
+    object-fit: cover;
 }
