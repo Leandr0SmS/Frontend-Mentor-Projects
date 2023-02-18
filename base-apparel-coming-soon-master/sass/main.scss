@@ -74,12 +74,17 @@ body {
     height: 3.5rem;
     background-color: #FFF4F4;
     opacity: 0.6;
+    padding-left: 2em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    &:focus { 
+        outline: 1px solid #a39999; 
+    }
 }
 
 ::placeholder {
     color: $desaturatedRed;
     font-family: 'Josefin Sans', sans-serif;
-    padding-left: 2em;
   }
 
 .form--button {
