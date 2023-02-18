@@ -45,7 +45,16 @@ Users should be able to:
 
 ### What I learned
 
-```
+- CSS ::placeholder Selector to style placeholder text.
+
+```CSS
+
+::placeholder {
+    color: $desaturatedRed;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-left: 2em;
+  }
+
 ```
 
 ### Continued development
