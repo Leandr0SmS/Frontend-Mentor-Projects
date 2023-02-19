@@ -137,4 +137,30 @@ body {
     display: flex;
     flex-direction: column;
   }
+  .header {
+    display: flex;
+    align-items: center;
+  }
+  .header--img {
+    margin: 2rem;
+    width: 6.25rem;
+    height: 1.31rem;
+  }
+  .hero--image-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .hero--image {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }/*# sourceMappingURL=main.css.map */
