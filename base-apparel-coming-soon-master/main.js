@@ -12,15 +12,24 @@ function Header () {
 }
 
 function Form() {
+    
     return (
-        <form className="form">
+        <form className="form" name="form" action="#">
             <input 
                 className="email--input"
+                name='text'
                 type="email"
                 placeholder="Email Address"
                 required
-            ></input>
-            <button className="form--button">
+            >
+            </input>
+            <button 
+                className="form--button"
+                type="submit"
+                name="submit"
+                value="Submit"
+                onclick="ValidateEmail(document.form1.text1)"
+                >
                 <img 
                     className="form--button--icon"
                     src=".\images\icon-arrow.svg"
@@ -50,6 +59,7 @@ function Main () {
 function App () {
     return (
         <div className="app">
+            <Header />
             <div className="hero--image-div">
                 <img 
                     className="hero--image"
@@ -57,7 +67,6 @@ function App () {
                     alt="top-model of Base Apparel"
                 />
             </div>
-            <Header />
             <Main />
         </div>
     )
