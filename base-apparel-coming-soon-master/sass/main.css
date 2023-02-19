@@ -119,4 +119,22 @@ body {
   height: 50rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media only screen and (max-width: 940px) {
+  body {
+    margin-left: 3%;
+  }
+  .header {
+    grid-column: 1/8;
+  }
+  .main {
+    grid-column: 1/8;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=main.css.map */
