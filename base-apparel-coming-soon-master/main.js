@@ -11,6 +11,15 @@ function Header () {
     )
 }
 
+function Image () {
+    return (
+        <picture className="hero--image-div">
+            <source media="(max-width:840px)" srcset=".\images\hero-mobile.jpg" />
+            <img className="hero--image" src=".\images\hero-desktop.jpg" alt="model of Base Apparel" />
+        </picture>
+    )
+}
+
 function Form() {
     
     return (
@@ -60,13 +69,7 @@ function App () {
     return (
         <div className="app">
             <Header />
-            <div className="hero--image-div">
-                <img 
-                    className="hero--image"
-                    src="./images/hero-desktop.jpg"
-                    alt="top-model of Base Apparel"
-                />
-            </div>
+            <Image />
             <Main />
         </div>
     )
