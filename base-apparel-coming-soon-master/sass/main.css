@@ -160,4 +160,50 @@ body {
     justify-content: center;
     align-items: center;
   }
+  .main--heading {
+    text-align: center;
+  }
+  .main--text {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .form {
+    width: 80%;
+    min-width: 19.43rem;
+    min-height: 3rem;
+  }
+  .email--input {
+    width: 100%;
+    min-width: 19.43rem;
+    min-height: 3rem;
+  }
+  .hero--image-div {
+    margin-bottom: 4rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .form {
+    width: 19.43rem;
+    height: 3rem;
+  }
+  .email--input {
+    width: 19.43rem;
+    height: 3rem;
+  }
+  .form--button {
+    height: 3rem;
+    width: 4rem;
+  }
+  .main {
+    margin: 0 1.5rem;
+  }
+  .main--heading {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .main--text {
+    font-size: 0.875rem;
+    text-align: center;
+  }
 }/*# sourceMappingURL=main.css.map */
