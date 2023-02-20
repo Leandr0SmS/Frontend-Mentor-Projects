@@ -122,9 +122,6 @@ body {
 }
 
 @media only screen and (max-width: 940px) {
-  body {
-    margin-left: 3%;
-  }
   .header {
     grid-column: 1/8;
   }
@@ -141,16 +138,16 @@ body {
     display: flex;
     align-items: center;
   }
+  .hero--image-div {
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .header--img {
     margin: 2rem;
     width: 6.25rem;
     height: 1.31rem;
-  }
-  .hero--image-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
   }
   .hero--image {
     height: 100%;
