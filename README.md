@@ -16,6 +16,8 @@ This repository is for sharing my solutions of Frontend Mentor Challenges.
 
 3. [Order summary card solution](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/order-summary-component-main)
 
+4. [Base Apparel coming soon page](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/base-apparel-coming-soon-master)
+
 <br>
 
 ## Author
