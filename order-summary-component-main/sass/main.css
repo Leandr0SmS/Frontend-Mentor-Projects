@@ -126,7 +126,7 @@ body {
   font-size: 14px;
   line-height: 19px;
   color: hsl(245deg, 75%, 52%);
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 @media only screen and (max-width: 520px) {
   .component .plan .plan-change {
