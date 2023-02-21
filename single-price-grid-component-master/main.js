@@ -26,7 +26,11 @@
 
   function App() {
     return (
-        <h1>Hello</h1>
+        <div className="grid">
+            < Header/>
+            < Price/>
+            < Why/>
+        </div>
     )
   }
 
