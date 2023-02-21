@@ -5,4 +5,15 @@
 body {
     margin: 0;
     background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 19.8125rem 19.875rem;
+    grid-template-rows: 13.5rem 16.1875rem;
+    background-color: aqua;
 }
