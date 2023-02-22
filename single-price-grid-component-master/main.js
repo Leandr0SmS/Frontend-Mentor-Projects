@@ -34,7 +34,7 @@
         <h2>Why Us</h2>
         <ul className="aside--list">
           <li className="aside-itens">Tutorials by industry experts</li>
-          <li className="aside-itens">Peer &amp; expert code review</li>
+          <li className="aside-itens">Peer & expert code review</li>
           <li className="aside-itens">Coding exercises</li>
           <li className="aside-itens">Access to our GitHub repos</li>
           <li className="aside-itens">Community forum</li>
