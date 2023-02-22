@@ -30,6 +30,26 @@ body {
 .header {
     grid-row: 1 / 2;
     grid-column: 1 / -1;
+    margin: 2.5rem;
+}
+
+.header--heading {
+    margin: 0;
+    color: $cyan;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.header--subtitle {
+    color: $bright-yellow;
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-top: 1.5rem;
+}
+
+.header--text {
+    color: $grayish-blue;
+    line-height: 1.625rem;
 }
 
 .main {
