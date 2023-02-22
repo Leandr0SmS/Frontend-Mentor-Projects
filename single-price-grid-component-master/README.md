@@ -9,13 +9,8 @@ This is a solution to the [Single price grid component challenge on Frontend Men
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/single-price-grid-component-master](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/single-price-grid-component-master
+- Live Site URL: [https://leandr0sms.github.io/Frontend-Mentor-Projects/single-price-grid-component-master/index.html](https://leandr0sms.github.io/Frontend-Mentor-Projects/single-price-grid-component-master/index.html)
 
 ## My process
 
@@ -41,18 +36,6 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-
-### What I learned
-
-
-
-### Continued development
-
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
