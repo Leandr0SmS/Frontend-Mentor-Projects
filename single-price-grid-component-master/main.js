@@ -15,13 +15,15 @@
   function Price() {
     return (
       <main className="main">
-        <h2 className="main--heading">Monthly Subscription</h2>
-        <h1 className="main--price">
-          &dollar;29
-          <span className="main--price--span">per month</span>
-        </h1>
-        <h2 className="main--subtitle">Full access for less than &dollar;1 a day</h2>
-        <button className="main--btn">Sign Up</button>
+        <div>
+          <h2 className="main--heading">Monthly Subscription</h2>
+          <h1 className="main--price">
+            $29
+            <span>per month</span>
+          </h1>
+          <h2 className="main--subtitle">Full access for less than $1 a day</h2>
+          <button className="main--btn">Sign Up</button>
+        </div>
       </main>
     )
   }
