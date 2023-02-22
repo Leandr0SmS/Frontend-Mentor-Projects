@@ -16,7 +16,11 @@ This repository is for sharing my solutions of Frontend Mentor Challenges.
 
 3. [Order summary card solution](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/order-summary-component-main)
 
-4. [Base Apparel coming soon page](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/base-apparel-coming-soon-master)
+4. [NFT preview card component solution](https://leandr0sms.github.io/Frontend-Mentor-Projects/nft-preview-card-component-main/index.html)
+
+5. [Base Apparel coming soon page](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/base-apparel-coming-soon-master)
+
+6. [Single price grid component](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/single-price-grid-component-main)
 
 <br>
 
