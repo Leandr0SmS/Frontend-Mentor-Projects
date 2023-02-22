@@ -17,3 +17,17 @@ body {
     grid-template-rows: 13.5rem 16.1875rem;
     background-color: aqua;
 }
+
+.header {
+    border: 1px solid black;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+}
+
+.main {
+    border: 1px solid black;
+}
+
+.side {
+    border: 1px solid black;
+}

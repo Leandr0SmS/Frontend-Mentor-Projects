@@ -24,12 +24,30 @@
   New videos every week
    */
 
+  function Header() {
+    return (
+      <header className="header">Header</header>
+    )
+  }
+
+  function Price() {
+    return (
+      <main className="main">Price</main>
+    )
+  }
+
+  function Side() {
+    return (
+      <side className="side">Side</side>
+    )
+  }
+
   function App() {
     return (
         <div className="grid">
             < Header/>
             < Price/>
-            < Why/>
+            < Side/>
         </div>
     )
   }
