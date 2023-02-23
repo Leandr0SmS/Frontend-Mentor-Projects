@@ -12,10 +12,10 @@
 * {
   box-sizing: border-box;
   font-family: "Overpass", sans-serif;
+  margin: 0;
 }
 
 body {
-  margin: 0;
   background-color: hsl(216deg, 12%, 8%);
   height: 100vh;
 }
@@ -25,15 +25,37 @@ body {
   border-radius: 1rem;
   width: 25.75rem;
   height: 26rem;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
+  padding: 2em;
+}
+.card--rating h2 {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  font-size: 1.75em;
+  margin-bottom: 0.5em;
+}
+.card--rating p {
+  color: hsl(217deg, 12%, 63%);
+  font-size: 0.9375em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+.card--rating button {
+  background-color: hsl(25deg, 97%, 53%);
+  border-radius: 1.4em;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  font-size: 0.9375em;
+  padding: 0.6875em 8.5625em;
+  margin-top: 2em;
 }
 
 .circle--star {
   background: hsl(213deg, 19%, 18%);
   width: 3rem;
   height: 3rem;
+  margin-bottom: 1.8em;
 }
 
 .grades {
