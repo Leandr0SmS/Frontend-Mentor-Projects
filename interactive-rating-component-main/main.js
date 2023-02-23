@@ -12,7 +12,7 @@
 function Rating() {
     return (
         <div className="card--rating">
-            <div className="circle star">
+            <div className="circle--star">
                 <img src="./images/icon-star.svg" alt="star-icon"/>
             </div>
             <h2>How did we do?</h2>
@@ -21,11 +21,11 @@ function Rating() {
                 All feedback is appreciated to help us improve our offering!
             </p>
             <div className="grades">
-                <div className="circle grade">1</div>
-                <div className="circle grade">2</div>
-                <div className="circle grade">3</div>
-                <div className="circle grade">4</div>
-                <div className="circle grade">5</div>
+                <div className="circle--grade">1</div>
+                <div className="circle--grade">2</div>
+                <div className="circle--grade">3</div>
+                <div className="circle--grade">4</div>
+                <div className="circle--grade">5</div>
             </div>
             <button>SUBMIT</button>
         </div>
