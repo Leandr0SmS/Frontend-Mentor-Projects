@@ -33,7 +33,7 @@ body {
     background: $dark-blue;
     width: 3rem;
     height: 3rem;
-    border-radius: 50%;
+    @extend %ball;
     @extend %center;
 }
 
@@ -48,6 +48,6 @@ body {
     background: $dark-blue;
     color: $medium-grey;
     font-weight: 700;
-    border-radius: 50%;
+    @extend %ball;
     @extend %center;
 }
