@@ -50,6 +50,11 @@ body {
   padding: 0.6875em 8.5625em;
   margin-top: 2em;
 }
+.card--rating button:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+  cursor: pointer;
+}
 
 .circle--star {
   background: hsl(213deg, 19%, 18%);
@@ -69,4 +74,9 @@ body {
   background: hsl(213deg, 19%, 18%);
   color: hsl(216deg, 12%, 54%);
   font-weight: 700;
+}
+.circle--grade:hover {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

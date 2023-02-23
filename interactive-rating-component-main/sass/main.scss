@@ -47,6 +47,11 @@ body {
         font-size: 0.9375em;
         padding: 0.6875em 8.5625em;
         margin-top: 2em;
+        &:hover {
+            background-color: $white;
+            color: $orange;
+            cursor: pointer;
+        }
     }
 }
 
@@ -72,4 +77,9 @@ body {
     font-weight: 700;
     @extend %ball;
     @extend %center;
+    &:hover {
+        background-color: $orange;
+        color: $white;
+        cursor: pointer;
+    }
 }
