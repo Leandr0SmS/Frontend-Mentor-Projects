@@ -1,10 +1,5 @@
   /*
-  <!-- Rating state start -->
-  How did we do?
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-  1 2 3 4 5
-  Submit
+
   <!-- Rating state end -->
   <!-- Thank you state start -->
   You selected <!-- Add rating here --> out of 5
@@ -14,9 +9,32 @@
   <!-- Thank you state end -->
   */
 
+function Rating() {
+    return (
+        <div className="card--rating">
+            <div className="circle star">
+                <img src="./images/icon-star.svg" alt="star-icon"/>
+            </div>
+            <h2>How did we do?</h2>
+            <p>
+                Please let us know how we did with your support request. 
+                All feedback is appreciated to help us improve our offering!
+            </p>
+            <div className="grades">
+                <div className="circle grade">1</div>
+                <div className="circle grade">2</div>
+                <div className="circle grade">3</div>
+                <div className="circle grade">4</div>
+                <div className="circle grade">5</div>
+            </div>
+            <button>SUBMIT</button>
+        </div>
+    )
+}
+
 function App() {
     return (
-        <h1>hello</h1>
+        <Rating />
     )
 }
 
