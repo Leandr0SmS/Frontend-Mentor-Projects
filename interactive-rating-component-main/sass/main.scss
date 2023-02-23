@@ -13,18 +13,41 @@ body {
     margin: 0;
     background-color: $Very-dark-blue;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %center;
 }
 
 .card--rating {
-    background-color: $dark-blue;
+    background: radial-gradient(
+        98.96% 98.96% at 50% 0%,
+        #232A34 0%, 
+        #181E27 100%);
     border-radius: 1rem;
     width: 25.75rem;
     height: 26rem;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
+}
 
+.circle--star {
+    background: $dark-blue;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    @extend %center;
+}
+
+.grades {
+    display: flex;
+    gap: 1.3125rem;
+}
+
+.circle--grade {
+    width: 3.1875rem;
+    height: 3.1875rem;
+    background: $dark-blue;
+    color: $medium-grey;
+    font-weight: 700;
+    border-radius: 50%;
+    @extend %center;
 }

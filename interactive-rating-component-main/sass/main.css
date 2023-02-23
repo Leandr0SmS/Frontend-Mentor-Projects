@@ -14,11 +14,38 @@ body {
 }
 
 .card--rating {
-  background-color: hsl(213deg, 19%, 18%);
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
   border-radius: 1rem;
   width: 25.75rem;
   height: 26rem;
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
+}
+
+.circle--star {
+  background: hsl(213deg, 19%, 18%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grades {
+  display: flex;
+  gap: 1.3125rem;
+}
+
+.circle--grade {
+  width: 3.1875rem;
+  height: 3.1875rem;
+  background: hsl(213deg, 19%, 18%);
+  color: hsl(216deg, 12%, 54%);
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
