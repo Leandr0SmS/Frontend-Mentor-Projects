@@ -9,7 +9,32 @@
   <!-- Thank you state end -->
   */
 
+function GradeCircle(props) {
+    
+    const [select, setSelect] = React.useState(false);
+    function toggleSelect() {
+        setSelect(prevState => !prevState);
+    }
+
+    return (
+        <div 
+            className={select? "circle--grade select" : "circle--grade not-select"}
+            onClick={toggleSelect}>
+            {props.num}
+        </div>
+    )
+}
+
+
 function Rating() {
+
+    const gradeArr = [1, 2, 3, 4, 5];
+    const grades = gradeArr.map((item) => {
+        return (
+            <GradeCircle num={item} />
+        )
+    })
+
     return (
         <div className="card--rating">
             <div className="circle--star">
@@ -21,11 +46,7 @@ function Rating() {
                 All feedback is appreciated to help us improve our offering!
             </p>
             <div className="grades">
-                <div className="circle--grade">1</div>
-                <div className="circle--grade">2</div>
-                <div className="circle--grade">3</div>
-                <div className="circle--grade">4</div>
-                <div className="circle--grade">5</div>
+                {grades}
             </div>
             <button>SUBMIT</button>
         </div>
