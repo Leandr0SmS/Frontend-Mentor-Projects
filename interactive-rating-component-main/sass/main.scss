@@ -72,8 +72,6 @@ body {
 .circle--grade {
     width: 3.1875rem;
     height: 3.1875rem;
-    background: $dark-blue;
-    color: $medium-grey;
     font-weight: 700;
     @extend %ball;
     @extend %center;
@@ -82,4 +80,14 @@ body {
         color: $white;
         cursor: pointer;
     }
+}
+
+.not-select {
+    background: $dark-blue;
+    color: $medium-grey;
+}
+
+.select {
+    background: $medium-grey;
+    color: $white;
 }

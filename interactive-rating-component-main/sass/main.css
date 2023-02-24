@@ -71,12 +71,20 @@ body {
 .circle--grade {
   width: 3.1875rem;
   height: 3.1875rem;
-  background: hsl(213deg, 19%, 18%);
-  color: hsl(216deg, 12%, 54%);
   font-weight: 700;
 }
 .circle--grade:hover {
   background-color: hsl(25deg, 97%, 53%);
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
+}
+
+.not-select {
+  background: hsl(213deg, 19%, 18%);
+  color: hsl(216deg, 12%, 54%);
+}
+
+.select {
+  background: hsl(216deg, 12%, 54%);
+  color: hsl(0deg, 0%, 100%);
 }/*# sourceMappingURL=main.css.map */
