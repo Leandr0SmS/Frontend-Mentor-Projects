@@ -117,4 +117,61 @@ body {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   text-align: center;
+}
+
+@media (max-width: 435px) {
+  .card--rating {
+    border-radius: 0.93rem;
+    width: 20.4375rem;
+    height: 22.5rem;
+    padding: 1.5em;
+  }
+  .card--rating h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  .card--rating p {
+    font-size: 0.875em;
+    line-height: 1.375em;
+    margin-bottom: 1.5em;
+  }
+  .circle--star {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 1em;
+  }
+  .rating button {
+    border-radius: 1.4em;
+    font-size: 0.875em;
+    padding: 0.75rem 6.75rem;
+    margin-top: 2em;
+  }
+  .grades {
+    gap: 1.3125rem;
+  }
+  .circle--grade {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .thankyou img {
+    margin-top: 0.125rem;
+    width: 9rem;
+    height: 6rem;
+  }
+  .thankyou .grade {
+    width: 10.5rem;
+    height: 2rem;
+    margin-top: 1.5rem;
+  }
+  .thankyou .grade p {
+    font-size: 0.875rem;
+  }
+  .thankyou h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .thankyou .thankyou--text {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }/*# sourceMappingURL=main.css.map */
