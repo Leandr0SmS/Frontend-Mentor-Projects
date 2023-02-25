@@ -12,14 +12,16 @@
 function GradeCircle(props) {
 
     const styles = {
-        backgroundColor: props.clicked ? "hsl(216, 12%, 54%)" : "hsl(213, 19%, 18%)"
+        backgroundColor: props.on ? "hsl(216, 12%, 54%)" : "hsl(213, 19%, 18%)",
+        color: props.on ? "hsl(0, 0%, 100%)" : "hsl(216, 12%, 54%)"
     }
 
     return (
         <div 
             className="circle--grade"
-            style={styles}>
-            {props.num}
+            style={styles}
+            onClick={()=>props.handleClick(props.id)}>
+            {props.id}
         </div>
     )
 }
@@ -29,30 +31,49 @@ function Rating() {
 
     const [grades, setGrades] = React.useState([
         {
-            clicked: false,
+            on: false,
             value: 1
         },
         {
-            clicked: true,
+            on: false,
             value: 2
         },
         {
-            clicked: false,
+            on: false,
             value: 3
         },
         {
-            clicked: false,
+            on: false,
             value: 4
         },
         {
-            clicked: false,
+            on: false,
             value: 5
         },
     ]);
+
+    function toggleOn(id) {
+        setGrades(prevState => {
+            const newGrades = [];
+            for (let i = 0; i < prevState.length; i++) {
+                const currentGrade = prevState[i];
+                if (currentGrade.value === id) {
+                    const updateGrades = {
+                        ...currentGrade,
+                        on: !currentGrade.on
+                    }
+                    newGrades.push(updateGrades)
+                } else {
+                    newGrades.push(currentGrade)
+                }
+            }
+            return newGrades;
+        })
+    }
     
     const num = grades.map((item) => {
         return (
-            <GradeCircle num={item.value} clicked={item.clicked}/>
+            <GradeCircle id={item.value} on={item.on} handleClick={toggleOn}/>
         )
     })
 
