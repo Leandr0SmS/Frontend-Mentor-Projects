@@ -47,4 +47,5 @@ Users should be able to:
 - (W3School)[https://www.w3schools.com/]
 - (FreeCodeCamp)[https://www.freecodecamp.org/]
 - (CodeCademy) [https://www.codecademy.com/]
+- (Scrimba) [https://scrimba.com/learn/learnreact]
 
