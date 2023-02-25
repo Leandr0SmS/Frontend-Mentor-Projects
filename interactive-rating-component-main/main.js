@@ -53,21 +53,10 @@ function Rating() {
     ]);
 
     function toggleOn(id) {
-        setGrades(prevState => {
-            const newGrades = [];
-            for (let i = 0; i < prevState.length; i++) {
-                const currentGrade = prevState[i];
-                if (currentGrade.value === id) {
-                    const updateGrades = {
-                        ...currentGrade,
-                        on: !currentGrade.on
-                    }
-                    newGrades.push(updateGrades)
-                } else {
-                    newGrades.push(currentGrade)
-                }
-            }
-            return newGrades;
+        setGrades(prevGrades => {
+            return prevGrades.map((grade) => {
+                return grade.value === id ? {...grade, on: !grade.on} : grade
+            })
         })
     }
     
