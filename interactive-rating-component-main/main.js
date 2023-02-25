@@ -42,7 +42,7 @@ function Rating(props) {
             <div className="grades">
                 {props.num}
             </div>
-            <button>SUBMIT</button>
+            <button >SUBMIT</button>
         </div>
     )
 }
@@ -65,6 +65,8 @@ function ThankYou(props) {
 
 function App() {
 
+    const [submited, setsubmited] = React.useState(true);
+
     const [grades, setGrades] = React.useState([
         {
             on: false,
@@ -83,7 +85,7 @@ function App() {
             value: 4
         },
         {
-            on: true,
+            on: false,
             value: 5
         },
     ]);
@@ -104,15 +106,23 @@ function App() {
         )
     })
 
-    const gradeSelected = grades.map((item) => item.on ? item.value : undefined)
+    const gradeSelected = grades.map((item) => item.on ? item.value : undefined);
 
-    return (
-        <div className="card--rating">
-            {/*<Question />
-            <Rating num={num}/>*/}
-            <ThankYou grade={gradeSelected} />
-        </div>
-    )
+
+    if (submited) {
+        return (
+            <div className="card--rating">
+                <Question />
+                <Rating num={num}/>
+            </div>
+        )
+    } else {
+        (
+            <div className="card--rating">
+                <ThankYou grade={gradeSelected} />
+            </div>
+        )
+    }
 }
 
 const app = document.getElementById('root');
