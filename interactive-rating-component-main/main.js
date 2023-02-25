@@ -14,7 +14,7 @@ function GradeCircle(props) {
     return (
         <div 
             className={props.on ? "circle--grade select" : "circle--grade not-select"}
-            onClick={()=>props.handleClick(props.id)}>
+            onClick={props.handleClick}>
             {props.id}
         </div>
     )
@@ -56,7 +56,11 @@ function Rating() {
     
     const num = grades.map((item) => {
         return (
-            <GradeCircle id={item.value} on={item.on} handleClick={toggleOn}/>
+            <GradeCircle 
+                id={item.value} 
+                on={item.on} handleClick={() => 
+                toggleOn(item.value)}
+            />
         )
     })
 
