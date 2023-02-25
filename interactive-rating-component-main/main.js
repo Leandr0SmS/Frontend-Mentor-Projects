@@ -47,12 +47,12 @@ function Rating(props) {
     )
 }
 
-function ThankYou() {
+function ThankYou(props) {
     return (
         <div className="thankyou">
             <img src=".\images\illustration-thank-you.svg"/>
             <div className="grade">
-                <p>You selected 4 out of 5</p>
+                <p>You selected {props.grade} out of 5</p>
             </div>
             <h2>Thank you!</h2>
             <p className="thankyou--text">
@@ -83,7 +83,7 @@ function App() {
             value: 4
         },
         {
-            on: false,
+            on: true,
             value: 5
         },
     ]);
@@ -104,11 +104,13 @@ function App() {
         )
     })
 
+    const gradeSelected = grades.map((item) => item.on ? item.value : undefined)
+
     return (
         <div className="card--rating">
             {/*<Question />
             <Rating num={num}/>*/}
-            <ThankYou />
+            <ThankYou grade={gradeSelected} />
         </div>
     )
 }
