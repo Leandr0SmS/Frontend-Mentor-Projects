@@ -43,7 +43,7 @@ function Rating(props) {
 function ThankYou(props) {
     return (
         <div className="thankyou">
-            <img src=".\images\illustration-thank-you.svg"/>
+            <img src=".\images\illustration-thank-you.svg" alt="Thank you!!"/>
             <div className="grade">
                 <p>You selected {props.gradeSelected} out of 5</p>
             </div>
