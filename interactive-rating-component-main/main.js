@@ -9,6 +9,21 @@
   <!-- Thank you state end -->
   */
 
+function Question() {
+    return (
+        <div>
+            <div className="circle--star">
+                <img src="./images/icon-star.svg" alt="star-icon"/>
+            </div>
+            <h2>How did we do?</h2>
+            <p>
+                Please let us know how we did with your support request. 
+                All feedback is appreciated to help us improve our offering!
+            </p>
+        </div>
+    )
+}
+
 function GradeCircle(props) {
 
     return (
@@ -21,7 +36,19 @@ function GradeCircle(props) {
 }
 
 
-function Rating() {
+function Rating(props) {
+
+    return (
+        <div className="rating">
+            <div className="grades">
+                {props.num}
+            </div>
+            <button>SUBMIT</button>
+        </div>
+    )
+}
+
+function App() {
 
     const [grades, setGrades] = React.useState([
         {
@@ -53,7 +80,7 @@ function Rating() {
             })
         })
     }
-    
+
     const num = grades.map((item) => {
         return (
             <GradeCircle 
@@ -65,27 +92,9 @@ function Rating() {
     })
 
     return (
-        <div className="rating">
-            <div className="grades">
-                {num}
-            </div>
-            <button>SUBMIT</button>
-        </div>
-    )
-}
-
-function App() {
-    return (
         <div className="card--rating">
-            <div className="circle--star">
-                <img src="./images/icon-star.svg" alt="star-icon"/>
-            </div>
-            <h2>How did we do?</h2>
-            <p>
-                Please let us know how we did with your support request. 
-                All feedback is appreciated to help us improve our offering!
-            </p>
-            <Rating />
+            <Question />
+            <Rating num={num} />
         </div>
     )
 }
