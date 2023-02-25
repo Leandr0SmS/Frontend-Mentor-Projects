@@ -29,12 +29,11 @@ function GradeCircle(props) {
     return (
         <div 
             className={props.on ? "circle--grade select" : "circle--grade not-select"}
-            onClick={props.handleClick}>
+            onClick={props.handleGradeClick}>
             {props.id}
         </div>
     )
 }
-
 
 function Rating(props) {
 
@@ -44,6 +43,22 @@ function Rating(props) {
                 {props.num}
             </div>
             <button>SUBMIT</button>
+        </div>
+    )
+}
+
+function ThankYou() {
+    return (
+        <div className="thankyou">
+            <img src=".\images\illustration-thank-you.svg"/>
+            <div className="grade">
+                <p>You selected 4 out of 5</p>
+            </div>
+            <h2>Thank you!</h2>
+            <p className="thankyou--text">
+                We appreciate you taking the time to give a rating. If you ever need more support, 
+                don't hesitate to get in touch!
+            </p>
         </div>
     )
 }
@@ -80,21 +95,20 @@ function App() {
             })
         })
     }
-
     const num = grades.map((item) => {
         return (
             <GradeCircle 
                 id={item.value} 
-                on={item.on} handleClick={() => 
-                toggleOn(item.value)}
+                on={item.on} handleGradeClick={() => toggleOn(item.value)}
             />
         )
     })
 
     return (
         <div className="card--rating">
-            <Question />
-            <Rating num={num} />
+            {/*<Question />
+            <Rating num={num}/>*/}
+            <ThankYou />
         </div>
     )
 }

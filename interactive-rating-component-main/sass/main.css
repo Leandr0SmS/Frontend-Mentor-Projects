@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
-.circle--grade, .circle--star, body {
+.thankyou .grade, .thankyou, .circle--grade, .circle--star, body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,4 +88,33 @@ body {
 .select {
   background: hsl(216, 12%, 54%);
   color: hsl(0, 0%, 100%);
+}
+
+.thankyou {
+  flex-direction: column;
+}
+.thankyou img {
+  margin-top: 0.8rem;
+}
+.thankyou .grade {
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 1.4rem;
+  width: 12rem;
+  height: 2rem;
+  margin-top: 2rem;
+}
+.thankyou .grade p {
+  margin: 0;
+  color: hsl(25, 97%, 53%);
+  font-size: 0.9375rem;
+}
+.thankyou h2 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin-top: 2rem;
+}
+.thankyou .thankyou--text {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
