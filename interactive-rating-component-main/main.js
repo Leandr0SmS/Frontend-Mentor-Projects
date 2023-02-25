@@ -49,7 +49,7 @@ function Rating() {
     function toggleOn(id) {
         setGrades(prevGrades => {
             return prevGrades.map((grade) => {
-                return grade.value === id ? {...grade, on: !grade.on} : grade
+                return grade.value === id ? {...grade, on: !grade.on} : {...grade, on: false}
             })
         })
     }
