@@ -1,14 +1,6 @@
-  /*
+//  ## Compoenents
 
-  <!-- Rating state end -->
-  <!-- Thank you state start -->
-  You selected <!-- Add rating here --> out of 5
-  Thank you!
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-  <!-- Thank you state end -->
-  */
-
+// Initial Card
 function Question() {
     return (
         <div>
@@ -47,6 +39,7 @@ function Rating(props) {
     )
 }
 
+// Final Card
 function ThankYou(props) {
     return (
         <div className="thankyou">
@@ -63,10 +56,11 @@ function ThankYou(props) {
     )
 }
 
+// App
 function App() {
-
+    //State to condition render cards
     const [submited, setsubmited] = React.useState(true);
-
+    //State to count and slect grades
     const [grades, setGrades] = React.useState([
         {
             on: false,
@@ -89,7 +83,7 @@ function App() {
             value: 5
         },
     ]);
-
+    //function to toggle slected grades
     function toggleOn(id) {
         setGrades(prevGrades => {
             return prevGrades.map((grade) => {
@@ -97,6 +91,7 @@ function App() {
             })
         })
     }
+    //.map to rander grades circles
     const num = grades.map((item) => {
         return (
             <GradeCircle 
@@ -105,10 +100,10 @@ function App() {
             />
         )
     })
-
+    //.map to find the selected grade
     const gradeSelected = grades.map((item) => item.on ? item.value : undefined);
 
-
+    //condition to render components
     if (submited) {
         return (
             <div className="card--rating">
@@ -128,6 +123,7 @@ function App() {
     }
 }
 
+//Render App
 const app = document.getElementById('root');
 const root = ReactDOM.createRoot(app);
 root.render(<App />)
