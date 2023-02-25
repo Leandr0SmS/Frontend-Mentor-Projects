@@ -33,7 +33,7 @@ body {
   color: hsl(0, 0%, 100%);
   font-weight: 700;
   font-size: 1.75em;
-  margin-bottom: 0.9375em;
+  margin-bottom: 0.8em;
 }
 .card--rating p {
   color: hsl(217, 12%, 63%);
