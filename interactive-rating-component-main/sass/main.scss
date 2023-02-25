@@ -39,20 +39,6 @@ body {
         line-height: 1.5em;
         margin-bottom: 1.5em;
     }
-    button {
-        background-color: $orange;
-        border-radius: 1.4em;
-        color: $white;
-        font-weight: 700;
-        font-size: 0.9375em;
-        padding: 0.6875em 8.5625em;
-        margin-top: 2em;
-        &:hover {
-            background-color: $white;
-            color: $orange;
-            cursor: pointer;
-        }
-    }
 }
 
 .circle--star {
@@ -62,6 +48,23 @@ body {
     @extend %ball;
     @extend %center;
     margin-bottom: 1.8em;
+}
+
+.rating {
+    button {
+        background-color: $orange;
+        border-radius: 1.4em;
+        color: $white;
+        font-weight: 700;
+        font-size: 0.9375em;
+        padding: 0.6875rem 8.5625rem;
+        margin-top: 2em;
+        &:hover {
+            background-color: $white;
+            color: $orange;
+            cursor: pointer;
+        }
+    }
 }
 
 .grades {

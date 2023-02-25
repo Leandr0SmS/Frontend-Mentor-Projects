@@ -10,16 +10,15 @@
   */
 
 function GradeCircle(props) {
-    
-    const [select, setSelect] = React.useState(false);
-    function toggleSelect() {
-        setSelect(prevState => !prevState);
+
+    const styles = {
+        backgroundColor: props.clicked ? "hsl(216, 12%, 54%)" : "hsl(213, 19%, 18%)"
     }
 
     return (
         <div 
-            className={select? "circle--grade select" : "circle--grade not-select"}
-            onClick={toggleSelect}>
+            className="circle--grade"
+            style={styles}>
             {props.num}
         </div>
     )
@@ -28,13 +27,46 @@ function GradeCircle(props) {
 
 function Rating() {
 
-    const gradeArr = [1, 2, 3, 4, 5];
-    const grades = gradeArr.map((item) => {
+    const [grades, setGrades] = React.useState([
+        {
+            clicked: false,
+            value: 1
+        },
+        {
+            clicked: true,
+            value: 2
+        },
+        {
+            clicked: false,
+            value: 3
+        },
+        {
+            clicked: false,
+            value: 4
+        },
+        {
+            clicked: false,
+            value: 5
+        },
+    ]);
+    
+    const num = grades.map((item) => {
         return (
-            <GradeCircle num={item} />
+            <GradeCircle num={item.value} clicked={item.clicked}/>
         )
     })
 
+    return (
+        <div className="rating">
+            <div className="grades">
+                {num}
+            </div>
+            <button>SUBMIT</button>
+        </div>
+    )
+}
+
+function App() {
     return (
         <div className="card--rating">
             <div className="circle--star">
@@ -45,17 +77,8 @@ function Rating() {
                 Please let us know how we did with your support request. 
                 All feedback is appreciated to help us improve our offering!
             </p>
-            <div className="grades">
-                {grades}
-            </div>
-            <button>SUBMIT</button>
+            <Rating />
         </div>
-    )
-}
-
-function App() {
-    return (
-        <Rating />
     )
 }
 

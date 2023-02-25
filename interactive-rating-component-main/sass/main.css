@@ -41,26 +41,27 @@ body {
   line-height: 1.5em;
   margin-bottom: 1.5em;
 }
-.card--rating button {
-  background-color: hsl(25deg, 97%, 53%);
-  border-radius: 1.4em;
-  color: hsl(0deg, 0%, 100%);
-  font-weight: 700;
-  font-size: 0.9375em;
-  padding: 0.6875em 8.5625em;
-  margin-top: 2em;
-}
-.card--rating button:hover {
-  background-color: hsl(0deg, 0%, 100%);
-  color: hsl(25deg, 97%, 53%);
-  cursor: pointer;
-}
 
 .circle--star {
   background: hsl(213deg, 19%, 18%);
   width: 3rem;
   height: 3rem;
   margin-bottom: 1.8em;
+}
+
+.rating button {
+  background-color: hsl(25deg, 97%, 53%);
+  border-radius: 1.4em;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  font-size: 0.9375em;
+  padding: 0.6875rem 8.5625rem;
+  margin-top: 2em;
+}
+.rating button:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+  cursor: pointer;
 }
 
 .grades {
