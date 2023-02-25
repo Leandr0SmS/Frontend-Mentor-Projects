@@ -11,15 +11,9 @@
 
 function GradeCircle(props) {
 
-    const styles = {
-        backgroundColor: props.on ? "hsl(216, 12%, 54%)" : "hsl(213, 19%, 18%)",
-        color: props.on ? "hsl(0, 0%, 100%)" : "hsl(216, 12%, 54%)"
-    }
-
     return (
         <div 
-            className="circle--grade"
-            style={styles}
+            className={props.on ? "circle--grade select" : "circle--grade not-select"}
             onClick={()=>props.handleClick(props.id)}>
             {props.id}
         </div>
