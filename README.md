@@ -22,6 +22,8 @@ This repository is for sharing my solutions of Frontend Mentor Challenges.
 
 6. [Single price grid component](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/single-price-grid-component-main)
 
+7. [Interactive rating component](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/interactive-rating-component-main)
+
 <br>
 
 ## Author
