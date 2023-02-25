@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: hsl(217deg, 54%, 11%);
+  background-color: hsl(217, 54%, 11%);
   font-family: "Outfit", sans-serif;
   margin: 0;
 }
@@ -31,7 +31,7 @@ body {
 }
 
 .nft {
-  background-color: hsl(216deg, 50%, 16%);
+  background-color: hsl(216, 50%, 16%);
   padding: 1.5em;
   width: -moz-fit-content;
   width: fit-content;
@@ -43,7 +43,7 @@ body {
   position: relative;
   border-radius: 1em;
   height: 19rem;
-  background-color: hsl(178deg, 100%, 50%);
+  background-color: hsl(178, 100%, 50%);
   cursor: pointer;
 }
 .images-container .nft-icon {
@@ -66,16 +66,16 @@ body {
 }
 
 .heading {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-size: 1.3em;
 }
 .heading:hover {
-  color: hsl(178deg, 100%, 50%);
+  color: hsl(178, 100%, 50%);
   cursor: pointer;
 }
 
 .text {
-  color: hsl(215deg, 51%, 70%);
+  color: hsl(215, 51%, 70%);
   width: 19rem;
   font-size: 1.1em;
 }
@@ -91,7 +91,7 @@ body {
   gap: 0.7em;
 }
 .price-time .price-div p {
-  color: hsl(178deg, 100%, 50%);
+  color: hsl(178, 100%, 50%);
 }
 .price-time .time-div {
   display: flex;
@@ -99,32 +99,32 @@ body {
   gap: 0.7em;
 }
 .price-time .time-div p {
-  color: hsl(215deg, 51%, 70%);
+  color: hsl(215, 51%, 70%);
 }
 
 .avatar-div {
   display: flex;
   align-items: center;
   padding: 0.7em;
-  border-top: 1px solid hsl(215deg, 32%, 27%);
+  border-top: 1px solid hsl(215, 32%, 27%);
   gap: 1em;
 }
 
 .avatar-img {
   width: 2rem;
-  border: 1px solid hsl(0deg, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 100%);
   border-radius: 50%;
 }
 
 .avatar-text {
-  color: hsl(215deg, 51%, 70%);
+  color: hsl(215, 51%, 70%);
   margin: 0;
 }
 .avatar-text span {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }
 .avatar-text span:hover {
-  color: hsl(178deg, 100%, 50%);
+  color: hsl(178, 100%, 50%);
   cursor: pointer;
 }
 
@@ -133,7 +133,7 @@ body {
   text-align: center;
 }
 .attribution a {
-  color: hsl(228deg, 45%, 44%);
+  color: hsl(228, 45%, 44%);
 }
 
 @media only screen and (max-width: 380px) {
