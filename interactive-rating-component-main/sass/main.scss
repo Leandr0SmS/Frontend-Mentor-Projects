@@ -31,12 +31,12 @@ body {
         color: $white;
         font-weight: 700;
         font-size: 1.75em;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.9375em;
     }
     p {
         color: $light-grey;
         font-size: 0.9375em;
-        line-height: 1.5em;
+        line-height: 1.55em;
         margin-bottom: 1.5em;
     }
 }
@@ -47,7 +47,7 @@ body {
     height: 3rem;
     @extend %ball;
     @extend %center;
-    margin-bottom: 1.8em;
+    margin-bottom: 1.875em;
 }
 
 .rating {
@@ -56,8 +56,9 @@ body {
         border-radius: 1.4em;
         color: $white;
         font-weight: 700;
+        letter-spacing: 0.2rem;
         font-size: 0.9375em;
-        padding: 0.6875rem 8.5625rem;
+        padding: 0.8125rem 8.5625rem;
         margin-top: 2em;
         border: none;
         &:hover {

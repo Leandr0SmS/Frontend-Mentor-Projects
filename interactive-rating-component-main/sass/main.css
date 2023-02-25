@@ -33,12 +33,12 @@ body {
   color: hsl(0, 0%, 100%);
   font-weight: 700;
   font-size: 1.75em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.9375em;
 }
 .card--rating p {
   color: hsl(217, 12%, 63%);
   font-size: 0.9375em;
-  line-height: 1.5em;
+  line-height: 1.55em;
   margin-bottom: 1.5em;
 }
 
@@ -46,7 +46,7 @@ body {
   background: hsl(213, 19%, 18%);
   width: 3rem;
   height: 3rem;
-  margin-bottom: 1.8em;
+  margin-bottom: 1.875em;
 }
 
 .rating button {
@@ -54,8 +54,9 @@ body {
   border-radius: 1.4em;
   color: hsl(0, 0%, 100%);
   font-weight: 700;
+  letter-spacing: 0.2rem;
   font-size: 0.9375em;
-  padding: 0.6875rem 8.5625rem;
+  padding: 0.8125rem 8.5625rem;
   margin-top: 2em;
   border: none;
 }
