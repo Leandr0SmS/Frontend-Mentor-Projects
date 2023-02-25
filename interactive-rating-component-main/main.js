@@ -42,7 +42,7 @@ function Rating(props) {
             <div className="grades">
                 {props.num}
             </div>
-            <button >SUBMIT</button>
+            <button onClick={props.handleSubmit}>SUBMIT</button>
         </div>
     )
 }
@@ -52,7 +52,7 @@ function ThankYou(props) {
         <div className="thankyou">
             <img src=".\images\illustration-thank-you.svg"/>
             <div className="grade">
-                <p>You selected {props.grade} out of 5</p>
+                <p>You selected {props.gradeSelected} out of 5</p>
             </div>
             <h2>Thank you!</h2>
             <p className="thankyou--text">
@@ -113,13 +113,16 @@ function App() {
         return (
             <div className="card--rating">
                 <Question />
-                <Rating num={num}/>
+                <Rating 
+                    num={num}
+                    handleSubmit={() => setsubmited(prevState => !prevState)}
+                />
             </div>
         )
-    } else {
-        (
+    } else if (!submited) {
+        return (
             <div className="card--rating">
-                <ThankYou grade={gradeSelected} />
+                <ThankYou gradeSelected={gradeSelected}/>
             </div>
         )
     }
