@@ -13,7 +13,7 @@ const faqData = [
   },
   {
     question: "Can I cancel my subscription?",
-    answer: "Yes! Send us a message and we’ll process your request no questions asked."
+    answer: "Yes! Send us a message and we'll process your request no questions asked."
   },
   {
     question: "Do you provide additional support?",
@@ -22,20 +22,27 @@ const faqData = [
 ]
 
 
-function Questions() {
+function Questions(props) {
   return (
     <div className="questions--div">
-      <h3 className="questions">somethig to question?</h3>
-      <p className="answer">Response</p>
+      <h3 className="questions">{props.question}</h3>
+      <p className="answer">{props.answer}</p>
     </div>
   )
 }
 
 //App
-
-
-
 function App() {
+
+  const questionsAnswers = faqData.map(elem => {
+    return (
+      <Questions 
+        question={elem.question}
+        answer={elem.answer}
+      />
+    )
+  })
+
   return (
     <div className="faq--card">
       <div className="image--div">
@@ -43,7 +50,7 @@ function App() {
       </div>
       <div className="faq--div">
         <h1>FAQ</h1>
-        < Questions/>
+        {questionsAnswers}
       </div>
     </div>
   )
