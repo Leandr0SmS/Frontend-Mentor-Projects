@@ -7,5 +7,17 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
 }
+
+body {
+    height: 100vh;
+    @extend %center;
+    background: linear-gradient(
+        180deg,
+        $softViolet 0%,
+        $softBlue 100%
+    );
+}
+
 

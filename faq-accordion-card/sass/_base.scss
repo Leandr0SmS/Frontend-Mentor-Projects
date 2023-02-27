@@ -10,3 +10,9 @@ $lightGrayishBlue: hsl(240, 5%, 91%);
 //Background Gradiente
 $softViolet: hsl(273, 75%, 66%);
 $softBlue: hsl(240, 73%, 65%);
+
+%center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
