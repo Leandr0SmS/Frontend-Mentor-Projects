@@ -25,6 +25,10 @@ const faqData = [
 function Questions(props) {
   return (
     <div className="questions--div">
+      <div className="questions">
+        <h3>{props.question}</h3>
+        <img src=".\images\icon-arrow-down.svg" alt="Arrow icon"/>
+      </div>
       <h3 className="questions">{props.question}</h3>
       <p className="answer">{props.answer}</p>
     </div>
