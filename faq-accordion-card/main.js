@@ -15,3 +15,16 @@
   Do you provide additional support?
   Chat and email support is available 24/7. Phone lines are open during normal business hours.
  */
+
+
+//App
+function App() {
+  return (
+    <h1>FAQ</h1>
+  )
+}
+
+//Render
+const app = document.getElementById('root');
+const root = ReactDOM.createRoot(app);
+root.render(<App />)
