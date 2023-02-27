@@ -20,4 +20,8 @@ body {
     );
 }
 
-
+.faq--card {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 57.5rem;
+}
