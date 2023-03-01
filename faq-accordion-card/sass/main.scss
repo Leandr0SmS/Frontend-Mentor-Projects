@@ -64,8 +64,12 @@ body {
         font-size: 0.75rem;
         line-height: 1.125rem;
         color: $darkGrayishBlue;
+        margin-bottom: 1rem;
     }
     margin-bottom: 1rem;
+    hr {
+        border: 1px solid $lightGrayishBlue;
+    }
 }
 
 .question {
@@ -79,5 +83,6 @@ body {
         font-size: 0.875rem;
         line-height: 1.06rem;
         color: $veryDarkDesaturatedBlue;
+        margin-bottom: 0.6875rem;
     }
 }

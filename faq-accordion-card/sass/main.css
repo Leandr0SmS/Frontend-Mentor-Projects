@@ -60,6 +60,10 @@ body {
   font-size: 0.75rem;
   line-height: 1.125rem;
   color: hsl(240, 6%, 50%);
+  margin-bottom: 1rem;
+}
+.questions--div hr {
+  border: 1px solid hsl(240, 5%, 91%);
 }
 
 .question {
@@ -75,4 +79,5 @@ body {
   font-size: 0.875rem;
   line-height: 1.06rem;
   color: hsl(238, 29%, 16%);
+  margin-bottom: 0.6875rem;
 }/*# sourceMappingURL=main.css.map */
