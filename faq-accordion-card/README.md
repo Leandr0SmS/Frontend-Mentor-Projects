@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/faq-accordion-card](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/faq-accordion-card)
+- Live Site URL: [https://leandr0sms.github.io/Frontend-Mentor-Projects/faq-accordion-card/index.html](https://leandr0sms.github.io/Frontend-Mentor-Projects/faq-accordion-card/index.html)
 
 ## My process
 
@@ -43,31 +43,26 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I've learned to work with background-position using multiple images.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+```scss
+.image--div {
+    position: relative;
+    background-image: url(../images/bg-pattern-desktop.svg),
+                      url(../images/illustration-woman-online-desktop.svg);
+    background-size: 220%, 103%;
+    background-repeat: no-repeat;
+    background-position: -38.5rem -18rem, -5rem 5rem;
 }
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I´ll continue to study React and CSS.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Example resource 1](https://www.w3schools.com/Css/css3_backgrounds.asp)
 
 ## Author
 
