@@ -53,17 +53,17 @@ function Questions(props) {
 //App
 function App() {
 
-  const [onState, setOnstate] = React.useState(faqData);
+  const [faqState, setFaqstate] = React.useState(faqData);
 
   function toggleOn(id) {
-    setOnstate((prevState) => {
+    setFaqstate((prevState) => {
       return prevState.map(faq => {
         return faq.id === id ? {...faq, on: !faq.on} : {...faq, on: false};
       })
     })
   }
 
-  const questionsAnswers = faqData.map(elem => {
+  const questionsAnswers = faqState.map(elem => {
     return (
       <Questions 
         question={elem.question}
