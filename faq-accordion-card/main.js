@@ -30,12 +30,12 @@ const faqData = [
 function Questions(props) {
   return (
     <div className="questions--div">
-      <div className="questions">
+      <div className="question">
         <h3>{props.question}</h3>
         <img src=".\images\icon-arrow-down.svg" alt="Arrow icon"/>
       </div>
-      <h3 className="questions">{props.question}</h3>
       <p className="answer">{props.answer}</p>
+      <hr/>
     </div>
   )
 }
@@ -60,7 +60,9 @@ function App() {
       </div>
       <div className="faq--div">
         <h1>FAQ</h1>
-        {questionsAnswers}
+        <div className="question-answers--div">
+          {questionsAnswers}
+        </div>
       </div>
     </div>
   )
