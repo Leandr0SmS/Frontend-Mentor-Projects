@@ -81,9 +81,10 @@ function App() {
 
   return (
     <div className="faq--card">
-      <div className="image--div">
-        <img src=".\images\illustration-box-desktop.svg" alt="Cardboard box with an '@' on top"/>
-      </div>
+      <picture className="image--div">
+            <source media="(max-width:1040px)" srcset=".\images\illustration-woman-online-mobile.svg" alt="Woman working on a board with a box" />
+            <img src=".\images\illustration-box-desktop.svg" alt="Cardboard box with an '@' on top"/>
+        </picture>
       <div className="faq--div">
         <h1>FAQ</h1>
         <div className="question-answers--div">
