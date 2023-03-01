@@ -46,9 +46,9 @@ body {
     position: relative;
     background-image: url(../images/bg-pattern-desktop.svg),
                       url(../images/illustration-woman-online-desktop.svg);
-    background-size: 240%, 103%;
+    background-size: 220%, 103%;
     background-repeat: no-repeat;
-    background-position: -44rem -25rem, -5rem 4rem;
+    background-position: -38.5rem -18rem, -5rem 5rem;
     img {
         position: absolute;
         top: 12.5rem;
@@ -57,7 +57,7 @@ body {
 }
 
 .faq--div {
-    padding: 2.6875rem;
+    padding: 4.65rem;
     padding-left: 0;
     h1 {
         color: $veryDarkDesaturatedBlue;
@@ -103,5 +103,26 @@ body {
     }
     &:hover {
         cursor: pointer;
+    }
+}
+
+
+@media (max-width: 1040px) {
+    .faq--card {
+        display: grid;
+        grid-template-rows: 8.25rem  25.1875rem;
+        max-width:20.4375rem;
+    }
+    .image--div {
+        position: relative;
+        background-image: url(../images/bg-pattern-mobile.svg);
+        background-size: 14.81rem;
+        background-position: 2.5rem 0;
+        img {
+            position: absolute;
+            width: 14.81rem;
+            top: -7rem;
+            left: 2.5rem;
+        }
     }
 }
