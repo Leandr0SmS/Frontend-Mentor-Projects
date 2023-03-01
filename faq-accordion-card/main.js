@@ -1,26 +1,31 @@
 const faqData = [
   {
     id: 1,
+    on: false,
     question: "How many team members can I invite?",
     answer: "You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan."
   },
   {
     id: 2,
+    on: true,
     question: "What is the maximum file upload size?",
     answer: "No more than 2GB. All files in your account must fit your allotted storage space."
   },
   {
     id: 3,
+    on: false,
     question: "How do I reset my password?",
     answer: "Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you."
   },
   {
     id: 4,
+    on: false,
     question: "Can I cancel my subscription?",
     answer: "Yes! Send us a message and we'll process your request no questions asked."
   },
   {
     id: 5,
+    on: false,
     question: "Do you provide additional support?",
     answer: "Chat and email support is available 24/7. Phone lines are open during normal business hours."
   }
@@ -31,8 +36,13 @@ function Questions(props) {
   return (
     <div className="questions--div">
       <div className="question">
-        <h3>{props.question}</h3>
-        <img src=".\images\icon-arrow-down.svg" alt="Arrow icon"/>
+        <h3 onClick={props.handleClick}>
+          {props.question}
+        </h3>
+        <img 
+          src=".\images\icon-arrow-down.svg" 
+          alt="Arrow icon"
+        />
       </div>
       <p className="answer">{props.answer}</p>
       <hr/>
@@ -43,12 +53,23 @@ function Questions(props) {
 //App
 function App() {
 
+  const [onState, setOnstate] = React.useState(faqData);
+
+  function toggleOn(id) {
+    setOnstate((prevState) => {
+      return prevState.map(faq => {
+        return faq.id === id ? {...faq, on: !faq.on} : {...faq, on: false};
+      })
+    })
+  }
+
   const questionsAnswers = faqData.map(elem => {
     return (
       <Questions 
         question={elem.question}
-        answer={elem.answer}
+        answer={elem.on && elem.answer}
         key={elem.id}
+        handleClick={() => toggleOn(elem.id)}
       />
     )
   })

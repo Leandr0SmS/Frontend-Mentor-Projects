@@ -78,11 +78,13 @@ body {
     img {
         object-fit: contain;
         width: 0.5rem;
+        height: 0.25rem;
     }
     h3 {
         font-size: 0.875rem;
         line-height: 1.06rem;
         color: $veryDarkDesaturatedBlue;
         margin-bottom: 0.6875rem;
+        cursor: pointer;
     }
 }

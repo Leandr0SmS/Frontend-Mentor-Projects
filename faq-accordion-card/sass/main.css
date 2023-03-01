@@ -74,10 +74,12 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
   width: 0.5rem;
+  height: 0.25rem;
 }
 .question h3 {
   font-size: 0.875rem;
   line-height: 1.06rem;
   color: hsl(238, 29%, 16%);
   margin-bottom: 0.6875rem;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
