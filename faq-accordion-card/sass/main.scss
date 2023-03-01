@@ -62,6 +62,7 @@ body {
     h1 {
         color: $veryDarkDesaturatedBlue;
         margin-bottom: 2.6875rem;
+        font-size: 2rem;
     }
 }
 
@@ -94,6 +95,7 @@ body {
     }
     h3 {
         font-size: 0.875rem;
+        font-weight: 400;
         line-height: 1.06rem;
         color: $darkGrayishBlue;
         margin-bottom: 0.6875rem;
@@ -110,8 +112,8 @@ body {
 @media (max-width: 1040px) {
     .faq--card {
         display: grid;
+        grid-template-columns: 20.4375rem;
         grid-template-rows: 8.25rem  25.1875rem;
-        max-width:20.4375rem;
     }
     .image--div {
         position: relative;
@@ -123,6 +125,38 @@ body {
             width: 14.81rem;
             top: -7rem;
             left: 2.5rem;
+        }
+    }
+    .faq--div {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3rem;
+        h1 {
+            margin-bottom: 1.875rem;
+        }
+    }
+    .question-answers--div {
+        width: 17.4375rem;
+        margin: 0;
+    }
+    .questions--div {
+        margin-bottom: 1rem;
+        hr {
+            border: 1px solid $lightGrayishBlue;
+        }
+    }
+    .question {
+        img {
+            width: 1rem;
+            height: 0.5rem;
+        }
+        h3 {
+            font-size: 0.8125rem;
+            line-height: 1rem;
+            margin-bottom: 0.4rem;
         }
     }
 }
