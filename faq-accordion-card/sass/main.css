@@ -34,7 +34,7 @@ body {
   background-image: url(../images/bg-pattern-desktop.svg), url(../images/illustration-woman-online-desktop.svg);
   background-size: 240%, 103%;
   background-repeat: no-repeat;
-  background-position: -44.5rem -20rem, -5.5rem 10rem;
+  background-position: -44.5rem -25rem, -5.5rem 4rem;
 }
 .image--div img {
   position: absolute;
