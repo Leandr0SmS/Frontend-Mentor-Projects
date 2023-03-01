@@ -42,6 +42,7 @@ function Questions(props) {
         <img 
           src=".\images\icon-arrow-down.svg" 
           alt="Arrow icon"
+          className={props.on && "rotate"}
         />
       </div>
       <p className="answer">{props.answer}</p>
@@ -69,6 +70,7 @@ function App() {
         question={elem.question}
         answer={elem.on && elem.answer}
         key={elem.id}
+        on={elem.on}
         handleClick={() => toggleOn(elem.id)}
       />
     )
