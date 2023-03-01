@@ -35,8 +35,11 @@ const faqData = [
 function Questions(props) {
   return (
     <div className="questions--div">
-      <div className="question">
-        <h3 onClick={props.handleClick}>
+      <div 
+        className="question"
+        onClick={props.handleClick}
+      >
+        <h3 id={props.on && "question--active"}>
           {props.question}
         </h3>
         <img 

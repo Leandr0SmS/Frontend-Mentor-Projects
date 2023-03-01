@@ -14,6 +14,14 @@
     transform: rotate(180deg);
 }
 
+#question--active {
+    color: $veryDarkDesaturatedBlue;
+    font-weight: 700;
+    &:hover {
+        color: $softRed
+    }
+}
+
 body {
     height: 100vh;
     @extend %center;
@@ -40,10 +48,10 @@ body {
                       url(../images/illustration-woman-online-desktop.svg);
     background-size: 240%, 103%;
     background-repeat: no-repeat;
-    background-position: -44.5rem -25rem, -5.5rem 4rem;
+    background-position: -44rem -25rem, -5rem 4rem;
     img {
         position: absolute;
-        top: 18rem;
+        top: 12.5rem;
         left: -5.7rem;
     }
 }
@@ -87,11 +95,13 @@ body {
     h3 {
         font-size: 0.875rem;
         line-height: 1.06rem;
-        color: $veryDarkDesaturatedBlue;
+        color: $darkGrayishBlue;
         margin-bottom: 0.6875rem;
         &:hover {
-            cursor: pointer;
             color: $softRed
         }
+    }
+    &:hover {
+        cursor: pointer;
     }
 }

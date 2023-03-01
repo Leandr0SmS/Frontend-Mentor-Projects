@@ -15,6 +15,14 @@ body {
   transform: rotate(180deg);
 }
 
+#question--active {
+  color: hsl(238, 29%, 16%);
+  font-weight: 700;
+}
+#question--active:hover {
+  color: hsl(14, 88%, 65%);
+}
+
 body {
   height: 100vh;
   background: linear-gradient(180deg, hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
@@ -34,11 +42,11 @@ body {
   background-image: url(../images/bg-pattern-desktop.svg), url(../images/illustration-woman-online-desktop.svg);
   background-size: 240%, 103%;
   background-repeat: no-repeat;
-  background-position: -44.5rem -25rem, -5.5rem 4rem;
+  background-position: -44rem -25rem, -5rem 4rem;
 }
 .image--div img {
   position: absolute;
-  top: 18rem;
+  top: 12.5rem;
   left: -5.7rem;
 }
 
@@ -83,10 +91,12 @@ body {
 .question h3 {
   font-size: 0.875rem;
   line-height: 1.06rem;
-  color: hsl(238, 29%, 16%);
+  color: hsl(240, 6%, 50%);
   margin-bottom: 0.6875rem;
 }
 .question h3:hover {
-  cursor: pointer;
   color: hsl(14, 88%, 65%);
+}
+.question:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
