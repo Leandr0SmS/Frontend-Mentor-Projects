@@ -1,3 +1,28 @@
+// ## Data
+
+const data = [
+    {
+        on: false,
+        value: 1
+    },
+    {
+        on: false,
+        value: 2
+    },
+    {
+        on: false,
+        value: 3
+    },
+    {
+        on: false,
+        value: 4
+    },
+    {
+        on: false,
+        value: 5
+    }
+]
+
 //  ## Compoenents
 
 // Initial Card
@@ -61,28 +86,7 @@ function App() {
     //State to condition render cards
     const [submited, setsubmited] = React.useState(true);
     //State to count and slect grades
-    const [grades, setGrades] = React.useState([
-        {
-            on: false,
-            value: 1
-        },
-        {
-            on: false,
-            value: 2
-        },
-        {
-            on: false,
-            value: 3
-        },
-        {
-            on: false,
-            value: 4
-        },
-        {
-            on: false,
-            value: 5
-        },
-    ]);
+    const [grades, setGrades] = React.useState(data);
     //function to toggle slected grades
     function toggleOn(id) {
         setGrades(prevGrades => {
@@ -96,7 +100,8 @@ function App() {
         return (
             <GradeCircle 
                 id={item.value} 
-                on={item.on} handleGradeClick={() => toggleOn(item.value)}
+                on={item.on} 
+                handleGradeClick={() => toggleOn(item.value)}
             />
         )
     })
