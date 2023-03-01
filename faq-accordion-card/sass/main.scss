@@ -43,3 +43,41 @@ body {
         left: -5.7rem;
     }
 }
+
+.faq--div {
+    padding: 2.6875rem;
+    padding-left: 0;
+    h1 {
+        color: $veryDarkDesaturatedBlue;
+        margin-bottom: 2.6875rem;
+    }
+}
+
+.question-answers--div {
+    width: 21.875rem;
+    margin: 1.125rem;
+    margin-left: 0;
+}
+
+.questions--div {
+    p {
+        font-size: 0.75rem;
+        line-height: 1.125rem;
+        color: $darkGrayishBlue;
+    }
+    margin-bottom: 1rem;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    img {
+        object-fit: contain;
+        width: 0.5rem;
+    }
+    h3 {
+        font-size: 0.875rem;
+        line-height: 1.06rem;
+        color: $veryDarkDesaturatedBlue;
+    }
+}

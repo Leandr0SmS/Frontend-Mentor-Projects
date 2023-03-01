@@ -36,4 +36,43 @@ body {
   position: absolute;
   top: 18rem;
   left: -5.7rem;
+}
+
+.faq--div {
+  padding: 2.6875rem;
+  padding-left: 0;
+}
+.faq--div h1 {
+  color: hsl(238, 29%, 16%);
+  margin-bottom: 2.6875rem;
+}
+
+.question-answers--div {
+  width: 21.875rem;
+  margin: 1.125rem;
+  margin-left: 0;
+}
+
+.questions--div {
+  margin-bottom: 1rem;
+}
+.questions--div p {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  color: hsl(240, 6%, 50%);
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+}
+.question img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 0.5rem;
+}
+.question h3 {
+  font-size: 0.875rem;
+  line-height: 1.06rem;
+  color: hsl(238, 29%, 16%);
 }/*# sourceMappingURL=main.css.map */
