@@ -5,21 +5,46 @@
 }
 
 body {
-  background-color: #121725;
-  background-image: url(../assets/desktop/bg-pattern-dots.svg), url(../assets/desktop/image-host.jpg);
-  background-repeat: no-repeat, no-repeat;
-  background-size: 14.5rem 6.5rem, 55.5rem 40rem;
-  background-position: right 0 top 44.875rem, right 0 top 8.125rem;
   margin: 0;
+  background-color: #121725;
+  height: 100vh;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.app {
+  border: 1px solid white;
+  width: 79.6875;
+  height: 40rem;
+  background-image: url(../assets/desktop/image-host.jpg);
+  background-repeat: no-repeat;
+  background-size: 55.5rem 40rem;
+  background-position: right;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+}
+
+.dots {
+  position: absolute;
+  bottom: -4rem;
+  right: 0;
 }
 
 .main {
+  border: 1px solid white;
   background-color: #121725;
   width: 45.18rem;
   height: 31.81rem;
-  margin: 16.3125rem 34.5rem 8.125rem 10.3125rem;
   padding-top: 5.5rem;
   padding-right: 3.625rem;
+  margin-top: 8rem;
+  margin-right: 34.5rem;
 }
 .main h1 {
   font-weight: 400;

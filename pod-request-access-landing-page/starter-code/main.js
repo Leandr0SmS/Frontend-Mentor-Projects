@@ -10,9 +10,6 @@ Request access
 function App() {
     return (
         <div className="app">
-            <header>
-                <img alt="logo-pod" src=".\assets\desktop\logo.svg"/>
-            </header>
             <main className="main">
                 <h1>
                     Publish your podcasts <span>everywhere.</span>
@@ -29,6 +26,8 @@ function App() {
                     <img src="./assets/desktop/pocket-casts.svg"/>
                 </div>
             </main>
+            <img className="logo" alt="logo-pod" src="./assets/desktop/logo.svg"/>
+            <img className="dots" alt="dots pattern" src="./assets/desktop/bg-pattern-dots.svg"/>
         </div>
     )
 }
