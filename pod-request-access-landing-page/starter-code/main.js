@@ -18,15 +18,17 @@ function App() {
                     Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
                     Apple Podcasts, Google Podcasts, Pocket Casts and more!
                 </p>
-                <input 
-                    className="email"
-                    type="email"
-                    name="email"
-                    placeholder="Email address"
-                />
-                <button className="btn">
-                    Request access
-                </button>
+                <div className="form">
+                    <input 
+                        className="email"
+                        type="email"
+                        name="email"
+                        placeholder="Email address"
+                    />
+                    <button className="btn">
+                        Request access
+                    </button>
+                </div>
                 <div className="podcasts--apps">
                     <img src="./assets/desktop/spotify.svg"/>
                     <img src="./assets/desktop/apple-podcast.svg"/>

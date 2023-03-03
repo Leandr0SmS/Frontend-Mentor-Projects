@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;500&display=swap");
 * {
   box-sizing: border-box;
   font-family: "Chivo", sans-serif;
@@ -14,14 +14,14 @@ body {
 }
 
 .app {
-  border: 1px solid white;
-  width: 79.6875;
-  height: 40rem;
   background-image: url(../assets/desktop/image-host.jpg);
   background-repeat: no-repeat;
   background-size: 55.5rem 40rem;
   background-position: right;
   position: relative;
+  display: grid;
+  grid-template-columns: 45.1875rem 34.5rem;
+  grid-template-rows: 8.1875rem 31.8125rem;
 }
 
 .logo {
@@ -37,13 +37,12 @@ body {
 }
 
 .main {
+  grid-column: 1/2;
+  grid-row: 2/-1;
   background-color: #121725;
   width: 45.18rem;
-  height: 31.81rem;
   padding-top: 5.5rem;
   padding-right: 3.625rem;
-  margin-top: 8rem;
-  margin-right: 34.5rem;
 }
 .main h1 {
   text-transform: uppercase;
@@ -62,4 +61,54 @@ body {
   color: #C2CBE5;
   line-height: 1.75rem;
   width: 27.8125rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.form {
+  position: relative;
+  width: 26.6875rem;
+  margin-bottom: 4rem;
+}
+.form input {
+  border: none;
+  width: 100%;
+  background-color: #2C344B;
+  border-radius: 1.75rem;
+  padding: 1.25rem 2rem;
+}
+.form ::-moz-placeholder {
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+.form ::placeholder {
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+.form .btn {
+  position: absolute;
+  top: 0.3125rem;
+  right: 0.3125rem;
+  border: none;
+  background-color: #54E6AF;
+  color: #121725;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  padding: 0.5625rem 1.6875rem;
+  border-radius: 1.75rem;
+  top: 0.3125rem;
+}
+
+.podcasts--apps {
+  width: 33.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
