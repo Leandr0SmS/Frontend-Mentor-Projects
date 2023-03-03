@@ -46,13 +46,20 @@ body {
   margin-right: 34.5rem;
 }
 .main h1 {
-  font-weight: 400;
+  text-transform: uppercase;
+  font-weight: 300;
   font-size: 3.25rem;
   line-height: 3.875rem;
   color: #54E6AF;
+  margin: 0;
   margin-bottom: 1.5rem;
-  margin-top: 5.5rem;
 }
 .main h1 span {
   color: #FFFFFF;
+}
+.main p {
+  font-size: 1.125rem;
+  color: #C2CBE5;
+  line-height: 1.75rem;
+  width: 27.8125rem;
 }/*# sourceMappingURL=main.css.map */

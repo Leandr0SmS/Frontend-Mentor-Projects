@@ -45,16 +45,22 @@ body {
     padding-right: 3.625rem;
     margin-top: 8rem;
     margin-right: 34.5rem;
-
     h1 {
-        font-weight: 400;
+        text-transform: uppercase;
+        font-weight: 300;
         font-size: 3.25rem;
         line-height: 3.875rem;
         color: $green;
+        margin: 0;
         margin-bottom: 1.5rem;
-        margin-top: 5.5rem;
         span {
             color: $white;
         }
+    }
+    p {
+        font-size: 1.125rem;
+        color: $gray-light;
+        line-height: 1.75rem;
+        width: 27.8125rem;
     }
 }
