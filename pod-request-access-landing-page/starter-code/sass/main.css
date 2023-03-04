@@ -140,7 +140,54 @@ body {
     padding-right: 0;
   }
   .main h1 {
-    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .main p {
+    font-size: 1.125rem;
+    color: #C2CBE5;
+    line-height: 1.75rem;
+    width: 27.8125rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+}
+@media (max-width: 750px) {
+  body {
+    justify-content: right;
+    align-items: baseline;
+    background-image: url(../assets/mobile/image-host.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .app {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(18, 23, 37, 0.75);
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    position: static;
+    margin: 3.8rem 0;
+  }
+  .dots {
+    visibility: hidden;
+  }
+  .main {
+    width: 20.4375rem;
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main h1 {
     font-size: 3rem;
     line-height: 3.5rem;
     margin-bottom: 1.5rem;
