@@ -106,3 +106,18 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+@media (max-width: 1280px) {
+    body {
+        justify-content: right;
+        align-items: baseline;
+    }
+    .app {
+        background-image: url(../assets/tablet/image-host.jpg);
+        background-size: 30.6875rem 47.9375rem;
+        background-position: right;
+        display: grid;
+        grid-template-columns: 39.6875rem 5.875rem;
+        grid-template-rows: 16.125rem 31.8125rem;
+    }
+}
