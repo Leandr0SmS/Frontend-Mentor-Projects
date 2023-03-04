@@ -126,4 +126,12 @@ body {
     grid-template-columns: 39.6875rem 5.875rem;
     grid-template-rows: 16.125rem 31.8125rem;
   }
+  .logo {
+    top: 3.125rem;
+    left: 0;
+  }
+  .dots {
+    bottom: -14rem;
+    left: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
