@@ -150,12 +150,13 @@ body {
         justify-content: right;
         align-items: baseline;
         background-image: url(../assets/mobile/image-host.jpg);
+        background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
     .app {
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         background-color: rgb(18, 23, 37, 0.75);
         background-image: none;
         display: flex;
@@ -171,6 +172,7 @@ body {
         visibility: hidden;
     }
     .main {
+        position: relative;
         width: 20.4375rem;
         padding: 0;
         background-color: transparent;
@@ -200,5 +202,21 @@ body {
             max-height: 1.06rem;
             max-width: 4.56rem;
         }
+    }
+    .form {
+        position: absolute;
+        top: 18.125rem;
+        width: 20.4375rem;
+        input {
+            padding: 1rem 2rem;
+        }
+        .btn {
+            position: absolute;
+            top: 3.875rem;
+            right: 0;
+            padding: 0.628rem 0;
+            width: 20.4375rem;
+        }
+        margin-bottom: 4rem;
     }
 }
