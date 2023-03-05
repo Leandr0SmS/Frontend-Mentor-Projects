@@ -24,10 +24,26 @@ function App() {
                     </button>
                 </div>
                 <div className="podcasts--apps">
-                    <img src="./assets/desktop/spotify.svg"/>
-                    <img src="./assets/desktop/apple-podcast.svg"/>
-                    <img src="./assets/desktop/google-podcasts.svg"/>
-                    <img src="./assets/desktop/pocket-casts.svg"/>
+                    <img 
+                        src="./assets/desktop/spotify.svg"
+                        alt="spotify logo"
+                        className="podcasts--logos"
+                    />
+                    <img 
+                        src="./assets/desktop/apple-podcast.svg"
+                        alt="apple podcast logo"
+                        className="podcasts--logos"
+                    />
+                    <img 
+                        src="./assets/desktop/google-podcasts.svg"
+                        alt="google podcast logo"
+                        className="podcasts--logos"
+                    />
+                    <img 
+                        src="./assets/desktop/pocket-casts.svg"
+                        alt="pocket cast logo"
+                        className="podcasts--logos"
+                    />
                 </div>
             </main>
         </div>

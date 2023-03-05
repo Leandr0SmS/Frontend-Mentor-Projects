@@ -109,8 +109,7 @@ body {
 
 @media (max-width: 1280px) {
     body {
-        justify-content: right;
-        align-items: baseline;
+        display: block;
     }
     .app {
         background-image: url(../assets/tablet/image-host.jpg);
@@ -139,11 +138,9 @@ body {
         }
         p {
             font-size: 1.125rem;
-            color: $gray-light;
             line-height: 1.75rem;
             width: 27.8125rem;
             margin-bottom: 2.5rem;
-            font-weight: 300;
         }
     }
 }
@@ -163,7 +160,7 @@ body {
         background-image: none;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: baseline;
         align-items: center;
     }
     .logo {
@@ -182,17 +179,25 @@ body {
         justify-content: center;
         align-items: center;
         h1 {
-            font-size: 3rem;
-            line-height: 3.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.625rem;
+            line-height: 2.375rem;
+            margin-bottom: 1rem;
+            text-align: center;
         }
         p {
-            font-size: 1.125rem;
-            color: $gray-light;
-            line-height: 1.75rem;
-            width: 27.8125rem;
-            margin-bottom: 2.5rem;
-            font-weight: 300;
+            font-size: 0.9375rem;
+            line-height: 1.5625rem;
+            width: 20.4375rem;
+            margin-bottom: 2.0625rem;
+            text-align: center;
+        }
+    }
+    .podcasts--apps {
+        width: 19.6875rem;
+        gap: 0.5rem;
+        img {
+            object-fit: contain;
+            height: 1.06rem;
         }
     }
 }
