@@ -197,7 +197,8 @@ body {
         gap: 0.5rem;
         img {
             object-fit: contain;
-            height: 1.06rem;
+            max-height: 1.06rem;
+            max-width: 4.56rem;
         }
     }
 }
