@@ -1,21 +1,28 @@
 
 function App() {
 
-    const [formData, setFormData] = React.useState(
-        {
-            email: ""
-        }
-    );
+    const [formData, setFormData] = React.useState({email: ""});
+    const [errors, setErrors] = React.useState({error: ""});
 
     function handleChange(event) {
+        const {name, value} = event.target
         setFormData(prevFormData => {
-            console.log(event.target.value);
             return {
                 ...prevFormData,
-                [event.target.name]: event.target.value
+                [name]: value
             }
         })
     }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        const isEmail = (email) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
+        if (!isEmail(formData.email)) {
+            setErrors({error : "Oops! Please check your email"})
+        }
+    }
+
+    console.log(errors);
 
     return (
         <div className="app">
@@ -26,10 +33,13 @@ function App() {
                     Publish your podcasts <span>everywhere.</span>
                 </h1>
                 <p>
-                    Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
+                    Upload your audio to Pod with a single click. We'll then distribute your podcast to Spotify, 
                     Apple Podcasts, Google Podcasts, Pocket Casts and more!
                 </p>
-                <form className="form">
+                <form 
+                    className="form"
+                    onSubmit={handleSubmit}
+                >
                     <input 
                         className="email"
                         type="email"
