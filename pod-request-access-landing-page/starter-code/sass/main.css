@@ -76,6 +76,10 @@ body {
   background-color: #2C344B;
   border-radius: 1.75rem;
   padding: 1.25rem 2rem;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 400;
+  opacity: 0.5;
 }
 .form ::-moz-placeholder {
   color: #FFFFFF;
