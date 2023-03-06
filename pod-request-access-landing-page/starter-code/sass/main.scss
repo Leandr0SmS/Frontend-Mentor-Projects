@@ -95,7 +95,10 @@ body {
         line-height: 1.75rem;
         padding: 0.5625rem 1.6875rem;
         border-radius: 1.75rem;
-        top: 0.3125rem;
+        &:hover {
+            cursor: pointer;
+            background-color: #B3FFE2;
+        }
     }
     margin-bottom: 4rem;
 }

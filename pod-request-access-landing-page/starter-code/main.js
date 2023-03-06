@@ -19,7 +19,9 @@ function App() {
                         name="email"
                         placeholder="Email address"
                     />
-                    <button className="btn">
+                    <button 
+                        className="btn"
+                    >
                         Request access
                     </button>
                 </div>
