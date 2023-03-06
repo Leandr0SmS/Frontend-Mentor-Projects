@@ -9,6 +9,7 @@ function App() {
 
     function handleChange(event) {
         setFormData(prevFormData => {
+            console.log(event.target.value);
             return {
                 ...prevFormData,
                 [event.target.name]: event.target.value
@@ -33,6 +34,7 @@ function App() {
                         className="email"
                         type="email"
                         name="email"
+                        value={formData.email}
                         placeholder="Email address"
                         onChange={handleChange}
                     />
