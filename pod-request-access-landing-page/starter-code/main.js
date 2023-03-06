@@ -1,5 +1,21 @@
 
 function App() {
+
+    const [formData, setFormData] = React.useState(
+        {
+            email: ""
+        }
+    );
+
+    function handleChange(event) {
+        setFormData(prevFormData => {
+            return {
+                ...prevFormData,
+                [event.target.name]: event.target.value
+            }
+        })
+    }
+
     return (
         <div className="app">
             <img className="logo" alt="logo-pod" src="./assets/desktop/logo.svg"/>
@@ -12,19 +28,20 @@ function App() {
                     Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
                     Apple Podcasts, Google Podcasts, Pocket Casts and more!
                 </p>
-                <div className="form">
+                <form className="form">
                     <input 
                         className="email"
                         type="email"
                         name="email"
                         placeholder="Email address"
+                        onChange={handleChange}
                     />
                     <button 
                         className="btn"
                     >
                         Request access
                     </button>
-                </div>
+                </form>
                 <div className="podcasts--apps">
                     <img 
                         src="./assets/desktop/spotify.svg"
