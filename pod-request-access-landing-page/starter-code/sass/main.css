@@ -81,19 +81,22 @@ body {
   font-weight: 400;
   opacity: 0.5;
 }
+.form input:focus {
+  color: #FFFFFF;
+  opacity: 1;
+  outline: none;
+}
 .form ::-moz-placeholder {
   color: #FFFFFF;
   font-size: 0.875rem;
   line-height: 1.75rem;
   font-weight: 400;
-  opacity: 0.5;
 }
 .form ::placeholder {
   color: #FFFFFF;
   font-size: 0.875rem;
   line-height: 1.75rem;
   font-weight: 400;
-  opacity: 0.5;
 }
 .form .btn {
   position: absolute;
@@ -111,6 +114,15 @@ body {
 .form .btn:hover {
   cursor: pointer;
   background-color: #B3FFE2;
+}
+
+#error--msg {
+  margin: 0;
+  padding-top: 0.3rem;
+  padding-left: 1.5rem;
+  color: #FB3E3E;
+  font-weight: 300;
+  font-size: 0.75rem;
 }
 
 .podcasts--apps {
@@ -131,6 +143,7 @@ body {
     display: grid;
     grid-template-columns: 39.6875rem 5.875rem;
     grid-template-rows: 16.125rem 31.8125rem;
+    margin-left: 2.4375rem;
   }
   .logo {
     top: 3.125rem;
@@ -157,7 +170,7 @@ body {
     margin-bottom: 2.5rem;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 710px) {
   body {
     justify-content: right;
     align-items: baseline;
@@ -167,6 +180,7 @@ body {
     background-repeat: no-repeat;
   }
   .app {
+    margin: 0;
     height: 100vh;
     width: 100%;
     background-color: rgba(18, 23, 37, 0.75);
@@ -231,5 +245,8 @@ body {
     right: 0;
     padding: 0.628rem 0;
     width: 20.4375rem;
+  }
+  #error--msg {
+    margin-top: -5rem;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,8 +1,11 @@
 
 function App() {
 
-    const [formData, setFormData] = React.useState({email: ""});
-    const [errors, setErrors] = React.useState({error: ""});
+    const [formData, setFormData] = React.useState(
+        {
+            email: "",
+            error: false
+        });
 
     function handleChange(event) {
         const {name, value} = event.target
@@ -16,13 +19,24 @@ function App() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        const isEmail = (email) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
-        if (!isEmail(formData.email)) {
-            setErrors({error : "Oops! Please check your email"})
-        }
     }
 
-    console.log(errors);
+    function emailValidation() {
+        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        if ( re.test(formData.email) ) {
+            console.log(formData.email)
+        }
+        else {
+            setFormData(prevFormData => {
+                console.log(formData.email)
+                return{
+                    ...prevFormData,
+                    error: true
+                }
+            })
+        }
+    }
 
     return (
         <div className="app">
@@ -42,14 +56,16 @@ function App() {
                 >
                     <input 
                         className="email"
-                        type="email"
+                        type="text"
                         name="email"
                         value={formData.email}
                         placeholder="Email address"
                         onChange={handleChange}
                     />
+                    {formData.error && <p id="error--msg">Oops! Please check your email</p>}
                     <button 
                         className="btn"
+                        onClick={emailValidation}
                     >
                         Request access
                     </button>

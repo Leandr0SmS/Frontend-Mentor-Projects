@@ -79,13 +79,17 @@ body {
         font-size: 0.875rem;
         font-weight: 400;
         opacity: 0.5;
+        &:focus {
+            color: $white;
+            opacity: 1;
+            outline: none;
+        }
     }
     ::placeholder {
         color: $white;
         font-size: 0.875rem;
         line-height: 1.75rem;
         font-weight: 400;
-        opacity: 0.5;
     }
     .btn {
         position: absolute;
@@ -107,6 +111,15 @@ body {
     margin-bottom: 4rem;
 }
 
+#error--msg {
+    margin: 0;
+    padding-top: 0.3rem;
+    padding-left: 1.5rem;
+    color: #FB3E3E;
+    font-weight: 300;
+    font-size: 0.75rem;
+}
+
 .podcasts--apps {
     width: 33.5rem;
     display: flex;
@@ -125,6 +138,7 @@ body {
         display: grid;
         grid-template-columns: 39.6875rem 5.875rem;
         grid-template-rows: 16.125rem 31.8125rem;
+        margin-left: 2.4375rem;
     }
     .logo {
         top: 3.125rem;
@@ -152,7 +166,7 @@ body {
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 710px) {
     body {
         justify-content: right;
         align-items: baseline;
@@ -162,6 +176,7 @@ body {
         background-repeat: no-repeat;
     }
     .app {
+        margin: 0;
         height: 100vh;
         width: 100%;
         background-color: rgb(18, 23, 37, 0.75);
@@ -225,5 +240,8 @@ body {
             width: 20.4375rem;
         }
         margin-bottom: 4rem;
+    }
+    #error--msg {
+        margin-top: -5rem;
     }
 }
