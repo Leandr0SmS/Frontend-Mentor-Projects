@@ -24,7 +24,9 @@ This repository is for sharing my solutions of Frontend Mentor Challenges.
 
 7. [Interactive rating component](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/interactive-rating-component-main)
 
-8. [Pod request access landing page](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/pod-request-access-landing-page)
+8. [FAQ accordion card](https://leandr0sms.github.io/Frontend-Mentor-Projects/faq-accordion-card/index.html)
+
+9. [Pod request access landing page](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/pod-request-access-landing-page)
 
 <br>
 
