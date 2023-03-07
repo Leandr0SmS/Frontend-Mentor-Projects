@@ -1,4 +1,12 @@
 function App() {
+  const [formData, setFormData] = React.useState(
+    {
+      firstName: "",
+      lastname: "",
+      email: "",
+      password: ""
+    }
+  )
   return (
     <div className="app">
       <div className="Heading">
