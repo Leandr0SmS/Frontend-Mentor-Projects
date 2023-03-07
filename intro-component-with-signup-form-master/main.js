@@ -11,33 +11,32 @@ function App() {
   const [formData, setFormData] = React.useState(
     {
       firstName: "",
-      lastname: "",
+      lastName: "",
       email: "",
       password: ""
     }
   );
   function handleChange(event) {
     const {name, value} = event.target;
-    setFormData((prevFormState) =>({
+    setFormData(prevFormState => ({
       ...prevFormState,
       [name]: value
     }))
   }
   function formValidation() {
-    emailValidation(formData.email)
-      ? console.log("email ok")
-      : console.log("email not");
     formData.firstName
       ? console.log("name ok")
       : console.log("name not");
     formData.lastName
-    ? console.log("name ok")
-    : console.log("name not");
+      ? console.log("name ok")
+      : console.log("name not");
+    emailValidation(formData.email)
+      ? console.log("email ok")
+      : console.log("email not");
     formData.password
-    ? console.log("password ok")
-    : console.log("password not")
+      ? console.log("password ok")
+      : console.log("password not")
   }
-
   return (
     <div className="app">
       <div className="Heading">
@@ -89,6 +88,7 @@ function App() {
           />
           <button
             className="submit--btn"
+            onClick={formValidation}
           >
             Claim your free trial 
           </button>
