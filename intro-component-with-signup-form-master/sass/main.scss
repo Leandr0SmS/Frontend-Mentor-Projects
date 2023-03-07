@@ -1,7 +1,12 @@
+@import "./base";
+
 * {
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     margin: 0;
+    background-color: $red;
+    background-image: url(../images/bg-intro-desktop.png);
 }
