@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;500&display=swap");
+#ok--msg, #error--msg {
+  margin: 0;
+  padding-top: 0.3rem;
+  padding-left: 1.5rem;
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Chivo", sans-serif;
@@ -117,12 +125,11 @@ body {
 }
 
 #error--msg {
-  margin: 0;
-  padding-top: 0.3rem;
-  padding-left: 1.5rem;
   color: #FB3E3E;
-  font-weight: 300;
-  font-size: 0.75rem;
+}
+
+#ok--msg {
+  color: #FFFFFF;
 }
 
 .podcasts--apps {
@@ -246,7 +253,7 @@ body {
     padding: 0.628rem 0;
     width: 20.4375rem;
   }
-  #error--msg {
-    margin-top: -5rem;
+  #error--msg, #ok--msg {
+    margin-top: 4rem;
   }
 }/*# sourceMappingURL=main.css.map */

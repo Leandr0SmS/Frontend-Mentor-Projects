@@ -112,12 +112,13 @@ body {
 }
 
 #error--msg {
-    margin: 0;
-    padding-top: 0.3rem;
-    padding-left: 1.5rem;
+    @extend %status-msg;
     color: #FB3E3E;
-    font-weight: 300;
-    font-size: 0.75rem;
+}
+
+#ok--msg {
+    @extend %status-msg;
+    color: $white;
 }
 
 .podcasts--apps {
@@ -241,7 +242,7 @@ body {
         }
         margin-bottom: 4rem;
     }
-    #error--msg {
-        margin-top: -5rem;
+    #error--msg, #ok--msg {
+        margin-top: 4rem;
     }
 }

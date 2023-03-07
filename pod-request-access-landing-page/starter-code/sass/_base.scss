@@ -11,3 +11,10 @@ $gray-dark: #5A668A;
 $gray-light: #C2CBE5;
 $green: #54E6AF;
 
+%status-msg {
+    margin: 0;
+    padding-top: 0.3rem;
+    padding-left: 1.5rem;
+    font-weight: 300;
+    font-size: 0.75rem;
+}
