@@ -16,6 +16,14 @@ function App() {
       password: ""
     }
   );
+  const [validationData, setValidationData] = React.useState(
+    {
+      firstNameCheck: true,
+      lastNameCheck: true,
+      emailCheck: true,
+      passwordCheck: true
+    }
+  ); 
   function handleChange(event) {
     const {name, value} = event.target;
     setFormData(prevFormState => ({
@@ -26,17 +34,18 @@ function App() {
   function formValidation() {
     formData.firstName
       ? console.log("name ok")
-      : console.log("name not");
+      : setValidationData(prevSate => ({...prevSate, firstNameCheck: false}));
     formData.lastName
       ? console.log("name ok")
-      : console.log("name not");
+      : setValidationData(prevSate => ({...prevSate, lastNameCheck: false}));
     emailValidation(formData.email)
       ? console.log("email ok")
-      : console.log("email not");
+      : setValidationData(prevSate => ({...prevSate, emailCheck: false}));
     formData.password
       ? console.log("password ok")
-      : console.log("password not")
+      : setValidationData(prevSate => ({...prevSate, passwordCheck: false}));
   }
+  console.log(validationData)
   return (
     <div className="app">
       <div className="Heading">
