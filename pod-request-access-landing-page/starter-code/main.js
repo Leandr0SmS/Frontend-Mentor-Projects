@@ -4,7 +4,8 @@ function App() {
     const [formData, setFormData] = React.useState(
         {
             email: "",
-            error: false
+            error: false,
+            ok: false
         });
 
     function handleChange(event) {
@@ -12,7 +13,9 @@ function App() {
         setFormData(prevFormData => {
             return {
                 ...prevFormData,
-                [name]: value
+                [name]: value,
+                error: false,
+                ok: false
             }
         })
     }
@@ -23,13 +26,16 @@ function App() {
 
     function emailValidation() {
         let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
         if ( re.test(formData.email) ) {
-            console.log(formData.email)
+            setFormData(prevFormData => {
+                return{
+                    ...prevFormData,
+                    ok: true
+                }
+            })
         }
         else {
             setFormData(prevFormData => {
-                console.log(formData.email)
                 return{
                     ...prevFormData,
                     error: true
@@ -63,6 +69,7 @@ function App() {
                         onChange={handleChange}
                     />
                     {formData.error && <p id="error--msg">Oops! Please check your email</p>}
+                    {formData.ok && <p id="ok--msg">Thanks!</p>}
                     <button 
                         className="btn"
                         onClick={emailValidation}
