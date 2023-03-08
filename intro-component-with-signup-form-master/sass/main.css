@@ -8,4 +8,91 @@ body {
   margin: 0;
   background-color: hsl(0, 100%, 74%);
   background-image: url(../images/bg-intro-desktop.png);
+}
+
+.app {
+  margin: 0 12%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.heading {
+  max-width: 32.8125rem;
+}
+.heading h1 {
+  color: #FFFFFF;
+  font-size: 3.125rem;
+  line-height: 3.4375rem;
+}
+.heading p {
+  color: #FFFFFF;
+  line-height: 1.625rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 32.625rem;
+}
+.main .try-free {
+  background-color: hsl(248, 32%, 49%);
+  color: #FFFFFF;
+  text-align: center;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  border-radius: 0.625rem;
+}
+.main .try-free span {
+  font-weight: 700;
+}
+.main .form {
+  background: #FFFFFF;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  border-radius: 0.625rem;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main .form input {
+  border: 1px solid #DEDEDE;
+  border-radius: 5px;
+  width: 28.75rem;
+  padding: 1rem 2rem;
+  margin-bottom: 1.25rem;
+}
+.main .form ::-moz-placeholder {
+  color: hsl(249, 10%, 26%);
+  font-size: 0.875rem;
+}
+.main .form ::placeholder {
+  color: hsl(249, 10%, 26%);
+  font-size: 0.875rem;
+}
+.main .form .error {
+  color: hsl(0, 100%, 74%);
+}
+.main .form .submit--btn {
+  padding: 0.9375rem 8.4375rem;
+  color: #FFFFFF;
+  background-color: hsl(154, 59%, 51%);
+  border: none;
+  width: 28.75rem;
+  border-radius: 0.625rem;
+}
+.main .form .terms--services {
+  text-align: center;
+  font-size: 0.6875rem;
+  line-height: 1.625rem;
+  color: hsl(246, 25%, 77%);
+  font-weight: 500;
+}
+.main .form .terms--services a {
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
 }/*# sourceMappingURL=main.css.map */
