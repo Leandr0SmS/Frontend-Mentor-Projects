@@ -7,6 +7,7 @@ function handleSubmit(e) {
   e.preventDefault();
 }
 
+//App component
 function App() {
   const [formData, setFormData] = React.useState(
     {
@@ -18,10 +19,10 @@ function App() {
   );
   const [validationData, setValidationData] = React.useState(
     {
-      firstNameCheck: true,
-      lastNameCheck: true,
-      emailCheck: true,
-      passwordCheck: true
+      firstName: false,
+      lastName: false,
+      email: false,
+      password: false
     }
   ); 
   function handleChange(event) {
@@ -30,22 +31,30 @@ function App() {
       ...prevFormState,
       [name]: value
     }))
+    setValidationData(prevValidState => ({
+      ...prevValidState,
+      [name]: false
+    }))
   }
   function formValidation() {
-    formData.firstName
-      ? console.log("name ok")
-      : setValidationData(prevSate => ({...prevSate, firstNameCheck: false}));
-    formData.lastName
-      ? console.log("name ok")
-      : setValidationData(prevSate => ({...prevSate, lastNameCheck: false}));
+    //check email valid
     emailValidation(formData.email)
       ? console.log("email ok")
-      : setValidationData(prevSate => ({...prevSate, emailCheck: false}));
-    formData.password
-      ? console.log("password ok")
-      : setValidationData(prevSate => ({...prevSate, passwordCheck: false}));
+      : setValidationData(prevSate => ({...prevSate, email: false}));
+      // loop to active error for empty input
+      for (let prop in formData) {
+        console.log(formData[prop])
+      formData[prop] 
+        ? console.log(`${prop} sent`) 
+        : setValidationData(prevSate => (
+            {
+              ...prevSate, 
+              [prop]: true
+            })
+          );
+    }
   }
-  console.log(validationData)
+  console.log(validationData);
   return (
     <div className="app">
       <div className="Heading">
@@ -67,34 +76,46 @@ function App() {
           className="form"
           onSubmit={handleSubmit}
         >
-          <input
-            type="text"
-            placeholder="First Name"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            placeholder="Last Name"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            placeholder="Email Address"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            placeholder="Password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-          />
+          <div className="input--div">
+            <input
+              type="text"
+              placeholder="First Name"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+            />
+            <p className="error">First Name cannot be empty</p>
+          </div>
+          <div className="input--div">
+            <input
+              type="text"
+              placeholder="Last Name"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+            />
+            <p className="error">Last Name cannot be empty</p>
+          </div>
+          <div className="input--div">
+            <input
+              type="text"
+              placeholder="Email Address"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <p className="error">Looks like this is not an email</p>
+          </div>
+          <div className="input--div">
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+            />
+            <p className="error">Password cannot be empty</p>
+          </div>
           <button
             className="submit--btn"
             onClick={formValidation}
