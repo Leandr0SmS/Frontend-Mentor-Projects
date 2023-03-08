@@ -37,24 +37,29 @@ function App() {
     }))
   }
   function formValidation() {
-    //check email valid
-    emailValidation(formData.email)
-      ? console.log("email ok")
-      : setValidationData(prevSate => ({...prevSate, email: false}));
-      // loop to active error for empty input
-      for (let prop in formData) {
-        console.log(formData[prop])
-      formData[prop] 
-        ? console.log(`${prop} sent`) 
-        : setValidationData(prevSate => (
+    // loop to active error for empty input
+    for (let prop in formData) {
+      if (formData[prop]) {
+        if (prop === "email") {
+          //check email valid
+          emailValidation(formData.email)
+            ? console.log("email ok")
+            : setValidationData(prevSate => ({...prevSate, email: true}))
+        } 
+        console.log(`${prop} ok`)
+      } else {
+        setValidationData(prevSate => (
             {
               ...prevSate, 
               [prop]: true
-            })
-          );
+            }
+          )
+        );
+      }
     }
   }
   console.log(validationData);
+  console.log(emailValidation(formData.email))
   return (
     <div className="app">
       <div className="Heading">
@@ -84,7 +89,11 @@ function App() {
               value={formData.firstName}
               onChange={handleChange}
             />
-            <p className="error">First Name cannot be empty</p>
+            {
+              validationData.firstName
+              &&
+              <p className="error">First Name cannot be empty</p>
+            }
           </div>
           <div className="input--div">
             <input
@@ -94,7 +103,11 @@ function App() {
               value={formData.lastName}
               onChange={handleChange}
             />
-            <p className="error">Last Name cannot be empty</p>
+            {
+              validationData.lastName
+              &&
+              <p className="error">Last Name cannot be empty</p>
+            }
           </div>
           <div className="input--div">
             <input
@@ -104,7 +117,11 @@ function App() {
               value={formData.email}
               onChange={handleChange}
             />
-            <p className="error">Looks like this is not an email</p>
+            {
+              validationData.email
+              &&
+              <p className="error">Looks like this is not an email</p>
+            }
           </div>
           <div className="input--div">
             <input
@@ -114,7 +131,11 @@ function App() {
               value={formData.password}
               onChange={handleChange}
             />
-            <p className="error">Password cannot be empty</p>
+            {
+              validationData.password
+              &&
+              <p className="error">Password cannot be empty</p>
+            }
           </div>
           <button
             className="submit--btn"
