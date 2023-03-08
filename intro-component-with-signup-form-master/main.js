@@ -62,7 +62,7 @@ function App() {
   console.log(emailValidation(formData.email))
   return (
     <div className="app">
-      <div className="Heading">
+      <div className="heading">
         <h1>
           Learn to code by watching others
         </h1>
@@ -147,7 +147,9 @@ function App() {
           >
             Claim your free trial 
           </button>
-          <p> By clicking the button, you are agreeing to our<a>Terms and Services</a></p>
+          <p className="terms--services"> 
+            By clicking the button, you are agreeing to our<a>Terms and Services</a>
+          </p>
         </form>
       </div>
     </div>
