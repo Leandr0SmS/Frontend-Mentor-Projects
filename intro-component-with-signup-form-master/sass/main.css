@@ -115,6 +115,10 @@ body {
   width: 28.75rem;
   border-radius: 0.625rem;
 }
+.main .form .submit--btn:hover {
+  cursor: pointer;
+  background: #77E2B3;
+}
 .main .form .terms--services {
   text-align: center;
   font-size: 0.6875rem;
