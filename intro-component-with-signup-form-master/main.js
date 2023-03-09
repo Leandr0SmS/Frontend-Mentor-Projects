@@ -88,6 +88,7 @@ function App() {
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
+              className={validationData.firstName && "error--input"}
             />
             {validationData.firstName && <img src="./images/icon-error.svg"/>}
             {
@@ -103,6 +104,7 @@ function App() {
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
+              className={validationData.lastName && "error--input"}
             />
             {validationData.lastName && <img src="./images/icon-error.svg"/>}
             {
@@ -118,6 +120,7 @@ function App() {
               name="email"
               value={formData.email}
               onChange={handleChange}
+              className={validationData.email && "error--input"}
             />
             {validationData.email && <img src="./images/icon-error.svg"/>}
             {
@@ -133,6 +136,7 @@ function App() {
               name="password"
               value={formData.password}
               onChange={handleChange}
+              className={validationData.password && "error--input"}
             />
             {validationData.password && <img src="./images/icon-error.svg"/>}
             {

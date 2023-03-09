@@ -93,6 +93,9 @@ body {
   top: 0.9rem;
   right: 1.5rem;
 }
+.main .form .error--input {
+  border: 2px solid red;
+}
 .main .form .error {
   color: hsl(0, 100%, 74%);
   margin: 0;

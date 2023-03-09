@@ -86,6 +86,9 @@ body {
                 right: 1.5rem;
             }
         }
+        .error--input {
+            border: 2px solid red;
+        }
         .error {
             color: $red;
             margin: 0;
