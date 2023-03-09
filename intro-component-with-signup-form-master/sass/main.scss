@@ -61,7 +61,7 @@ body {
         flex-direction: column;
         input {
             border: 1px solid #DEDEDE;
-            border-radius: 5px;
+            border-radius: 0.3125rem;
             width: 28.75rem;
             padding: 1rem 2rem;
             font-weight: 600;
@@ -128,7 +128,7 @@ body {
         height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         gap: 4rem;
     }
@@ -145,14 +145,63 @@ body {
     }
 }
 @media (max-width: 560px) {
+    body {
+        background-image: url(../images/bg-intro-mobile.png);
+    }
     .app {
-        margin: 0;
+        margin: 5.5rem 1.5rem;
+        gap: 3rem;
     }
     .heading {
         max-width: 20.43rem;
         h1 {
             font-size: 1.75rem;
             line-height: 2.25rem;
+        }
+    }
+    .main {
+        gap: 1.5rem;
+        max-width: 20.43rem;
+        .try-free {
+            p {
+                width: 12.125rem;
+                text-align: center;
+                margin: 1rem auto;
+                font-size: 0.9375rem;
+                line-height: 1.625rem;
+            }
+        }
+        .form {
+            padding: 1.5rem;
+            input {
+                max-width: 17.4375rem;
+                padding: 1rem 2rem;
+            }
+            ::placeholder {
+                font-size: 0.875rem;
+            }
+            .input--div {
+                position: relative;
+                margin-bottom: 1.25rem;
+                img {
+                    position: absolute;
+                    top: 0.9rem;
+                    right: 1.5rem;
+                }
+            }
+            .error {
+                margin-top: 0.5rem;
+                font-size: 0.6875rem;
+                line-height: 1rem;     
+            }
+            .submit--btn {
+                padding: 0.9375rem 2.8125rem;
+                max-width: 17.4375rem;
+            }
+            .terms--services {
+                font-size: 0.6875rem;
+                line-height: 1.625rem;
+            }
         }
     }
 }

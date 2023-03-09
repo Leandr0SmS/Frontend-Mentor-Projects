@@ -62,7 +62,7 @@ body {
 }
 .main .form input {
   border: 1px solid #DEDEDE;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   width: 28.75rem;
   padding: 1rem 2rem;
   font-weight: 600;
@@ -133,7 +133,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 4rem;
   }
@@ -148,8 +148,12 @@ body {
   }
 }
 @media (max-width: 560px) {
+  body {
+    background-image: url(../images/bg-intro-mobile.png);
+  }
   .app {
-    margin: 0;
+    margin: 5.5rem 1.5rem;
+    gap: 3rem;
   }
   .heading {
     max-width: 20.43rem;
@@ -157,5 +161,51 @@ body {
   .heading h1 {
     font-size: 1.75rem;
     line-height: 2.25rem;
+  }
+  .main {
+    gap: 1.5rem;
+    max-width: 20.43rem;
+  }
+  .main .try-free p {
+    width: 12.125rem;
+    text-align: center;
+    margin: 1rem auto;
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+  }
+  .main .form {
+    padding: 1.5rem;
+  }
+  .main .form input {
+    max-width: 17.4375rem;
+    padding: 1rem 2rem;
+  }
+  .main .form ::-moz-placeholder {
+    font-size: 0.875rem;
+  }
+  .main .form ::placeholder {
+    font-size: 0.875rem;
+  }
+  .main .form .input--div {
+    position: relative;
+    margin-bottom: 1.25rem;
+  }
+  .main .form .input--div img {
+    position: absolute;
+    top: 0.9rem;
+    right: 1.5rem;
+  }
+  .main .form .error {
+    margin-top: 0.5rem;
+    font-size: 0.6875rem;
+    line-height: 1rem;
+  }
+  .main .form .submit--btn {
+    padding: 0.9375rem 2.8125rem;
+    max-width: 17.4375rem;
+  }
+  .main .form .terms--services {
+    font-size: 0.6875rem;
+    line-height: 1.625rem;
   }
 }/*# sourceMappingURL=main.css.map */
