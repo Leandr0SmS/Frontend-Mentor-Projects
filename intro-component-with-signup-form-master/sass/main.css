@@ -64,18 +64,44 @@ body {
   border-radius: 5px;
   width: 28.75rem;
   padding: 1rem 2rem;
-  margin-bottom: 1.25rem;
+  font-weight: 600;
+  color: hsl(249, 10%, 26%);
+}
+.main .form input:focus {
+  outline: none;
+  border: 1px solid hsl(248, 32%, 49%);
+  opacity: 1;
 }
 .main .form ::-moz-placeholder {
   color: hsl(249, 10%, 26%);
   font-size: 0.875rem;
+  font-weight: 600;
+  opacity: 0.75;
 }
 .main .form ::placeholder {
   color: hsl(249, 10%, 26%);
   font-size: 0.875rem;
+  font-weight: 600;
+  opacity: 0.75;
+}
+.main .form .input--div {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+.main .form .input--div img {
+  position: absolute;
+  top: 0.9rem;
+  right: 1.5rem;
 }
 .main .form .error {
   color: hsl(0, 100%, 74%);
+  margin: 0;
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  text-align: right;
 }
 .main .form .submit--btn {
   padding: 0.9375rem 8.4375rem;
