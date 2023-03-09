@@ -28,6 +28,8 @@ This repository is for sharing my solutions of Frontend Mentor Challenges.
 
 9. [Pod request access landing page](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/pod-request-access-landing-page)
 
+10. [Intro component with sign up form](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/intro-component-with-signup-form-master)
+
 <br>
 
 ## Author
