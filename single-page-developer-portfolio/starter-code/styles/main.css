@@ -4,5 +4,30 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 10.3125rem;
+  background-color: #151515;
+  font-family: "Space Grotesk", sans-serif;
+  background-image: url(../assets/images/image-profile-desktop.webp), url(../assets/images/pattern-circle.svg);
+  background-repeat: no-repeat, no-repeat;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h3 {
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.header .icon--div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.header .icon--div img {
+  width: 1.5375rem;
+  height: 1.5rem;
 }/*# sourceMappingURL=main.css.map */

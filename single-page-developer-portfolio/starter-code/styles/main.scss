@@ -5,5 +5,31 @@
 }
 
 body {
-    margin: 0;
+    margin: 0 10.3125rem;
+    background-color: $black;
+    font-family: 'Space Grotesk', sans-serif;
+    background-image: url(../assets/images/image-profile-desktop.webp),
+                      url(../assets/images/pattern-circle.svg);
+    background-repeat: no-repeat, no-repeat;        
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+        color: $white;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .icon--div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        img {
+            width: 1.5375rem;
+            height: 1.5rem;
+        }
+    }
 }

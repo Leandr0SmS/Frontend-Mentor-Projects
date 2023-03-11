@@ -72,8 +72,34 @@
 
   adamkeyes */
 
+function Header() {
+    return (
+        <header className="header">
+            <h3>adamkeyes</h3>
+            <div className="icon--div">
+                <a>
+                    <img src="./assets/images/icon-frontend-mentor.svg" alt="Frontend Mentor icon"/>
+                </a>
+                <a>
+                    <img src="./assets/images/icon-github.svg" alt="GitHub icon"/> 
+                </a>
+                <a>
+                    <img src="./assets/images/icon-linkedin.svg" alt="Linkedin icon"/>
+                </a>
+                <a>
+                    <img src="./assets/images/icon-twitter.svg" alt="Twitter icon"/>
+                </a>
+            </div>
+        </header>
+    )
+}
+
 function Page() {
-  return <h1>Hello</h1>
+  return (
+    <div className="page">
+        <Header />
+    </div>
+  )
 }
 
 //render
