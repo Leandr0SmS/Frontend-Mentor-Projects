@@ -4,14 +4,17 @@
 }
 
 body {
-  margin: 0 10.3125rem;
+  margin: 0;
   background-color: #151515;
   font-family: "Space Grotesk", sans-serif;
-  background-image: url(../assets/images/image-profile-desktop.webp), url(../assets/images/pattern-circle.svg);
-  background-repeat: no-repeat, no-repeat;
 }
 
 .header {
+  margin: 0 10.3125rem;
+  background-image: url(../assets/images/pattern-rings.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 445px 720px, auto, auto;
+  background-position: right, center, left bottom;
   display: flex;
   justify-content: space-between;
   align-items: center;

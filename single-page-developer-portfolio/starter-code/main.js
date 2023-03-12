@@ -75,20 +75,26 @@
 function Header() {
     return (
         <header className="header">
-            <h3>adamkeyes</h3>
-            <div className="icon--div">
-                <a>
-                    <img src="./assets/images/icon-frontend-mentor.svg" alt="Frontend Mentor icon"/>
-                </a>
-                <a>
-                    <img src="./assets/images/icon-github.svg" alt="GitHub icon"/> 
-                </a>
-                <a>
-                    <img src="./assets/images/icon-linkedin.svg" alt="Linkedin icon"/>
-                </a>
-                <a>
-                    <img src="./assets/images/icon-twitter.svg" alt="Twitter icon"/>
-                </a>
+            <div className="top--header">
+                <h3>adamkeyes</h3>
+                <div className="icon--div">
+                    <a>
+                        <img src="./assets/images/icon-frontend-mentor.svg" alt="Frontend Mentor icon"/>
+                    </a>
+                    <a>
+                        <img src="./assets/images/icon-github.svg" alt="GitHub icon"/> 
+                    </a>
+                    <a>
+                        <img src="./assets/images/icon-linkedin.svg" alt="Linkedin icon"/>
+                    </a>
+                    <a>
+                        <img src="./assets/images/icon-twitter.svg" alt="Twitter icon"/>
+                    </a>
+                </div>
+            </div>
+            <div className="profile--div">
+                <img className="profile-img" src="./assets/images/image-profile-desktop.webp"/>
+                <img className="circle" src="./assets/images/pattern-circle.svg"/>
             </div>
         </header>
     )
