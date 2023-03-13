@@ -93,8 +93,10 @@ function Header() {
                 </div>
             </div>
             <div className="profile--div">
-                <img className="profile-img" src="./assets/images/image-profile-desktop.webp"/>
-                <img className="circle" src="./assets/images/pattern-circle.svg"/>
+                <div className="profile--div--inner">
+                    <img className="profile-img" src="./assets/images/image-profile-desktop.webp"/>
+                    <img className="circle" src="./assets/images/pattern-circle.svg"/>
+                </div>
             </div>
         </header>
     )

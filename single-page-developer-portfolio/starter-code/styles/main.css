@@ -9,11 +9,16 @@ body {
   font-family: "Space Grotesk", sans-serif;
 }
 
-header .top--header {
+header {
   margin: 0 10.3125rem;
+  position: relative;
+}
+header .top--header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 header .top--header h3 {
   color: #FFFFFF;
@@ -25,8 +30,28 @@ header .top--header .icon--div {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  margin-right: 1.844rem;
 }
 header .top--header .icon--div img {
   width: 1.5375rem;
   height: 1.5rem;
+}
+header .profile--div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+header .profile--div .profile--div--inner {
+  position: relative;
+  width: 27.8125rem;
+}
+header .profile--div .profile--div--inner .profile-img {
+  height: 45rem;
+}
+header .profile--div .profile--div--inner .circle {
+  position: absolute;
+  bottom: 4.375rem;
+  left: -4rem;
+  width: 8.0625rem;
 }/*# sourceMappingURL=main.css.map */

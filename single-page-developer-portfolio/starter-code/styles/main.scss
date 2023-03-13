@@ -11,11 +11,14 @@ body {
 }
 
 header {
+    margin: 0 10.3125rem;
+    position: relative;
     .top--header {
-        margin: 0 10.3125rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        z-index: 2;
         h3 {
             color: $white;
             font-size: 2rem;
@@ -26,9 +29,29 @@ header {
             justify-content: center;
             align-items: center;
             gap: 2rem;
+            margin-right: 1.844rem;
             img {
                 width: 1.5375rem;
                 height: 1.5rem;
+            }
+        }
+    }
+    .profile--div {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        .profile--div--inner {
+            position: relative;
+            width: 27.8125rem;
+            .profile-img {
+                height: 45rem;
+            }
+            .circle {
+                position: absolute;
+                bottom: 4.375rem;
+                left: -4rem;
+                width: 8.0625rem;
             }
         }
     }
