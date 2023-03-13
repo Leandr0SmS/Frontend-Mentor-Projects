@@ -10,15 +10,19 @@ body {
 }
 
 header {
-  margin: 0 10.3125rem;
+  padding: 0 10.3125rem;
   position: relative;
+  height: 45rem;
+  background-image: url(../assets/images/pattern-rings.svg);
+  background-repeat: no-repeat;
+  background-position: -6.25rem 8.3125rem;
 }
 header .top--header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 header .top--header h3 {
   color: #FFFFFF;
@@ -39,8 +43,8 @@ header .top--header .icon--div img {
 header .profile--div {
   position: absolute;
   top: 0;
-  right: 0;
-  z-index: 1;
+  right: 10.3125rem;
+  z-index: 0;
 }
 header .profile--div .profile--div--inner {
   position: relative;
