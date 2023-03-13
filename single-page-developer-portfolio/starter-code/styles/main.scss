@@ -10,30 +10,26 @@ body {
     font-family: 'Space Grotesk', sans-serif;     
 }
 
-.header {
-    margin: 0 10.3125rem;
-    background-image: //url(../assets/images/image-profile-desktop.webp),
-    //url(../assets/images/pattern-circle.svg),
-    url(../assets/images/pattern-rings.svg);
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: 445px 720px, auto, auto;
-    background-position: right, center, left bottom;   
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    h3 {
-        color: $white;
-        font-size: 2rem;
-        font-weight: 700;
-    }
-    .icon--div {
+header {
+    .top--header {
+        margin: 0 10.3125rem;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 2rem;
-        img {
-            width: 1.5375rem;
-            height: 1.5rem;
+        h3 {
+            color: $white;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .icon--div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            img {
+                width: 1.5375rem;
+                height: 1.5rem;
+            }
         }
     }
 }

@@ -9,28 +9,24 @@ body {
   font-family: "Space Grotesk", sans-serif;
 }
 
-.header {
+header .top--header {
   margin: 0 10.3125rem;
-  background-image: url(../assets/images/pattern-rings.svg);
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: 445px 720px, auto, auto;
-  background-position: right, center, left bottom;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header h3 {
+header .top--header h3 {
   color: #FFFFFF;
   font-size: 2rem;
   font-weight: 700;
 }
-.header .icon--div {
+header .top--header .icon--div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
-.header .icon--div img {
+header .top--header .icon--div img {
   width: 1.5375rem;
   height: 1.5rem;
 }/*# sourceMappingURL=main.css.map */
