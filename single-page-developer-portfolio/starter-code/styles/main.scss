@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
@@ -97,10 +98,24 @@ body {
     border-top: 1px solid $white; 
     padding: 0 10.3125rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(21.5625rem, 23.125rem));
-    grid-template-rows: repeat(2, minmax(5.4375rem, 7.9375rem));
+    grid-template-columns: repeat(auto-fit, minmax(21.5625rem, 1fr));
+    grid-template-rows: repeat(2, auto-fit);
     .experience {
-        border: 2px solid white;
+        h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 3.5rem;
+            letter-spacing: -1.5px;
+        }
+        p {
+            font-size: 1.125rem;
+            line-height: 4.66rem;
+        }
     }
 }
 
+@media (max-width: 770px) {
+    .aside {
+        padding: 0 1.875rem;
+    }
+}

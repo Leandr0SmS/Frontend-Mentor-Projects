@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -97,9 +98,22 @@ body {
   border-top: 1px solid #FFFFFF;
   padding: 0 10.3125rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(21.5625rem, 23.125rem));
-  grid-template-rows: repeat(2, minmax(5.4375rem, 7.9375rem));
+  grid-template-columns: repeat(auto-fit, minmax(21.5625rem, 1fr));
+  grid-template-rows: repeat(2, auto-fit);
 }
-.aside .experience {
-  border: 2px solid white;
+.aside .experience h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  letter-spacing: -1.5px;
+}
+.aside .experience p {
+  font-size: 1.125rem;
+  line-height: 4.66rem;
+}
+
+@media (max-width: 770px) {
+  .aside {
+    padding: 0 1.875rem;
+  }
 }/*# sourceMappingURL=main.css.map */
