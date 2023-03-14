@@ -9,7 +9,7 @@ body {
   font-family: "Space Grotesk", sans-serif;
 }
 
-header {
+.header {
   padding: 0 10.3125rem;
   position: relative;
   height: 45rem;
@@ -17,45 +17,89 @@ header {
   background-repeat: no-repeat;
   background-position: -6.25rem 8.3125rem;
 }
-header .top--header {
+.header .top--header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   z-index: 3;
 }
-header .top--header h3 {
+.header .top--header h3 {
   color: #FFFFFF;
   font-size: 2rem;
   font-weight: 700;
 }
-header .top--header .icon--div {
+.header .top--header .icon--div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   margin-right: 1.844rem;
 }
-header .top--header .icon--div img {
+.header .top--header .icon--div img {
   width: 1.5375rem;
   height: 1.5rem;
 }
-header .profile--div {
+.header .profile--div {
   position: absolute;
   top: 0;
   right: 10.3125rem;
   z-index: 0;
 }
-header .profile--div .profile--div--inner {
+.header .profile--div .profile--div--inner {
   position: relative;
   width: 27.8125rem;
 }
-header .profile--div .profile--div--inner .profile-img {
+.header .profile--div .profile--div--inner .profile-img {
   height: 45rem;
 }
-header .profile--div .profile--div--inner .circle {
+.header .profile--div .profile--div--inner .circle {
   position: absolute;
   bottom: 4.375rem;
   left: -4rem;
   width: 8.0625rem;
+}
+.header .Heading--contact {
+  position: relative;
+  z-index: 2;
+}
+.header .Heading--contact .heading {
+  font-size: 5.5rem;
+  line-height: 5.5rem;
+  font-weight: 700;
+  letter-spacing: -0.15625rem;
+  color: #FFFFFF;
+}
+.header .Heading--contact .heading span {
+  text-decoration-line: underline;
+  text-decoration-color: #4EE1A0;
+  text-decoration-thickness: 0.5rem;
+}
+.header .Heading--contact .discription {
+  width: 27.8125rem;
+  color: #d9d9d9;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 4.125rem;
+}
+.header .Heading--contact .link-contactMe {
+  letter-spacing: 0.14285rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-bottom: 0.625rem;
+  border-bottom: 2px solid #4EE1A0;
+}
+
+.aside {
+  color: #FFFFFF;
+  border-top: 1px solid #FFFFFF;
+  padding: 0 10.3125rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21.5625rem, 23.125rem));
+  grid-template-rows: repeat(2, minmax(5.4375rem, 7.9375rem));
+}
+.aside .experience {
+  border: 2px solid white;
 }/*# sourceMappingURL=main.css.map */

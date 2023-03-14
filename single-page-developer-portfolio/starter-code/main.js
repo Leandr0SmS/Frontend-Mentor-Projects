@@ -1,30 +1,4 @@
-/*adamkeyes
-
-  Nice to meet you! I'm Adam Keyes.
-
-  Based in the UK, I'm a front-end developer passionate about 
-  building accessible web apps that users love.
-
-  Contact me
-
-  HTML
-  4 Years Experience
-
-  CSS
-  4 Years Experience
-
-  JavaScript
-  4 Years Experience
-
-  Accessibility
-  4 Years Experience
-
-  React
-  3 Years Experience
-
-  Sass
-  3 Years Experience
-
+/*
   Projects
 
   Contact me
@@ -98,7 +72,50 @@ function Header() {
                     <img className="circle" src="./assets/images/pattern-circle.svg"/>
                 </div>
             </div>
+            <div className="Heading--contact">
+                <h1 className="heading">
+                    Nice to meet you!<br/>I'm <span>Adam Keyes</span>.
+                </h1>
+                <p className="discription">
+                    Based in the UK, I'm a front-end developer passionate about 
+                    building accessible web apps that users love.
+                </p>
+                <a className="link-contactMe">
+                    Contact me
+                </a>
+            </div>
         </header>
+    )
+}
+
+function Experience() {
+    return (
+        <aside className="aside">
+            <div className="experience">
+                <h1>HTML</h1>
+                <p>4 Years Experience</p>
+            </div>
+            <div className="experience">
+                <h1>CSS</h1>
+                <p>4 Years Experience</p>
+            </div>
+            <div className="experience">
+                <h1>JavaScript</h1>
+                <p>4 Years Experience</p>
+            </div>
+            <div className="experience">
+                <h1>Accessibility</h1>
+                <p>4 Years Experience</p>
+            </div>
+            <div className="experience">
+                <h1>React</h1>
+                <p>3 Years Experience</p>
+            </div>
+            <div className="experience">
+                <h1>Sass</h1>
+                <p>3 Years Experience</p>
+            </div>
+        </aside>
     )
 }
 
@@ -106,6 +123,7 @@ function Page() {
   return (
     <div className="page">
         <Header />
+        <Experience />
     </div>
   )
 }

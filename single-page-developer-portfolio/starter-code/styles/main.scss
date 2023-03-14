@@ -10,7 +10,7 @@ body {
     font-family: 'Space Grotesk', sans-serif;     
 }
 
-header {
+.header {
     padding: 0 10.3125rem;
     position: relative;
     height: 45rem;
@@ -59,4 +59,48 @@ header {
             }
         }
     }
+    .Heading--contact {
+        position: relative;
+        z-index: 2;
+        .heading {
+            font-size: 5.5rem;
+            line-height: 5.5rem;
+            font-weight: 700;
+            letter-spacing: -0.15625rem;
+            color: $white;
+            span {
+                text-decoration-line: underline;
+                text-decoration-color: $green;
+                text-decoration-thickness: 0.5rem;
+            }
+        }
+        .discription {
+            width: 27.8125rem;
+            color: $ice;
+            font-weight: 500;
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            margin-bottom: 4.125rem;
+        }
+        .link-contactMe {
+            letter-spacing: 0.14285rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $white;
+            padding-bottom: 0.625rem;
+            border-bottom: 2px solid $green;
+        }
+    }
 }
+.aside {
+    color: $white;
+    border-top: 1px solid $white; 
+    padding: 0 10.3125rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(21.5625rem, 23.125rem));
+    grid-template-rows: repeat(2, minmax(5.4375rem, 7.9375rem));
+    .experience {
+        border: 2px solid white;
+    }
+}
+
