@@ -19,6 +19,7 @@ body {
   background-position: -6.25rem 8.3125rem;
 }
 .header .top--header {
+  padding-top: 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,6 +64,7 @@ body {
 .header .Heading--contact {
   position: relative;
   z-index: 2;
+  padding-top: 7.9375rem;
 }
 .header .Heading--contact .heading {
   font-size: 5.5rem;
@@ -70,6 +72,7 @@ body {
   font-weight: 700;
   letter-spacing: -0.15625rem;
   color: #FFFFFF;
+  margin-bottom: 2.75rem;
 }
 .header .Heading--contact .heading span {
   text-decoration-line: underline;
@@ -96,10 +99,13 @@ body {
 .aside {
   color: #FFFFFF;
   border-top: 1px solid #FFFFFF;
-  padding: 0 10.3125rem;
+  margin: 0 10.3125rem;
+  padding-top: 7.2rem;
+  margin-top: 6.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(21.5625rem, 1fr));
-  grid-template-rows: repeat(2, auto-fit);
+  grid-auto-rows: minmax(98px, 67px);
+  gap: 3.625rem 1.875rem;
 }
 .aside .experience h1 {
   font-weight: 700;
