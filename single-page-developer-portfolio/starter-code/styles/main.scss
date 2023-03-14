@@ -98,14 +98,21 @@ body {
 }
 .aside {
     color: $white;
-    border-top: 1px solid $white; 
-    margin: 0 10.3125rem;
-    padding-top: 7.2rem;
-    margin-top: 6.5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(21.5625rem, 1fr));
-    grid-auto-rows: minmax(98px, 67px);
-    gap: 3.625rem 1.875rem;
+    margin: 0;
+    background-image: url(../assets/images/pattern-rings.svg);
+    background-repeat: no-repeat;
+    background-position: 73rem 26rem;
+    padding: 6.5rem 0;
+    .grid--div {
+        border-top: 1px solid $white;
+        margin: 0 10.3125rem;
+        padding-top: 7.2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(21.5625rem, 1fr));
+        grid-auto-rows: minmax(98px, 67px);
+        gap: 3.625rem 1.875rem;
+    }
+
     .experience {
         h1 {
             font-weight: 700;

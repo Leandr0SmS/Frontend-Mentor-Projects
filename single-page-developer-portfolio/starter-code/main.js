@@ -91,29 +91,31 @@ function Header() {
 function Experience() {
     return (
         <aside className="aside">
-            <div className="experience">
-                <h1>HTML</h1>
-                <p>4 Years Experience</p>
-            </div>
-            <div className="experience">
-                <h1>CSS</h1>
-                <p>4 Years Experience</p>
-            </div>
-            <div className="experience">
-                <h1>JavaScript</h1>
-                <p>4 Years Experience</p>
-            </div>
-            <div className="experience">
-                <h1>Accessibility</h1>
-                <p>4 Years Experience</p>
-            </div>
-            <div className="experience">
-                <h1>React</h1>
-                <p>3 Years Experience</p>
-            </div>
-            <div className="experience">
-                <h1>Sass</h1>
-                <p>3 Years Experience</p>
+            <div className="grid--div">
+                <div className="experience">
+                    <h1>HTML</h1>
+                    <p>4 Years Experience</p>
+                </div>
+                <div className="experience">
+                    <h1>CSS</h1>
+                    <p>4 Years Experience</p>
+                </div>
+                <div className="experience">
+                    <h1>JavaScript</h1>
+                    <p>4 Years Experience</p>
+                </div>
+                <div className="experience">
+                    <h1>Accessibility</h1>
+                    <p>4 Years Experience</p>
+                </div>
+                <div className="experience">
+                    <h1>React</h1>
+                    <p>3 Years Experience</p>
+                </div>
+                <div className="experience">
+                    <h1>Sass</h1>
+                    <p>3 Years Experience</p>
+                </div>
             </div>
         </aside>
     )
