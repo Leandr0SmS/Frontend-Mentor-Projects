@@ -1,8 +1,4 @@
 /*
-  Projects
-
-  Contact me
-
   Design portfolio
   HTML CSS
   View project
@@ -46,7 +42,47 @@
 
   adamkeyes */
 
+const projectsData = [
+    {
+        title: "Design portfolio",
+        tools: ["HTML", "CSS"],
+        live: "",
+        code: ""
+    },
+    {
+        title: "E-learning landing page",
+        tools: ["HTML", "CSS"],
+        live: "",
+        code: ""
+    },
+    {
+        title: "Todo web app",
+        tools: ["HTML", "CSS", "JavaScript"],
+        live: "",
+        code: ""
+    },
+    {
+        title: "Entertainment web app",
+        tools: ["HTML", "CSS", "JavaScript"],
+        live: "",
+        code: ""
+    },
+    {
+        title: "Memory Game",
+        tools: ["HTML", "CSS", "JavaScript"],
+        live: "",
+        code: ""
+    },
+    {
+        title: "Art gallery showcase",
+        tools: ["HTML", "CSS", "JavaScript"],
+        live: "",
+        code: ""
+    }
+]
+
 function Header() {
+
     return (
         <header className="header">
             <div className="top--header">
@@ -118,6 +154,29 @@ function Experience() {
                 </div>
             </div>
         </aside>
+    )
+}
+
+function Projects(props) {
+
+    return (
+        <main className="projects">
+            <div className="projects--header">
+                <h1 className="projects--heading">
+                    Projects
+                </h1>
+                <a className="link-contactMe">
+                    Contact me
+                </a>
+            </div>
+            <div className="project--div">
+                <div className="project--img">
+                    <img/>
+                </div>                
+                <h3></h3>
+                <p></p>
+            </div>
+        </main>
     )
 }
 
