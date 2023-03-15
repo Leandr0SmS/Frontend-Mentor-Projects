@@ -87,27 +87,35 @@ const projectsData = [
     }
 ]
 
+function NameLinks(props) {
+    return (
+        <div className={props.class}>
+            <h3>adamkeyes</h3>
+            <div className="icon--div">
+                <a>
+                    <img src="./assets/images/icon-frontend-mentor.svg" alt="Frontend Mentor icon"/>
+                </a>
+                <a>
+                    <img src="./assets/images/icon-github.svg" alt="GitHub icon"/> 
+                </a>
+                <a>
+                    <img src="./assets/images/icon-linkedin.svg" alt="Linkedin icon"/>
+                </a>
+                <a>
+                    <img src="./assets/images/icon-twitter.svg" alt="Twitter icon"/>
+                </a>
+            </div>
+        </div>
+    )
+}
+
 function Header() {
 
     return (
         <header className="header">
-            <div className="top--header">
-                <h3>adamkeyes</h3>
-                <div className="icon--div">
-                    <a>
-                        <img src="./assets/images/icon-frontend-mentor.svg" alt="Frontend Mentor icon"/>
-                    </a>
-                    <a>
-                        <img src="./assets/images/icon-github.svg" alt="GitHub icon"/> 
-                    </a>
-                    <a>
-                        <img src="./assets/images/icon-linkedin.svg" alt="Linkedin icon"/>
-                    </a>
-                    <a>
-                        <img src="./assets/images/icon-twitter.svg" alt="Twitter icon"/>
-                    </a>
-                </div>
-            </div>
+            <NameLinks 
+                class="name--links top--header"
+            />
             <div className="profile--div">
                 <div className="profile--div--inner">
                     <img className="profile-img" src="./assets/images/image-profile-desktop.webp"/>
@@ -122,7 +130,7 @@ function Header() {
                     Based in the UK, I'm a front-end developer passionate about 
                     building accessible web apps that users love.
                 </p>
-                <a className="link-contactMe">
+                <a className="form--btn">
                     Contact me
                 </a>
             </div>
@@ -216,6 +224,47 @@ function Projects() {
     )
 }
 
+function Footer() {
+    return (
+        <footer className="footer">
+            <div className="contact--form--div">
+                <div className="contact--div">
+                    <h1>Contact</h1>
+                    <p>
+                        I would love to hear about your project and how I could help. 
+                        Please fill in the form, and I'll get back to you as soon as possible.
+                    </p>
+                </div>
+                <form className="form">
+                    <input 
+                        type="text"
+                        name="name"
+                        placeholder="name"
+                    ></input>
+                    <input 
+                        type="text"
+                        name="email"
+                        placeholder="email"
+                    ></input>
+                    <textarea
+                        type="text"
+                        name="message"
+                        placeholder="message"
+                    ></textarea>
+                    <button
+                        className="form--btn"
+                    >
+                        Send message
+                    </button>
+                </form>
+            </div>
+            <NameLinks 
+                class="name--links bottom--header"
+            />
+        </footer>
+    )
+}
+
 function Page() {
 
   return (
@@ -223,6 +272,7 @@ function Page() {
         <Header />
         <Experience />
         <Projects />
+        <Footer />
     </div>
   )
 }
