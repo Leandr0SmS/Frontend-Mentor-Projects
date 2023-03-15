@@ -168,21 +168,33 @@ function Projects() {
     function Project(props) {
         return (
             <div className="project--div">
-                <div className="project--img">
-                    <img src={`./assets/images/${props.img}`}/>
-                </div>                
+                <img
+                    className="project--img" 
+                    src={`./assets/images/${props.img}`}
+                    alt={props.title}
+                    />            
                 <h3>{props.title}</h3>
-                <p>{props.tools}</p>
+                <div className="tool--div">{props.tools}</div>
             </div>
         )
     }
 
     const projectsMap = projectsData.map((project) => {
+        
+        const ProjectToolsMap = project.tools.map((tool) => {
+            return (
+                <p key={tool}>
+                    {tool}
+                </p>
+            )
+        })
+        
         return (
             <Project 
+                key={project.title}
                 img={project.image}
                 title={project.title}
-                tools={project.tools}
+                tools={ProjectToolsMap}
             />
         )
     })
