@@ -46,36 +46,42 @@ const projectsData = [
     {
         title: "Design portfolio",
         tools: ["HTML", "CSS"],
+        image:  "thumbnail-project-1-large.webp",
         live: "",
         code: ""
     },
     {
         title: "E-learning landing page",
         tools: ["HTML", "CSS"],
+        image:  "thumbnail-project-2-large.webp",
         live: "",
         code: ""
     },
     {
         title: "Todo web app",
         tools: ["HTML", "CSS", "JavaScript"],
+        image:  "thumbnail-project-3-large.webp",
         live: "",
         code: ""
     },
     {
         title: "Entertainment web app",
         tools: ["HTML", "CSS", "JavaScript"],
+        image:  "thumbnail-project-4-large.webp",
         live: "",
         code: ""
     },
     {
         title: "Memory Game",
         tools: ["HTML", "CSS", "JavaScript"],
+        image:  "thumbnail-project-5-large.webp",
         live: "",
         code: ""
     },
     {
         title: "Art gallery showcase",
         tools: ["HTML", "CSS", "JavaScript"],
+        image:  "thumbnail-project-6-large.webp",
         live: "",
         code: ""
     }
@@ -157,10 +163,32 @@ function Experience() {
     )
 }
 
-function Projects(props) {
+function Projects() {
+
+    function Project(props) {
+        return (
+            <div className="project--div">
+                <div className="project--img">
+                    <img src={`./assets/images/${props.img}`}/>
+                </div>                
+                <h3>{props.title}</h3>
+                <p>{props.tools}</p>
+            </div>
+        )
+    }
+
+    const projectsMap = projectsData.map((project) => {
+        return (
+            <Project 
+                img={project.image}
+                title={project.title}
+                tools={project.tools}
+            />
+        )
+    })
 
     return (
-        <main className="projects">
+        <main className="main">
             <div className="projects--header">
                 <h1 className="projects--heading">
                     Projects
@@ -169,22 +197,20 @@ function Projects(props) {
                     Contact me
                 </a>
             </div>
-            <div className="project--div">
-                <div className="project--img">
-                    <img/>
-                </div>                
-                <h3></h3>
-                <p></p>
+            <div className="projects--grid">
+                {projectsMap}
             </div>
         </main>
     )
 }
 
 function Page() {
+
   return (
     <div className="page">
         <Header />
         <Experience />
+        <Projects />
     </div>
   )
 }
