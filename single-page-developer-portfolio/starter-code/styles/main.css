@@ -45,7 +45,7 @@ body {
 
 .page {
   display: grid;
-  grid-template-columns: 100vw;
+  grid-template-columns: minmax(max-content, 150rem);
   justify-content: center;
 }
 
@@ -152,9 +152,10 @@ body {
 }
 .main .projects--grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(33.75rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(33.75rem, 37.5%));
   grid-template-rows: repeat(auto-fill, 1fr);
-  gap: 4.3125rem 1.875rem;
+  gap: 4.3125rem 2.083%;
+  justify-content: center;
 }
 .main .projects--grid .project--div .project--img {
   width: 100%;
