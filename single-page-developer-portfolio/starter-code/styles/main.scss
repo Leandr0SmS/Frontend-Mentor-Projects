@@ -151,9 +151,12 @@ body {
         gap: 4.3125rem 1.875rem;
         .project--div {
             .project--img {
-                width: 100%;//33.75rem;
-                //height: //18.75rem;
+                width: 100%;
+                height: auto;
                 object-fit: cover;
+                &:hover {
+                    opacity: 0.25;
+                }
             }
             h3 {
                 font-size:1.5rem;

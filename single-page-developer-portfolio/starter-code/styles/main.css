@@ -152,8 +152,12 @@ body {
 }
 .main .projects--grid .project--div .project--img {
   width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.main .projects--grid .project--div .project--img:hover {
+  opacity: 0.25;
 }
 .main .projects--grid .project--div h3 {
   font-size: 1.5rem;

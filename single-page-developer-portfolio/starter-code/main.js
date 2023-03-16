@@ -1,46 +1,4 @@
-/*
-  Design portfolio
-  HTML CSS
-  View project
-  View code
 
-  E-learning landing page
-  HTML CSS
-  View project
-  View code
-
-  Todo web app
-  HTML CSS JavaScript
-  View project
-  View code
-
-  Entertainment web app
-  HTML CSS JavaScript
-  View project
-  View code
-
-  Memory Game
-  HTML CSS JavaScript
-  View project
-  View code
-
-  Art gallery showcase
-  HTML CSS JavaScript
-  View project
-  View code
-
-  Contact
-
-  I would love to hear about your project and how I could help. Please 
-  fill in the form, and I’ll get back to you as soon as possible.
-
-  Name
-  Email
-  Message
-
-  Send message
-
-  adamkeyes */
 
 const projectsData = [
     {
@@ -110,7 +68,6 @@ function NameLinks(props) {
 }
 
 function Header() {
-
     return (
         <header className="header">
             <NameLinks 
@@ -173,6 +130,16 @@ function Experience() {
 
 function Projects() {
 
+
+    function View(props) {
+        return (
+            <div className="view--div">
+                <a href={props.live}>View project</a>
+                <a href={props.code}>View code</a>
+            </div>
+        )
+    }
+
     function Project(props) {
         return (
             <div className="project--div">
@@ -183,6 +150,10 @@ function Projects() {
                     />            
                 <h3>{props.title}</h3>
                 <div className="tool--div">{props.tools}</div>
+                <View 
+                    live={props.live}
+                    code={props.code}
+                />
             </div>
         )
     }
@@ -203,6 +174,8 @@ function Projects() {
                 img={project.image}
                 title={project.title}
                 tools={ProjectToolsMap}
+                live={project.live}
+                code={project.code}
             />
         )
     })
