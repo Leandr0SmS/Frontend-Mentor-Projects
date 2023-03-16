@@ -43,6 +43,12 @@ body {
     }
 }
 
+.page {
+    display: grid;
+    grid-template-columns: 100vw;
+    justify-content: center;
+}
+
 .header {
     padding: 0 10.3125rem;
     position: relative;
