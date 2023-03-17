@@ -69,7 +69,7 @@ body {
   position: relative;
   width: 27.8125rem;
 }
-.header .profile--div .profile--div--inner .profile-img {
+.header .profile--div .profile--div--inner .img-div .profile-img {
   height: 45rem;
 }
 .header .profile--div .profile--div--inner .circle {
@@ -322,7 +322,7 @@ body {
     position: relative;
     width: 41.92%;
   }
-  .header .profile--div .profile--div--inner .profile-img {
+  .header .profile--div .profile--div--inner .img-div .profile-img {
     height: 37.5rem;
   }
   .header .profile--div .profile--div--inner .circle {
@@ -369,6 +369,29 @@ body {
   }
 }
 @media (max-width: 750px) {
+  .name--links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+  }
+  .name--links h3 {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .name--links .icon--div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 1.844rem;
+  }
+  .name--links .icon--div img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
   .header {
     background-image: url(../assets/images/pattern-rings.svg);
     background-repeat: no-repeat;
@@ -377,18 +400,26 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
   .header .top--header {
+    position: absolute;
+    top: 0;
+    width: 46.4%;
     padding-top: 1.25rem;
   }
   .header .profile--div {
     position: static;
-    width: 100%;
+    width: 46.4%;
   }
   .header .profile--div .profile--div--inner {
     position: relative;
+    width: 100%;
   }
-  .header .profile--div .profile--div--inner .profile-img {
+  .header .profile--div .profile--div--inner .img-div {
+    width: 100%;
+  }
+  .header .profile--div .profile--div--inner .img-div .profile-img {
     width: 100%;
   }
   .header .profile--div .profile--div--inner .circle {

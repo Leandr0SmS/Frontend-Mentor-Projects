@@ -66,8 +66,10 @@ body {
         .profile--div--inner {
             position: relative;
             width: 27.8125rem;
-            .profile-img {
-                height: 45rem;
+            .img-div {
+                .profile-img {
+                    height: 45rem;
+                }
             }
             .circle {
                 position: absolute;
@@ -317,8 +319,10 @@ body {
             .profile--div--inner {
                 position: relative;
                 width: 41.92%;
-                .profile-img {
+                .img-div {
+                    .profile-img {
                     height: 37.5rem;
+                    }
                 }
                 .circle {
                     bottom: 0;
@@ -377,6 +381,29 @@ body {
 
 //header adjust
 @media (max-width: 750px) {
+    .name--links {
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+        h3 {
+            color: $white;
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+        .icon--div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-right: 1.844rem;
+            img {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+    }
     .header {
         background-image: url(../assets/images/pattern-rings.svg);
         background-repeat: no-repeat;
@@ -385,16 +412,24 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
         .top--header {
+            position: absolute;
+            top: 0;
+            width: 46.4%;
             padding-top: 1.25rem;
         }
         .profile--div {
             position: static;
-            width: 100%;
+            width: 46.4%;
             .profile--div--inner {
                 position: relative;
-                .profile-img {
+                width: 100%;
+                .img-div {
                     width: 100%;
+                    .profile-img {
+                    width: 100%;
+                    }
                 }
                 .circle {
                     position: absolute;

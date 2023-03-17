@@ -75,7 +75,7 @@ function Header() {
             />
             <div className="profile--div">
                 <div className="profile--div--inner">
-                    <picture className="profile-img-div">
+                    <picture className="img-div">
                         <source 
                             media="(max-width:840px)" 
                             srcset="./assets/images/image-profile-mobile.webp"
