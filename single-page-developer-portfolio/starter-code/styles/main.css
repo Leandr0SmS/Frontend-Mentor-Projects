@@ -50,7 +50,7 @@ body {
 }
 
 .header {
-  padding: 0 10.3125rem;
+  padding: 0 11.45%;
   position: relative;
   height: 45rem;
   background-image: url(../assets/images/pattern-rings.svg);
@@ -121,7 +121,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-auto-rows: minmax(6.125rem, 4.1875px);
-  gap: 3.625rem 1.875rem;
+  gap: 3.625em 1.875em;
 }
 .aside .experience h1 {
   font-weight: 700;
@@ -135,7 +135,7 @@ body {
 }
 
 .main {
-  padding: 0 10.3125rem;
+  padding: 0 11.45%;
   margin-bottom: 8.6875rem;
 }
 .main .projects--header {
@@ -186,7 +186,7 @@ body {
 }
 
 .footer {
-  padding: 0 10.3125rem;
+  padding: 0 11.45%;
   background-color: #242424;
   height: 100%;
   background-image: url(../assets/images/pattern-rings.svg);
@@ -266,6 +266,108 @@ body {
   padding: 2.93rem 0 5.75rem;
 }
 
+@media (max-width: 1435px) {
+  .header {
+    padding: 0 6.66%;
+  }
+  .aside .grid--div {
+    margin: 0 6.66%;
+  }
+  .main {
+    padding: 0 6.66%;
+  }
+  .footer {
+    padding: 0 6.66%;
+  }
+}
+@media (max-width: 1335px) {
+  .header {
+    padding: 0 4.44%;
+  }
+  .aside .grid--div {
+    margin: 0 4.44%;
+  }
+  .main {
+    padding: 0 4.44%;
+  }
+  .footer {
+    padding: 0 4.44%;
+  }
+}
+@media (max-width: 1235px) {
+  .header {
+    padding: 0 4.44%;
+  }
+  .aside .grid--div {
+    margin: 0 4.44%;
+  }
+  .main {
+    padding: 0 4.44%;
+  }
+  .footer {
+    padding: 0 4.44%;
+  }
+}
+@media (max-width: 1211px) {
+  body {
+    overflow-x: hidden;
+  }
+  .header {
+    padding: 0 0 0 1.875rem;
+  }
+  .header .profile--div {
+    right: 0;
+  }
+  .header .profile--div .profile--div--inner {
+    position: relative;
+    width: 41.92%;
+  }
+  .header .profile--div .profile--div--inner .profile-img {
+    height: 37.5rem;
+  }
+  .header .profile--div .profile--div--inner .circle {
+    bottom: 0;
+    left: 190%;
+  }
+  .header .Heading--contact {
+    width: 60%;
+  }
+  .header .heading {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+    font-weight: 700;
+    letter-spacing: -0.15625rem;
+    color: #FFFFFF;
+    margin-bottom: 2.75rem;
+  }
+  .header .heading span {
+    text-decoration-line: underline;
+    text-decoration-color: #4EE1A0;
+    text-decoration-thickness: 0.5rem;
+  }
+  .aside .grid--div {
+    margin: 0 1.875rem;
+  }
+  .main {
+    padding: 0 1.875rem;
+  }
+  .footer {
+    padding: 0 1.875rem;
+  }
+}
+@media (max-width: 1160px) {
+  .aside {
+    padding: 6.5rem 1.875rem 9rem;
+    padding-top: 7.2rem;
+  }
+  .aside .grid--div {
+    margin: 0;
+    gap: 3.25em 0.4375em;
+  }
+  .aside .experience {
+    width: 345px;
+  }
+}
 @media (max-width: 880px) {
   .aside {
     padding: 0 1.875rem;
