@@ -14,7 +14,7 @@ function Header () {
 function Image () {
     return (
         <picture className="hero--image-div">
-            <source media="(max-width:840px)" srcset=".\images\hero-mobile.jpg" />
+            <source media="(max-width:840px)" srcSet=".\images\hero-mobile.jpg" />
             <img className="hero--image" src=".\images\hero-desktop.jpg" alt="model of Base Apparel" />
         </picture>
     )
@@ -37,7 +37,6 @@ function Form() {
                 type="submit"
                 name="submit"
                 value="Submit"
-                onclick="ValidateEmail(document.form1.text1)"
                 >
                 <img 
                     className="form--button--icon"
