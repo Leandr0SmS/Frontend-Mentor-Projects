@@ -219,7 +219,7 @@ body {
         .form {
             display: flex;
             flex-direction: column;
-            align-items: end;
+            align-items: flex-end;
             width: 27.8125rem;
             input, textarea {
                 background-color: $gray;
@@ -309,9 +309,6 @@ body {
     }
 }
 @media (max-width: 1211px) {
-    //body {
-    //    overflow-x: hidden;
-    //}
     .header {
         padding: 0 0 0 1.875rem;
         .profile--div {
@@ -329,19 +326,11 @@ body {
             }
         }
         .Heading--contact {
-            width: 60%;
-        }
-        .heading {
-            font-size: 5.5rem;
-            line-height: 5.5rem;
-            font-weight: 700;
-            letter-spacing: -0.15625rem;
-            color: $white;
-            margin-bottom: 2.75rem;
-            span {
-                text-decoration-line: underline;
-                text-decoration-color: $green;
-                text-decoration-thickness: 0.5rem;
+            .heading {
+                width: 57.94%;
+            }
+            .discription {
+                width: 57.94%;
             }
         }
     }
