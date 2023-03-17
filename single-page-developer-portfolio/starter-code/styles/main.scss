@@ -44,9 +44,10 @@ body {
 }
 
 .page {
-    display: grid;
-    grid-template-columns: minmax(max-content, 150rem);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .header {
@@ -83,6 +84,7 @@ body {
         z-index: 2;
         padding-top: 7.9375rem;
         .heading {
+            width: 72.04%;
             font-size: 5.5rem;
             line-height: 5.5rem;
             font-weight: 700;
@@ -96,7 +98,7 @@ body {
             }
         }
         .discription {
-            width: 27.8125rem;
+            width: 30.9%;
             color: $ice;
             font-weight: 500;
             font-size: 1.125rem;
@@ -307,9 +309,9 @@ body {
     }
 }
 @media (max-width: 1211px) {
-    body {
-        overflow-x: hidden;
-    }
+    //body {
+    //    overflow-x: hidden;
+    //}
     .header {
         padding: 0 0 0 1.875rem;
         .profile--div {

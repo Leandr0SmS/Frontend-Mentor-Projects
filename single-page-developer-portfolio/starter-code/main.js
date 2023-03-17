@@ -81,7 +81,7 @@ function Header() {
             </div>
             <div className="Heading--contact">
                 <h1 className="heading">
-                    Nice to meet you!<br/>I'm <span>Adam Keyes</span>.
+                    Nice to meet you! I'm <span>Adam Keyes</span>.
                 </h1>
                 <p className="discription">
                     Based in the UK, I'm a front-end developer passionate about 
@@ -243,9 +243,9 @@ function Page() {
   return (
     <div className="page">
         <Header />
-        <Experience />
-        <Projects />
-        <Footer />
+        {/*<Experience />*/}
+        {/*<Projects />*/}
+        {/*<Footer />*/}
     </div>
   )
 }
