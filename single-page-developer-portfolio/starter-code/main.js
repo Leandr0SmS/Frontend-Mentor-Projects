@@ -75,8 +75,23 @@ function Header() {
             />
             <div className="profile--div">
                 <div className="profile--div--inner">
-                    <img className="profile-img" src="./assets/images/image-profile-desktop.webp"/>
-                    <img className="circle" src="./assets/images/pattern-circle.svg"/>
+                    <picture className="profile-img-div">
+                        <source 
+                            media="(max-width:840px)" 
+                            srcset="./assets/images/image-profile-mobile.webp"
+                            alt="Hero face photo"
+                        />
+                        <img 
+                            className="profile-img" 
+                            src="./assets/images/image-profile-desktop.webp"
+                            alt="Hero face photo"
+                        />
+                    </picture>
+                    <img 
+                        className="circle" 
+                        src="./assets/images/pattern-circle.svg"
+                        alt="Pattern of circles. One above another"
+                    />
                 </div>
             </div>
             <div className="Heading--contact">

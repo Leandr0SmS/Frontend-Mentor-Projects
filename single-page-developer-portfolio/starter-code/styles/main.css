@@ -51,9 +51,7 @@ body {
 }
 
 .header {
-  padding: 0 11.45%;
   position: relative;
-  height: 45rem;
   background-image: url(../assets/images/pattern-rings.svg);
   background-repeat: no-repeat;
   background-position: -6.25rem 8.3125rem;
@@ -314,6 +312,9 @@ body {
   .header {
     padding: 0 0 0 1.875rem;
   }
+  .header .top--header {
+    padding-top: 1.81rem;
+  }
   .header .profile--div {
     right: 0;
   }
@@ -365,5 +366,62 @@ body {
   .aside .grid--div {
     margin: 0;
     gap: 0;
+  }
+}
+@media (max-width: 750px) {
+  .header {
+    background-image: url(../assets/images/pattern-rings.svg);
+    background-repeat: no-repeat;
+    background-position: -6.25rem 8.3125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .top--header {
+    padding-top: 1.25rem;
+  }
+  .header .profile--div {
+    position: static;
+    width: 100%;
+  }
+  .header .profile--div .profile--div--inner {
+    position: relative;
+  }
+  .header .profile--div .profile--div--inner .profile-img {
+    width: 100%;
+  }
+  .header .profile--div .profile--div--inner .circle {
+    position: absolute;
+    bottom: 4.375rem;
+    left: -4rem;
+    width: 8.0625rem;
+  }
+  .header .Heading--contact {
+    position: relative;
+    z-index: 2;
+    padding-top: 7.9375rem;
+  }
+  .header .Heading--contact .heading {
+    width: 72.04%;
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+    font-weight: 700;
+    letter-spacing: -0.15625rem;
+    color: #FFFFFF;
+    margin-bottom: 2.75rem;
+  }
+  .header .Heading--contact .heading span {
+    text-decoration-line: underline;
+    text-decoration-color: #4EE1A0;
+    text-decoration-thickness: 0.5rem;
+  }
+  .header .Heading--contact .discription {
+    width: 30.9%;
+    color: #d9d9d9;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 4.125rem;
   }
 }/*# sourceMappingURL=main.css.map */
