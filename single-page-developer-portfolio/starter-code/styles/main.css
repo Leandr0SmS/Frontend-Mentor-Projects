@@ -56,6 +56,7 @@ body {
   background-image: url(../assets/images/pattern-rings.svg);
   background-repeat: no-repeat;
   background-position: -6.25rem 8.3125rem;
+  overflow: hidden;
 }
 .header .top--header {
   padding-top: 2.5rem;
@@ -68,10 +69,12 @@ body {
 }
 .header .profile--div .profile--div--inner {
   position: relative;
-  width: 27.8125rem;
+  width: 30.97vw;
 }
 .header .profile--div .profile--div--inner .img-div .profile-img {
-  height: 45rem;
+  height: 100ex;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .header .profile--div .profile--div--inner .circle {
   position: absolute;
@@ -279,10 +282,7 @@ body {
   }
   .header .profile--div .profile--div--inner {
     position: relative;
-    width: 41.92%;
-  }
-  .header .profile--div .profile--div--inner .img-div .profile-img {
-    height: 37.5rem;
+    width: 41.92vw;
   }
   .header .profile--div .profile--div--inner .circle {
     bottom: 0;
