@@ -394,6 +394,7 @@ body {
     height: 1.2rem;
   }
   .header {
+    padding: 0 1rem;
     background-image: url(../assets/images/pattern-rings.svg), url(../assets/images/pattern-circle.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: -20rem 8.3125rem, 125% 18%;
@@ -429,11 +430,10 @@ body {
     visibility: hidden;
   }
   .header .Heading--contact {
-    position: relative;
     padding-top: 2.5rem;
   }
   .header .Heading--contact .heading {
-    width: 72.04%;
+    width: 100%;
     font-size: 5.5rem;
     line-height: 5.5rem;
     font-weight: 700;

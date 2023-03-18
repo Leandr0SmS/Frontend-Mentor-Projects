@@ -406,6 +406,7 @@ body {
         }
     }
     .header {
+        padding: 0 1rem;
         background-image: url(../assets/images/pattern-rings.svg),
                           url(../assets/images/pattern-circle.svg);
         background-repeat: no-repeat, no-repeat;
@@ -441,10 +442,9 @@ body {
             }
         }
         .Heading--contact {
-            position: relative;
             padding-top: 2.5rem;
             .heading {
-                width: 72.04%;
+                width: 100%;
                 font-size: 5.5rem;
                 line-height: 5.5rem;
                 font-weight: 700;
