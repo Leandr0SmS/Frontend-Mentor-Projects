@@ -410,7 +410,7 @@ body {
         background-image: url(../assets/images/pattern-rings.svg),
                           url(../assets/images/pattern-circle.svg);
         background-repeat: no-repeat, no-repeat;
-        background-position: -20rem 8.3125rem, 125% 18%;
+        background-position: -20rem 8.3125rem, 125% 44%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -437,32 +437,35 @@ body {
                     }
                 }
                 .circle {
-                    visibility: hidden;
+                    position: absolute;
+                    bottom: 0rem;
+                    left: 0rem;
+                    width: 8.0625rem;
+                    opacity: 0;
                 }
             }
         }
         .Heading--contact {
             padding-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             .heading {
+                text-align: center;
                 width: 100%;
-                font-size: 5.5rem;
-                line-height: 5.5rem;
-                font-weight: 700;
-                letter-spacing: -0.15625rem;
-                color: $white;
-                margin-bottom: 2.75rem;
+                font-size: 2.5rem;
+                line-height: 2.5rem;
+                margin-bottom: 2rem;
                 span {
-                    text-decoration-line: underline;
-                    text-decoration-color: $green;
-                    text-decoration-thickness: 0.5rem;
+                    text-decoration-thickness: 0.3rem;
                 }
             }
             .discription {
-                width: 30.9%;
-                color: $ice;
-                font-weight: 500;
-                font-size: 1.125rem;
-                line-height: 1.75rem;
+                text-align: center;
+                width: 100%;
+                font-size: 1rem;
+                line-height: 1.625rem;
                 margin-bottom: 4.125rem;
             }
         }
