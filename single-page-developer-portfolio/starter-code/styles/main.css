@@ -394,9 +394,9 @@ body {
     height: 1.2rem;
   }
   .header {
-    background-image: url(../assets/images/pattern-rings.svg);
-    background-repeat: no-repeat;
-    background-position: -6.25rem 8.3125rem;
+    background-image: url(../assets/images/pattern-rings.svg), url(../assets/images/pattern-circle.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: -20rem 8.3125rem, 125% 18%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -412,6 +412,7 @@ body {
   .header .profile--div {
     position: static;
     width: 46.4%;
+    min-width: 10.875rem;
   }
   .header .profile--div .profile--div--inner {
     position: relative;
@@ -422,17 +423,14 @@ body {
   }
   .header .profile--div .profile--div--inner .img-div .profile-img {
     width: 100%;
+    height: auto;
   }
   .header .profile--div .profile--div--inner .circle {
-    position: absolute;
-    bottom: 4.375rem;
-    left: -4rem;
-    width: 8.0625rem;
+    visibility: hidden;
   }
   .header .Heading--contact {
     position: relative;
-    z-index: 2;
-    padding-top: 7.9375rem;
+    padding-top: 2.5rem;
   }
   .header .Heading--contact .heading {
     width: 72.04%;
