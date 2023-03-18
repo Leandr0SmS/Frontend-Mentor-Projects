@@ -78,7 +78,7 @@ function Header() {
                     <picture className="img-div">
                         <source 
                             media="(max-width:840px)" 
-                            srcset="./assets/images/image-profile-mobile.webp"
+                            srcSet="./assets/images/image-profile-mobile.webp"
                             alt="Hero face photo"
                         />
                         <img 
