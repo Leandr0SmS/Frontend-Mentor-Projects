@@ -51,7 +51,7 @@ body {
 }
 
 .header {
-    padding: 0 11.45%;
+    padding: 0 11.45vw 7.58rem;
     position: relative;
     background-image: url(../assets/images/pattern-rings.svg);
     background-repeat: no-repeat;
@@ -113,11 +113,11 @@ body {
     margin: 0;
     background-image: url(../assets/images/pattern-rings.svg);
     background-repeat: no-repeat;
-    background-position: 73rem 26rem;
-    padding: 6.5rem 0 9rem;
+    background-position: 80vw 23rem;
+    padding: 6.5rem 11.45vw 9rem;
+    width: 100vw;
     .grid--div {
         border-top: 1px solid $white;
-        margin: 0 11.45%;
         padding-top: 7.2rem;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
