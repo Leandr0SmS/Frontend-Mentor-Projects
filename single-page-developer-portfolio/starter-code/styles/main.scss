@@ -266,7 +266,7 @@ body {
 @media (max-width: 1211px) {
     .header {
         background-position: -15rem 8.3125rem;
-        padding: 0 0 0 1.875rem;
+        padding: 0 0 3.75rem 1.875rem;
         .top--header {
             padding-top: 1.81rem;
         }
@@ -274,8 +274,10 @@ body {
             right: 0;
             .profile--div--inner {
                 position: relative;
-                width: 41.92vw;
                 overflow-x: hidden;
+                .profile-img {
+                    width: 41.92vw;
+                }
                 .circle {
                     bottom: 0;
                     left: 85%;
