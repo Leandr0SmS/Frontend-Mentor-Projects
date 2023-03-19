@@ -263,6 +263,13 @@ body {
     }
 }
 
+//.aside background image adjust
+@media (max-width: 1420px) {
+    .aside {
+        background-position: 80vw 35rem;
+    }
+}
+
 //change .header to tablet format
 @media (max-width: 1211px) {
     .header {
@@ -295,8 +302,10 @@ body {
         }
     }
     .aside {
+        padding: 6.5rem 3.9vw 9rem;
         .grid--div {
-            margin: 0 1.875rem;
+            padding-top: 3.25rem;
+            gap: 3.25em 0.4375em;
         }
     }
     .main {
@@ -304,13 +313,6 @@ body {
     }
     .footer {
         padding: 0 1.875rem;
-    }
-}
-
-//.aside background image adjust
-@media (max-width: 1080px) {
-    .aside {
-        background-position: 80vw 35rem;
     }
 }
 
@@ -400,17 +402,35 @@ body {
                 width: 100%;
                 font-size: 1rem;
                 line-height: 1.625rem;
-                margin-bottom: 4.125rem;
             }
         }
     }
     .aside {
+        background-position: 55vw 75rem;
         display: flex;
         align-items: center;
         justify-content: center;
         .grid--div {
-            margin: 0;
+            gap: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             width: 92.18%;
+            border-bottom: 1px solid $white;
+            padding: 2.5rem 0;
+        }
+        .experience  {
+            text-align: center;
+            h1 {
+                font-size: 2rem;
+                line-height: 2.5rem;
+                letter-spacing: -1px;
+            }
+            p {
+                font-size: 1rem;
+                line-height: 4.33rem;
+            }
         }
     }
 }

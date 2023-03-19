@@ -269,6 +269,11 @@ body {
   padding: 2.93rem 0 5.75rem;
 }
 
+@media (max-width: 1420px) {
+  .aside {
+    background-position: 80vw 35rem;
+  }
+}
 @media (max-width: 1211px) {
   .header {
     background-position: -15rem 8.3125rem;
@@ -297,19 +302,18 @@ body {
   .header .Heading--contact .discription {
     width: 57.94%;
   }
+  .aside {
+    padding: 6.5rem 3.9vw 9rem;
+  }
   .aside .grid--div {
-    margin: 0 1.875rem;
+    padding-top: 3.25rem;
+    gap: 3.25em 0.4375em;
   }
   .main {
     padding: 0 1.875rem;
   }
   .footer {
     padding: 0 1.875rem;
-  }
-}
-@media (max-width: 1080px) {
-  .aside {
-    background-position: 80vw 35rem;
   }
 }
 @media (max-width: 750px) {
@@ -398,15 +402,33 @@ body {
     width: 100%;
     font-size: 1rem;
     line-height: 1.625rem;
-    margin-bottom: 4.125rem;
   }
   .aside {
+    background-position: 55vw 75rem;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .aside .grid--div {
-    margin: 0;
+    gap: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 92.18%;
+    border-bottom: 1px solid #FFFFFF;
+    padding: 2.5rem 0;
+  }
+  .aside .experience {
+    text-align: center;
+  }
+  .aside .experience h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: -1px;
+  }
+  .aside .experience p {
+    font-size: 1rem;
+    line-height: 4.33rem;
   }
 }/*# sourceMappingURL=main.css.map */
