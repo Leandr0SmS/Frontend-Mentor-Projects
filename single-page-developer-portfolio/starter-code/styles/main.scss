@@ -303,6 +303,7 @@ body {
     }
     .aside {
         padding: 6.5rem 3.9vw 9rem;
+        background-position: 80vw 20rem; ///adjust!!!!
         .grid--div {
             padding-top: 3.25rem;
             gap: 3.25em 0.4375em;
@@ -342,7 +343,7 @@ body {
         }
     }
     .header {
-        padding: 0 1rem;
+        padding: 0 4.2vw;
         background-image: url(../assets/images/pattern-rings.svg),
                           url(../assets/images/pattern-circle.svg);
         background-repeat: no-repeat, no-repeat;
@@ -407,18 +408,14 @@ body {
     }
     .aside {
         background-position: 55vw 75rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 6.5rem 4.2vw 9rem;
         .grid--div {
             gap: 0 1.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 92.18%;
             border-bottom: 1px solid $white;
-            padding: 2.5rem 0;
         }
         .experience  {
             text-align: center;
