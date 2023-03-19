@@ -50,16 +50,28 @@ function NameLinks(props) {
         <div className={props.class}>
             <h3>adamkeyes</h3>
             <div className="icon--div">
-                <a>
+                <a 
+                    href="https://www.frontendmentor.io/challenges"
+                    ariaLabel="https://www.frontendmentor.io/challenges"
+                >
                     <img src="./assets/images/icon-frontend-mentor.svg" alt="Frontend Mentor icon"/>
                 </a>
-                <a>
+                <a 
+                    href="https://github.com"
+                    ariaLabel="https://github.com"
+                >
                     <img src="./assets/images/icon-github.svg" alt="GitHub icon"/> 
                 </a>
-                <a>
+                <a 
+                    href="https://www.linkedin.com"
+                    ariaLabel="https://www.linkedin.com/"
+                >
                     <img src="./assets/images/icon-linkedin.svg" alt="Linkedin icon"/>
                 </a>
-                <a>
+                <a 
+                    href="https://twitter.com/"
+                    ariaLabel="https://twitter.com/"
+                >
                     <img src="./assets/images/icon-twitter.svg" alt="Twitter icon"/>
                 </a>
             </div>
@@ -95,7 +107,7 @@ function Header() {
                     <img 
                         className="circle" 
                         src="./assets/images/pattern-circle.svg"
-                        alt="Pattern of circles. One above another"
+                        alt="Pattern of circles. One above other"
                     />
                 </div>
             </div>
