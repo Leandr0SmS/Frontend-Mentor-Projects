@@ -115,7 +115,7 @@ body {
     margin: 0;
     background-image: url(../assets/images/pattern-rings.svg);
     background-repeat: no-repeat;
-    background-position: 80vw 23rem;
+    background-position: 80vw 85%;
     padding: 6.5rem 11.45vw 9rem;
     width: 100%;
     .grid--div {
@@ -263,13 +263,6 @@ body {
     }
 }
 
-//.aside background image adjust
-@media (max-width: 1420px) {
-    .aside {
-        background-position: 80vw 35rem;
-    }
-}
-
 //change .header to tablet format
 @media (max-width: 1211px) {
     .header {
@@ -303,7 +296,7 @@ body {
     }
     .aside {
         padding: 6.5rem 3.9vw 9rem;
-        background-position: 80vw 20rem; ///adjust!!!!
+        background-position: 80vw 87%;
         .grid--div {
             padding-top: 3.25rem;
             gap: 3.25em 0.4375em;
@@ -407,7 +400,7 @@ body {
         }
     }
     .aside {
-        background-position: 55vw 75rem;
+        background-position: 55vw 90%;
         padding: 6.5rem 4.2vw 9rem;
         .grid--div {
             gap: 0 1.5rem;
