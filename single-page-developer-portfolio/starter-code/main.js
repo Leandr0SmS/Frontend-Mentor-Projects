@@ -263,7 +263,7 @@ function Page() {
   return (
     <div className="page">
         <Header />
-        {<Experience />}
+        <Experience />
         {/*<Projects />*/}
         {/*<Footer />*/}
     </div>
