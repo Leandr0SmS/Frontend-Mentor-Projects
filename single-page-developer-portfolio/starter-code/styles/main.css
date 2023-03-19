@@ -307,14 +307,9 @@ body {
     padding: 0 1.875rem;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 1080px) {
   .aside {
-    padding: 0 1.875rem;
-    padding-top: 7.2rem;
-  }
-  .aside .grid--div {
-    margin: 0;
-    gap: 0;
+    background-position: 80vw 35rem;
   }
 }
 @media (max-width: 750px) {

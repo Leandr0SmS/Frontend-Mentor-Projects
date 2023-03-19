@@ -263,6 +263,7 @@ body {
     }
 }
 
+//change .header to tablet format
 @media (max-width: 1211px) {
     .header {
         background-position: -15rem 8.3125rem;
@@ -306,22 +307,14 @@ body {
     }
 }
 
-//aside grid adjust
-
-
-//aside grid adjust
-@media (max-width: 950px) {
+//.aside background image adjust
+@media (max-width: 1080px) {
     .aside {
-        padding: 0 1.875rem;
-        padding-top: 7.2rem;
-        .grid--div {
-            margin: 0;
-            gap: 0;
-        }
+        background-position: 80vw 35rem;
     }
 }
 
-//header adjust
+//adjust to mobile
 @media (max-width: 750px) {
     .name--links {
         flex-direction: column;
