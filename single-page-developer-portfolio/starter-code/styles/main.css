@@ -51,12 +51,11 @@ body {
 }
 
 .header {
-  padding: 0 11.45vw 7.58rem;
+  padding: 0 11.45vw 13.68rem;
   position: relative;
   background-image: url(../assets/images/pattern-rings.svg);
   background-repeat: no-repeat;
   background-position: -6.25rem 8.3125rem;
-  overflow: hidden;
 }
 .header .top--header {
   padding-top: 2.5rem;
@@ -69,12 +68,12 @@ body {
 }
 .header .profile--div .profile--div--inner {
   position: relative;
-  width: 30.97vw;
 }
 .header .profile--div .profile--div--inner .img-div .profile-img {
   height: 100ex;
   -o-object-fit: fill;
      object-fit: fill;
+  width: auto;
 }
 .header .profile--div .profile--div--inner .circle {
   position: absolute;
@@ -88,7 +87,7 @@ body {
   padding-top: 7.9375rem;
 }
 .header .Heading--contact .heading {
-  width: 72.04%;
+  width: 63.87%;
   font-size: 5.5rem;
   line-height: 5.5rem;
   font-weight: 700;
@@ -102,7 +101,7 @@ body {
   text-decoration-thickness: 0.5rem;
 }
 .header .Heading--contact .discription {
-  width: 30.9%;
+  width: 40.09%;
   color: #d9d9d9;
   font-weight: 500;
   font-size: 1.125rem;
@@ -116,7 +115,7 @@ body {
   background-image: url(../assets/images/pattern-rings.svg);
   background-repeat: no-repeat;
   background-position: 80vw 23rem;
-  padding: 6.5rem 11.45vw 9rem;
+  padding: 6.5rem 0 9rem;
   width: 100vw;
 }
 .aside .grid--div {
@@ -272,6 +271,7 @@ body {
 
 @media (max-width: 1211px) {
   .header {
+    background-position: -15rem 8.3125rem;
     padding: 0 0 0 1.875rem;
   }
   .header .top--header {
@@ -283,10 +283,11 @@ body {
   .header .profile--div .profile--div--inner {
     position: relative;
     width: 41.92vw;
+    overflow-x: hidden;
   }
   .header .profile--div .profile--div--inner .circle {
     bottom: 0;
-    left: 190%;
+    left: 85%;
   }
   .header .Heading--contact .heading {
     width: 57.94%;
