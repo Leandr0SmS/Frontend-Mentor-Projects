@@ -175,7 +175,7 @@ body {
                 }
             }
             h3 {
-                font-size:1.5rem;
+                font-size: 1.5rem;
                 font-weight: 700;
                 line-height: 2rem;
                 color: $white;
@@ -439,6 +439,22 @@ body {
                 font-size: 1rem;
                 line-height: 4.33rem;
             }
+        }
+    }
+    .main {
+        padding: 0 4.2vw;
+        margin-bottom: 5rem;
+        .projects--header {
+            margin-bottom: 2.5rem;
+            .projects--heading {
+                font-size: 2.5rem;
+                line-height: 2.5rem;
+            }
+        }
+        .projects--grid {
+            grid-template-columns: minmax(15rem, 1fr);
+            grid-template-rows: repeat(auto-fit, 1fr);
+            row-gap: 2.5rem;
         }
     }
 }

@@ -441,4 +441,20 @@ body {
     font-size: 1rem;
     line-height: 4.33rem;
   }
+  .main {
+    padding: 0 4.2vw;
+    margin-bottom: 5rem;
+  }
+  .main .projects--header {
+    margin-bottom: 2.5rem;
+  }
+  .main .projects--header .projects--heading {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  .main .projects--grid {
+    grid-template-columns: minmax(15rem, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+    row-gap: 2.5rem;
+  }
 }/*# sourceMappingURL=main.css.map */
