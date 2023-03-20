@@ -52,27 +52,47 @@ function NameLinks(props) {
             <div className="icon--div">
                 <a 
                     href="https://www.frontendmentor.io/challenges"
-                    ariaLabel="https://www.frontendmentor.io/challenges"
+                    aria-label="https://www.frontendmentor.io/challenges"
                 >
-                    <img src="./assets/images/icon-frontend-mentor.svg" alt="Frontend Mentor icon"/>
+                    <img 
+                        src="./assets/images/icon-frontend-mentor.svg" 
+                        alt="Frontend Mentor icon"
+                        aria-hidden="false"
+                        role="img"
+                    />
                 </a>
                 <a 
                     href="https://github.com"
-                    ariaLabel="https://github.com"
+                    aria-label="https://github.com"
                 >
-                    <img src="./assets/images/icon-github.svg" alt="GitHub icon"/> 
+                    <img 
+                        src="./assets/images/icon-github.svg" 
+                        alt="GitHub icon"
+                        aria-hidden="false"
+                        role="img"
+                    /> 
                 </a>
                 <a 
                     href="https://www.linkedin.com"
-                    ariaLabel="https://www.linkedin.com/"
+                    aria-label="https://www.linkedin.com/"
                 >
-                    <img src="./assets/images/icon-linkedin.svg" alt="Linkedin icon"/>
+                    <img 
+                        src="./assets/images/icon-linkedin.svg" 
+                        alt="Linkedin icon"
+                        aria-hidden="false"
+                        role="img"
+                    />
                 </a>
                 <a 
                     href="https://twitter.com/"
-                    ariaLabel="https://twitter.com/"
+                    aria-label="https://twitter.com/"
                 >
-                    <img src="./assets/images/icon-twitter.svg" alt="Twitter icon"/>
+                    <img 
+                        src="./assets/images/icon-twitter.svg" 
+                        alt="Twitter icon"
+                        aria-hidden="false"
+                        role="img"
+                    />
                 </a>
             </div>
         </div>
@@ -92,22 +112,30 @@ function Header() {
                             media="(max-width:1211px)" 
                             srcSet="./assets/images/image-profile-tablet.webp"
                             alt="Hero face photo"
+                            aria-hidden="false"
+                            role="img"
                         />
                         <source 
                             media="(max-width:750px)" 
                             srcSet="./assets/images/image-profile-mobile.webp"
                             alt="Hero face photo"
+                            aria-hidden="false"
+                            role="img"
                         />
                         <img 
                             className="profile-img" 
                             src="./assets/images/image-profile-desktop.webp"
                             alt="Hero face photo"
+                            aria-hidden="false"
+                            role="img"
                         />
                     </picture>
                     <img 
                         className="circle" 
                         src="./assets/images/pattern-circle.svg"
                         alt="Pattern of circles. One above other"
+                        aria-hidden="false"
+                        role="img"
                     />
                 </div>
             </div>
