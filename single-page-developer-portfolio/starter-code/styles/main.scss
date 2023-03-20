@@ -161,10 +161,10 @@ body {
     }
     .projects--grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(21.375rem, 33.75rem));
-        grid-template-rows: repeat(auto-fill, minmax(24rem, 30.43rem));
-        gap: 4.3125rem 2.083%;
         justify-content: center;
+        grid-template-columns: repeat(2, minmax(28rem, 1fr));
+        grid-template-rows: repeat(3, minmax(30.43rem, 1fr));
+        gap: 4.3125rem 2.7%;
         .project--div {
             .project--img {
                 width: 100%;
@@ -308,7 +308,20 @@ body {
         }
     }
     .main {
-        padding: 0 1.875rem;
+        padding: 0 3.9vw;
+        margin-bottom: 8.6875rem;
+        .projects--header {
+            margin-bottom: 3.75rem;
+            .projects--heading {
+                font-size: 4.5rem;
+                line-height: 4.5rem;
+            }
+        }
+        .projects--grid {
+            grid-template-columns: repeat(2, minmax(21.375rem, 1fr));
+            grid-template-rows: repeat(3, minmax(24rem, 1fr));
+            gap: 3.75rem 3.39%;
+        }    
     }
     .footer {
         padding: 0 1.875rem;
