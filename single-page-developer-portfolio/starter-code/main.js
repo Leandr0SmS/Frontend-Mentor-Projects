@@ -304,7 +304,7 @@ function Page() {
     <div className="page">
         <Header />
         <Experience />
-        {/*<Projects />*/}
+        <Projects />
         {/*<Footer />*/}
     </div>
   )

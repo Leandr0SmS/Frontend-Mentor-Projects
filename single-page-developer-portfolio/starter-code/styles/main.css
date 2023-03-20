@@ -8,6 +8,9 @@ body {
   margin: 0;
   background-color: #151515;
   font-family: "Space Grotesk", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .link-contactMe {
@@ -48,6 +51,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 150rem;
 }
 
 .header {
@@ -55,7 +59,7 @@ body {
   position: relative;
   background-image: url(../assets/images/pattern-rings.svg);
   background-repeat: no-repeat;
-  background-position: -6.25rem 8.3125rem;
+  background-position: -10vw 8.3125rem;
 }
 .header .top--header {
   padding-top: 2.5rem;
@@ -123,7 +127,7 @@ body {
   padding-top: 7.2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 21.56rem));
-  grid-auto-rows: minmax(6.125rem, 4.1875px);
+  grid-auto-rows: minmax(6.125rem, 4.1875rem);
   gap: 3.625em 1.875em;
 }
 .aside .experience h1 {
@@ -138,8 +142,9 @@ body {
 }
 
 .main {
-  padding: 0 11.45%;
+  padding: 0 11.45vw;
   margin-bottom: 8.6875rem;
+  width: 100%;
 }
 .main .projects--header {
   display: flex;
@@ -155,8 +160,8 @@ body {
 }
 .main .projects--grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(33.75rem, 37.5%));
-  grid-template-rows: repeat(auto-fill, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(21.375rem, 33.75rem));
+  grid-template-rows: repeat(auto-fill, minmax(24rem, 30.43rem));
   gap: 4.3125rem 2.083%;
   justify-content: center;
 }
