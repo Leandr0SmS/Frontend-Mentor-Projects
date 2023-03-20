@@ -207,6 +207,8 @@ function Projects() {
                     className="project--img" 
                     src={`./assets/images/${props.img}`}
                     alt={props.title}
+                    aria-hidden="false"
+                    role="img"
                     />            
                 <h3>{props.title}</h3>
                 <div className="tool--div">{props.tools}</div>

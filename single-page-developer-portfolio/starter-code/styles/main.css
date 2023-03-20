@@ -165,6 +165,9 @@ body {
   grid-template-rows: repeat(3, minmax(30.43rem, 1fr));
   gap: 4.3125rem 2.7%;
 }
+.main .projects--grid .project--div {
+  position: relative;
+}
 .main .projects--grid .project--div .project--img {
   width: 100%;
   height: auto;
@@ -191,6 +194,17 @@ body {
   line-height: 1.75rem;
   color: #d9d9d9;
   text-transform: uppercase;
+}
+.main .projects--grid .project--div .view--div {
+  position: absolute;
+  height: 2.375rem;
+}
+.main .projects--grid .project--div .view--div a {
+  color: #FFFFFF;
+  line-height: 1.625rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid #4EE1A0;
 }
 
 .footer {
