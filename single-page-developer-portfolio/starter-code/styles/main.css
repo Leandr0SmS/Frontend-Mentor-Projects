@@ -168,15 +168,6 @@ body {
 .main .projects--grid .project--div {
   position: relative;
 }
-.main .projects--grid .project--div .project--img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.main .projects--grid .project--div .project--img:hover {
-  opacity: 0.25;
-}
 .main .projects--grid .project--div h3 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -195,16 +186,42 @@ body {
   color: #d9d9d9;
   text-transform: uppercase;
 }
-.main .projects--grid .project--div .view--div {
-  position: absolute;
-  height: 2.375rem;
+
+.my-image-container {
+  position: relative;
 }
-.main .projects--grid .project--div .view--div a {
+
+.project--img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.view--div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.view--div a {
   color: #FFFFFF;
   line-height: 1.625rem;
   text-transform: uppercase;
   text-decoration: none;
   border-bottom: 1px solid #4EE1A0;
+}
+
+.active {
+  display: flex;
+}
+
+.img--active {
+  opacity: 0.75;
 }
 
 .footer {

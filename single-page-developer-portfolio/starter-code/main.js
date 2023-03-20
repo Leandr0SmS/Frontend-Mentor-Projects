@@ -190,38 +190,47 @@ function Experience() {
 
 function Projects() {
 
+    const [hovered, setHovered] = React.useState(false);
 
+    function handleMouseEnter() {
+      setHovered(true);
+    }
+    function handleMouseLeave() {
+      setHovered(false);
+    }
     function View(props) {
         return (
-            <div className="view--div">
+            <div className={hovered ? 'active view--div' : 'view--div'}>
                 <a href={props.live}>View project</a>
                 <a href={props.code}>View code</a>
             </div>
         )
     }
-
     function Project(props) {
         return (
             <div className="project--div">
-                <img
-                    className="project--img" 
-                    src={`./assets/images/${props.img}`}
-                    alt={props.title}
-                    aria-hidden="false"
-                    role="img"
-                    />            
+                <div className="my-image-container">
+                    <img
+                        className={hovered ? 'img--active project--img' : 'project--img'} //"project--img" 
+                        src={`./assets/images/${props.img}`}
+                        alt={props.title}
+                        aria-hidden="false"
+                        role="img"
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    />
+                    <View 
+                        live={props.live}
+                        code={props.code}
+                        style="display: flex"
+                    />   
+                    </div>          
                 <h3>{props.title}</h3>
                 <div className="tool--div">{props.tools}</div>
-                <View 
-                    live={props.live}
-                    code={props.code}
-                />
             </div>
         )
     }
-
     const projectsMap = projectsData.map((project) => {
-        
         const ProjectToolsMap = project.tools.map((tool) => {
             return (
                 <p key={tool}>
@@ -229,7 +238,6 @@ function Projects() {
                 </p>
             )
         })
-        
         return (
             <Project 
                 key={project.title}
@@ -241,7 +249,6 @@ function Projects() {
             />
         )
     })
-
     return (
         <main className="main">
             <div className="projects--header">
@@ -301,7 +308,6 @@ function Footer() {
 }
 
 function Page() {
-
   return (
     <div className="page">
         <Header />
@@ -311,7 +317,6 @@ function Page() {
     </div>
   )
 }
-
 //render
 const page = document.getElementById('root');
 const root = ReactDOM.createRoot(page);
