@@ -220,7 +220,7 @@ function Projects() {
     }
     function View(props) {
         return (
-            <div className='view--div'>
+            <div className={props.Ishovered ? 'active view--div' : 'deactive view--div'}>
                 <a href={props.live}>View project</a>
                 <a href={props.code}>View code</a>
             </div>
@@ -235,22 +235,19 @@ function Projects() {
                     onMouseLeave={() => handleMouseLeave(props.id)}
                 >
                     <img
-                        className={props.Ishovered ? 'img--active project--img' : 'project--img'} //"project--img" 
+                        className={props.Ishovered ? 'img--active project--img' : 'project--img'}
                         src={`./assets/images/${props.img}`}
                         alt={props.title}
                         aria-hidden="false"
                         role="img"
                         id={props.id}
                     />
-                    {
-                        props.Ishovered 
-                        &&
-                        <View 
-                            live={props.live}
-                            code={props.code}
-                        />
-                    }
-                    </div>          
+                    <View 
+                        live={props.live}
+                        code={props.code}
+                        Ishovered={props.Ishovered}
+                    />
+                </div>          
                 <h3>{props.title}</h3>
                 <div className="tool--div">{props.tools}</div>
             </div>
@@ -266,11 +263,11 @@ function Projects() {
         })
         return (
             <Project 
-                key={project.id}
-                id={project.id}
                 img={project.image}
                 title={project.title}
                 tools={ProjectToolsMap}
+                key={project.id}
+                id={project.id}
                 live={project.live}
                 code={project.code}
                 Ishovered={project.active}
