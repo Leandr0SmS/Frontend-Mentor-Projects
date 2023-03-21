@@ -2,46 +2,58 @@
 
 const projectsData = [
     {
+        id: 1,
         title: "Design portfolio",
         tools: ["HTML", "CSS"],
         image:  "thumbnail-project-1-large.webp",
         live: "",
-        code: ""
+        code: "",
+        active: false
     },
     {
+        id: 2,
         title: "E-learning landing page",
         tools: ["HTML", "CSS"],
         image:  "thumbnail-project-2-large.webp",
         live: "",
-        code: ""
+        code: "",
+        active: false
     },
     {
+        id: 3,
         title: "Todo web app",
         tools: ["HTML", "CSS", "JavaScript"],
         image:  "thumbnail-project-3-large.webp",
         live: "",
-        code: ""
+        code: "",
+        active: false
     },
     {
+        id: 4,
         title: "Entertainment web app",
         tools: ["HTML", "CSS", "JavaScript"],
         image:  "thumbnail-project-4-large.webp",
         live: "",
-        code: ""
+        code: "",
+        active: false
     },
     {
+        id: 5,
         title: "Memory Game",
         tools: ["HTML", "CSS", "JavaScript"],
         image:  "thumbnail-project-5-large.webp",
         live: "",
-        code: ""
+        code: "",
+        active: false
     },
     {
+        id: 6,
         title: "Art gallery showcase",
         tools: ["HTML", "CSS", "JavaScript"],
         image:  "thumbnail-project-6-large.webp",
         live: "",
-        code: ""
+        code: "",
+        active: false
     }
 ]
 
@@ -190,17 +202,25 @@ function Experience() {
 
 function Projects() {
 
-    const [hovered, setHovered] = React.useState(false);
+    const [projectState, setProjectState] = React.useState(projectsData);
 
-    function handleMouseEnter() {
-      setHovered(true);
+    function handleMouseEnter(id) {
+        setProjectState((prevProjectState) => {
+            return prevProjectState.map(project => {
+                return project.id === id ? {...project, active: true} : {...project, on: false}
+            })
+        });
     }
-    function handleMouseLeave() {
-      setHovered(false);
+    function handleMouseLeave(id) {
+        setProjectState((prevProjectState) => {
+            return prevProjectState.map(project => {
+                return project.id === id ? {...project, active: false} : {...project, on: false}
+            })
+        });
     }
     function View(props) {
         return (
-            <div className={hovered ? 'active view--div' : 'view--div'}>
+            <div className='view--div'>
                 <a href={props.live}>View project</a>
                 <a href={props.code}>View code</a>
             </div>
@@ -211,26 +231,29 @@ function Projects() {
             <div className="project--div">
                 <div className="my-image-container">
                     <img
-                        className={hovered ? 'img--active project--img' : 'project--img'} //"project--img" 
+                        className={props.Ishovered ? 'img--active project--img' : 'project--img'} //"project--img" 
                         src={`./assets/images/${props.img}`}
                         alt={props.title}
                         aria-hidden="false"
                         role="img"
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
+                        id={props.id}
+                        onMouseEnter={() => handleMouseEnter(props.id)}
+                        onMouseLeave={() => handleMouseLeave(props.id)}
                     />
+                    {props.Ishovered 
+                    &&
                     <View 
                         live={props.live}
                         code={props.code}
-                        style="display: flex"
-                    />   
+                    />
+                    }
                     </div>          
                 <h3>{props.title}</h3>
                 <div className="tool--div">{props.tools}</div>
             </div>
         )
     }
-    const projectsMap = projectsData.map((project) => {
+    const projectsStateMap = projectState.map((project) => {
         const ProjectToolsMap = project.tools.map((tool) => {
             return (
                 <p key={tool}>
@@ -240,12 +263,14 @@ function Projects() {
         })
         return (
             <Project 
-                key={project.title}
+                key={project.id}
+                id={project.id}
                 img={project.image}
                 title={project.title}
                 tools={ProjectToolsMap}
                 live={project.live}
                 code={project.code}
+                Ishovered={project.active}
             />
         )
     })
@@ -260,7 +285,7 @@ function Projects() {
                 </a>
             </div>
             <div className="projects--grid">
-                {projectsMap}
+                {projectsStateMap}
             </div>
         </main>
     )
