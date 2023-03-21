@@ -233,8 +233,6 @@ function Projects() {
                 <div className="project--div">
                     <div 
                         className="my-image-container"
-                        onMouseEnter={() => handleMouseEnter(props.id)}
-                        onMouseLeave={() => handleMouseLeave(props.id)}
                     >
                         <img
                             className="project--img"
@@ -369,7 +367,7 @@ function Page() {
         <Header />
         <Experience />
         <Projects />
-        {/*<Footer />*/}
+        <Footer />
     </div>
   )
 }
