@@ -242,12 +242,13 @@ function Projects() {
                         role="img"
                         id={props.id}
                     />
-                    {props.Ishovered 
-                    &&
-                    <View 
-                        live={props.live}
-                        code={props.code}
-                    />
+                    {
+                        props.Ishovered 
+                        &&
+                        <View 
+                            live={props.live}
+                            code={props.code}
+                        />
                     }
                     </div>          
                 <h3>{props.title}</h3>

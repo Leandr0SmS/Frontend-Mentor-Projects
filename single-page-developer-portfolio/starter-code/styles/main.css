@@ -21,6 +21,10 @@ body {
   padding-bottom: 0.625rem;
   border-bottom: 2px solid #4EE1A0;
 }
+.link-contactMe:hover {
+  color: #4EE1A0;
+  cursor: pointer;
+}
 
 .name--links {
   display: flex;
@@ -214,6 +218,9 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   border-bottom: 1px solid #4EE1A0;
+}
+.view--div a:hover {
+  color: #4EE1A0;
 }
 
 .active {
