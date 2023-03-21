@@ -121,15 +121,15 @@ function Header() {
                 <div className="profile--div--inner">
                     <picture className="img-div">
                         <source 
-                            media="(max-width:1211px)" 
-                            srcSet="./assets/images/image-profile-tablet.webp"
+                            media="(max-width:750px)" 
+                            srcSet="./assets/images/image-profile-mobile.webp"
                             alt="Hero face photo"
                             aria-hidden="false"
                             role="img"
                         />
                         <source 
-                            media="(max-width:750px)" 
-                            srcSet="./assets/images/image-profile-mobile.webp"
+                            media="(max-width:1211px)" 
+                            srcSet="./assets/images/image-profile-tablet.webp"
                             alt="Hero face photo"
                             aria-hidden="false"
                             role="img"

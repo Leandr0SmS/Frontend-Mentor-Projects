@@ -422,52 +422,6 @@ body {
   .footer .contact--form--div .contact--div p {
     text-align: center;
   }
-  .footer .contact--form--div .form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 27.8125rem;
-  }
-  .footer .contact--form--div .form input, .footer .contact--form--div .form textarea {
-    background-color: #242424;
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #FFFFFF;
-    margin-bottom: 2rem;
-    padding-left: 1.5rem;
-    padding-bottom: 1rem;
-  }
-  .footer .contact--form--div .form ::-moz-placeholder {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    line-height: 1.625rem;
-    font-weight: 500;
-    color: #FFFFFF;
-    opacity: 0.5;
-  }
-  .footer .contact--form--div .form ::placeholder {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    line-height: 1.625rem;
-    font-weight: 500;
-    color: #FFFFFF;
-    opacity: 0.5;
-  }
-  .footer .contact--form--div .form textarea {
-    height: 6.6875rem;
-  }
-  .footer .contact--form--div .form .form--btn {
-    background-color: #242424;
-    border: none;
-    letter-spacing: 0.14285rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    padding: 0;
-    padding-bottom: 0.625rem;
-    border-bottom: 2px solid #4EE1A0;
-    width: 9rem;
-  }
   .footer .bottom--header {
     padding: 1.825em 0 2.5em;
     border-top: 1px solid #FFFFFF;
@@ -485,13 +439,14 @@ body {
     color: #FFFFFF;
     font-size: 1.5rem;
     line-height: 2rem;
+    margin-bottom: 1.25rem;
   }
   .name--links .icon--div {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 2rem;
-    margin-right: 1.844rem;
+    margin: 0;
   }
   .name--links .icon--div img {
     width: 1.2rem;
