@@ -229,7 +229,11 @@ function Projects() {
     function Project(props) {
         return (
             <div className="project--div">
-                <div className="my-image-container">
+                <div 
+                    className="my-image-container"
+                    onMouseEnter={() => handleMouseEnter(props.id)}
+                    onMouseLeave={() => handleMouseLeave(props.id)}
+                >
                     <img
                         className={props.Ishovered ? 'img--active project--img' : 'project--img'} //"project--img" 
                         src={`./assets/images/${props.img}`}
@@ -237,8 +241,6 @@ function Projects() {
                         aria-hidden="false"
                         role="img"
                         id={props.id}
-                        onMouseEnter={() => handleMouseEnter(props.id)}
-                        onMouseLeave={() => handleMouseLeave(props.id)}
                     />
                     {props.Ishovered 
                     &&
