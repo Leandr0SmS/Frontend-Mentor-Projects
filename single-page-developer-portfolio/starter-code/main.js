@@ -227,6 +227,34 @@ function Projects() {
         )
     }
     function Project(props) {
+        const screenWidth = window.innerWidth;
+        if (screenWidth < 1211) {
+            return (
+                <div className="project--div">
+                    <div 
+                        className="my-image-container"
+                        onMouseEnter={() => handleMouseEnter(props.id)}
+                        onMouseLeave={() => handleMouseLeave(props.id)}
+                    >
+                        <img
+                            className="project--img"
+                            src={`./assets/images/${props.img}`}
+                            alt={props.title}
+                            aria-hidden="false"
+                            role="img"
+                            id={props.id}
+                        />
+                    </div>          
+                    <h3>{props.title}</h3>
+                    <div className="tool--div">{props.tools}</div>
+                    <View 
+                            live={props.live}
+                            code={props.code}
+                            Ishovered={true}
+                    />
+                </div>
+            )
+        }
         return (
             <div className="project--div">
                 <div 
@@ -252,6 +280,9 @@ function Projects() {
                 <div className="tool--div">{props.tools}</div>
             </div>
         )
+
+
+
     }
     const projectsStateMap = projectState.map((project) => {
         const ProjectToolsMap = project.tools.map((tool) => {

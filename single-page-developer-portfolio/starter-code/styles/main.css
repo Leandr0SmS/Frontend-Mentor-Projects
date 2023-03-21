@@ -364,6 +364,39 @@ body {
     grid-template-rows: repeat(3, minmax(24rem, 1fr));
     gap: 3.75rem 3.39%;
   }
+  .main .projects--grid .project--div h3 {
+    margin-top: 0.7rem;
+  }
+  .main .projects--grid .project--div .tool--div {
+    margin-top: 1rem;
+  }
+  .view--div {
+    position: static;
+    transform: none;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8.7%;
+  }
+  .view--div a {
+    color: #FFFFFF;
+    line-height: 1.625rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid #4EE1A0;
+    padding: 0.5em 0;
+  }
+  .view--div a:hover {
+    color: #4EE1A0;
+  }
+  .active {
+    display: flex;
+  }
+  .img--active {
+    opacity: 0.25;
+  }
   .footer {
     padding: 0 1.875rem;
   }
@@ -492,7 +525,6 @@ body {
   }
   .main .projects--grid {
     grid-template-columns: minmax(15rem, 1fr);
-    grid-template-rows: repeat(auto-fit, 1fr);
     row-gap: 2.5rem;
   }
 }/*# sourceMappingURL=main.css.map */
