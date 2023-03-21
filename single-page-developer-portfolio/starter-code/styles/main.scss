@@ -302,7 +302,6 @@ body {
         padding: 2.93rem 0 5.75rem;
     }
 }
-
 //change to tablet format
 @media (max-width: 1211px) {
     .header {
@@ -342,8 +341,6 @@ body {
             gap: 3.25em 0.4375em;
         }
     }
-
-
     .main {
         padding: 0 3.9vw;
         margin-bottom: 8.6875rem;
@@ -426,7 +423,6 @@ body {
         }
     }
 }
-
 //adjust to mobile
 @media (max-width: 750px) {
     .name--links {
@@ -556,9 +552,6 @@ body {
             row-gap: 2.5rem;
         }
     }
-
-    //editing
-
     .footer {
         padding: 0 4.2%;
         background-position: -23rem 30rem;
@@ -612,7 +605,4 @@ body {
             border-top: 1px solid $white;
         }
     }
-
-    //editing
-
 }
