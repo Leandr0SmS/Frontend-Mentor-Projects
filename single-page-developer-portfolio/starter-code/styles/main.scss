@@ -395,11 +395,74 @@ body {
     .img--active {
         opacity: 0.25;
     }
-
     .footer {
-        padding: 0 1.875rem;
+        padding: 0 11.45%;
+        height: 100%;
+        width: 100%;
+        background-position: -23rem 35rem;
+        .contact--form--div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3em;
+            padding: 3.75rem 0 5.75rem;
+            border-bottom: none;
+            .contact--div {
+                h1 {
+                    font-size: 4.5rem;
+                    line-height: 4.5rem;
+                    margin-bottom: 1.25rem;
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+            .form {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                width: 27.8125rem;
+                input, textarea {
+                    background-color: $gray;
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid $white;
+                    margin-bottom: 2rem;
+                    padding-left: 1.5rem;
+                    padding-bottom: 1rem;
+                }
+                ::placeholder {
+                    font-size: 1.1rem;
+                    text-transform: uppercase;
+                    line-height: 1.625rem;
+                    font-weight: 500;
+                    color: $white;
+                    opacity: .5;
+                }
+                textarea {
+                    height: 6.6875rem;
+                }
+                .form--btn {
+                    background-color: $gray;
+                    border: none;
+                    letter-spacing: 0.14285rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: $white;
+                    padding: 0;
+                    padding-bottom: 0.625rem;
+                    border-bottom: 2px solid $green;
+                    width: 9rem;
+                }
+            }
+        }
+        .bottom--header {
+            padding: 1.825em 0 2.5em;
+            border-top: 1px solid $white;
+        }
     }
-
 }
 
 //adjust to mobile

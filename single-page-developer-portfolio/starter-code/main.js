@@ -278,9 +278,6 @@ function Projects() {
                 <div className="tool--div">{props.tools}</div>
             </div>
         )
-
-
-
     }
     const projectsStateMap = projectState.map((project) => {
         const ProjectToolsMap = project.tools.map((tool) => {
