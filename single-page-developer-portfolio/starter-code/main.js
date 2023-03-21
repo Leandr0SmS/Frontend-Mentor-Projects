@@ -220,7 +220,7 @@ function Projects() {
     }
     function View(props) {
         return (
-            <div className={props.Ishovered ? 'active view--div' : 'deactive view--div'}>
+            <div className={props.Ishovered ? 'active view--div' : 'view--div'}>
                 <a href={props.live}>View project</a>
                 <a href={props.code}>View code</a>
             </div>
