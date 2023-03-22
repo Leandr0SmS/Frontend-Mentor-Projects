@@ -44,7 +44,7 @@ function App() {
           //check email valid
           emailValidation(formData.email)
             ? console.log("email ok")
-            : setValidationData(prevSate => ({...prevSate, email: true}))
+            : setValidationData(prevState => ({...prevState, email: true}))
         } 
         console.log(`${prop} ok`)
       } else {
