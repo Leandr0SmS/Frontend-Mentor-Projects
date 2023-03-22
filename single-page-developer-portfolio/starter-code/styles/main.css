@@ -53,6 +53,13 @@ body {
   width: 1.5375rem;
   height: 1.5rem;
 }
+.name--links .icon--div img:hover {
+  opacity: 0.5;
+}
+.name--links .icon--div img:active {
+  border-bottom: 2px solid #4EE1A0;
+  opacity: 1;
+}
 
 .page {
   display: flex;
@@ -341,9 +348,7 @@ body {
   color: #4EE1A0;
 }
 .footer .contact--form--div .form .form--btn:active {
-  padding-top: 1px;
-  font-size: 1.1rem;
-  border-bottom: 1px solid #4EE1A0;
+  font-size: 0.8rem;
 }
 .footer .bottom--header {
   padding: 2.93rem 0 5.75rem;
