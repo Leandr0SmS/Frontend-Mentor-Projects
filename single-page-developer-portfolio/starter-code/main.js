@@ -357,16 +357,27 @@ function Footer() {
         </footer>
     )
 }
-
+//function emailValidation(email) {
+//    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//    return re.test(email) && true; 
+//}
 function Page() {
-  return (
-    <div className="page">
-        <Header />
-        <Experience />
-        <Projects />
-        <Footer />
-    </div>
-  )
+    //const [formData, setFormData] = React.useState({
+    //    name: "",
+    //    email: "",
+    //    message: ""
+    //})
+    //function handleSubmit(e) {
+    //    e.preventDefault();
+    //}
+    return (
+      <div className="page">
+          <Header />
+          <Experience />
+          <Projects />
+          <Footer />
+      </div>
+    )
 }
 //render
 const page = document.getElementById('root');

@@ -278,6 +278,16 @@ body {
   padding-left: 1.5rem;
   padding-bottom: 1rem;
 }
+.footer .contact--form--div .form input:focus, .footer .contact--form--div .form textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #4EE1A0;
+  opacity: 1;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  line-height: 1.625rem;
+  font-weight: 500;
+  color: #FFFFFF;
+}
 .footer .contact--form--div .form ::-moz-placeholder {
   font-size: 1.1rem;
   text-transform: uppercase;
