@@ -25,6 +25,10 @@ body {
   color: #4EE1A0;
   cursor: pointer;
 }
+.link-contactMe:active {
+  padding-top: 2px;
+  border-bottom: 1px solid #4EE1A0;
+}
 
 .name--links {
   display: flex;
@@ -217,10 +221,13 @@ body {
   line-height: 1.625rem;
   text-transform: uppercase;
   text-decoration: none;
-  border-bottom: 1px solid #4EE1A0;
+  border-bottom: 2px solid #4EE1A0;
 }
 .view--div a:hover {
   color: #4EE1A0;
+}
+.view--div a:active {
+  opacity: 0.3;
 }
 
 .active {
@@ -321,6 +328,14 @@ body {
   padding-bottom: 0.625rem;
   border-bottom: 2px solid #4EE1A0;
   width: 9rem;
+  cursor: pointer;
+}
+.footer .contact--form--div .form .form--btn:hover {
+  color: #4EE1A0;
+}
+.footer .contact--form--div .form .form--btn:active {
+  padding-top: 1px;
+  border-bottom: 1px solid #4EE1A0;
 }
 .footer .bottom--header {
   padding: 2.93rem 0 5.75rem;

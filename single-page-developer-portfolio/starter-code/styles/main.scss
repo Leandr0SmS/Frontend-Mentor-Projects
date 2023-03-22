@@ -26,6 +26,10 @@ body {
         color: $green;
         cursor: pointer;
     }
+    &:active {
+        padding-top: 2px;
+        border-bottom: 1px solid $green;
+    }
 }
 .name--links {
     display: flex;
@@ -213,14 +217,17 @@ body {
     justify-content: center;
     align-items: center;
         a {
-          color: $white;
-          line-height: 1.625rem;
-          text-transform: uppercase;
-          text-decoration: none;
-          border-bottom: 1px solid $green;
-          &:hover {
-            color: $green;
-          }
+            color: $white;
+            line-height: 1.625rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-bottom: 2px solid $green;
+            &:hover {
+              color: $green;
+            }
+            &:active {
+              opacity: 0.3;
+            }
         }
 }
 .active {
@@ -308,6 +315,14 @@ body {
                 padding-bottom: 0.625rem;
                 border-bottom: 2px solid $green;
                 width: 9rem;
+                cursor: pointer;
+                &:hover {
+                    color: $green;
+                  }
+                &:active {
+                    padding-top: 1px;
+                    border-bottom: 1px solid $green;
+                }
             }
         }
     }

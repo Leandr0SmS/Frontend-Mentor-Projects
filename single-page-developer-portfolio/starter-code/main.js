@@ -333,7 +333,10 @@ function Footer(props) {
                         Please fill in the form, and I'll get back to you as soon as possible.
                     </p>
                 </div>
-                <form className="form">
+                <form 
+                    className="form"
+                    onSubmit={props.handleSubmit}
+                >
                     <input 
                         className="inputs"
                         type="text"
@@ -360,7 +363,7 @@ function Footer(props) {
                     ></textarea>
                     <button
                         className="form--btn"
-                        onClick={props.handleSubmit}
+                        onClick={props.formValidation}
                     >
                         Send message
                     </button>
