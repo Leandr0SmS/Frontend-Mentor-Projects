@@ -199,107 +199,68 @@ function Experience() {
         </aside>
     )
 }
-
-function Projects() {
-
-    const [projectState, setProjectState] = React.useState(projectsData);
-
-    function handleMouseEnter(id) {
-        setProjectState((prevProjectState) => {
-            return prevProjectState.map(project => {
-                return project.id === id ? {...project, active: true} : {...project, on: false}
-            })
-        });
-    }
-    function handleMouseLeave(id) {
-        setProjectState((prevProjectState) => {
-            return prevProjectState.map(project => {
-                return project.id === id ? {...project, active: false} : {...project, on: false}
-            })
-        });
-    }
-    function View(props) {
-        return (
-            <div className={props.Ishovered ? 'active view--div' : 'view--div'}>
-                <a href={props.live}>View project</a>
-                <a href={props.code}>View code</a>
-            </div>
-        )
-    }
-    function Project(props) {
-        const screenWidth = window.innerWidth;
-        if (screenWidth < 1211) {
-            return (
-                <div className="project--div">
-                    <div 
-                        className="my-image-container"
-                    >
-                        <img
-                            className="project--img"
-                            src={`./assets/images/${props.img}`}
-                            alt={props.title}
-                            aria-hidden="false"
-                            role="img"
-                            id={props.id}
-                        />
-                    </div>          
-                    <h3>{props.title}</h3>
-                    <div className="tool--div">{props.tools}</div>
-                    <View 
-                            live={props.live}
-                            code={props.code}
-                            Ishovered={true}
-                    />
-                </div>
-            )
-        }
+function View(props) {
+    return (
+        <div className={props.Ishovered ? 'active view--div' : 'view--div'}>
+            <a href={props.live}>View project</a>
+            <a href={props.code}>View code</a>
+        </div>
+    )
+}
+function Project(props) {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 1211) {
         return (
             <div className="project--div">
                 <div 
                     className="my-image-container"
-                    onMouseEnter={() => handleMouseEnter(props.id)}
-                    onMouseLeave={() => handleMouseLeave(props.id)}
                 >
                     <img
-                        className={props.Ishovered ? 'img--active project--img' : 'project--img'}
+                        className="project--img"
                         src={`./assets/images/${props.img}`}
                         alt={props.title}
                         aria-hidden="false"
                         role="img"
                         id={props.id}
                     />
-                    <View 
-                        live={props.live}
-                        code={props.code}
-                        Ishovered={props.Ishovered}
-                    />
                 </div>          
                 <h3>{props.title}</h3>
                 <div className="tool--div">{props.tools}</div>
+                <View 
+                        live={props.live}
+                        code={props.code}
+                        Ishovered={true}
+                />
             </div>
         )
-    }
-    const projectsStateMap = projectState.map((project) => {
-        const ProjectToolsMap = project.tools.map((tool) => {
-            return (
-                <p key={tool}>
-                    {tool}
-                </p>
-            )
-        })
-        return (
-            <Project 
-                img={project.image}
-                title={project.title}
-                tools={ProjectToolsMap}
-                key={project.id}
-                id={project.id}
-                live={project.live}
-                code={project.code}
-                Ishovered={project.active}
-            />
-        )
-    })
+    }        
+    return (
+        <div className="project--div">
+            <div 
+                className="my-image-container"
+                onMouseEnter={props.handleMouseEnter}
+                onMouseLeave={props.handleMouseLeave}
+            >
+                <img
+                    className={props.Ishovered ? 'img--active project--img' : 'project--img'}
+                    src={`./assets/images/${props.img}`}
+                    alt={props.title}
+                    aria-hidden="false"
+                    role="img"
+                    id={props.id}
+                />
+                <View 
+                    live={props.live}
+                    code={props.code}
+                    Ishovered={props.Ishovered}
+                />
+            </div>          
+            <h3>{props.title}</h3>
+            <div className="tool--div">{props.tools}</div>
+        </div>
+    )
+}
+function Projects(props) {
     return (
         <main className="main">
             <div className="projects--header">
@@ -311,7 +272,7 @@ function Projects() {
                 </a>
             </div>
             <div className="projects--grid">
-                {projectsStateMap}
+                {props.projectsStateMap}
             </div>
         </main>
     )
@@ -425,11 +386,52 @@ function Footer(props) {
     )
 }
 function Page() {
+    //Projects handle state
+    const [projectState, setProjectState] = React.useState(projectsData);
+    function handleMouseEnter(id) {
+        setProjectState((prevProjectState) => {
+            return prevProjectState.map(project => {
+                return project.id === id ? {...project, active: true} : {...project, on: false}
+            })
+        });
+    }
+    function handleMouseLeave(id) {
+        setProjectState((prevProjectState) => {
+            return prevProjectState.map(project => {
+                return project.id === id ? {...project, active: false} : {...project, on: false}
+            })
+        });
+    }
+    const projectsStateMap = projectState.map((project) => {
+        const ProjectToolsMap = project.tools.map((tool) => {
+            return (
+                <p key={tool}>
+                    {tool}
+                </p>
+            )
+        })
+        return (
+            <Project 
+                img={project.image}
+                title={project.title}
+                tools={ProjectToolsMap}
+                key={project.id}
+                id={project.id}
+                live={project.live}
+                code={project.code}
+                Ishovered={project.active}
+                handleMouseEnter={() => handleMouseEnter(project.id)}
+                handleMouseLeave={() => handleMouseLeave(project.id)}
+            />
+        )
+    })
+    //Form handle state
     const [formData, setFormData] = React.useState({
         name: "",
         email: "",
         message: ""
     })
+    //Form error handle state
     const [error, setError] = React.useState({
         name: false,
         email: false,
@@ -474,7 +476,9 @@ function Page() {
       <div className="page">
           <Header />
           <Experience />
-          <Projects />
+          <Projects 
+            projectsStateMap={projectsStateMap}
+          />
           <Footer
             name={formData.name}
             email={formData.email}
