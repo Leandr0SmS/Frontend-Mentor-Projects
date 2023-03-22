@@ -317,7 +317,12 @@ function Projects() {
     )
 }
 
-function Footer() {
+function Footer(props) {
+    //const [emailError, setEmailError] = React.useState(false);
+    //function emailValidation(email) {
+    //    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    //    return re.test(email) && true; 
+    //}
     return (
         <footer className="footer">
             <div className="contact--form--div">
@@ -332,20 +337,27 @@ function Footer() {
                     <input 
                         type="text"
                         name="name"
+                        value={props.name}
+                        onChange={props.handleChange}
                         placeholder="name"
                     ></input>
                     <input 
                         type="text"
                         name="email"
+                        value={props.email}
+                        onChange={props.handleChange}
                         placeholder="email"
                     ></input>
                     <textarea
                         type="text"
                         name="message"
+                        value={props.textarea}
+                        onChange={props.handleChange}
                         placeholder="message"
                     ></textarea>
                     <button
                         className="form--btn"
+                        onClick={props.handleSubmit}
                     >
                         Send message
                     </button>
@@ -357,25 +369,35 @@ function Footer() {
         </footer>
     )
 }
-//function emailValidation(email) {
-//    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//    return re.test(email) && true; 
-//}
 function Page() {
-    //const [formData, setFormData] = React.useState({
-    //    name: "",
-    //    email: "",
-    //    message: ""
-    //})
-    //function handleSubmit(e) {
-    //    e.preventDefault();
-    //}
+    const [formData, setFormData] = React.useState({
+        name: "",
+        email: "",
+        message: ""
+    })
+    function handleSubmit(e) {
+        e.preventDefault();
+    }
+    function handleChange(event) {
+        console.log(formData)
+        const {name, value} = event.target;
+        setFormData(prevFormState => ({
+          ...prevFormState,
+          [name]: value
+        }))
+    }
     return (
       <div className="page">
           <Header />
           <Experience />
           <Projects />
-          <Footer />
+          <Footer
+            name={formData.name}
+            email={formData.email}
+            textarea={formData.message}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+          />
       </div>
     )
 }
