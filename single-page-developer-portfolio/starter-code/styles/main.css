@@ -278,13 +278,14 @@ body {
 }
 .footer .contact--form--div .form .inputs--div {
   width: 100%;
+  margin-bottom: 2rem;
+  position: relative;
 }
 .footer .contact--form--div .form .inputs {
   background-color: #242424;
   width: 100%;
   border: none;
   border-bottom: 1px solid #FFFFFF;
-  margin-bottom: 2rem;
   padding-left: 1.5rem;
   padding-bottom: 1rem;
   color: #FFFFFF;
@@ -347,7 +348,13 @@ body {
 .footer .error--text {
   color: #FF6F5B;
   font-size: 0.75rem;
-  font-weight: 500;
+  text-align: right;
+  padding-top: 0.2rem;
+}
+.footer .error--icon {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 @media (max-width: 1211px) {
