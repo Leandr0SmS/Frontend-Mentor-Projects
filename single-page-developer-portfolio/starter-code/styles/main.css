@@ -299,6 +299,7 @@ body {
   line-height: 1.625rem;
   text-transform: uppercase;
   border-bottom: 1px solid #FFFFFF;
+  background-color: transparent;
 }
 .footer .contact--form--div .form .inputs:focus {
   outline: none;
@@ -630,9 +631,6 @@ body {
     align-items: flex-end;
     max-width: 27.8125rem;
     width: 100%;
-  }
-  .footer .contact--form--div .form input, .footer .contact--form--div .form textarea {
-    background-color: transparent;
   }
   .footer .contact--form--div .form ::-moz-placeholder {
     font-size: 1.1rem;

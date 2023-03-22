@@ -294,6 +294,7 @@ body {
                 line-height: 1.625rem;
                 text-transform: uppercase;
                 border-bottom: 1px solid $white;
+                background-color: transparent;
                 &:focus {
                     outline: none;
                     border-bottom: 1px solid $green;
@@ -627,9 +628,6 @@ body {
                 align-items: flex-end;
                 max-width: 27.8125rem;
                 width: 100%;
-                input, textarea {
-                    background-color: transparent;
-                }
                 ::placeholder {
                     font-size: 1.1rem;
                     text-transform: uppercase;
