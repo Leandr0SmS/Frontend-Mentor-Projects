@@ -285,12 +285,13 @@ body {
   background-color: #242424;
   width: 100%;
   border: none;
-  border-bottom: 1px solid #FFFFFF;
   padding-left: 1.5rem;
   padding-bottom: 1rem;
   color: #FFFFFF;
+  font-size: 1.1rem;
   line-height: 1.625rem;
   text-transform: uppercase;
+  border-bottom: 1px solid #FFFFFF;
 }
 .footer .contact--form--div .form .inputs:focus {
   outline: none;
@@ -332,7 +333,8 @@ body {
   padding: 0;
   padding-bottom: 0.625rem;
   border-bottom: 2px solid #4EE1A0;
-  width: 9rem;
+  width: -moz-max-content;
+  width: max-content;
   cursor: pointer;
 }
 .footer .contact--form--div .form .form--btn:hover {
@@ -340,10 +342,14 @@ body {
 }
 .footer .contact--form--div .form .form--btn:active {
   padding-top: 1px;
+  font-size: 1.1rem;
   border-bottom: 1px solid #4EE1A0;
 }
 .footer .bottom--header {
   padding: 2.93rem 0 5.75rem;
+}
+.footer #error--input {
+  border-bottom: 1px solid #FF6F5B;
 }
 .footer .error--text {
   color: #FF6F5B;

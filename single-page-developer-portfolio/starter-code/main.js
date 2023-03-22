@@ -335,6 +335,7 @@ function Footer(props) {
                     <div className="inputs--div">
                         <input 
                             className="inputs"
+                            id={props.nameError ? "error--input" : "name-input"}
                             type="text"
                             name="name"
                             value={props.name}
@@ -360,6 +361,7 @@ function Footer(props) {
                     <div className="inputs--div">
                         <input 
                             className="inputs"
+                            id={props.emailError ? "error--input" : "email-input"} 
                             type="text"
                             name="email"
                             value={props.email}
@@ -385,6 +387,7 @@ function Footer(props) {
                     <div className="inputs--div">
                         <textarea
                             className="inputs"
+                            id={props.messageError ? "error--input" : "message-input"}
                             type="text"
                             name="message"
                             value={props.textarea}
@@ -467,7 +470,6 @@ function Page() {
             };
         };
     }
-    console.log(error) // DELETE!!!
     return (
       <div className="page">
           <Header />
