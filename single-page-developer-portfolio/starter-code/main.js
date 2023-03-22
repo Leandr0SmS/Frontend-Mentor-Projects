@@ -318,11 +318,6 @@ function Projects() {
 }
 
 function Footer(props) {
-    //const [emailError, setEmailError] = React.useState(false);
-    //function emailValidation(email) {
-    //    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    //    return re.test(email) && true; 
-    //}
     return (
         <footer className="footer">
             <div className="contact--form--div">
@@ -381,17 +376,48 @@ function Page() {
         email: "",
         message: ""
     })
+    const [error, setError] = React.useState({
+        name: false,
+        email: false,
+        message: false
+    });
     function handleSubmit(e) {
         e.preventDefault();
     }
     function handleChange(event) {
-        console.log(formData)
+        console.log(formData)////Delete!!!
         const {name, value} = event.target;
         setFormData(prevFormState => ({
           ...prevFormState,
           [name]: value
         }))
+        setError(prevValidState => ({
+            ...prevValidState,
+            [name]: false
+        }))
     }
+    function emailValidation(email) {
+        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email) && true; 
+    }
+    function formValidation() {
+        for (let prop in formData) {
+            if (formData[prop]) {
+                if (prop === "email") {
+                    emailValidation(formData.email)
+                        ? console.log("email ok")
+                        : setError(prevState => ({...prevState, email: true}))
+                }
+                console.log(`${prop} of form checked`)
+            } else {
+                setError(prevError => ({
+                    ...prevError,
+                    [prop]: true
+                }));
+            };
+        };
+    }
+    console.log(error) // DELETE!!!
     return (
       <div className="page">
           <Header />
@@ -403,6 +429,7 @@ function Page() {
             textarea={formData.message}
             handleChange={handleChange}
             handleSubmit={handleSubmit}
+            formValidation={formValidation}
           />
       </div>
     )
