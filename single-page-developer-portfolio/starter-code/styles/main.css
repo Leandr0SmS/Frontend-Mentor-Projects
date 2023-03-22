@@ -316,6 +316,7 @@ body {
 }
 .footer .contact--form--div .form textarea {
   height: 6.6875rem;
+  max-width: 28rem;
 }
 .footer .contact--form--div .form .form--btn {
   background-color: #242424;

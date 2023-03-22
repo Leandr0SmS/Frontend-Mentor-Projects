@@ -385,7 +385,6 @@ function Page() {
         e.preventDefault();
     }
     function handleChange(event) {
-        console.log(formData)////Delete!!!
         const {name, value} = event.target;
         setFormData(prevFormState => ({
           ...prevFormState,
