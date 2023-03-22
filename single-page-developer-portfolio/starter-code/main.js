@@ -335,6 +335,7 @@ function Footer(props) {
                 </div>
                 <form className="form">
                     <input 
+                        className="inputs"
                         type="text"
                         name="name"
                         value={props.name}
@@ -342,6 +343,7 @@ function Footer(props) {
                         placeholder="name"
                     ></input>
                     <input 
+                        className="inputs"
                         type="text"
                         name="email"
                         value={props.email}
@@ -349,6 +351,7 @@ function Footer(props) {
                         placeholder="email"
                     ></input>
                     <textarea
+                        className="inputs"
                         type="text"
                         name="message"
                         value={props.textarea}

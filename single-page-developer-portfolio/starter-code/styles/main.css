@@ -269,7 +269,7 @@ body {
   align-items: flex-end;
   width: 27.8125rem;
 }
-.footer .contact--form--div .form input, .footer .contact--form--div .form textarea {
+.footer .contact--form--div .form .inputs {
   background-color: #242424;
   width: 100%;
   border: none;
@@ -277,8 +277,11 @@ body {
   margin-bottom: 2rem;
   padding-left: 1.5rem;
   padding-bottom: 1rem;
+  color: #FFFFFF;
+  line-height: 1.625rem;
+  text-transform: uppercase;
 }
-.footer .contact--form--div .form input:focus, .footer .contact--form--div .form textarea:focus {
+.footer .contact--form--div .form .inputs:focus {
   outline: none;
   border-bottom: 1px solid #4EE1A0;
   opacity: 1;
