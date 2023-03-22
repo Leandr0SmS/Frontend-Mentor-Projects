@@ -276,6 +276,9 @@ body {
   align-items: flex-end;
   width: 27.8125rem;
 }
+.footer .contact--form--div .form .inputs--div {
+  width: 100%;
+}
 .footer .contact--form--div .form .inputs {
   background-color: #242424;
   width: 100%;
@@ -340,6 +343,11 @@ body {
 }
 .footer .bottom--header {
   padding: 2.93rem 0 5.75rem;
+}
+.footer .error--text {
+  color: #FF6F5B;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 @media (max-width: 1211px) {

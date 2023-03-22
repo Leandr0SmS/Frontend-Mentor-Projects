@@ -332,30 +332,81 @@ function Footer(props) {
                     className="form"
                     onSubmit={props.handleSubmit}
                 >
-                    <input 
-                        className="inputs"
-                        type="text"
-                        name="name"
-                        value={props.name}
-                        onChange={props.handleChange}
-                        placeholder="name"
-                    ></input>
-                    <input 
-                        className="inputs"
-                        type="text"
-                        name="email"
-                        value={props.email}
-                        onChange={props.handleChange}
-                        placeholder="email"
-                    ></input>
-                    <textarea
-                        className="inputs"
-                        type="text"
-                        name="message"
-                        value={props.textarea}
-                        onChange={props.handleChange}
-                        placeholder="message"
-                    ></textarea>
+                    <div className="inputs--div">
+                        <input 
+                            className="inputs"
+                            type="text"
+                            name="name"
+                            value={props.name}
+                            onChange={props.handleChange}
+                            placeholder="name"
+                        ></input>
+                        {
+                            props.nameError
+                            && 
+                            <img 
+                                className="error--icon" 
+                                src="./assets/images/icon-error.svg"
+                                alt="Input error, please check the message error"
+                            />
+                        }
+                        {
+                            props.nameError
+                            &&
+                            <p className="error--text">Please, tell me your name</p>
+                        }
+                    </div>
+
+                    <div className="inputs--div">
+                        <input 
+                            className="inputs"
+                            type="text"
+                            name="email"
+                            value={props.email}
+                            onChange={props.handleChange}
+                            placeholder="email"
+                        ></input>
+                        {
+                            props.emailError
+                            && 
+                            <img 
+                                className="error--icon" 
+                                src="./assets/images/icon-error.svg"
+                                alt="Input error, please check the message error"
+                            />
+                        }
+                        {
+                            props.emailError
+                            &&
+                            <p className="error--text">Sorry, invalid format here</p>
+                        }
+                    </div>
+
+                    <div className="inputs--div">
+                        <textarea
+                            className="inputs"
+                            type="text"
+                            name="message"
+                            value={props.textarea}
+                            onChange={props.handleChange}
+                            placeholder="message"
+                        ></textarea>
+                        {
+                            props.messageError
+                            && 
+                            <img 
+                                className="error--icon" 
+                                src="./assets/images/icon-error.svg"
+                                alt="Input error, please check the message error"
+                            />
+                        }
+                        {
+                            props.messageError
+                            &&
+                            <p className="error--text">Tell me about your project</p>
+                        }        
+                    </div>
+
                     <button
                         className="form--btn"
                         onClick={props.formValidation}
@@ -429,6 +480,9 @@ function Page() {
             handleChange={handleChange}
             handleSubmit={handleSubmit}
             formValidation={formValidation}
+            nameError={error.name}
+            emailError={error.email}
+            messageError={error.message}
           />
       </div>
     )
