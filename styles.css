@@ -11,7 +11,7 @@
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     background-color: var(--background);
     color: var(--font);
     font-family: monospace, Arial, Helvetica, sans-serif;
@@ -19,16 +19,16 @@ body {
 
 header {
     background-color: var(--div);
-    padding: 1rem;
+    padding: 1rem 3rem 1rem;
 }
 
 main {
+    max-width: 90rem;
     margin: 2rem;
-    display: flex;
-    justify-content:left;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(15rem, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
 }
 
 .heading {
@@ -37,17 +37,16 @@ main {
 
 .challenge-card {
     background-color: var(--div);
-    margin: 1rem;
-    padding: 2rem;
-    width: 30rem;
-    border-radius: 2rem;
+    padding: 10%;
+    width: 100%;
+    border-radius: 1rem;
     display: flex;
     justify-content: center;
 }
 
 .project-link > img {
     object-fit: cover;
-    height: 15rem;
+    height: 90%;
 }
 
 .project-link {
@@ -55,8 +54,8 @@ main {
 }
 
 .project-img {
-    width: 25rem;
-    border-radius: 2rem;
+    width: 100%;
+    border-radius: 1rem;
 }
 
 .project-img:hover {
@@ -68,5 +67,16 @@ main {
     color: var(--font);
     text-align: center;
     margin: 0;
-    margin-top: 1rem;
+    margin-top: 1%;
+}
+
+@media (max-width: 585px) {
+    header {
+        padding: 1rem 1rem 1rem;
+    }
+    main {
+        margin: 1rem;
+        grid-template-columns: repeat(1, minmax(15rem, 1fr));
+        gap: 1rem;
+    }
 }
