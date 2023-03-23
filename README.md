@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository is for sharing my solutions of Frontend Mentor Challenges.
+This repository is to share my solutions of Frontend Mentor Challenges.
 
 <br>
 
