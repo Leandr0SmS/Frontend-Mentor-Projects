@@ -3,5 +3,16 @@
     box-sizing: border-box;
 }
 body {
-    margin: 0
+    margin: 0;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: aliceblue;
 }
