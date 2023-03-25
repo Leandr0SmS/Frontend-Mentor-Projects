@@ -1,13 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap");
 * {
   box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
 }
 
 body {
   margin: 0;
-  background-color: black;
+  background-color: hsl(218, 23%, 16%);
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: aliceblue;
 }/*# sourceMappingURL=main.css.map */
