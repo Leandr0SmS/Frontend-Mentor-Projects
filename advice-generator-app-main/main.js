@@ -1,6 +1,16 @@
 function App() {
+    const [data, setData] = React.useState({});
+    const [get, setGet] = React.useState(1)
+    React.useEffect(() => {
+        fetch(`https://api.adviceslip.com/advice/${get}`)
+            .then(res => res.json())
+            .then(data => setData(data.slip))
+    }, [get])
     return (
-        <h1>Test</h1>
+        <div>
+            <h1>{data.advice}</h1>
+            <button onClick={() => setGet(c => c + 1)}>New Advise: {`${get}`}</button>
+        </div>
     )
 }
 //Render
