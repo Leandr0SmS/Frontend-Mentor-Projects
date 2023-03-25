@@ -14,7 +14,7 @@ function App() {
             <h2 className="advice">"{data.advice}"</h2>
             <picture className="divider">
                 <source 
-                    media="(max-width:750px)" 
+                    media="(max-width:770px)" 
                     srcSet="./images/pattern-divider-mobile.svg"
                     alt="A line under the advice"
                     aria-hidden="false"

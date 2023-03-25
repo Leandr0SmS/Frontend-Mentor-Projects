@@ -12,7 +12,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 .container {
     position: relative;
     background-color: $dark-grayish-Blue;
@@ -25,7 +24,6 @@ body {
     text-align: center;
     box-shadow: 1.875rem 3.125rem 5rem rgba(0, 0, 0, 0.100202);
 }
-
 .advice--id {
     color: $Neon-green;
     font-size: 0.8125rem;
@@ -33,7 +31,6 @@ body {
     margin-bottom: 1.5rem;
     letter-spacing: 0.255rem;
 }
-
 .advice {
     color: $Light-cyan;
     font-size: 1.75rem;
@@ -41,7 +38,6 @@ body {
     margin-bottom: 2.5rem;
     width: 27.75rem;
 }
-
 .buttom {
     position: absolute;
     display: flex;
@@ -55,4 +51,21 @@ body {
     background-color: $Neon-green;
     border-radius: 50%;
     cursor: pointer;
+}
+
+@media (max-width: 770px) {
+    .container {
+        border-radius: 0.625rem;
+        padding: 2.5rem 1.5rem 4rem;
+    }
+    .advice--id {
+        font-size: 0.6875rem;
+        line-height: 0.9375rem;
+    }
+    .advice {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 2rem;
+        width: 18.43rem;
+    }
 }
