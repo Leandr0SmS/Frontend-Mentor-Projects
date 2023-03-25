@@ -1,10 +1,9 @@
 
 function App() {
-    const random =  Math.floor(Math.random() * 21) + 1;
     const [data, setData] = React.useState({});
-    const [get, setGet] = React.useState(random)
+    const [get, setGet] = React.useState(1)
     React.useEffect(() => {
-        fetch(`https://api.adviceslip.com/advice/${get}`)
+        fetch("https://api.adviceslip.com/advice")
             .then(res => res.json())
             .then(data => setData(data.slip))
     }, [get])
@@ -28,7 +27,7 @@ function App() {
                     role="img"
                 />
             </picture>
-            <div className="buttom" onClick={() => setGet(random)}>
+            <div className="buttom" onClick={() => setGet(c => c + 1)}>
                 <img
                     className="dice--icon"
                     src="./images/icon-dice.svg"
