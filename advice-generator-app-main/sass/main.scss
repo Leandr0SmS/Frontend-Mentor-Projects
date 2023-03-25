@@ -51,6 +51,9 @@ body {
     background-color: $Neon-green;
     border-radius: 50%;
     cursor: pointer;
+    &:hover {
+        box-shadow: 0px 0px 2.5rem #53FFAA;
+    }
 }
 
 @media (max-width: 770px) {
