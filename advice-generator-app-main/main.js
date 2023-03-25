@@ -8,9 +8,9 @@ function App() {
     }, [get])
     return (
         <div className="container">
-            <p className="advice--id">{data.id}</p>
-            <h2 className="advice">{data.advice}</h2>
-            <picture>
+            <p className="advice--id">ADVICE #{data.id}</p>
+            <h2 className="advice">`"${data.advice}"`</h2>
+            <picture className="divider">
                 <source 
                     media="(max-width:750px)" 
                     srcSet="./images/pattern-divider-mobile.svg"
@@ -19,7 +19,6 @@ function App() {
                     role="img"
                 />
                 <img
-                    className="divider"
                     src="./images/pattern-divider-desktop.svg"
                     alt="A line under the advice"
                     aria-hidden="false"

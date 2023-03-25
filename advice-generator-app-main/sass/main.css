@@ -2,6 +2,7 @@
 * {
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
+  font-weight: 800;
 }
 
 body {
@@ -11,4 +12,46 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.container {
+  position: relative;
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 0.9375rem;
+  width: 33.75rem;
+  height: 20.75rem;
+  padding: 3em 9em 4.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.advice--id {
+  color: hsl(150, 100%, 66%);
+  font-size: 0.8125rem;
+  line-height: 1.11rem;
+  margin-bottom: 1.5rem;
+}
+
+.advice {
+  color: hsl(193, 38%, 86%);
+  font-size: 1.75rem;
+  line-height: 2.39rem;
+  margin-bottom: 2.5rem;
+}
+
+.buttom {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: hsl(150, 100%, 66%);
+  border-radius: 50%;
 }/*# sourceMappingURL=main.css.map */
