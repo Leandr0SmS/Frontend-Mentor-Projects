@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap");
 * {
   box-sizing: border-box;
+  margin: 0;
   font-family: "Manrope", sans-serif;
   font-weight: 800;
 }
 
 body {
-  margin: 0;
   background-color: hsl(218, 23%, 16%);
   height: 100vh;
   display: flex;
@@ -18,14 +18,13 @@ body {
   position: relative;
   background-color: hsl(217, 19%, 24%);
   border-radius: 0.9375rem;
-  width: 33.75rem;
-  height: 20.75rem;
-  padding: 3em 9em 4.5em;
+  padding: 3rem 9rem 4.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-shadow: 1.875rem 3.125rem 5rem rgba(0, 0, 0, 0.100202);
 }
 
 .advice--id {
@@ -33,6 +32,7 @@ body {
   font-size: 0.8125rem;
   line-height: 1.11rem;
   margin-bottom: 1.5rem;
+  letter-spacing: 0.255rem;
 }
 
 .advice {
@@ -40,6 +40,7 @@ body {
   font-size: 1.75rem;
   line-height: 2.39rem;
   margin-bottom: 2.5rem;
+  width: 27.75rem;
 }
 
 .buttom {
@@ -49,9 +50,10 @@ body {
   justify-content: center;
   height: 4rem;
   width: 4rem;
-  bottom: -1rem;
+  bottom: -2rem;
   left: 50%;
   transform: translate(-50%);
   background-color: hsl(150, 100%, 66%);
   border-radius: 50%;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
