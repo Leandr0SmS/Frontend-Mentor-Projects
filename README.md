@@ -30,7 +30,11 @@ This repository is to share my solutions of Frontend Mentor Challenges.
 
 10. [Intro component with sign up form](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/intro-component-with-signup-form-master)
 
-11. [Intro component with sign up form](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/single-page-developer-portfolio)
+11. [Single-page developer portfolio](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/single-page-developer-portfolio)
+
+12. [Advice generator app](https://github.com/Leandr0SmS/Frontend-Mentor-Projects)
+
+
 
 <br>
 
