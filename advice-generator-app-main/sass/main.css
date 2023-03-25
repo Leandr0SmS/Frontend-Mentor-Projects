@@ -9,11 +9,5 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-h1 {
-  font-size: 3rem;
-  text-align: center;
-  text-transform: uppercase;
   color: aliceblue;
 }/*# sourceMappingURL=main.css.map */
