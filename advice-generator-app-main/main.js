@@ -1,13 +1,17 @@
 
 function App() {
     const [data, setData] = React.useState({});
-    const [get, setGet] = React.useState(1)
+    const [get, setGet] = React.useState(0)
+    function handleClick() {
+        setGet(get => get + 1)
+    }
     React.useEffect(() => {
+        console.log("fech data")///// Checkdata
         fetch("https://api.adviceslip.com/advice")
             .then(res => res.json())
             .then(data => setData(data.slip))
     }, [get])
-    console.log({get, data})
+    console.log({get, data}) ///// Checkdata
     return (
         <div className="container">
             <p className="advice--id">ADVICE #{data.id}</p>
@@ -27,7 +31,7 @@ function App() {
                     role="img"
                 />
             </picture>
-            <div className="buttom" onClick={() => setGet(c => c + 1)}>
+            <div className="buttom" onClick={handleClick}>
                 <img
                     className="dice--icon"
                     src="./images/icon-dice.svg"
