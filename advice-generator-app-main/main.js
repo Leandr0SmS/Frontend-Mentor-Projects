@@ -1,6 +1,11 @@
 
 function App() {
-    const [data, setData] = React.useState({});
+    const [data, setData] = React.useState(
+        {
+            id: 117,
+            advice: "It is easy to sit up and take notice, what's difficult is getting up and taking action."
+        }
+    );
     const [get, setGet] = React.useState(0)
     function handleClick() {
         setGet(get => get + 1)
