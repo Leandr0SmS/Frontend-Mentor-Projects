@@ -49,10 +49,31 @@ function App() {
                     <p className="card--CVC">000</p>
                 </div>
             </div>
-            <div className="form--div">
-                <form className="form">
-                </form>
-            </div>
+            <form className="form">
+                <label>Cardholder Name</label>
+                <input
+                    placeholder="e.g. Jane Appleseed"
+                />
+                <label>Card Number</label>
+                <input
+                    placeholder="e.g. 1234 5678 9123 0000"
+                />
+                <label>Exp. Date (MM/YY)</label>
+                <div className="form--expDate--cvc--div">
+                    <div className="form--expDate--div">
+                        <input
+                            placeholder="MM"
+                        />
+                        <input
+                            placeholder="YY"
+                        />
+                    </div>
+                    <label>CVC</label>
+                    <inpit
+                        placeholder="e.g. 123"
+                    />
+                </div>
+            </form>
         </div>
     )
 }
