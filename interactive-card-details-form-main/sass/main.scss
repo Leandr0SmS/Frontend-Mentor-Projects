@@ -1,1 +1,10 @@
 @import "base.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+ body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: $White url("../images/bg-main-desktop.png") no-repeat top left;
+}

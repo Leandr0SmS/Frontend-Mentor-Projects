@@ -1,1 +1,10 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background: hsl(0, 0%, 100%) url("../images/bg-main-desktop.png") no-repeat top left;
+}/*# sourceMappingURL=main.css.map */
