@@ -31,8 +31,23 @@ function App() {
     return (
         <div className="app">
             <div className="cards--div">
-                <div className="card--front--div"></div>
-                <div className="card--back--div"></div>
+                <div className="card--front--div">
+                    <img
+                        className="card--logo"
+                        src="./images/card-logo.svg"
+                        alt="card logo"
+                        aria-hidden="false"
+                        role="img"
+                    />
+                    <h2 className="card--number">0000 0000 0000 0000</h2>
+                    <div className="card--name--date--div">
+                        <p className="card--name">Jane Appleseed</p>
+                        <p className="card--expDate">00/00</p>
+                    </div>
+                </div>
+                <div className="card--back--div">
+                    <p className="card--CVC">000</p>
+                </div>
             </div>
             <div className="form--div">
                 <form className="form">
