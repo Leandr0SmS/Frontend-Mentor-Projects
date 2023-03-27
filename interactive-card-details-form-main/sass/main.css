@@ -10,12 +10,20 @@ body {
   background: hsl(0, 0%, 100%) url("../images/bg-main-desktop.png") no-repeat top left;
 }
 
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8.8194%;
+}
+
 .cards--div {
-  border: 2px solid red;
   position: relative;
   width: 33.8125rem;
   height: 32.9375rem;
   color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
 }
 
 .card--front--div {
@@ -36,13 +44,16 @@ body {
   margin-bottom: 1.5937rem;
   font-size: 1.75rem;
   line-height: 2.25rem;
-  letter-spacing: 0.21375rem;
+  letter-spacing: 0.21388rem;
 }
 
 .card--name--date--div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.125rem;
 }
 
 .card--back--div {
@@ -52,4 +63,20 @@ body {
   background: transparent url("../images/bg-card-back.png") no-repeat center;
   width: 27.9375rem;
   height: 15.3125rem;
+}
+
+.card--CVC {
+  position: absolute;
+  top: 6.9375rem;
+  right: 3.5625rem;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.125rem;
+}
+
+.form--div {
+  border: 1px solid red;
+  width: 23.8125rem;
+  height: 22rem;
 }/*# sourceMappingURL=main.css.map */
