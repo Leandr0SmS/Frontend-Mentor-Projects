@@ -50,28 +50,45 @@ function App() {
                 </div>
             </div>
             <form className="form">
-                <label>Cardholder Name</label>
+                <label htmlFor="name">Cardholder Name</label>
                 <input
+                    class="input"
+                    name="name"
+                    id="name"
                     placeholder="e.g. Jane Appleseed"
                 />
-                <label>Card Number</label>
+                <label htmlFor="number">Card Number</label>
                 <input
+                    class="input"
+                    name="number"
+                    id="number"
                     placeholder="e.g. 1234 5678 9123 0000"
                 />
                 <label>Exp. Date (MM/YY)</label>
                 <div className="form--expDate--cvc--div">
                     <div className="form--expDate--div">
                         <input
+                            class="input"
+                            name="MM"
+                            id="MM"
                             placeholder="MM"
                         />
                         <input
+                            class="input"
+                            name="YY"
+                            id="YY"
                             placeholder="YY"
                         />
                     </div>
-                    <label>CVC</label>
-                    <inpit
-                        placeholder="e.g. 123"
-                    />
+                    <div className="form--CVC--div">
+                        <label htmlFor="e.g.">CVC</label>
+                        <inpit
+                            class="input"
+                            name="e.g."
+                            id="e.g."
+                            placeholder="e.g. 123"
+                        />
+                    </div>
                 </div>
             </form>
         </div>

@@ -78,5 +78,14 @@ body {
 .form {
   border: 1px solid red;
   width: 23.8125rem;
-  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form--expDate--div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
