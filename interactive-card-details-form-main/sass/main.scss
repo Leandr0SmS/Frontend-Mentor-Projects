@@ -68,13 +68,9 @@
 }
 
 .form {
-    border: 1px solid red;
-    width: 26.52vw;//23.8125rem;
-    //height: 22rem;
+    width: 26.52vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .input {
     margin-bottom: 1.625rem;
@@ -92,5 +88,14 @@
     align-items: center;
 }
 .btn {
+    border: none;
+    background-color: $very-dark-violet;
+    color: $White;
+    border-radius: 0.5rem;
     margin-top: 2.5rem;
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+    width: 100%;
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
 }

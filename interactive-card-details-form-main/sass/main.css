@@ -76,12 +76,9 @@ body {
 }
 
 .form {
-  border: 1px solid red;
   width: 26.52vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .input {
@@ -103,5 +100,14 @@ body {
 }
 
 .btn {
+  border: none;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
   margin-top: 2.5rem;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+  width: 100%;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
 }/*# sourceMappingURL=main.css.map */
