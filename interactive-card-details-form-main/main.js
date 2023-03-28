@@ -97,8 +97,8 @@ function App() {
                         >CVC</label>
                         <input
                             className="input"
-                            name="e.g."
-                            id="e.g."
+                            name="eg"
+                            id="eg"
                             placeholder="e.g. 123"
                         />
                     </div>
