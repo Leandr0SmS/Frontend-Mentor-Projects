@@ -52,44 +52,51 @@ function App() {
             <form className="form">
                 <label htmlFor="name">Cardholder Name</label>
                 <input
-                    class="input"
+                    className="input"
                     name="name"
                     id="name"
                     placeholder="e.g. Jane Appleseed"
                 />
                 <label htmlFor="number">Card Number</label>
                 <input
-                    class="input"
+                    className="input"
                     name="number"
                     id="number"
                     placeholder="e.g. 1234 5678 9123 0000"
                 />
-                <label>Exp. Date (MM/YY)</label>
                 <div className="form--expDate--cvc--div">
-                    <div className="form--expDate--div">
-                        <input
-                            class="input"
-                            name="MM"
-                            id="MM"
-                            placeholder="MM"
-                        />
-                        <input
-                            class="input"
-                            name="YY"
-                            id="YY"
-                            placeholder="YY"
-                        />
+                    <div className="form--expDate--label--div">
+                        <label>Exp. Date (MM/YY)</label>
+                        <div className="form--expDate--div">
+                            <input
+                                className="input"
+                                name="MM"
+                                id="MM"
+                                placeholder="MM"
+                            />
+                            <input
+                                className="input"
+                                name="YY"
+                                id="YY"
+                                placeholder="YY"
+                            />
+                        </div>
                     </div>
                     <div className="form--CVC--div">
                         <label htmlFor="e.g.">CVC</label>
-                        <inpit
-                            class="input"
+                        <input
+                            className="input"
                             name="e.g."
                             id="e.g."
                             placeholder="e.g. 123"
                         />
                     </div>
                 </div>
+                <button
+                    className="btn"
+                    id="btn"
+                    name="btn"
+                >Confirm</button>
             </form>
         </div>
     )

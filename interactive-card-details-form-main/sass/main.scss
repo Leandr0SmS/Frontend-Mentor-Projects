@@ -69,15 +69,28 @@
 
 .form {
     border: 1px solid red;
-    width: 23.8125rem;
+    width: 26.52vw;//23.8125rem;
     //height: 22rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.input {
+    margin-bottom: 1.625rem;
+    width: 100%;
+}
+.form--expDate--cvc--div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
 .form--expDate--div {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.btn {
+    margin-top: 2.5rem;
 }
