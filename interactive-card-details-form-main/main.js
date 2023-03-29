@@ -27,7 +27,7 @@ function Cards() {
     )
 }
 
-function Form() {
+function Form(props) {
     return (
         <form className="form">
             <label 
@@ -39,6 +39,7 @@ function Form() {
                 name="name"
                 id="name"
                 placeholder="e.g. Jane Appleseed"
+                onChange={props.onchange}
             />
             <label 
                 htmlFor="number"
@@ -49,6 +50,7 @@ function Form() {
                 name="number"
                 id="number"
                 placeholder="e.g. 1234 5678 9123 0000"
+                onChange={props.onchange}
             />
             <div className="form--expDate--cvc--div">
                 <div className="form--expDate--label--div">
@@ -58,15 +60,17 @@ function Form() {
                     <div className="form--expDate--div">
                         <input
                             className="input"
-                            name="MM"
-                            id="MM"
+                            name="mm"
+                            id="mm"
                             placeholder="MM"
+                            onChange={props.onchange}
                         />
                         <input
                             className="input"
-                            name="YY"
-                            id="YY"
+                            name="yy"
+                            id="yy"
                             placeholder="YY"
+                            onChange={props.onchange}
                         />
                     </div>
                 </div>
@@ -77,9 +81,10 @@ function Form() {
                     >CVC</label>
                     <input
                         className="input"
-                        name="eg"
-                        id="eg"
+                        name="cvc"
+                        id="cvc"
                         placeholder="e.g. 123"
+                        onChange={props.onchange}
                     />
                 </div>
             </div>
@@ -87,16 +92,58 @@ function Form() {
                 className="btn"
                 id="btn"
                 name="btn"
+                onClick={props.onclick}
             >Confirm</button>
         </form>
     )
 }
 
 function App() {
+    function handleSubmit(e) {
+        e.preventDefault();
+    }
+    const [formData, setformData] = React.useState(
+        {
+            name: {
+                value: "",
+                error: true
+            },
+            number: {
+                value: "",
+                error: false
+            },
+            mm: {
+                value: "",
+                error: false
+            },
+            yy: {
+                value: "",
+                error: false
+            },
+            cvc: {
+                value: "",
+                error: false
+            }
+        }
+    );
+    function handleChange(event) {
+        const {name, value} = event.target;
+        setformData(prevFormState => ({
+            ...prevFormState,
+            [name]: {
+                ...prevFormState[name],
+                value: value,
+            }
+        })) 
+    }
+    console.log(formData);
     return (
         <div className="app">
             <Cards />
-            <Form />
+            <Form
+                onchange={handleChange}
+                onclick={handleSubmit}
+            />
         </div>
     )
 }
