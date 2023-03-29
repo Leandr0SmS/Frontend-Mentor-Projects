@@ -140,4 +140,7 @@ body {
   width: 100%;
   font-size: 1.125rem;
   line-height: 1.4375rem;
+}
+.btn:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
