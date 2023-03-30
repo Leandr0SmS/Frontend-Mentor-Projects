@@ -29,7 +29,10 @@ function Cards() {
 
 function Form(props) {
     return (
-        <form className="form">
+        <form 
+            className="form"
+            onSubmit={props.handleSubmit}
+        >
             <label 
                 className="label"
                 htmlFor="name"
@@ -106,7 +109,7 @@ function App() {
         {
             name: {
                 value: "",
-                error: true
+                error: false
             },
             number: {
                 value: "",
@@ -135,14 +138,36 @@ function App() {
                 value: value,
             }
         })) 
+    };
+    function formValidation() {
+        for (let prop in formData) {
+            if (formData[prop].value) {
+                setformData(prevFormState => ({
+                    ...prevFormState,
+                    [prop]: {
+                        ...prevFormState[prop],
+                        error: false,
+                    }
+                }))
+            } else {
+                setformData(prevFormState => ({
+                    ...prevFormState,
+                    [prop]: {
+                        ...prevFormState[prop],
+                        error: true,
+                    }
+                }))
+            }
+        }
     }
-    console.log(formData);
+    console.log(formData); // delete!!
     return (
         <div className="app">
             <Cards />
             <Form
+                handleSubmit={handleSubmit}
                 onchange={handleChange}
-                onclick={handleSubmit}
+                onclick={formValidation}
             />
         </div>
     )
