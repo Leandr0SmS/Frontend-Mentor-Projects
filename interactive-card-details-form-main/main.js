@@ -41,6 +41,7 @@ function Form(props) {
                 className="input"
                 name="name"
                 id="name"
+                value={props.nameValue}
                 placeholder="e.g. Jane Appleseed"
                 onChange={props.onchange}
             />
@@ -52,6 +53,7 @@ function Form(props) {
                 className="input"
                 name="number"
                 id="number"
+                value={props.numberValue}
                 placeholder="e.g. 1234 5678 9123 0000"
                 onChange={props.onchange}
             />
@@ -65,6 +67,7 @@ function Form(props) {
                             className="input"
                             name="mm"
                             id="mm"
+                            value={props.mmValue}
                             placeholder="MM"
                             onChange={props.onchange}
                         />
@@ -72,6 +75,7 @@ function Form(props) {
                             className="input"
                             name="yy"
                             id="yy"
+                            value={props.yyValue}
                             placeholder="YY"
                             onChange={props.onchange}
                         />
@@ -86,6 +90,7 @@ function Form(props) {
                         className="input"
                         name="cvc"
                         id="cvc"
+                        value={props.cvcValue}
                         placeholder="e.g. 123"
                         onChange={props.onchange}
                     />
@@ -105,6 +110,10 @@ function App() {
     function handleSubmit(e) {
         e.preventDefault();
     }
+    function numberValidation(number) {
+        let re = /^\d+$/;
+        return re.test(number) && true; 
+      }
     const [formData, setformData] = React.useState(
         {
             name: {
@@ -134,21 +143,33 @@ function App() {
         setformData(prevFormState => ({
             ...prevFormState,
             [name]: {
-                ...prevFormState[name],
                 value: value,
+                error: false
             }
         })) 
     };
     function formValidation() {
         for (let prop in formData) {
-            if (formData[prop].value) {
-                setformData(prevFormState => ({
-                    ...prevFormState,
-                    [prop]: {
-                        ...prevFormState[prop],
-                        error: false,
+            if (formData[prop].value.trim().length !== 0) {
+                if (prop !== "name") {
+                    if (numberValidation(formData[prop].value)) {
+                        setformData(prevFormState => ({
+                            ...prevFormState,
+                            [prop]: {
+                                ...prevFormState[prop],
+                                error: false,
+                            }
+                        }))
+                    } else {
+                        setformData(prevFormState => ({
+                            ...prevFormState,
+                            [prop]: {
+                                ...prevFormState[prop],
+                                error: true,
+                            }
+                        }))
                     }
-                }))
+                } 
             } else {
                 setformData(prevFormState => ({
                     ...prevFormState,
@@ -160,11 +181,15 @@ function App() {
             }
         }
     }
-    console.log(formData); // delete!!
     return (
         <div className="app">
             <Cards />
             <Form
+                nameValue={formData.name.value}
+                numberValue={formData.number.value}
+                mmValue={formData.mm.value}
+                yyValue={formData.yy.value}
+                cvcValue={formData.cvc.value}
                 handleSubmit={handleSubmit}
                 onchange={handleChange}
                 onclick={formValidation}
