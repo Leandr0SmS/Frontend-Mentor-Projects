@@ -89,7 +89,7 @@
     border-radius: 0.5rem;
     &:focus {
         outline: none;
-        background: linear-gradient(white, white) padding-box,
+        background: linear-gradient($White, $White) padding-box,
         linear-gradient($linear-gradient) border-box;
         border: 1px solid transparent;  
         opacity: 1;

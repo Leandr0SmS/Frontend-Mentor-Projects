@@ -101,7 +101,7 @@ body {
 }
 .input:focus {
   outline: none;
-  background: linear-gradient(white, white) padding-box, linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+  background: linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 100%)) padding-box, linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
   border: 1px solid transparent;
   opacity: 1;
 }
