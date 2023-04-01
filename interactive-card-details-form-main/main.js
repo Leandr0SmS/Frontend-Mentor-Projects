@@ -45,7 +45,7 @@ function Form(props) {
                     htmlFor="name"
                 >Cardholder Name</label>
                 <input
-                    className="input"
+                    className={props.nameError ? "input error" : "input"}
                     name="name"
                     id="name"
                     value={props.nameValue}
