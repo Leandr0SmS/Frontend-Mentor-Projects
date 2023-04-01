@@ -27,6 +27,13 @@ function Cards(props) {
     )
 }
 function Form(props) {
+    function NumberOrBlankError(props) {
+        if (props.typeOfError === "format") {
+            return <p className="error">Wrong format, numbers only</p>
+        } else if (props.typeOfError === "blank") {
+            return <p className="error">Can't be blank</p>
+        }
+    }
     return (
         <form 
             className="form"
@@ -45,7 +52,7 @@ function Form(props) {
                     placeholder="e.g. Jane Appleseed"
                     onChange={props.onchange}
                 />
-                {props.nameError && <p className="blank--error error">Can't be blank</p>}
+                {props.nameError === "blank" && <p className="error">Can't be blank</p>}
             </div>
             <div className="input--div">
                 <label 
@@ -60,6 +67,7 @@ function Form(props) {
                     placeholder="e.g. 1234 5678 9123 0000"
                     onChange={props.onchange}
                 />
+                {props.numberError && <NumberOrBlankError typeOfError={props.numberError} />}
             </div>
             <div className="form--expDate--cvc--div">
                 <div className="form--expDate--label--div">
@@ -84,6 +92,8 @@ function Form(props) {
                             onChange={props.onchange}
                         />
                     </div>
+                    {props.mmError && <NumberOrBlankError typeOfError={props.mmError} />}
+                    {props.yyError && <NumberOrBlankError typeOfError={props.yyError} />}
                 </div>
                 <div className="form--CVC--div">
                     <label
@@ -98,6 +108,7 @@ function Form(props) {
                         placeholder="e.g. 123"
                         onChange={props.onchange}
                     />
+                    {props.cvcError && <NumberOrBlankError typeOfError={props.cvcError} />}
                 </div>
             </div>
             <button
@@ -168,7 +179,7 @@ function App() {
                             ...prevFormState,
                             [prop]: {
                                 ...prevFormState[prop],
-                                error: true,
+                                error: "format",
                             }
                         }))
                     }
@@ -178,12 +189,13 @@ function App() {
                     ...prevFormState,
                     [prop]: {
                         ...prevFormState[prop],
-                        error: true,
+                        error: "blank",
                     }
                 }))
             }
         }
     }
+    console.log(formData)
     return (
         <div className="app">
             <Cards
@@ -195,10 +207,15 @@ function App() {
             />
             <Form
                 nameValue={formData.name.value}
+                nameError={formData.name.error}
                 numberValue={formData.number.value}
+                numberError={formData.number.error}
                 mmValue={formData.mm.value}
+                mmError={formData.mm.error}
                 yyValue={formData.yy.value}
+                yyError={formData.yy.error}
                 cvcValue={formData.cvc.value}
+                cvcError={formData.cvc.error}
                 handleSubmit={handleSubmit}
                 onchange={handleChange}
                 onclick={formValidation}

@@ -81,6 +81,10 @@ body {
   flex-direction: column;
 }
 
+.input--div {
+  margin-bottom: 1.625rem;
+}
+
 .label {
   font-size: 0.75rem;
   line-height: 0.9375rem;
@@ -89,7 +93,6 @@ body {
 }
 
 .input {
-  margin-bottom: 1.625rem;
   padding: 0.6875rem 1rem;
   width: 100%;
   margin-top: 0.5625rem;
