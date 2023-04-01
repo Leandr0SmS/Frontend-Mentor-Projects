@@ -92,8 +92,7 @@ function Form(props) {
                             onChange={props.onchange}
                         />
                     </div>
-                    {props.mmError && <NumberOrBlankError typeOfError={props.mmError} />}
-                    {props.yyError && <NumberOrBlankError typeOfError={props.yyError} />}
+                    {(props.mmError || props.yyError) && <NumberOrBlankError typeOfError={props.mmError || props.yyError} />}
                 </div>
                 <div className="form--CVC--div">
                     <label
