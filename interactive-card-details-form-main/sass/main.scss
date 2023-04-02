@@ -92,6 +92,9 @@
     width: 100%;
     margin-top: 0.5625rem;
     border-radius: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+    color: $very-dark-violet;
     &:focus {
         outline: none;
         background: linear-gradient($White, $White) padding-box,

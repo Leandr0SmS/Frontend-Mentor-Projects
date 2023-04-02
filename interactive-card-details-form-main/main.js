@@ -46,6 +46,7 @@ function Form(props) {
                 >Cardholder Name</label>
                 <input
                     className={props.nameError ? "error--border input" : "normal--border input"}
+                    type="text"
                     name="name"
                     id="name"
                     value={props.nameValue}
@@ -60,11 +61,13 @@ function Form(props) {
                     className="label"
                 >Card Number</label>
                 <input
-                    className={props.nameError ? "error--border input" : "normal--border input"}
+                    className={props.numberError ? "error--border input" : "normal--border input"}
+                    type="text"
                     name="number"
                     id="number"
                     value={props.numberValue}
                     placeholder="e.g. 1234 5678 9123 0000"
+                    maxLength="16"
                     onChange={props.onchange}
                 />
                 {props.numberError && <NumberOrBlankError typeOfError={props.numberError} />}
@@ -76,19 +79,23 @@ function Form(props) {
                     >Exp. Date (MM/YY)</label>
                     <div className="form--expDate--div">
                         <input
-                            className={props.nameError ? "error--border input" : "normal--border input"}
+                            className={props.mmError ? "error--border input" : "normal--border input"}
+                            type="text"
                             name="mm"
                             id="mm"
                             value={props.mmValue}
                             placeholder="MM"
+                            maxLength="2"
                             onChange={props.onchange}
                         />
                         <input
-                            className={props.nameError ? "error--border input" : "normal--border input"}
+                            className={props.yyError ? "error--border input" : "normal--border input"}
+                            type="text"
                             name="yy"
                             id="yy"
                             value={props.yyValue}
                             placeholder="YY"
+                            maxLength="2"
                             onChange={props.onchange}
                         />
                     </div>
@@ -100,11 +107,13 @@ function Form(props) {
                         htmlFor="e.g."
                     >CVC</label>
                     <input
-                        className={props.nameError ? "error--border input" : "normal--border input"}
+                        className={props.cvcError ? "error--border input" : "normal--border input"}
+                        type="text"
                         name="cvc"
                         id="cvc"
                         value={props.cvcValue}
                         placeholder="e.g. 123"
+                        maxLength="3"
                         onChange={props.onchange}
                     />
                     {props.cvcError && <NumberOrBlankError typeOfError={props.cvcError} />}
