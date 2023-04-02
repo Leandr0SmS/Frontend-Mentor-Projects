@@ -45,7 +45,7 @@ function Form(props) {
                     htmlFor="name"
                 >Cardholder Name</label>
                 <input
-                    className={props.nameError ? "input error" : "input"}
+                    className={props.nameError ? "error--border input" : "normal--border input"}
                     name="name"
                     id="name"
                     value={props.nameValue}
@@ -60,7 +60,7 @@ function Form(props) {
                     className="label"
                 >Card Number</label>
                 <input
-                    className="input"
+                    className={props.nameError ? "error--border input" : "normal--border input"}
                     name="number"
                     id="number"
                     value={props.numberValue}
@@ -76,7 +76,7 @@ function Form(props) {
                     >Exp. Date (MM/YY)</label>
                     <div className="form--expDate--div">
                         <input
-                            className="input"
+                            className={props.nameError ? "error--border input" : "normal--border input"}
                             name="mm"
                             id="mm"
                             value={props.mmValue}
@@ -84,7 +84,7 @@ function Form(props) {
                             onChange={props.onchange}
                         />
                         <input
-                            className="input"
+                            className={props.nameError ? "error--border input" : "normal--border input"}
                             name="yy"
                             id="yy"
                             value={props.yyValue}
@@ -100,7 +100,7 @@ function Form(props) {
                         htmlFor="e.g."
                     >CVC</label>
                     <input
-                        className="input"
+                        className={props.nameError ? "error--border input" : "normal--border input"}
                         name="cvc"
                         id="cvc"
                         value={props.cvcValue}
