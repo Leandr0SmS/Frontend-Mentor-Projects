@@ -1,8 +1,3 @@
-/*
-  Thank you!
-  We've added your card details
-  Continue
-*/
 function Cards(props) {
     return (
         <div className="cards--div">
