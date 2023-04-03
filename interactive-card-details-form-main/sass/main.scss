@@ -143,12 +143,18 @@
     width: 100%;
     font-size: 1.125rem;
     line-height: 1.4375rem;
+    transition: 0.2s linear;
     &:hover {
         cursor: pointer;
+    }
+    &:active {
+        transform: scale(0.98);
+        box-shadow: 3px 2px 25px 1px rgba(0,0,0,0.25);
     }
 }
 .link {
     text-align: center;
+    text-decoration: none;
 }
 .thankyou--div {
     display: flex;

@@ -123,7 +123,7 @@ function Form(props) {
         </form>
     )
 }
-function Thankyou(props) {
+function Thankyou() {
     return (
         <div className="thankyou--div">
             <img
@@ -137,6 +137,7 @@ function Thankyou(props) {
             <p className="thankyou--text">We've added your card details</p>
             <a 
                 className="btn link"
+                href="./index.html"
             >Continue</a>
         </div>
     )
@@ -219,7 +220,6 @@ function App() {
                 isError = true;
             }
         }
-        console.log(isError)
         if (!isError) return setCheck(p => !p);
     }
     return (
