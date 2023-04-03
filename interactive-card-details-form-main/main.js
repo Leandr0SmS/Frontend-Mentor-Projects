@@ -123,7 +123,7 @@ function Form(props) {
         </form>
     )
 }
-function Thankyou() {
+function Thankyou(props) {
     return (
         <div className="thankyou--div">
             <img
@@ -135,7 +135,9 @@ function Thankyou() {
             />
             <h1 className="thankyou--title">THANK YOU!</h1>
             <p className="thankyou--text">We've added your card details</p>
-            <button className="btn">Continue</button>
+            <button 
+                className="btn"
+            >Continue</button>
         </div>
     )
 }
@@ -183,7 +185,7 @@ function App() {
         })) 
     };
     function formValidation() {
-        let countError = 0;
+        let isError = false;
         for (let prop in formData) {
             if (formData[prop].value.trim().length !== 0) {
                 if (prop !== "name") {
@@ -203,7 +205,7 @@ function App() {
                                 error: "format",
                             }
                         }))
-                        countError ++;
+                        isError = true;
                     }
                 } 
             } else {
@@ -214,12 +216,12 @@ function App() {
                         error: "blank",
                     }
                 }))
-                countError ++;
+                isError = true;
             }
         }
-        if (countError === 0) return setCheck(p => !p);
+        console.log(isError)
+        if (!isError) return setCheck(p => !p);
     }
-    console.log(check)
     return (
         <div className="app">
             <Cards
