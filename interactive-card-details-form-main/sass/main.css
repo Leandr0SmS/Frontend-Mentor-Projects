@@ -127,7 +127,7 @@ body {
 }
 
 #cvc {
-  width: 191px;
+  width: 11.93rem;
 }
 
 ::-moz-placeholder {
@@ -163,7 +163,7 @@ body {
   background-color: hsl(278, 68%, 11%);
   color: hsl(0, 0%, 100%);
   border-radius: 0.5rem;
-  margin-top: 1.625rem;
+  margin-top: 2.5rem;
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;
   width: 100%;
@@ -249,5 +249,24 @@ body {
     font-size: 0.5625rem;
     line-height: 0.6875rem;
     letter-spacing: 0.08rem;
+  }
+  .form {
+    min-width: 20.4375rem;
+  }
+  .input--div {
+    margin-bottom: 1.25rem;
+  }
+  #cvc {
+    width: 10.25rem;
+  }
+  .form--expDate--cvc--div {
+    gap: 0.6875rem;
+  }
+  .form--expDate--div {
+    gap: 0.5rem;
+    width: 9.5rem;
+  }
+  .btn {
+    margin-top: 1.75rem;
   }
 }/*# sourceMappingURL=main.css.map */
