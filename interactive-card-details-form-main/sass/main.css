@@ -172,4 +172,28 @@ body {
 }
 .btn:hover {
   cursor: pointer;
+}
+
+.thankyou--div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 26.4583%;
+  max-width: 23.8125rem;
+}
+.thankyou--div .thankyou--title {
+  font-size: 1.75rem;
+  line-height: 2.1875rem;
+  letter-spacing: 0.21375rem;
+  color: hsl(278, 68%, 11%);
+  text-align: center;
+  margin-top: 2.1875rem;
+  margin-bottom: 1rem;
+}
+.thankyou--div .thankyou--text {
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  text-align: center;
+  color: hsl(279, 6%, 55%);
 }/*# sourceMappingURL=main.css.map */

@@ -148,3 +148,26 @@
         cursor: pointer;
     }
 }
+.thankyou--div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 26.4583%;
+    max-width: 23.8125rem;
+    .thankyou--title {
+        font-size: 1.75rem;
+        line-height: 2.1875rem;
+        letter-spacing: 0.21375rem;
+        color: $very-dark-violet;
+        text-align: center;
+        margin-top: 2.1875rem;
+        margin-bottom: 1rem;
+    }
+    .thankyou--text {
+        font-size: 1.125rem;
+        line-height: 1.4375rem;
+        text-align: center;
+        color: $dark-grayish-violet;
+    }
+}
