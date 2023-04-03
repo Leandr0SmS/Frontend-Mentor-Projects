@@ -139,7 +139,7 @@ function Thankyou() {
                 role="img"
             />
             <h1 className="thankyou--title">THANK YOU!</h1>
-            <p className="thankyou--title">We've added your card details</p>
+            <p className="thankyou--text">We've added your card details</p>
             <button className="btn">Continue</button>
         </div>
     )
