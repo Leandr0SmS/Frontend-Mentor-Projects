@@ -128,6 +128,22 @@ function Form(props) {
         </form>
     )
 }
+function Thankyou() {
+    return (
+        <div className="thankyou--div">
+            <img
+                className="check--icon"
+                src="./images/icon-complete.svg"
+                alt="checked icon"
+                aria-hidden="false"
+                role="img"
+            />
+            <h1 className="thankyou--title">THANK YOU!</h1>
+            <p className="thankyou--title">We've added your card details</p>
+            <button className="btn">Continue</button>
+        </div>
+    )
+}
 function App() {
     function handleSubmit(e) {
         e.preventDefault();
@@ -135,7 +151,8 @@ function App() {
     function numberValidation(number) {
         let re = /^\d+$/;
         return re.test(number) && true; 
-      }
+    }
+    const [check, setCheck] = React.useState(false);
     const [formData, setformData] = React.useState(
         {
             name: {
@@ -171,6 +188,7 @@ function App() {
         })) 
     };
     function formValidation() {
+        let countError = 0;
         for (let prop in formData) {
             if (formData[prop].value.trim().length !== 0) {
                 if (prop !== "name") {
@@ -190,6 +208,7 @@ function App() {
                                 error: "format",
                             }
                         }))
+                        countError ++;
                     }
                 } 
             } else {
@@ -200,10 +219,12 @@ function App() {
                         error: "blank",
                     }
                 }))
+                countError ++;
             }
         }
+        if (countError === 0) return setCheck(p => !p);
     }
-    console.log(formData)
+    console.log(check)
     return (
         <div className="app">
             <Cards
@@ -213,21 +234,25 @@ function App() {
                 yyValue={formData.yy.value}
                 cvcValue={formData.cvc.value}
             />
-            <Form
-                nameValue={formData.name.value}
-                nameError={formData.name.error}
-                numberValue={formData.number.value}
-                numberError={formData.number.error}
-                mmValue={formData.mm.value}
-                mmError={formData.mm.error}
-                yyValue={formData.yy.value}
-                yyError={formData.yy.error}
-                cvcValue={formData.cvc.value}
-                cvcError={formData.cvc.error}
-                handleSubmit={handleSubmit}
-                onchange={handleChange}
-                onclick={formValidation}
-            />
+            {
+                check
+                ?<Thankyou />
+                :<Form
+                    nameValue={formData.name.value}
+                    nameError={formData.name.error}
+                    numberValue={formData.number.value}
+                    numberError={formData.number.error}
+                    mmValue={formData.mm.value}
+                    mmError={formData.mm.error}
+                    yyValue={formData.yy.value}
+                    yyError={formData.yy.error}
+                    cvcValue={formData.cvc.value}
+                    cvcError={formData.cvc.error}
+                    handleSubmit={handleSubmit}
+                    onchange={handleChange}
+                    onclick={formValidation}
+                />
+            }
         </div>
     )
 }
