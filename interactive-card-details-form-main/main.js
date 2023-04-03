@@ -135,9 +135,9 @@ function Thankyou(props) {
             />
             <h1 className="thankyou--title">THANK YOU!</h1>
             <p className="thankyou--text">We've added your card details</p>
-            <button 
-                className="btn"
-            >Continue</button>
+            <a 
+                className="btn link"
+            >Continue</a>
         </div>
     )
 }
