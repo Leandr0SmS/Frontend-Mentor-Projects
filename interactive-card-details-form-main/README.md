@@ -63,34 +63,27 @@ Set Gradient Borders:
       opacity: 1;
   }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+```css
+    transition: 0.2s linear;
+    &:active {
+        transform: scale(0.98);
+        box-shadow: 3px 2px 25px 1px rgba(0,0,0,0.25);
+    }
 ```
-
 
 ### Continued development
 
-
-
-### Useful resources
-
-- [Example resource 1](https://codyhouse.co/nuggets/css-gradient-borders) - This helped me to set gradient border.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+I need to improve and pratice React.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@Leandr0SmS](https://www.frontendmentor.io/profile/Leandr0SmS)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- (MDN)[https://developer.mozilla.org/]
+- (W3School)[https://www.w3schools.com/]
+- (FreeCodeCamp)[https://www.freecodecamp.org/]
+- (CodeCademy) [https://www.codecademy.com/]
+- (Scrimba) [https://scrimba.com/learn/learnreact]
+- (Chat-GPT) [https://chat.openai.com]
