@@ -14,11 +14,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8.8194%;
+    gap: 8.75vw;
 }
 .cards--div {
     position: relative;
-    width: 33.8125rem;
+    width: 37.5694vw;
     height: 32.9375rem;
     color: $White;
     text-transform: uppercase;
@@ -61,14 +61,13 @@
     position: absolute;
     top: 6.9375rem;
     right: 3.5625rem;
-    font-style: normal;
     font-size: 0.875rem;
     line-height: 1.125rem;
     letter-spacing: 0.125rem;
 }
-
 .form {
     width: 26.52vw;
+    min-width: 23.875rem;
     display: flex;
     flex-direction: column;
 }
@@ -169,5 +168,54 @@
         line-height: 1.4375rem;
         text-align: center;
         color: $dark-grayish-violet;
+    }
+}
+
+@media (max-width: 1040px) {
+    body {
+        background: $White url("../images/bg-main-mobile.png") no-repeat top;
+        background-size: 100% 34%;
+    }
+    .app {
+        flex-direction: column;
+    }
+    .cards--div {
+        width: 21.4375rem;
+        height: 15.6875rem;
+    }
+    .card--front--div {
+        position: absolute;
+        top: calc(100% - 9.8125rem);
+        right: 0;
+        background-size: contain;
+        width: 17.8125rem;
+        height: 9.763125rem;
+        padding: 1.1em 1.1875em 1.225em;
+        z-index: 2;
+    }
+    .card--logo {
+        width: 19.947368%;
+        padding-bottom: 2.3125rem;
+    }
+    .card--number {
+        margin-bottom: 1.0625rem;
+        font-size: 1.12rem;
+        line-height: 1.4375rem;
+        letter-spacing: 0.12rem;
+    }
+    .card--back--div {
+        top: 0;
+        right: 0;
+        width: 17.8125rem;
+        height: 9.8125rem;
+        background-size: contain;
+        z-index: 1;
+    }
+    .card--CVC {
+        top: 4.6rem;
+        right: 2.5rem;
+        font-size: 0.5625rem;
+        line-height: 0.6875rem;
+        letter-spacing: 0.08rem;
     }
 }
