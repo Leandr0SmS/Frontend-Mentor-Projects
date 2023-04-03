@@ -1,4 +1,8 @@
 function Cards(props) {
+    function  splitIntoFour(str) {
+        const groups = str.match(/.{1,4}/g);
+        return groups.join(" ");
+    }
     return (
         <div className="cards--div">
             <div className="card--front--div">
@@ -9,7 +13,7 @@ function Cards(props) {
                     aria-hidden="false"
                     role="img"
                 />
-                <h2 className="card--number">{props.numberValue ? props.numberValue : "0000 0000 0000 0000"}</h2>
+                <h2 className="card--number">{props.numberValue ? splitIntoFour(props.numberValue) : "0000 0000 0000 0000"}</h2>
                 <div className="card--name--date--div">
                     <p className="card--name">{props.nameValue ? props.nameValue : "JANE APPLESEED"}</p>
                     <p className="card--expDate">{props.mmValue ? props.mmValue : "00"}/{props.yyValue ? props.yyValue : "00"}</p>
