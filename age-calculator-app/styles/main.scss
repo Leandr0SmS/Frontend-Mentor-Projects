@@ -1,3 +1,5 @@
+@import "./base";
+
 * {
     margin: 0;
 }
@@ -17,4 +19,21 @@ body {
 .form {
     display: flex;
     align-items: center;
+}
+.btn--div {
+    display: flex;
+    align-items: center;
+}
+.divider {
+    width: 39.5rem;
+}
+.btn {
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+    background-color: $Off-black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }

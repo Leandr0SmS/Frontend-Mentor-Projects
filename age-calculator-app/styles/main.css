@@ -21,4 +21,24 @@ body {
 .form {
   display: flex;
   align-items: center;
+}
+
+.btn--div {
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  width: 39.5rem;
+}
+
+.btn {
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  background-color: hsl(0, 0%, 8%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
