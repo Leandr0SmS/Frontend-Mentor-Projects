@@ -9,4 +9,16 @@ html, body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+}
+
+.root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */

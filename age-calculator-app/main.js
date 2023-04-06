@@ -32,46 +32,48 @@ function App() {
     }
 
     return (
-        <form className="form">
-            <div className="input--div">
-                <label>Day</label>
-                <input
-                    className="day--input"
-                    type="text"
-                    placeholder="DD"
-                />
-            </div>
-            <div className="input--div">
-                <label>Month</label>
-                <input
-                    className="month--input"
-                    type="text"
-                    placeholder="MM"
-                />
-            </div>
-            <div className="input--div">
-                <label>Year</label>
-                <input
-                    className="year--input"
-                    type="text"
-                    placeholder="YYYY"
-                />
-            </div>
+        <div className="calculator">
+            <form className="form">
+                <div className="input--div">
+                    <label>Day</label>
+                    <input
+                        className="day--input"
+                        type="text"
+                        placeholder="DD"
+                    />
+                </div>
+                <div className="input--div">
+                    <label>Month</label>
+                    <input
+                        className="month--input"
+                        type="text"
+                        placeholder="MM"
+                    />
+                </div>
+                <div className="input--div">
+                    <label>Year</label>
+                    <input
+                        className="year--input"
+                        type="text"
+                        placeholder="YYYY"
+                    />
+                </div>
+            </form>
             <div className="age--div">
-                <h1 className="days--age">
+                <h1 className="years--age">
                     <span>--</span>
-                    days
+                    years
                 </h1>
                 <h1 className="months--age">
                     <span>--</span>
                     months
                 </h1>
-                <h1 className="years--age">
+                <h1 className="days--age">
                     <span>--</span>
-                    years
+                    days
                 </h1>
             </div>
-        </form>
+        </div>
     )
 }
 
