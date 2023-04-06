@@ -16,6 +16,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: hsl(0, 0%, 86%);
+}
+
+.calculator {
+  width: 58.33%;
+  padding: 3.5rem;
+  border-radius: 1.5rem 1.5rem 12.5rem 1.5rem;
+  background-color: hsl(0, 0%, 100%);
 }
 
 .form {
