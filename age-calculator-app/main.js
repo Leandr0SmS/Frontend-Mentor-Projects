@@ -1,7 +1,7 @@
 function App() {
-    const [day, setDay] = useState('');
-    const [month, setMonth] = useState('');
-    const [year, setYear] = useState('');
+    const [day, setDay] = React.useState('');
+    const [month, setMonth] = React.useState('');
+    const [year, setYear] = React.useState('');
 
     const handleDayChange = (event) => {
       const inputValue = event.target.value.replace(/\D/g, '');
@@ -16,6 +16,7 @@ function App() {
       setYear(inputValue);
     };
 
+
     function isValidDate(day, month, year) {
         const date = new Date(`${year}-${month}-${day}`);
         return (
@@ -24,13 +25,14 @@ function App() {
           date.getFullYear() == year
         );
     }
-
     function ageCalculation(day, month, year) {
         let currentDate = new Date();
         let cDay = currentDate.getDate()
         let cMonth = currentDate.getMonth() + 1
         let cYear = currentDate.getFullYear()
     }
+    
+console.log(day)
 
     return (
         <div className="calculator">
@@ -41,6 +43,10 @@ function App() {
                         className="day--input"
                         type="text"
                         placeholder="DD"
+                        maxLength="2"
+                        name="day"
+                        value={day}
+                        onChange={handleDayChange}
                     />
                 </div>
                 <div className="input--div">
@@ -49,6 +55,10 @@ function App() {
                         className="month--input"
                         type="text"
                         placeholder="MM"
+                        maxLength="2"
+                        name="month"
+                        value={month}
+                        onChange={handleMonthChange}
                     />
                 </div>
                 <div className="input--div">
@@ -57,9 +67,28 @@ function App() {
                         className="year--input"
                         type="text"
                         placeholder="YYYY"
+                        maxLength="4"
+                        name="year"
+                        value={year}
+                        onChange={handleYearChange}
                     />
                 </div>
             </form>
+            <div className="btn--div">
+                <hr/>
+                <div 
+                    className="btn"
+                    onclick={handleDate}
+                >
+                    <img
+                        className="card--logo"
+                        src="./assets/images/icon-arrow.svg"
+                        alt="arrow icon"
+                        aria-hidden="false"
+                        role="img"
+                    />
+                </div>
+            </div>
             <div className="age--div">
                 <h1 className="years--age">
                     <span>--</span>
