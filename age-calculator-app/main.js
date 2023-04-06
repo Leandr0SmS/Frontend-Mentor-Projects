@@ -1,27 +1,21 @@
-/*
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-*/
 function App() {
-    //let currentDate = new Date();
-    //let cDay = currentDate.getDate()
-    //let cMonth = currentDate.getMonth() + 1
-    //let cYear = currentDate.getFullYear()
-    //console.log(cDay);
-    //console.log(cMonth);
-    //console.log(cYear);
-    const [currentDate, setcurrentDate] = React.useState(new Date());
-    console.log(currentDate)
+    const [day, setDay] = useState('');
+    const [month, setMonth] = useState('');
+    const [year, setYear] = useState('');
+
+    const handleDayChange = (event) => {
+      const inputValue = event.target.value.replace(/\D/g, '');
+      setDay(inputValue);
+    };
+    const handleMonthChange = (event) => {
+      const inputValue = event.target.value.replace(/\D/g, '');
+      setMonth(inputValue);
+    };
+    const handleYearChange = (event) => {
+      const inputValue = event.target.value.replace(/\D/g, '');
+      setYear(inputValue);
+    };
+
     function isValidDate(day, month, year) {
         const date = new Date(`${year}-${month}-${day}`);
         return (
@@ -29,6 +23,13 @@ function App() {
           date.getMonth() == month - 1 &&
           date.getFullYear() == year
         );
+    }
+
+    function ageCalculation(day, month, year) {
+        let currentDate = new Date();
+        let cDay = currentDate.getDate()
+        let cMonth = currentDate.getMonth() + 1
+        let cYear = currentDate.getFullYear()
     }
 
     return (
