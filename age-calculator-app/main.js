@@ -1,19 +1,23 @@
 function App() {
-    const [day, setDay] = React.useState('');
-    const [month, setMonth] = React.useState('');
-    const [year, setYear] = React.useState('');
+    const [dayInput, setDayInput] = React.useState('');
+    const [monthInput, setMonthInput] = React.useState('');
+    const [yearInput, setYearInput] = React.useState('');
+
+    const [dayAge, setDayAge] = React.useState('');
+    const [monthAge, setMonthAge] = React.useState('');
+    const [yearAge, setYearAge] = React.useState('');
 
     const handleDayChange = (event) => {
       const inputValue = event.target.value.replace(/\D/g, '');
-      setDay(inputValue);
+      setDayInput(inputValue);
     };
     const handleMonthChange = (event) => {
       const inputValue = event.target.value.replace(/\D/g, '');
-      setMonth(inputValue);
+      setMonthInput(inputValue);
     };
     const handleYearChange = (event) => {
       const inputValue = event.target.value.replace(/\D/g, '');
-      setYear(inputValue);
+      setYearInput(inputValue);
     };
 
 
@@ -27,12 +31,16 @@ function App() {
     }
     function ageCalculation(day, month, year) {
         let currentDate = new Date();
-        let cDay = currentDate.getDate()
-        let cMonth = currentDate.getMonth() + 1
-        let cYear = currentDate.getFullYear()
+        let cDay = currentDate.getDate();
+        let cMonth = currentDate.getMonth() + 1;
+        let cYear = currentDate.getFullYear();
+
     }
-    
-console.log(day)
+    function handleDate(day, month, year) {
+        isValidDate(day, month, year)
+            ? ageCalculation(day, month, year)
+            : console.log(error)
+    }
 
     return (
         <div className="calculator">
@@ -45,7 +53,7 @@ console.log(day)
                         placeholder="DD"
                         maxLength="2"
                         name="day"
-                        value={day}
+                        value={dayInput}
                         onChange={handleDayChange}
                     />
                 </div>
@@ -57,7 +65,7 @@ console.log(day)
                         placeholder="MM"
                         maxLength="2"
                         name="month"
-                        value={month}
+                        value={monthInput}
                         onChange={handleMonthChange}
                     />
                 </div>
@@ -69,7 +77,7 @@ console.log(day)
                         placeholder="YYYY"
                         maxLength="4"
                         name="year"
-                        value={year}
+                        value={yearInput}
                         onChange={handleYearChange}
                     />
                 </div>
@@ -78,7 +86,7 @@ console.log(day)
                 <hr/>
                 <div 
                     className="btn"
-                    onclick={handleDate}
+                    onClick={() => handleDate(dayInput, monthInput, yearInput)}
                 >
                     <img
                         className="card--logo"
