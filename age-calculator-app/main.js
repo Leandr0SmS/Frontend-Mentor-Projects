@@ -22,26 +22,48 @@ function App() {
 
 
     function isValidDate(day, month, year) {
-        const date = new Date(`${year}-${month}-${day}`);
+        const date = new Date(year, month - 1, day);
+        console.log("isValidDate: " + date) ///// DELETE!!!!
         return (
           date.getDate() == day &&
           date.getMonth() == month - 1 &&
-          date.getFullYear() == year
+          date.getFullYear() == year &&
+          !isNaN(date.getTime())
         );
     }
     function ageCalculation(day, month, year) {
         let currentDate = new Date();
-        let cDay = currentDate.getDate();
-        let cMonth = currentDate.getMonth() + 1;
-        let cYear = currentDate.getFullYear();
+    
+        let currentYear = currentDate.getFullYear();
+        let currentMonth = currentDate.getMonth() + 1; // Month is zero-based, so add 1
+        let currentDay = currentDate.getDate();
+
+        let yearDiff = currentYear - year;
+        let monthDiff = currentMonth - month;
+        let dayDiff = currentDay - day;
+
+        if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+            yearDiff--;
+            monthDiff += 12;
+        }
+        if (dayDiff < 0) {
+            const daysInLastMonth = new Date(currentYear, currentMonth - 1, 0).getDate();
+            dayDiff += daysInLastMonth;
+            monthDiff--;
+        }
+        setDayAge(dayDiff);
+        setMonthAge(monthDiff);
+        setYearAge(yearDiff);
+        return { years: yearDiff, months: monthDiff, days: dayDiff };
 
     }
     function handleDate(day, month, year) {
         isValidDate(day, month, year)
-            ? ageCalculation(day, month, year)
-            : console.log(error)
+            ? console.log(ageCalculation(day, month, year))
+            : console.log("error");
     }
-
+    console.log({dayInput, monthInput, yearInput})  ///// DELETE!!!!
+    console.log(isValidDate(dayInput, monthInput, yearInput))  ///// DELETE!!!!
     return (
         <div className="calculator">
             <form className="form">
@@ -83,7 +105,9 @@ function App() {
                 </div>
             </form>
             <div className="btn--div">
-                <hr/>
+                <hr
+                    className="divider"
+                />
                 <div 
                     className="btn"
                     onClick={() => handleDate(dayInput, monthInput, yearInput)}
@@ -99,15 +123,15 @@ function App() {
             </div>
             <div className="age--div">
                 <h1 className="years--age">
-                    <span>--</span>
+                    <span>{yearAge ? yearAge : "--"}</span>
                     years
                 </h1>
                 <h1 className="months--age">
-                    <span>--</span>
+                    <span>{monthAge ? monthAge : "--"}</span>
                     months
                 </h1>
                 <h1 className="days--age">
-                    <span>--</span>
+                    <span>{dayAge ? dayAge : "--"}</span>
                     days
                 </h1>
             </div>
