@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 * {
   margin: 0;
 }
@@ -9,6 +14,7 @@ html, body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: "Poppins", sans-serif;
 }
 
 .root {
@@ -16,7 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(0, 0%, 86%);
+  background-color: hsl(0, 0%, 94%);
 }
 
 .calculator {
@@ -29,6 +35,38 @@ body {
 .form {
   display: flex;
   align-items: center;
+  gap: 2rem;
+}
+
+.input--div {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 10rem;
+  padding: 12px 24px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: hsl(0, 0%, 8%);
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 0.5rem;
+}
+.input:focus {
+  outline: none;
+  border: 1px solid hsl(259, 100%, 65%);
+}
+
+.label {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: hsl(0, 1%, 44%);
+  margin-bottom: 0.5rem;
 }
 
 .btn--div {
@@ -38,15 +76,28 @@ body {
 
 .divider {
   width: 39.5rem;
+  background-color: hsl(0, 0%, 86%);
 }
 
 .btn {
   border-radius: 50%;
   height: 6rem;
   width: 6rem;
-  background-color: hsl(0, 0%, 8%);
+  background-color: hsl(259, 100%, 65%);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.title--age {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 6.5rem;
+  line-height: 7.15rem;
+  color: hsl(0, 0%, 8%);
+}
+
+.age {
+  color: hsl(259, 100%, 65%);
 }/*# sourceMappingURL=main.css.map */

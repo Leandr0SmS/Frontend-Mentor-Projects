@@ -20,10 +20,8 @@ function App() {
       setYearInput(inputValue);
     };
 
-
     function isValidDate(day, month, year) {
         const date = new Date(year, month - 1, day);
-        console.log("isValidDate: " + date) ///// DELETE!!!!
         return (
           date.getDate() == day &&
           date.getMonth() == month - 1 &&
@@ -33,7 +31,6 @@ function App() {
     }
     function ageCalculation(day, month, year) {
         let currentDate = new Date();
-    
         let currentYear = currentDate.getFullYear();
         let currentMonth = currentDate.getMonth() + 1; // Month is zero-based, so add 1
         let currentDay = currentDate.getDate();
@@ -62,15 +59,13 @@ function App() {
             ? console.log(ageCalculation(day, month, year))
             : console.log("error");
     }
-    console.log({dayInput, monthInput, yearInput})  ///// DELETE!!!!
-    console.log(isValidDate(dayInput, monthInput, yearInput))  ///// DELETE!!!!
     return (
         <div className="calculator">
             <form className="form">
                 <div className="input--div">
-                    <label>Day</label>
+                    <label className="label">Day</label>
                     <input
-                        className="day--input"
+                        className="input"
                         type="text"
                         placeholder="DD"
                         maxLength="2"
@@ -80,9 +75,9 @@ function App() {
                     />
                 </div>
                 <div className="input--div">
-                    <label>Month</label>
+                    <label className="label">Month</label>
                     <input
-                        className="month--input"
+                        className="input"
                         type="text"
                         placeholder="MM"
                         maxLength="2"
@@ -92,9 +87,9 @@ function App() {
                     />
                 </div>
                 <div className="input--div">
-                    <label>Year</label>
+                    <label className="label">Year</label>
                     <input
-                        className="year--input"
+                        className="input"
                         type="text"
                         placeholder="YYYY"
                         maxLength="4"
@@ -122,16 +117,16 @@ function App() {
                 </div>
             </div>
             <div className="age--div">
-                <h1 className="years--age">
-                    <span>{yearAge ? yearAge : "--"}</span>
+                <h1 className="title--age">
+                    <span className="age">{yearAge ? yearAge : "--"}</span>
                     years
                 </h1>
-                <h1 className="months--age">
-                    <span>{monthAge ? monthAge : "--"}</span>
+                <h1 className="title--age">
+                    <span className="age">{monthAge ? monthAge : "--"}</span>
                     months
                 </h1>
-                <h1 className="days--age">
-                    <span>{dayAge ? dayAge : "--"}</span>
+                <h1 className="title--age">
+                    <span className="age">{dayAge ? dayAge : "--"}</span>
                     days
                 </h1>
             </div>
