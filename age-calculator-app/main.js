@@ -8,39 +8,31 @@ function App() {
     const [yearAge, setYearAge] = React.useState('');
 
     const [error, setError] = React.useState({
-        day: false,
-        month: false,
-        year: false,
+        dayValid: false,
+        monthValid: false,
+        yearValid: false,
+        dayEmpty: false,
+        monthEmpty: false,
+        yearEmpty: false,
         dateFormat: false
     })
 
     const handleDayChange = (event) => {
       const inputValue = event.target.value.replace(/\D/g, '');
       setDayInput(inputValue);
-      setError(p => ({...p, day: false, dateFormat: false}))
+      setError(p => ({...p, dayValid: false, dayEmpty: false, dateFormat: false}))
     };
     const handleMonthChange = (event) => {
       const inputValue = event.target.value.replace(/\D/g, '');
       setMonthInput(inputValue);
-      setError(p => ({...p, month: false, dateFormat: false}))
+      setError(p => ({...p, monthValid: false, monthEmpty: false, dateFormat: false}))
     };
     const handleYearChange = (event) => {
       const inputValue = event.target.value.replace(/\D/g, '');
       setYearInput(inputValue);
-      setError(p => ({...p, year: false, dateFormat: false}))
+      setError(p => ({...p, yearValid: false, yearEmpty: false, dateFormat: false}))
     };
 
-    function isValidDate(day, month, year) {
-        const currentDate = new Date();
-        const inputDate = new Date(year, month - 1, day);
-        return (
-            inputDate.getDate() == day &&
-            inputDate.getMonth() == month - 1 &&
-            inputDate.getFullYear() == year &&
-            !isNaN(inputDate.getTime()) &&
-            inputDate <= currentDate
-        );
-    }
     function ageCalculation(day, month, year) {
         let currentDate = new Date();
         let currentYear = currentDate.getFullYear();
@@ -66,17 +58,37 @@ function App() {
         return { years: yearDiff, months: monthDiff, days: dayDiff };
 
     }
+    function isValidDate(day, month, year) {
+        const currentDate = new Date();
+        const inputDate = new Date(year, month - 1, day);
+        return (
+            inputDate.getDate() == day &&
+            inputDate.getMonth() == month - 1 &&
+            inputDate.getFullYear() == year &&
+            inputDate <= currentDate
+        );
+    }
     function handleDate(day, month, year) {
+        const currentDate = new Date();
         if (day.trim().length === 0) {
-            setError(p => ({...p, day: true}))
+            return setError(p => ({...p, dayEmpty: true}))
+        }
+        if (day > 31) {
+            return setError(p => ({...p, dayValid: true}))
         }
         if (month.trim().length === 0) {
-            setError(p => ({...p, month: true}))
+            return setError(p => ({...p, monthEmpty: true}))
+        }
+        if (month > 12) {
+            return setError(p => ({...p, monthValid: true}))
         }
         if (year.trim().length === 0) {
-            setError(p => ({...p, year: true}))
+            return setError(p => ({...p, yearEmpty: true}))
         }
-        if (day.trim().length !== 0 && month.trim().length !== 0 && year.trim().length !== 0) {
+        if (year > currentDate.getFullYear()) {
+            return setError(p => ({...p, yearValid: true}))
+        }
+        if (Object.values(error).every(key => !key)) {
             isValidDate(day, month, year)
             ? console.log(ageCalculation(day, month, year))
             : setError(prevState => ({
@@ -85,6 +97,7 @@ function App() {
               }));
         }
     }
+    console.log(error)
     return (
         <div className="calculator">
             <form className="form">
@@ -99,7 +112,9 @@ function App() {
                         value={dayInput}
                         onChange={handleDayChange}
                     />
-                    {error.day && <p className="error--color error--text">This field is required</p>}
+                    {error.dayValid && <p className="error--color error--text">Must be a valid day</p>}
+                    {error.dayEmpty && <p className="error--color error--text">This field is required</p>}
+                    {error.dateFormat && <p className="error--color error--text">Must be a valid date</p>}
                 </div>
                 <div className="input--div">
                     <label className={error.month || error.dateFormat ? "error--color label" : "label"}>Month</label>
@@ -112,7 +127,8 @@ function App() {
                         value={monthInput}
                         onChange={handleMonthChange}
                     />
-                    {error.month && <p className="error--color error--text">This field is required</p>}
+                    {error.monthValid && <p className="error--color error--text">Must be a valid month</p>}
+                    {error.monthEmpty && <p className="error--color error--text">This field is required</p>}
                 </div>
                 <div className="input--div">
                     <label className={error.year || error.dateFormat ? "error--color label" : "label"}>Year</label>
@@ -125,10 +141,10 @@ function App() {
                         value={yearInput}
                         onChange={handleYearChange}
                     />
-                    {error.year && <p className="error--color error--text">This field is required</p>}
+                    {error.yearValid && <p className="error--color error--text">Must be in the past</p>}
+                    {error.yearEmpty && <p className="error--color error--text">This field is required</p>}
                 </div>
             </form>
-            {error.dateFormat && <p className="error--color error--text">Must be a valid date</p>}
             <div className="btn--div">
                 <hr
                     className="divider"
