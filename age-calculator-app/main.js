@@ -7,6 +7,13 @@ function App() {
     const [monthAge, setMonthAge] = React.useState('');
     const [yearAge, setYearAge] = React.useState('');
 
+    const [error, setError] = React.useState({
+        day: false,
+        month: false,
+        year: false,
+        dateFormat: false
+    })
+
     const handleDayChange = (event) => {
       const inputValue = event.target.value.replace(/\D/g, '');
       setDayInput(inputValue);
@@ -21,12 +28,14 @@ function App() {
     };
 
     function isValidDate(day, month, year) {
-        const date = new Date(year, month - 1, day);
+        const currentDate = new Date();
+        const inputDate = new Date(year, month - 1, day);
         return (
-          date.getDate() == day &&
-          date.getMonth() == month - 1 &&
-          date.getFullYear() == year &&
-          !isNaN(date.getTime())
+            inputDate.getDate() == day &&
+            inputDate.getMonth() == month - 1 &&
+            inputDate.getFullYear() == year &&
+            !isNaN(inputDate.getTime()) &&
+            inputDate <= currentDate
         );
     }
     function ageCalculation(day, month, year) {
@@ -57,15 +66,18 @@ function App() {
     function handleDate(day, month, year) {
         isValidDate(day, month, year)
             ? console.log(ageCalculation(day, month, year))
-            : console.log("error");
+            : setError(prevState => ({
+                ...prevState,
+                dateFormat: true
+            }));
     }
     return (
         <div className="calculator">
             <form className="form">
                 <div className="input--div">
-                    <label className="label">Day</label>
+                    <label className={error.day || error.dateFormat ? "error--color label" : "label"}>Day</label>
                     <input
-                        className="input"
+                        className={error.day || error.dateFormat ? "input input--error--border" : "input input--normal--border"}
                         type="text"
                         placeholder="DD"
                         maxLength="2"
@@ -73,11 +85,13 @@ function App() {
                         value={dayInput}
                         onChange={handleDayChange}
                     />
+                    {error.day && <p className="error--color">This field is required</p>}
+                    {error.dateFormat && <p className="error--color">Must be a valid date</p>}
                 </div>
                 <div className="input--div">
-                    <label className="label">Month</label>
+                    <label className={error.month || error.dateFormat ? "error--color label" : "label"}>Month</label>
                     <input
-                        className="input"
+                        className={error.month || error.dateFormat ? "input input--error--border" : "input input--normal--border"}
                         type="text"
                         placeholder="MM"
                         maxLength="2"
@@ -85,11 +99,12 @@ function App() {
                         value={monthInput}
                         onChange={handleMonthChange}
                     />
+                    {error.month && <p className="error">This field is required</p>}
                 </div>
                 <div className="input--div">
-                    <label className="label">Year</label>
+                    <label className={error.year || error.dateFormat ? "error--color label" : "label"}>Year</label>
                     <input
-                        className="input"
+                        className={error.year || error.dateFormat ? "input input--error--border" : "input input--normal--border"}
                         type="text"
                         placeholder="YYYY"
                         maxLength="4"
@@ -97,6 +112,7 @@ function App() {
                         value={yearInput}
                         onChange={handleYearChange}
                     />
+                    {error.year && <p className="error--color">This field is required</p>}
                 </div>
             </form>
             <div className="btn--div">

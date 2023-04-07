@@ -36,21 +36,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-.input {
-    width: 10rem;
-    padding: 12px 24px;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    font-size: 2rem;
-    line-height: 3rem;
-    color: $Off-black;
-    border: 1px solid $Light-grey;
-    border-radius: 0.5rem;
-    &:focus {
-        outline: none;
-        border: 1px solid $Purple;
-    }
-}
 .label {
     font-weight: 700;
     font-size: 0.875rem;
@@ -59,6 +44,33 @@ body {
     text-transform: uppercase;
     color: $Smokey-grey;
     margin-bottom: 0.5rem;
+}
+.input {
+    width: 10rem;
+    padding: 12px 24px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: $Off-black;
+    border-radius: 0.5rem;
+    &:focus {
+        outline: none;
+        border: 1px solid $Purple;
+    }
+}
+.input--error--border {
+    border: 1px solid $LightRed;
+}
+.input--normal--border {
+    border: 1px solid $Light-grey;
+}
+.error--color {
+     color: $LightRed;
+}
+.error--text {
+    font-size: 0.875rem;
+    line-height: 1.13175rem;
 }
 .btn--div {
     display: flex;

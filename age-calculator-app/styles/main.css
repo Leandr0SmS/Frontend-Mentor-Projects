@@ -43,22 +43,6 @@ body {
   flex-direction: column;
 }
 
-.input {
-  width: 10rem;
-  padding: 12px 24px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  font-size: 2rem;
-  line-height: 3rem;
-  color: hsl(0, 0%, 8%);
-  border: 1px solid hsl(0, 0%, 86%);
-  border-radius: 0.5rem;
-}
-.input:focus {
-  outline: none;
-  border: 1px solid hsl(259, 100%, 65%);
-}
-
 .label {
   font-weight: 700;
   font-size: 0.875rem;
@@ -67,6 +51,38 @@ body {
   text-transform: uppercase;
   color: hsl(0, 1%, 44%);
   margin-bottom: 0.5rem;
+}
+
+.input {
+  width: 10rem;
+  padding: 12px 24px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: hsl(0, 0%, 8%);
+  border-radius: 0.5rem;
+}
+.input:focus {
+  outline: none;
+  border: 1px solid hsl(259, 100%, 65%);
+}
+
+.input--error--border {
+  border: 1px solid hsl(0, 100%, 67%);
+}
+
+.input--normal--border {
+  border: 1px solid hsl(0, 0%, 86%);
+}
+
+.error--color {
+  color: hsl(0, 100%, 67%);
+}
+
+.error--text {
+  font-size: 0.875rem;
+  line-height: 1.13175rem;
 }
 
 .btn--div {
