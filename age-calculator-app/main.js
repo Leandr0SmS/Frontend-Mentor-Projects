@@ -186,16 +186,16 @@ function App() {
             </div>
             <div className="age--div">
                 <h1 className="title--age">
-                    <span className="age">{yearAge ? yearAge : "--"}</span>
-                    years
+                    <span className="age">{yearAge ? `${yearAge} ` : "-- "}</span>
+                    years 
                 </h1>
                 <h1 className="title--age">
-                    <span className="age">{monthAge ? monthAge : "--"}</span>
-                    months
+                    <span className="age">{monthAge ? `${monthAge} ` : "-- "}</span>
+                    months 
                 </h1>
                 <h1 className="title--age">
-                    <span className="age">{dayAge ? dayAge : "--"}</span>
-                    days
+                    <span className="age">{dayAge ? `${dayAge} ` : "-- "}</span>
+                    days 
                 </h1>
             </div>
         </div>
