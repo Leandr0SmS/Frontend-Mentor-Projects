@@ -114,7 +114,6 @@ function App() {
               }));
         }
     }
-    console.log(error)
     return (
         <div className="calculator">
             <form className="form">
@@ -168,7 +167,13 @@ function App() {
                 />
                 <div 
                     className="btn"
-                    onClick={() => handleDate(dayInput, monthInput, yearInput)}
+                    onClick={() => {
+                        if (yearAge && monthAge && dayAge) {
+                            window.location.reload();
+                        } else {
+                            handleDate(dayInput, monthInput, yearInput);
+                        }
+                    }}
                 >
                     <img
                         className="card--logo"

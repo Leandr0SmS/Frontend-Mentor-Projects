@@ -54,7 +54,7 @@ body {
 
 .input {
   width: 10rem;
-  padding: 0.75px 1.5px;
+  padding: 0.75rem 1.5rem;
   font-weight: 700;
   letter-spacing: 0.01em;
   font-size: 2rem;
@@ -103,6 +103,11 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: 0.2s linear;
+}
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 1rem 1px rgba(0, 0, 0, 0.25);
 }
 
 .title--age {
