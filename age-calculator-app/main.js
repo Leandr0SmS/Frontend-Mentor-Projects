@@ -32,17 +32,21 @@ function App() {
       setYearInput(inputValue);
       setError(p => ({...p, yearValid: false, yearEmpty: false, dateFormat: false}))
     };
-
     function ageCalculation(day, month, year) {
+        // Helper function to check if a year is a leap year
+        function isLeapYear(year) {
+            return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+        }
         let currentDate = new Date();
         let currentYear = currentDate.getFullYear();
         let currentMonth = currentDate.getMonth() + 1; // Month is zero-based, so add 1
         let currentDay = currentDate.getDate();
-
+    
         let yearDiff = currentYear - year;
         let monthDiff = currentMonth - month;
         let dayDiff = currentDay - day;
-
+    
+        // Adjust for negative month and day differences
         if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
             yearDiff--;
             monthDiff += 12;
@@ -52,11 +56,24 @@ function App() {
             dayDiff += daysInLastMonth;
             monthDiff--;
         }
+        // Adjust for leap years
+        let leapYears = 0;
+        for (let year = year; year < currentYear; year++) {
+            if (isLeapYear(year)) {
+                leapYears++;
+            }
+        }
+        if (isLeapYear(year) && (month < 2 || (month === 2 && day <= 28))) {
+            leapYears--;
+        }
+        if (isLeapYear(currentYear) && currentMonth <= 2 && currentDay < 29) {
+            leapYears--;
+        }
+        yearDiff -= leapYears;
+        //setting States
         setDayAge(dayDiff);
         setMonthAge(monthDiff);
         setYearAge(yearDiff);
-        return { years: yearDiff, months: monthDiff, days: dayDiff };
-
     }
     function isValidDate(day, month, year) {
         const currentDate = new Date();
