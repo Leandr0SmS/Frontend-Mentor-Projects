@@ -99,3 +99,36 @@ body {
 .age {
     color: $Purple;
 }
+@media (max-width: 890px) {
+    .btn--div {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 4rem;
+    }
+    .divider {
+        width: 100%;
+        background-color: $Light-grey;
+    }
+    .btn {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        height: 4rem;
+        width: 4rem;
+        background-color: $Purple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
+/*
+position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+*/
