@@ -54,7 +54,7 @@ body {
 
 .input {
   width: 10rem;
-  padding: 12px 24px;
+  padding: 0.75px 1.5px;
   font-weight: 700;
   letter-spacing: 0.01em;
   font-size: 2rem;
@@ -118,6 +118,35 @@ body {
 }
 
 @media (max-width: 890px) {
+  .calculator {
+    width: 21.43rem;
+    padding: 3rem 1.5rem;
+    border-radius: 1.5rem 1.5rem 6.25rem 1.5rem;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .form {
+    gap: 1rem;
+  }
+  .input--div {
+    display: flex;
+    flex-direction: column;
+  }
+  .label {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    margin-bottom: 0.25rem;
+  }
+  .input {
+    width: 5.47rem;
+    padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
   .btn--div {
     display: flex;
     align-items: center;
@@ -125,7 +154,7 @@ body {
     height: 4rem;
   }
   .divider {
-    width: 100%;
+    width: 18.43rem;
     background-color: hsl(0, 0%, 86%);
   }
   .btn {
@@ -142,10 +171,8 @@ body {
     align-items: center;
     cursor: pointer;
   }
-}
-/*
-position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-*//*# sourceMappingURL=main.css.map */
+  .title--age {
+    font-size: 3.5rem;
+    line-height: 3.85rem;
+  }
+}/*# sourceMappingURL=main.css.map */
