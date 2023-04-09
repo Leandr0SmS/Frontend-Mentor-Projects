@@ -9,16 +9,9 @@
 
 html, body {
   height: 100%;
-}
-
-body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: "Poppins", sans-serif;
-}
-
-.root {
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
