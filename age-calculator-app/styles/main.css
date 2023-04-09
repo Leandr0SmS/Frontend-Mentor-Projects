@@ -115,6 +115,7 @@ html, body {
 
 .age {
   color: hsl(259, 100%, 65%);
+  padding-right: 0.5rem;
 }
 
 @media (max-width: 890px) {
@@ -174,5 +175,8 @@ html, body {
   .title--age {
     font-size: 3.5rem;
     line-height: 3.85rem;
+  }
+  .age {
+    padding-right: 0.03em;
   }
 }/*# sourceMappingURL=main.css.map */
