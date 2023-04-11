@@ -5,7 +5,9 @@ function Header () {
             <img 
                 className="header--img"
                 src=".\images\logo.svg"
-                alt="logo Base Apparel" 
+                alt="logo Base Apparel"
+                aria-hidden="false"
+                role="img" 
             />
         </header>
     )
@@ -42,6 +44,8 @@ function Form() {
                     className="form--button--icon"
                     src=".\images\icon-arrow.svg"
                     alt="Arrow icon"
+                    aria-hidden="false"
+                    role="img"
                 />
             </button>
         </form>
