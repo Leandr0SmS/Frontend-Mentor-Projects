@@ -29,11 +29,19 @@ function Price_Time (props) {
     return (
         <div className="price-time">
             <div className="price-div">
-                <img src="./images/icon-ethereum.svg" />
+                <img 
+                    src="./images/icon-ethereum.svg"
+                    aria-hidden="false"
+                    role="img"
+                />
                 <p>{props.price} ETH</p>
             </div>
             <div className="time-div">
-                <img src="./images/icon-clock.svg" />
+                <img 
+                    src="./images/icon-clock.svg"
+                    aria-hidden="false"
+                    role="img"
+                />
                 <p>{props.time} days left</p>
             </div>
         </div>
@@ -43,7 +51,12 @@ function Price_Time (props) {
 function Avatar (props) {
     return (
         <div className="avatar-div">
-            <img className="avatar-img" src="./images/image-avatar.png" />
+            <img 
+                className="avatar-img" 
+                src="./images/image-avatar.png"
+                aria-hidden="false"
+                role="img"
+            />
             <p className="avatar-text">
                 Creation of     
                 <span>{` ${props.avatarName}`}</span>
@@ -72,8 +85,18 @@ function Main (props) {
         <main>
             <div className="nft">
                 <div className="images-container">
-                    <img className="nft-img" src=".\images\image-equilibrium.jpg"/>
-                    <img className="nft-icon" src=".\images\icon-view.svg"/>
+                    <img 
+                        className="nft-img" 
+                        src=".\images\image-equilibrium.jpg"
+                        aria-hidden="false"
+                        role="img"
+                    />
+                    <img 
+                        className="nft-icon" 
+                        src=".\images\icon-view.svg"
+                        aria-hidden="false"
+                        role="img"
+                    />
                 </div>
                 <h1 className="heading">{props.item.main.heading}</h1>
                 <p className="text">{props.item.main.text}</p>
