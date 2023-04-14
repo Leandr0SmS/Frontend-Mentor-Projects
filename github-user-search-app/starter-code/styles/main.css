@@ -7,6 +7,31 @@
   margin: 0;
 }
 
-html, body {
+body {
   height: 100%;
+}
+
+.app {
+  height: 100vh;
+  background-color: #F6F8FF;
+  color: #141D2F;
+}
+
+.dark-mode {
+  background-color: #141D2F;
+  color: #FFFFFF;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.color-mode-div {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }/*# sourceMappingURL=main.css.map */

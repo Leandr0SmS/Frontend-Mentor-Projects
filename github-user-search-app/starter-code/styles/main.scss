@@ -6,6 +6,39 @@
 * {
     margin: 0;
 }
-html, body {
+body {
     height: 100%;
 }
+
+.app {
+    height: 100vh;
+    background-color: $ice;
+    color: $dark;
+}
+
+.dark-mode {
+    background-color: $dark;
+    color: $white;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.color-mode-div {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+//@media (prefers-color-scheme: dark) {
+//    .app, .app.dark-mode {
+//        background-color: $dark;
+//        color: $white;
+//    }
+//  }
