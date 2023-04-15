@@ -20,6 +20,13 @@ function App() {
         setColorMode(p => !p)
     }
 
+    React.useEffect(() => {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        console.log(mediaQuery)
+        mediaQuery.matches ? setColorMode(false) : setColorMode(true);
+    }, []);
+    
+
     console.log(colorMode)
     return (
         <div className={colorMode ? "app" : "app dark-mode"}>
@@ -55,7 +62,8 @@ function App() {
                       </div>
                 }
             </header>
-            <div className="search">
+            <div className={colorMode ? "search" : "search-dark search "}>
+                Hello
             </div>
         </div>
     )

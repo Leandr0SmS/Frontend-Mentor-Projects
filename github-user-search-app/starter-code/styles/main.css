@@ -9,6 +9,7 @@
 
 body {
   height: 100%;
+  font-family: "Space Mono", monospace;
 }
 
 .app {
@@ -34,4 +35,16 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.search {
+  width: 40rem;
+  height: 20rem;
+  background-color: gainsboro;
+  color: #141D2F;
+}
+
+.search-dark {
+  background-color: rgb(101, 101, 101);
+  color: aliceblue;
 }/*# sourceMappingURL=main.css.map */
