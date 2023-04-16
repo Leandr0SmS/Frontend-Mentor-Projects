@@ -29,57 +29,59 @@ function App() {
 
     console.log(colorMode)
     return (
-        <div className={colorMode ? "app" : "app bg-dark"}>
-            <header className="header">
-                <h1 className="title">devfinder</h1>
-                {
-                    colorMode
-                    ? <div 
-                        className="color-mode-div"
-                        onClick={handleColorMode}
-                      >
-                        <p className="color-mode-text">Dark</p>
-                        <img
-                            className="moon-icon"
-                            src="./assets/icon-moon.svg"
-                            alt="moon icon to dark colors mode"
-                            aria-hidden="false"
-                            role="img"
-                        />
-                      </div>
-                    : <div 
-                        className="color-mode-div"
-                        onClick={handleColorMode}
-                      >
-                        <p className="color-mode-text">Light</p>
-                        <img
-                            className="sun-icon"
-                            src="./assets/icon-sun.svg"
-                            alt="sun icon to dark colors mode"
-                            aria-hidden="false"
-                            role="img"
-                        />
-                      </div>
-                }
-            </header>
-            <form>
-                <img
-                    className="magnifier-icon"
-                    src="./assets/icon-search.svg"
-                    alt="magnifier icon to search"
-                    aria-hidden="false"
-                    role="img"
-                />
-                <input
-                    className={colorMode ? "input" : "div-dark input"}
-                    placeholder="Search GitHub username…"
-                />
-                <buttom
-                    className="btn"
-                >
-                    Search
-                </buttom>
-            </form>
+        <div className={colorMode ? "bg" : "bg-dark bg"}>
+            <div className="app">
+                <header className="header">
+                    <h1 className="title">devfinder</h1>
+                    {
+                        colorMode
+                        ? <div 
+                            className="color-mode-div"
+                            onClick={handleColorMode}
+                          >
+                            <p className="color-mode-text">Dark</p>
+                            <img
+                                className="moon-icon"
+                                src="./assets/icon-moon.svg"
+                                alt="moon icon to dark colors mode"
+                                aria-hidden="false"
+                                role="img"
+                            />
+                          </div>
+                        : <div 
+                            className="color-mode-div"
+                            onClick={handleColorMode}
+                          >
+                            <p className="color-mode-text">Light</p>
+                            <img
+                                className="sun-icon"
+                                src="./assets/icon-sun.svg"
+                                alt="sun icon to dark colors mode"
+                                aria-hidden="false"
+                                role="img"
+                            />
+                          </div>
+                    }
+                </header>
+                <form className="form">
+                    <img
+                        className="magnifier-icon"
+                        src="./assets/icon-search.svg"
+                        alt="magnifier icon to search"
+                        aria-hidden="false"
+                        role="img"
+                    />
+                    <input
+                        className={colorMode ? "input" : "div-dark input"}
+                        placeholder="Search GitHub username…"
+                    />
+                    <button
+                        className="btn"
+                    >
+                        Search
+                    </button>
+                </form>
+            </div>
         </div>
     )
 }

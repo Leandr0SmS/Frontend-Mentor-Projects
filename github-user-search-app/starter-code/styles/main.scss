@@ -7,27 +7,32 @@
     margin: 0;
 }
 body {
-    height: 100vh;
+    height: 100%;
     font-family: 'Space Mono', monospace;
+}
+
+.bg {
+    height: 100vh;
     background-color: $ice;
+    color: $dark;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.app {
-    width: 45.5rem;
-    color: $dark;
-}
-
 .bg-dark {
     background-color: $dark;
     color: $white;
+}
+.app {
+    width: 45.5rem;
+    background-color: transparent;
 }
 .header {
     display: flex;
     justify-content: space-between;
     background-color: transparent;
+    margin-bottom: 2.25rem;
+
 }
 .color-mode-div {
     cursor: pointer;
@@ -36,23 +41,47 @@ body {
     align-items: center;
     gap: 1rem;
 }
+.form {
+    position: relative;
+}
 .input {
     width: 100%;
     height: 4.3125rem;
-    background-color: $light-white;
     color: $blue-gray;
     border: none;
+    border-radius: 0.937rem;
     padding: 1.775rem 5rem; 
-    box-shadow: 0rem 1rem 1.875 -0.625rem rgba(70, 96, 187, 0.198567);
+    box-shadow: 0rem 1rem 1.875rem -0.625rem rgba(70, 96, 187, 0.198567);
 }
 .div-dark {
     background-color: $dark-blue;
     color: $light-white;
 }
-
+.magnifier-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(2rem, -50%);
+}
 .btn {
-    padding: 0.843rem 1.5rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-0.5937rem, -50%);
+    border: none;
+    border-radius: 0.625rem;
+    padding: 0.843em 1.5em;
     background-color: $blue;
-    font-size: 0.781rem;
     color: $white;
+    line-height: 1.48125rem;
+    font-weight: 700;
+    font-size: 1rem;
+    &:hover {
+        cursor: pointer;
+    }
+}
+::placeholder {
+    color: $white;
+    font-weight: 400;
+    font-size: 1.125rem;
 }
