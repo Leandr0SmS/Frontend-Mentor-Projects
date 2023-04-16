@@ -72,7 +72,7 @@ function App() {
                         role="img"
                     />
                     <input
-                        className={colorMode ? "input" : "div-dark input"}
+                        className={colorMode ? "input ph-light" : "ph-dark div-dark input"}
                         placeholder="Search GitHub username…"
                     />
                     <button

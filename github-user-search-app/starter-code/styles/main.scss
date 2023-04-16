@@ -40,6 +40,11 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.15625rem;
+    line-height: 1.203rem;
+    text-transform: uppercase;
 }
 .form {
     position: relative;
@@ -53,9 +58,22 @@ body {
     padding: 1.775rem 5rem; 
     box-shadow: 0rem 1rem 1.875rem -0.625rem rgba(70, 96, 187, 0.198567);
 }
+.input::placeholder {
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+.ph-light::placeholder {
+    color: $blue-gray;
+}
 .div-dark {
     background-color: $dark-blue;
     color: $light-white;
+}
+.ph-dark::placeholder {
+    color: $white;
+    font-weight: 400;
+    font-size: 1.125rem;
+    opacity: 0.8;
 }
 .magnifier-icon {
     position: absolute;
@@ -79,9 +97,4 @@ body {
     &:hover {
         cursor: pointer;
     }
-}
-::placeholder {
-    color: $white;
-    font-weight: 400;
-    font-size: 1.125rem;
 }

@@ -44,6 +44,11 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.15625rem;
+  line-height: 1.203rem;
+  text-transform: uppercase;
 }
 
 .form {
@@ -60,9 +65,41 @@ body {
   box-shadow: 0rem 1rem 1.875rem -0.625rem rgba(70, 96, 187, 0.198567);
 }
 
+.input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.input::placeholder {
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.ph-light::-moz-placeholder {
+  color: #4B6A9B;
+}
+
+.ph-light::placeholder {
+  color: #4B6A9B;
+}
+
 .div-dark {
   background-color: #1E2A47;
   color: #FEFEFE;
+}
+
+.ph-dark::-moz-placeholder {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 1.125rem;
+  opacity: 0.8;
+}
+
+.ph-dark::placeholder {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 1.125rem;
+  opacity: 0.8;
 }
 
 .magnifier-icon {
@@ -88,16 +125,4 @@ body {
 }
 .btn:hover {
   cursor: pointer;
-}
-
-::-moz-placeholder {
-  color: #FFFFFF;
-  font-weight: 400;
-  font-size: 1.125rem;
-}
-
-::placeholder {
-  color: #FFFFFF;
-  font-weight: 400;
-  font-size: 1.125rem;
 }/*# sourceMappingURL=main.css.map */
