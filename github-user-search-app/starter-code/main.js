@@ -29,7 +29,7 @@ function App() {
 
     console.log(colorMode)
     return (
-        <div className={colorMode ? "app" : "app dark-mode"}>
+        <div className={colorMode ? "app" : "app bg-dark"}>
             <header className="header">
                 <h1 className="title">devfinder</h1>
                 {
@@ -62,9 +62,24 @@ function App() {
                       </div>
                 }
             </header>
-            <div className={colorMode ? "search" : "search-dark search "}>
-                Hello
-            </div>
+            <form>
+                <img
+                    className="magnifier-icon"
+                    src="./assets/icon-search.svg"
+                    alt="magnifier icon to search"
+                    aria-hidden="false"
+                    role="img"
+                />
+                <input
+                    className={colorMode ? "input" : "div-dark input"}
+                    placeholder="Search GitHub username…"
+                />
+                <buttom
+                    className="btn"
+                >
+                    Search
+                </buttom>
+            </form>
         </div>
     )
 }
