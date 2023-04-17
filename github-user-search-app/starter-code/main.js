@@ -36,7 +36,7 @@ function App() {
                     {
                         colorMode
                         ? <div 
-                            className="color-mode-div"
+                            className="gray-light color-mode-div"
                             onClick={handleColorMode}
                           >
                             <p className="color-mode-text">Dark</p>
@@ -49,7 +49,7 @@ function App() {
                             />
                           </div>
                         : <div 
-                            className="color-mode-div"
+                            className="bg-dark color-mode-div"
                             onClick={handleColorMode}
                           >
                             <p className="color-mode-text">Light</p>
@@ -115,8 +115,8 @@ function App() {
                         <div className="contacts--divs">
                             <img
                                 className="contacts--icon"
-                                src="./assets/icon-search.svg"
-                                alt="magnifier icon to search"
+                                src="./assets/icon-location.svg"
+                                alt="location spot icon"
                                 aria-hidden="false"
                                 role="img"
                             />
@@ -125,8 +125,8 @@ function App() {
                         <div className="contacts--divs">
                             <img
                                 className="contacts--icon"
-                                src="./assets/icon-search.svg"
-                                alt="magnifier icon to search"
+                                src="./assets/icon-website.svg"
+                                alt="link icon"
                                 aria-hidden="false"
                                 role="img"
                             />
@@ -135,8 +135,8 @@ function App() {
                         <div className="contacts--divs">
                             <img
                                 className="contacts--icon"
-                                src="./assets/icon-search.svg"
-                                alt="magnifier icon to search"
+                                src="./assets/icon-twitter.svg"
+                                alt="twitter icon"
                                 aria-hidden="false"
                                 role="img"
                             />
@@ -145,8 +145,8 @@ function App() {
                         <div className="contacts--divs">
                             <img
                                 className="contacts--icon"
-                                src="./assets/icon-search.svg"
-                                alt="magnifier icon to search"
+                                src="./assets/icon-company.svg"
+                                alt="build icon"
                                 aria-hidden="false"
                                 role="img"
                             />

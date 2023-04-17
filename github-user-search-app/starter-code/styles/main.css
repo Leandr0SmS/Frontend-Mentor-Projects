@@ -26,6 +26,10 @@ body {
   color: #FFFFFF;
 }
 
+.gray-light {
+  color: #697C9A;
+}
+
 .app {
   width: 45.5rem;
   background-color: transparent;
