@@ -81,6 +81,79 @@ function App() {
                         Search
                     </button>
                 </form>
+                <main className="user">
+                    <img
+                        className="user-img"
+                        src="./assets/icon-search.svg"
+                        alt="magnifier icon to search"
+                        aria-hidden="false"
+                        role="img"
+                    />
+                    <div className="user--infos">
+                        <div className="flex-div-name">
+                            <h1 className="name">Name</h1>
+                            <p className="user">@user</p>
+                        </div>
+                        <div className="created--date">Joined 25 Jan 2011</div>
+                    </div>
+                    <p className="bio">This profile has no bio</p>
+                    <div className="user--numbers">
+                        <div className="div--num">
+                            <p>Repos</p>
+                            <p>8</p>
+                        </div>
+                        <div className="div--num">
+                            <p>Followers</p>
+                            <p>3938</p>
+                        </div>
+                        <div className="div--num">
+                            <p>Following</p>
+                            <p>9</p>
+                        </div>
+                    </div>
+                    <div className="user--contacts">
+                        <div className="contacts--divs">
+                            <img
+                                className="contacts--icon"
+                                src="./assets/icon-search.svg"
+                                alt="magnifier icon to search"
+                                aria-hidden="false"
+                                role="img"
+                            />
+                            <p className="contact"></p>
+                        </div>
+                        <div className="contacts--divs">
+                            <img
+                                className="contacts--icon"
+                                src="./assets/icon-search.svg"
+                                alt="magnifier icon to search"
+                                aria-hidden="false"
+                                role="img"
+                            />
+                            <p className="contact"></p>
+                        </div>
+                        <div className="contacts--divs">
+                            <img
+                                className="contacts--icon"
+                                src="./assets/icon-search.svg"
+                                alt="magnifier icon to search"
+                                aria-hidden="false"
+                                role="img"
+                            />
+                            <p className="contact"></p>
+                        </div>
+                        <div className="contacts--divs">
+                            <img
+                                className="contacts--icon"
+                                src="./assets/icon-search.svg"
+                                alt="magnifier icon to search"
+                                aria-hidden="false"
+                                role="img"
+                            />
+                            <p className="contact"></p>
+                        </div>
+                    </div>
+                </main>
             </div>
         </div>
     )

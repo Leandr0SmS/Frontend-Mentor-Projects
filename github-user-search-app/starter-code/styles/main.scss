@@ -68,6 +68,7 @@ body {
 .div-dark {
     background-color: $dark-blue;
     color: $light-white;
+    box-shadow: none;
 }
 .ph-dark::placeholder {
     color: $white;

@@ -86,6 +86,7 @@ body {
 .div-dark {
   background-color: #1E2A47;
   color: #FEFEFE;
+  box-shadow: none;
 }
 
 .ph-dark::-moz-placeholder {
