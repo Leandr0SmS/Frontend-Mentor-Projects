@@ -1,3 +1,48 @@
+const octocat = {
+    "login": "octocat",
+    "id": 583231,
+    "node_id": "MDQ6VXNlcjU4MzIzMQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/583231?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/octocat",
+    "html_url": "https://github.com/octocat",
+    "followers_url": "https://api.github.com/users/octocat/followers",
+    "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+    "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+    "organizations_url": "https://api.github.com/users/octocat/orgs",
+    "repos_url": "https://api.github.com/users/octocat/repos",
+    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/octocat/received_events",
+    "type": "User",
+    "site_admin": false,
+    "name": "The Octocat",
+    "company": "@github",
+    "blog": "https://github.blog",
+    "location": "San Francisco",
+    "email": null,
+    "hireable": null,
+    "bio": null,
+    "twitter_username": null,
+    "public_repos": 8,
+    "public_gists": 8,
+    "followers": 8936,
+    "following": 9,
+    "created_at": "2011-01-25T18:44:36Z",
+    "updated_at": "2023-03-22T11:21:35Z"
+  }
+
+function dateFormat(inputDate) {
+    const date = new Date(inputDate);
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const day = date.getUTCDate();
+    const month = monthNames[date.getUTCMonth()];
+    const year = date.getUTCFullYear();
+    return `${day} ${month} ${year}`;
+}
+console.log(dateFormat(octocat.created_at));
+
 function App() {
 
     //State to dark mode
@@ -12,10 +57,12 @@ function App() {
     }, []);
 
 
-    const [data, setData] = React.useState();
+    const [formData, setFormData] = React.useState("octocat");
+
+    const [data, setData] = React.useState(octocat);
     const [get, setGet] = React.useState(0)
     React.useEffect(() => {
-        fetch(`https://api.github.com/users/octocat`)
+        fetch(`https://api.github.com/users/${formData}`)
             .then(res => res.json())
             .then(data => setData(data))
     }, [get])
@@ -91,24 +138,24 @@ function App() {
                     />
                     <div className="user--infos">
                         <div className="flex-div-name">
-                            <h1 className="name">Name</h1>
-                            <p className="user">@user</p>
+                            <h1 className="name">{data.name ? data.name : data.login}</h1>
+                            <p className="user">@{data.login}</p>
                         </div>
-                        <div className="created--date">Joined 25 Jan 2011</div>
+                        <div className="created--date">Joined {dateFormat(data.created_at)}</div>
                     </div>
-                    <p className="bio">This profile has no bio</p>
+                    <p className="bio">{data.bio ? data.bio : "This profile has no bio"}</p>
                     <div className="user--numbers">
                         <div className="div--num">
                             <p>Repos</p>
-                            <p>8</p>
+                            <p>{data.public_repo}</p>
                         </div>
                         <div className="div--num">
                             <p>Followers</p>
-                            <p>3938</p>
+                            <p>{data.followers}</p>
                         </div>
                         <div className="div--num">
                             <p>Following</p>
-                            <p>9</p>
+                            <p>{data.following}</p>
                         </div>
                     </div>
                     <div className="user--contacts">
@@ -120,7 +167,7 @@ function App() {
                                 aria-hidden="false"
                                 role="img"
                             />
-                            <p className="contact"></p>
+                            <p className="contact">{data.location ? data.location : "Not Available"}</p>
                         </div>
                         <div className="contacts--divs">
                             <img
@@ -130,7 +177,7 @@ function App() {
                                 aria-hidden="false"
                                 role="img"
                             />
-                            <p className="contact"></p>
+                            <p className="contact">{data.blog ? data.blog : "Not Available"}</p>
                         </div>
                         <div className="contacts--divs">
                             <img
@@ -140,7 +187,7 @@ function App() {
                                 aria-hidden="false"
                                 role="img"
                             />
-                            <p className="contact"></p>
+                            <p className="contact">{data.twitter_username ? data.twitter_username : "Not Available"}</p>
                         </div>
                         <div className="contacts--divs">
                             <img
@@ -150,7 +197,7 @@ function App() {
                                 aria-hidden="false"
                                 role="img"
                             />
-                            <p className="contact"></p>
+                            <p className="contact">{data.company ? data.company : "Not Available"}</p>
                         </div>
                     </div>
                 </main>
