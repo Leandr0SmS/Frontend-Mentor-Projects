@@ -1,33 +1,29 @@
-/*
-  devfinder
-
-  Light
-  Dark
-
-  Search GitHub username...
-  Search
-
-  Joined
-
-  Repos
-  Followers
-  Following
-*/
-
 function App() {
+
+    //State to dark mode
     const [colorMode, setColorMode] = React.useState(true);
     function handleColorMode() {
         setColorMode(p => !p)
     }
-
+    // Looknig for color mode of the user
     React.useEffect(() => {
         const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        console.log(mediaQuery)
         mediaQuery.matches ? setColorMode(false) : setColorMode(true);
     }, []);
-    
 
-    console.log(colorMode)
+
+    const [data, setData] = React.useState();
+    const [get, setGet] = React.useState(0)
+    React.useEffect(() => {
+        fetch(`https://api.github.com/users/octocat`)
+            .then(res => res.json())
+            .then(data => setData(data))
+    }, [get])
+    function handleClick() {
+        setGet(get => get + 1)
+    }
+
+    console.log(data)
     return (
         <div className={colorMode ? "bg" : "bg-dark bg"}>
             <div className="app">
@@ -63,7 +59,10 @@ function App() {
                           </div>
                     }
                 </header>
-                <form className="form">
+                <form 
+                    className="form"
+                    onSubmit={(e) => e.preventDefault()}
+                >
                     <img
                         className="magnifier-icon"
                         src="./assets/icon-search.svg"
@@ -77,6 +76,7 @@ function App() {
                     />
                     <button
                         className="btn"
+                        onClick={handleClick}
                     >
                         Search
                     </button>
