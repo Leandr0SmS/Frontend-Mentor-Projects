@@ -1,38 +1,3 @@
-const octocat = {
-    "login": "octocat",
-    "id": 583231,
-    "node_id": "MDQ6VXNlcjU4MzIzMQ==",
-    "avatar_url": "https://avatars.githubusercontent.com/u/583231?v=4",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/octocat",
-    "html_url": "https://github.com/octocat",
-    "followers_url": "https://api.github.com/users/octocat/followers",
-    "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-    "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "type": "User",
-    "site_admin": false,
-    "name": "The Octocat",
-    "company": "@github",
-    "blog": "https://github.blog",
-    "location": "San Francisco",
-    "email": null,
-    "hireable": null,
-    "bio": null,
-    "twitter_username": null,
-    "public_repos": 8,
-    "public_gists": 8,
-    "followers": 8936,
-    "following": 9,
-    "created_at": "2011-01-25T18:44:36Z",
-    "updated_at": "2023-03-22T11:21:35Z"
-  }
-
 function dateFormat(inputDate) {
     const date = new Date(inputDate);
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -41,7 +6,6 @@ function dateFormat(inputDate) {
     const year = date.getUTCFullYear();
     return `${day} ${month} ${year}`;
 }
-console.log(dateFormat(octocat.created_at));
 
 function App() {
 
@@ -56,21 +20,25 @@ function App() {
         mediaQuery.matches ? setColorMode(false) : setColorMode(true);
     }, []);
 
-
-    const [formData, setFormData] = React.useState("octocat");
-
-    const [data, setData] = React.useState(octocat);
-    const [get, setGet] = React.useState(0)
+    //Form State
+    const [formData, setFormData] = React.useState("");
+    function handleChange(e) {
+        setFormData(e.target.value)
+    }
+    //Data State
+    const [data, setData] = React.useState("");
+    // State to trigger fetch data from API
+    const [get, setGet] = React.useState(0);
+    function handleClick() {
+        setGet(get => get + 1)
+    };
+    //Fetch data
     React.useEffect(() => {
-        fetch(`https://api.github.com/users/${formData}`)
+        fetch(`https://api.github.com/users/${formData ? formData : "octocat"}`)
             .then(res => res.json())
             .then(data => setData(data))
     }, [get])
-    function handleClick() {
-        setGet(get => get + 1)
-    }
 
-    console.log(data)
     return (
         <div className={colorMode ? "bg" : "bg-dark bg"}>
             <div className="app">
@@ -120,6 +88,10 @@ function App() {
                     <input
                         className={colorMode ? "input ph-light" : "ph-dark div-dark input"}
                         placeholder="Search GitHub username…"
+                        type="text"
+                        name="username"
+                        value={formData}
+                        onChange={handleChange}
                     />
                     <button
                         className="btn"
