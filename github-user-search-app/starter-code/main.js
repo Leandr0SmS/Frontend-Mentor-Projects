@@ -103,8 +103,8 @@ function App() {
                 <main className="user">
                     <img
                         className="user-img"
-                        src="./assets/icon-search.svg"
-                        alt="magnifier icon to search"
+                        src={data.avatar_url}
+                        alt="user image"
                         aria-hidden="false"
                         role="img"
                     />
