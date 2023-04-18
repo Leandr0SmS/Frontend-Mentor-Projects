@@ -24,7 +24,6 @@ function App() {
     const [formData, setFormData] = React.useState("");
     function handleChange(e) {
         setFormData(e.target.value);
-        setError(false);
     };
     //Data State
     const [data, setData] = React.useState("");
@@ -34,15 +33,15 @@ function App() {
     const [get, setGet] = React.useState(0);
     function handleClick() {
         setGet(get => get + 1);
-        data.message === "Not Found" && setError(true);
     };
     //Fetch data
     React.useEffect(() => {
         fetch(`https://api.github.com/users/${formData ? formData : "octocat"}`)
             .then(res => res.json())
             .then(data => setData(data))
+            .catch(error => console.error('Error fetching data:', error));
     }, [get]);
-
+    console.log(error);
     return (
         <div className={colorMode ? "bg" : "bg-dark bg"}>
             <div className="app">
@@ -97,6 +96,7 @@ function App() {
                         value={formData}
                         onChange={handleChange}
                     />
+                    {error && <p className="error--text">No results</p>}
                     <button
                         className="btn"
                         onClick={handleClick}

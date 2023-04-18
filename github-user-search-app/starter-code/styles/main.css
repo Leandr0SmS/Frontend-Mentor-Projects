@@ -107,6 +107,17 @@ body {
   opacity: 0.8;
 }
 
+.error--text {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-8.75rem, -50%);
+  font-weight: 700;
+  color: #F74646;
+  font-size: 0.9375rem;
+  line-height: 1.388rem;
+}
+
 .magnifier-icon {
   position: absolute;
   left: 0;
