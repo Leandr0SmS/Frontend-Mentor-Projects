@@ -12,7 +12,6 @@ body {
 }
 
 .bg {
-    height: 100vh;
     background-color: $ice;
     color: $dark;
     display: flex;
@@ -57,9 +56,8 @@ body {
     height: 4.3125rem;
     color: $blue-gray;
     border: none;
-    border-radius: 0.937rem;
     padding: 1.775rem 5rem; 
-    box-shadow: 0rem 1rem 1.875rem -0.625rem rgba(70, 96, 187, 0.198567);
+    @extend %box-shadow-radius;
 }
 .input::placeholder {
     font-weight: 400;
@@ -111,6 +109,14 @@ body {
     &:hover {
         cursor: pointer;
     }
+}
+.user {
+    margin-top: 1.5rem;
+    padding: 3rem;
+    @extend %box-shadow-radius;
+}
+.user-light {
+    background: $light-white;
 }
 .user-img {
     width: 7.31rem;

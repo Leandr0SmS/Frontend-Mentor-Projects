@@ -16,3 +16,8 @@ $light-white: #FEFEFE;
 $dark-blue: #1E2A47;
 $dark: #141D2F;
 $white: #FFFFFF;
+
+%box-shadow-radius {
+    box-shadow: 0rem 1rem 1.875rem -0.625rem rgba(70, 96, 187, 0.198567);
+    border-radius: 0.937rem;
+}

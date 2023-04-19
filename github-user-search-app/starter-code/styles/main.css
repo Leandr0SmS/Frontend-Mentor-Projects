@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+.user, .input {
+  box-shadow: 0rem 1rem 1.875rem -0.625rem rgba(70, 96, 187, 0.198567);
+  border-radius: 0.937rem;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -13,7 +18,6 @@ body {
 }
 
 .bg {
-  height: 100vh;
   background-color: #F6F8FF;
   color: #141D2F;
   display: flex;
@@ -64,9 +68,7 @@ body {
   height: 4.3125rem;
   color: #4B6A9B;
   border: none;
-  border-radius: 0.937rem;
   padding: 1.775rem 5rem;
-  box-shadow: 0rem 1rem 1.875rem -0.625rem rgba(70, 96, 187, 0.198567);
 }
 
 .input::-moz-placeholder {
@@ -141,6 +143,15 @@ body {
 }
 .btn:hover {
   cursor: pointer;
+}
+
+.user {
+  margin-top: 1.5rem;
+  padding: 3rem;
+}
+
+.user-light {
+  background: #FEFEFE;
 }
 
 .user-img {

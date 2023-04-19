@@ -111,76 +111,78 @@ function App() {
                         Search
                     </button>
                 </form>
-                <main className="user">
-                    <img
-                        className="user-img"
-                        src={data.avatar_url}
-                        alt="user image"
-                        aria-hidden="false"
-                        role="img"
-                    />
-                    <div className="user--infos">
-                        <div className="flex-div-name">
-                            <h1 className="name">{data.name ? data.name : data.login}</h1>
-                            <p className="user">@{data.login}</p>
+                <main className={colorMode ? "user-light user" : "div-dark user"}>
+                    <div className="grid">
+                        <img
+                            className="user-img"
+                            src={data.avatar_url}
+                            alt="user image"
+                            aria-hidden="false"
+                            role="img"
+                        />
+                        <div className="user--infos">
+                            <div className="flex-div-name">
+                                <h1 className="name">{data.name ? data.name : data.login}</h1>
+                                <p className="user@">@{data.login}</p>
+                            </div>
+                            <div className="created--date">Joined {dateFormat(data.created_at)}</div>
                         </div>
-                        <div className="created--date">Joined {dateFormat(data.created_at)}</div>
-                    </div>
-                    <p className="bio">{data.bio ? data.bio : "This profile has no bio"}</p>
-                    <div className="user--numbers">
-                        <div className="div--num">
-                            <p>Repos</p>
-                            <p>{data.public_repo}</p>
+                        <p className="bio">{data.bio ? data.bio : "This profile has no bio"}</p>
+                        <div className="user--numbers">
+                            <div className="div--num">
+                                <p>Repos</p>
+                                <p>{data.public_repo}</p>
+                            </div>
+                            <div className="div--num">
+                                <p>Followers</p>
+                                <p>{data.followers}</p>
+                            </div>
+                            <div className="div--num">
+                                <p>Following</p>
+                                <p>{data.following}</p>
+                            </div>
                         </div>
-                        <div className="div--num">
-                            <p>Followers</p>
-                            <p>{data.followers}</p>
-                        </div>
-                        <div className="div--num">
-                            <p>Following</p>
-                            <p>{data.following}</p>
-                        </div>
-                    </div>
-                    <div className="user--contacts">
-                        <div className="contacts--divs">
-                            <img
-                                className="contacts--icon"
-                                src="./assets/icon-location.svg"
-                                alt="location spot icon"
-                                aria-hidden="false"
-                                role="img"
-                            />
-                            <p className="contact">{data.location ? data.location : "Not Available"}</p>
-                        </div>
-                        <div className="contacts--divs">
-                            <img
-                                className="contacts--icon"
-                                src="./assets/icon-website.svg"
-                                alt="link icon"
-                                aria-hidden="false"
-                                role="img"
-                            />
-                            <p className="contact">{data.blog ? data.blog : "Not Available"}</p>
-                        </div>
-                        <div className="contacts--divs">
-                            <img
-                                className="contacts--icon"
-                                src="./assets/icon-twitter.svg"
-                                alt="twitter icon"
-                                aria-hidden="false"
-                                role="img"
-                            />
-                            <p className="contact">{data.twitter_username ? data.twitter_username : "Not Available"}</p>
-                        </div>
-                        <div className="contacts--divs">
-                            <img
-                                className="contacts--icon"
-                                src="./assets/icon-company.svg"
-                                alt="build icon"
-                                aria-hidden="false"
-                                role="img"
-                            />
-                            <p className="contact">{data.company ? data.company : "Not Available"}</p>
+                        <div className="user--contacts">
+                            <div className="contacts--divs">
+                                <img
+                                    className="contacts--icon"
+                                    src="./assets/icon-location.svg"
+                                    alt="location spot icon"
+                                    aria-hidden="false"
+                                    role="img"
+                                />
+                                <p className="contact">{data.location ? data.location : "Not Available"}</p>
+                            </div>
+                            <div className="contacts--divs">
+                                <img
+                                    className="contacts--icon"
+                                    src="./assets/icon-website.svg"
+                                    alt="link icon"
+                                    aria-hidden="false"
+                                    role="img"
+                                />
+                                <p className="contact">{data.blog ? data.blog : "Not Available"}</p>
+                            </div>
+                            <div className="contacts--divs">
+                                <img
+                                    className="contacts--icon"
+                                    src="./assets/icon-twitter.svg"
+                                    alt="twitter icon"
+                                    aria-hidden="false"
+                                    role="img"
+                                />
+                                <p className="contact">{data.twitter_username ? data.twitter_username : "Not Available"}</p>
+                            </div>
+                            <div className="contacts--divs">
+                                <img
+                                    className="contacts--icon"
+                                    src="./assets/icon-company.svg"
+                                    alt="build icon"
+                                    aria-hidden="false"
+                                    role="img"
+                                />
+                                <p className="contact">{data.company ? data.company : "Not Available"}</p>
+                            </div>
                         </div>
                     </div>
                 </main>
