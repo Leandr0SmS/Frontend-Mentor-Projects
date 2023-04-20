@@ -67,9 +67,9 @@ body {
     border: none;
     padding: 1.775rem 5rem; 
     @extend %box-shadow-radius;
+    line-height: 1.5625rem;
     font-weight: 400;
     font-size: 1.125rem;
-    line-height: 1.5625rem;
 }
 .input::placeholder {
     font-weight: 400;
@@ -126,13 +126,15 @@ body {
     margin-top: 1.5rem;
     padding: 3rem;
     @extend %box-shadow-radius;
+    width: fit-content;
 }
 .user-light {
     background: $light-white;
 }
 .grid {
+    width: max-content;
     display: grid;
-    grid-template-columns: 7.31rem 30rem;
+    grid-template-columns: 7.31rem minmax(30rem, max-content);
     grid-template-rows: 
         repeat(6, 0.84375rem) 
         minmax(1.5rem, max-content)
@@ -180,12 +182,14 @@ body {
 }
 .user--contacts {
     display: grid;
-    grid-template-columns: repeat(2, 15rem);
+    width: max-content;
+    grid-template-columns: repeat(2, max-content);
     grid-template-rows: repeat(2, 1.375rem);
     grid-gap: 1rem;
     grid-row: 15 / 20;
 }
 .contacts--divs {
     display: flex;
+    width: max-content;
     gap: 1rem;
 }
