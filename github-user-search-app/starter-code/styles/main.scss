@@ -130,8 +130,11 @@ body {
 .grid {
     display: grid;
     grid-template-columns: 7.31rem 30rem;
-    grid-template-rows: fit-content(100%);
-    column-gap: 2.3125rem;
+    grid-template-rows: 
+        repeat(6, 0.84375rem) 
+        minmax(1.5rem, max-content)
+        repeat(10, 1.65rem);
+    grid-column-gap: 2.3125rem;
 }
 .user-img {
     width: 7.31rem;
@@ -147,6 +150,7 @@ body {
     display: flex;
     justify-content: space-between;
     height: fit-content;
+    grid-row: 1 / 5;
 }
 .user-a {
     color: $blue;
@@ -158,6 +162,7 @@ body {
 }
 .bio {
     margin-bottom: 2rem;
+    grid-row: 7 / 8;
 }
 .user--numbers {
     width: 30rem;
@@ -168,11 +173,14 @@ body {
     padding: 1rem 2rem;
     margin-bottom: 2.3125rem;
     border-radius: 0.625rem;
+    grid-row: 8 / 13;
 }
 .user--contacts {
     display: grid;
     grid-template-columns: repeat(2, 15rem);
     grid-template-rows: repeat(2, 1.375rem);
+    grid-gap: 1rem;
+    grid-row: 15 / 20;
 }
 .contacts--divs {
     display: flex;
