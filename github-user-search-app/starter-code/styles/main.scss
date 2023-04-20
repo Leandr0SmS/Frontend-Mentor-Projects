@@ -25,8 +25,14 @@ body {
     background-color: $dark;
     color: $white;
 }
+.font-dark {
+    color: $white;
+}
 .gray-light {
     color: $gray;
+}
+.blue-gray-light {
+    color: $blue-gray;
 }
 .app {
     width: 45.5rem;
@@ -161,6 +167,7 @@ body {
     gap: 5.3125rem;
     padding: 1rem 2rem;
     margin-bottom: 2.3125rem;
+    border-radius: 0.625rem;
 }
 .user--contacts {
     display: grid;

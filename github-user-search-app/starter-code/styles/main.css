@@ -34,8 +34,16 @@ body {
   color: #FFFFFF;
 }
 
+.font-dark {
+  color: #FFFFFF;
+}
+
 .gray-light {
   color: #697C9A;
+}
+
+.blue-gray-light {
+  color: #4B6A9B;
 }
 
 .app {
@@ -207,6 +215,7 @@ body {
   gap: 5.3125rem;
   padding: 1rem 2rem;
   margin-bottom: 2.3125rem;
+  border-radius: 0.625rem;
 }
 
 .user--contacts {

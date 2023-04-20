@@ -127,7 +127,7 @@ function App() {
                             </div>
                             <div className="created--date--div">
                                 <p 
-                                    className={colorMode ? "created--date gray-light" : "created--date"}
+                                    className={colorMode ? "created--date blue-gray-light" : "created--date"}
                                 >
                                     Joined {dateFormat(data.created_at)}
                                 </p>
@@ -136,15 +136,15 @@ function App() {
                         <p className="bio">{data.bio ? data.bio : "This profile has no bio"}</p>
                         <div className={colorMode ? "user--numbers bg-light" : "user--numbers bg-dark"}>
                             <div className="div--num">
-                                <p>Repos</p>
+                                <p className={colorMode ? "blue-gray-light" : "font-dark"}>Repos</p>
                                 <p>{data.public_repos}</p>
                             </div>
                             <div className="div--num">
-                                <p>Followers</p>
+                                <p className={colorMode ? "blue-gray-light" : "font-dark"}>Followers</p>
                                 <p>{data.followers}</p>
                             </div>
                             <div className="div--num">
-                                <p>Following</p>
+                                <p className={colorMode ? "blue-gray-light" : "font-dark"}>Following</p>
                                 <p>{data.following}</p>
                             </div>
                         </div>
