@@ -48,9 +48,9 @@ function App() {
                 .then(data => setData(data))
         }
     }, [data]);
-    console.log("render")
+    console.log(data)
     return (
-        <div className={colorMode ? "bg" : "bg-dark bg"}>
+        <div className={colorMode ? "bg bg-light" : "bg-dark bg"}>
             <div className="app">
                 <header className="header">
                     <h1 className="title">devfinder</h1>
@@ -123,15 +123,21 @@ function App() {
                         <div className="user--infos">
                             <div className="flex-div-name">
                                 <h1 className="name">{data.name ? data.name : data.login}</h1>
-                                <p className="user@">@{data.login}</p>
+                                <p className="user-a">@{data.login}</p>
                             </div>
-                            <div className="created--date">Joined {dateFormat(data.created_at)}</div>
+                            <div className="created--date--div">
+                                <p 
+                                    className={colorMode ? "created--date gray-light" : "created--date"}
+                                >
+                                    Joined {dateFormat(data.created_at)}
+                                </p>
+                            </div>
                         </div>
                         <p className="bio">{data.bio ? data.bio : "This profile has no bio"}</p>
-                        <div className="user--numbers">
+                        <div className={colorMode ? "user--numbers bg-light" : "user--numbers bg-dark"}>
                             <div className="div--num">
                                 <p>Repos</p>
-                                <p>{data.public_repo}</p>
+                                <p>{data.public_repos}</p>
                             </div>
                             <div className="div--num">
                                 <p>Followers</p>

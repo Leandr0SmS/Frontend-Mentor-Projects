@@ -18,12 +18,15 @@ body {
 }
 
 .bg {
-  background-color: #F6F8FF;
   color: #141D2F;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bg-light {
+  background-color: #F6F8FF;
 }
 
 .bg-dark {
@@ -158,7 +161,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 7.31rem 30rem;
-  grid-template-rows: repeat(auto-fit);
+  grid-template-rows: fit-content(100%);
   -moz-column-gap: 2.3125rem;
        column-gap: 2.3125rem;
 }
@@ -173,4 +176,46 @@ body {
 
 .user--infos, .bio, .user--numbers, .user--contacts {
   grid-column: 2/-1;
+}
+
+.user--infos {
+  display: flex;
+  justify-content: space-between;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.user-a {
+  color: #0079FF;
+}
+
+.created--date {
+  padding-top: 0.67em;
+  font-weight: 400;
+  font-size: 0.9375rem;
+}
+
+.bio {
+  margin-bottom: 2rem;
+}
+
+.user--numbers {
+  width: 30rem;
+  height: 5.3125rem;
+  display: flex;
+  align-items: center;
+  gap: 5.3125rem;
+  padding: 1rem 2rem;
+  margin-bottom: 2.3125rem;
+}
+
+.user--contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 15rem);
+  grid-template-rows: repeat(2, 1.375rem);
+}
+
+.contacts--divs {
+  display: flex;
+  gap: 1rem;
 }/*# sourceMappingURL=main.css.map */
