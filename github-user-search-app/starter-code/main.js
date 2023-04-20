@@ -22,9 +22,6 @@ function App() {
 
     //Form State
     const [formData, setFormData] = React.useState("");
-    function handleInputChange(e) {
-        setFormData(e.target.value);
-    };
     //Data State
     const [data, setData] = React.useState("");
     //Error state
@@ -33,6 +30,10 @@ function App() {
     const [get, setGet] = React.useState(0);
     function handleClick() {
         setGet(get => get + 1);
+    };
+    function handleInputChange(e) {
+        setFormData(e.target.value);
+        setError(false);
     };
     //Fetch data
     React.useEffect(() => {

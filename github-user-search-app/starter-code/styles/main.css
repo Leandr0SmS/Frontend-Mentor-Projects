@@ -81,6 +81,9 @@ body {
   color: #4B6A9B;
   border: none;
   padding: 1.775rem 5rem;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
 }
 
 .input::-moz-placeholder {
@@ -169,7 +172,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 7.31rem 30rem;
-  grid-template-rows: repeat(6, 0.84375rem) minmax(1.5rem, max-content) repeat(10, 1.2875rem);
+  grid-template-rows: repeat(6, 0.84375rem) minmax(1.5rem, max-content) repeat(10, 1.15625rem);
   grid-column-gap: 2.3125rem;
 }
 

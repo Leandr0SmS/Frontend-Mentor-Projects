@@ -67,6 +67,9 @@ body {
     border: none;
     padding: 1.775rem 5rem; 
     @extend %box-shadow-radius;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
 }
 .input::placeholder {
     font-weight: 400;
@@ -133,7 +136,7 @@ body {
     grid-template-rows: 
         repeat(6, 0.84375rem) 
         minmax(1.5rem, max-content)
-        repeat(10, 1.2875rem);
+        repeat(10, 1.15625rem);
     grid-column-gap: 2.3125rem;
 }
 .user-img {
