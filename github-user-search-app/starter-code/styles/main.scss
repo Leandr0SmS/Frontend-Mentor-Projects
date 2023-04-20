@@ -14,6 +14,7 @@ body {
 .bg {
     background-color: $ice;
     color: $dark;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,8 +119,19 @@ body {
 .user-light {
     background: $light-white;
 }
+.grid {
+    display: grid;
+    grid-template-columns: 7.31rem 30rem;
+    grid-template-rows: repeat(auto-fit);
+    column-gap: 2.3125rem;
+}
 .user-img {
     width: 7.31rem;
     height: 7.31rem;
     border-radius: 50%;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+}
+.user--infos, .bio, .user--numbers, .user--contacts {
+    grid-column: 2 / -1;
 }

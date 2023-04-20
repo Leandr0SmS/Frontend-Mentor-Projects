@@ -20,6 +20,7 @@ body {
 .bg {
   background-color: #F6F8FF;
   color: #141D2F;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,8 +155,22 @@ body {
   background: #FEFEFE;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 7.31rem 30rem;
+  grid-template-rows: repeat(auto-fit);
+  -moz-column-gap: 2.3125rem;
+       column-gap: 2.3125rem;
+}
+
 .user-img {
   width: 7.31rem;
   height: 7.31rem;
   border-radius: 50%;
+  grid-column: 1/2;
+  grid-row: 1/-1;
+}
+
+.user--infos, .bio, .user--numbers, .user--contacts {
+  grid-column: 2/-1;
 }/*# sourceMappingURL=main.css.map */
