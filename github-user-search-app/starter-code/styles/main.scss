@@ -71,6 +71,12 @@ body {
     font-weight: 400;
     font-size: 1.125rem;
 }
+.input:focus {
+    outline: none;
+}
+.input:focus + .btn {
+    opacity: 0.5;
+}
 .input::placeholder {
     font-weight: 400;
     font-size: 1.125rem;
