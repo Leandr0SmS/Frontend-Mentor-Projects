@@ -149,8 +149,11 @@ function App() {
                                 <p className="numbers">{data.following}</p>
                             </div>
                         </div>
-                        <div className="user--contacts">
-                            <div className="contacts--divs">
+                        <div className={colorMode ? "user--contacts blue-gray-light" : "user--contacts"}>
+                            <div 
+                                className="contacts--divs"
+                                style={data.twitter_username ? {opacity: 1} : {opacity: 0.5}}
+                            >
                                 <img
                                     className="contacts--icon"
                                     src="./assets/icon-location.svg"
@@ -160,7 +163,10 @@ function App() {
                                 />
                                 <p className="contact">{data.location ? data.location : "Not Available"}</p>
                             </div>
-                            <div className="contacts--divs">
+                            <div 
+                                className="contacts--divs" 
+                                style={data.twitter_username ? {opacity: 1} : {opacity: 0.5}}
+                            >
                                 <img
                                     className="contacts--icon"
                                     src="./assets/icon-twitter.svg"
@@ -170,7 +176,10 @@ function App() {
                                 />
                                 <p className="contact">{data.twitter_username ? data.twitter_username : "Not Available"}</p>
                             </div>
-                            <div className="contacts--divs">
+                            <div 
+                                className="contacts--divs"
+                                style={data.twitter_username ? {opacity: 1} : {opacity: 0.5}}
+                            >
                                 <img
                                     className="contacts--icon"
                                     src="./assets/icon-website.svg"
@@ -180,7 +189,10 @@ function App() {
                                 />
                                 <p className="contact">{data.blog ? data.blog : "Not Available"}</p>
                             </div>
-                            <div className="contacts--divs">
+                            <div 
+                                className="contacts--divs"
+                                style={data.twitter_username ? {opacity: 1} : {opacity: 0.5}}
+                            >
                                 <img
                                     className="contacts--icon"
                                     src="./assets/icon-company.svg"
