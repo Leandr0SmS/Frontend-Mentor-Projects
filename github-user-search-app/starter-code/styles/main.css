@@ -255,4 +255,12 @@ body {
   width: -moz-max-content;
   width: max-content;
   gap: 1rem;
+}
+
+.contact {
+  text-decoration: none;
+  color: inherit;
+}
+.contact:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */

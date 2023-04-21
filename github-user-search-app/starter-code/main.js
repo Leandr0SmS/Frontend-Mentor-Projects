@@ -149,7 +149,7 @@ function App() {
                                 <p className="numbers">{data.following}</p>
                             </div>
                         </div>
-                        <div className={colorMode ? "user--contacts blue-gray-light" : "user--contacts"}>
+                        <div className={colorMode ? "user--contacts blue-gray-light" : "user--contacts font-dark"}>
                             <div 
                                 className="contacts--divs"
                                 style={data.location ? {opacity: 1} : {opacity: 0.5}}
@@ -161,7 +161,12 @@ function App() {
                                     aria-hidden="false"
                                     role="img"
                                 />
-                                <p className="contact">{data.location ? data.location : "Not Available"}</p>
+                                <a 
+                                    className="contact"
+                                    href={data.location ? data.location : ""}
+                                >
+                                    {data.location ? data.location : "Not Available"}
+                                </a>
                             </div>
                             <div 
                                 className="contacts--divs" 
@@ -174,7 +179,12 @@ function App() {
                                     aria-hidden="false"
                                     role="img"
                                 />
-                                <p className="contact">{data.twitter_username ? data.twitter_username : "Not Available"}</p>
+                                <a 
+                                    className="contact"
+                                    href={data.twitter_username ? data.twitter_username : ""}
+                                >
+                                    {data.twitter_username ? data.twitter_username : "Not Available"}
+                                </a>
                             </div>
                             <div 
                                 className="contacts--divs"
@@ -187,7 +197,12 @@ function App() {
                                     aria-hidden="false"
                                     role="img"
                                 />
-                                <p className="contact">{data.blog ? data.blog : "Not Available"}</p>
+                                <a 
+                                    className="contact"
+                                    href={data.blog ? data.blog : ""}
+                                >
+                                    {data.blog ? data.blog : "Not Available"}
+                                </a>
                             </div>
                             <div 
                                 className="contacts--divs"
@@ -200,7 +215,12 @@ function App() {
                                     aria-hidden="false"
                                     role="img"
                                 />
-                                <p className="contact">{data.company ? data.company : "Not Available"}</p>
+                                <a 
+                                    className="contact"
+                                    href={data.company ? data.company : ""}
+                                >
+                                    {data.company ? data.company : "Not Available"}
+                                </a>
                             </div>
                         </div>
                     </div>
