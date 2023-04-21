@@ -163,22 +163,22 @@ function App() {
                             <div className="contacts--divs">
                                 <img
                                     className="contacts--icon"
-                                    src="./assets/icon-website.svg"
-                                    alt="link icon"
-                                    aria-hidden="false"
-                                    role="img"
-                                />
-                                <p className="contact">{data.blog ? data.blog : "Not Available"}</p>
-                            </div>
-                            <div className="contacts--divs">
-                                <img
-                                    className="contacts--icon"
                                     src="./assets/icon-twitter.svg"
                                     alt="twitter icon"
                                     aria-hidden="false"
                                     role="img"
                                 />
                                 <p className="contact">{data.twitter_username ? data.twitter_username : "Not Available"}</p>
+                            </div>
+                            <div className="contacts--divs">
+                                <img
+                                    className="contacts--icon"
+                                    src="./assets/icon-website.svg"
+                                    alt="link icon"
+                                    aria-hidden="false"
+                                    role="img"
+                                />
+                                <p className="contact">{data.blog ? data.blog : "Not Available"}</p>
                             </div>
                             <div className="contacts--divs">
                                 <img
