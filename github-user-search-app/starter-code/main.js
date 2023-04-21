@@ -152,7 +152,7 @@ function App() {
                         <div className={colorMode ? "user--contacts blue-gray-light" : "user--contacts"}>
                             <div 
                                 className="contacts--divs"
-                                style={data.twitter_username ? {opacity: 1} : {opacity: 0.5}}
+                                style={data.location ? {opacity: 1} : {opacity: 0.5}}
                             >
                                 <img
                                     className="contacts--icon"
@@ -178,7 +178,7 @@ function App() {
                             </div>
                             <div 
                                 className="contacts--divs"
-                                style={data.twitter_username ? {opacity: 1} : {opacity: 0.5}}
+                                style={data.blog ? {opacity: 1} : {opacity: 0.5}}
                             >
                                 <img
                                     className="contacts--icon"
@@ -191,7 +191,7 @@ function App() {
                             </div>
                             <div 
                                 className="contacts--divs"
-                                style={data.twitter_username ? {opacity: 1} : {opacity: 0.5}}
+                                style={data.company ? {opacity: 1} : {opacity: 0.5}}
                             >
                                 <img
                                     className="contacts--icon"
