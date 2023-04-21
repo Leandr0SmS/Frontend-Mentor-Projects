@@ -213,6 +213,7 @@ body {
 .bio {
   margin-bottom: 2rem;
   grid-row: 7/8;
+  opacity: 0.75;
 }
 
 .user--numbers {
@@ -227,13 +228,17 @@ body {
   grid-row: 8/13;
 }
 
+.numbers {
+  font-weight: 700;
+}
+
 .user--contacts {
   display: grid;
   width: -moz-max-content;
   width: max-content;
   grid-template-columns: repeat(2, max-content);
   grid-template-rows: repeat(2, 1.375rem);
-  grid-gap: 1rem;
+  grid-gap: 1rem 4rem;
   grid-row: 15/20;
 }
 
