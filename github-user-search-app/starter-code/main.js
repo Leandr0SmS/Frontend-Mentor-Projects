@@ -155,7 +155,7 @@ function App() {
                                 style={data.location ? {opacity: 1} : {opacity: 0.5}}
                             >
                                 <img
-                                    className="contacts--icon"
+                                    className={colorMode ? "contacts--icon" : "icon--white"}
                                     src="./assets/icon-location.svg"
                                     alt="location spot icon"
                                     aria-hidden="false"
@@ -173,7 +173,7 @@ function App() {
                                 style={data.twitter_username ? {opacity: 1} : {opacity: 0.5}}
                             >
                                 <img
-                                    className="contacts--icon"
+                                    className={colorMode ? "contacts--icon" : "icon--white"}
                                     src="./assets/icon-twitter.svg"
                                     alt="twitter icon"
                                     aria-hidden="false"
@@ -191,7 +191,7 @@ function App() {
                                 style={data.blog ? {opacity: 1} : {opacity: 0.5}}
                             >
                                 <img
-                                    className="contacts--icon"
+                                    className={colorMode ? "contacts--icon" : "icon--white"}
                                     src="./assets/icon-website.svg"
                                     alt="link icon"
                                     aria-hidden="false"
@@ -209,7 +209,7 @@ function App() {
                                 style={data.company ? {opacity: 1} : {opacity: 0.5}}
                             >
                                 <img
-                                    className="contacts--icon"
+                                    className={colorMode ? "contacts--icon" : "icon--white"}
                                     src="./assets/icon-company.svg"
                                     alt="build icon"
                                     aria-hidden="false"

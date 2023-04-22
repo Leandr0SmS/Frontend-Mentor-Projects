@@ -263,4 +263,8 @@ body {
 }
 .contact:hover {
   text-decoration: underline;
+}
+
+.icon--white {
+  filter: brightness(0) saturate(100%) invert(100%);
 }/*# sourceMappingURL=main.css.map */
