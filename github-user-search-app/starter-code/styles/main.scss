@@ -11,13 +11,7 @@ body {
     font-family: 'Space Mono', monospace;
 }
 
-.bg {
-    color: $dark;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+//color mode classes
 .bg-light {
     background-color: $ice;
 }
@@ -33,6 +27,34 @@ body {
 }
 .blue-gray-light {
     color: $blue-gray;
+}
+.ph-light::placeholder {
+    color: $blue-gray;
+}
+.ph-dark::placeholder {
+    color: $white;
+    font-weight: 400;
+    font-size: 1.125rem;
+    opacity: 0.8;
+}
+.div-dark {
+    background-color: $dark-blue;
+    color: $light-white;
+    box-shadow: none;
+}
+.user-light {
+    background: $light-white;
+}
+.icon--white {
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.bg {
+    color: $dark;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .app {
     width: 45.5rem;
@@ -81,20 +103,6 @@ body {
     font-weight: 400;
     font-size: 1.125rem;
 }
-.ph-light::placeholder {
-    color: $blue-gray;
-}
-.div-dark {
-    background-color: $dark-blue;
-    color: $light-white;
-    box-shadow: none;
-}
-.ph-dark::placeholder {
-    color: $white;
-    font-weight: 400;
-    font-size: 1.125rem;
-    opacity: 0.8;
-}
 .error--text {
     position: absolute;
     right: 0;
@@ -133,9 +141,6 @@ body {
     padding: 3rem;
     @extend %box-shadow-radius;
     width: fit-content;
-}
-.user-light {
-    background: $light-white;
 }
 .grid {
     width: max-content;
@@ -210,6 +215,7 @@ body {
         text-decoration: underline;
     }
 }
-.icon--white {
-    filter: brightness(0) saturate(100%) invert(100%);
+
+@media (max-width: 800px) {
+
 }

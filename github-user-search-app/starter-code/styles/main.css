@@ -17,14 +17,6 @@ body {
   font-family: "Space Mono", monospace;
 }
 
-.bg {
-  color: #141D2F;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .bg-light {
   background-color: #F6F8FF;
 }
@@ -44,6 +36,50 @@ body {
 
 .blue-gray-light {
   color: #4B6A9B;
+}
+
+.ph-light::-moz-placeholder {
+  color: #4B6A9B;
+}
+
+.ph-light::placeholder {
+  color: #4B6A9B;
+}
+
+.ph-dark::-moz-placeholder {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 1.125rem;
+  opacity: 0.8;
+}
+
+.ph-dark::placeholder {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 1.125rem;
+  opacity: 0.8;
+}
+
+.div-dark {
+  background-color: #1E2A47;
+  color: #FEFEFE;
+  box-shadow: none;
+}
+
+.user-light {
+  background: #FEFEFE;
+}
+
+.icon--white {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.bg {
+  color: #141D2F;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app {
@@ -104,34 +140,6 @@ body {
   font-size: 1.125rem;
 }
 
-.ph-light::-moz-placeholder {
-  color: #4B6A9B;
-}
-
-.ph-light::placeholder {
-  color: #4B6A9B;
-}
-
-.div-dark {
-  background-color: #1E2A47;
-  color: #FEFEFE;
-  box-shadow: none;
-}
-
-.ph-dark::-moz-placeholder {
-  color: #FFFFFF;
-  font-weight: 400;
-  font-size: 1.125rem;
-  opacity: 0.8;
-}
-
-.ph-dark::placeholder {
-  color: #FFFFFF;
-  font-weight: 400;
-  font-size: 1.125rem;
-  opacity: 0.8;
-}
-
 .error--text {
   position: absolute;
   right: 0;
@@ -173,10 +181,6 @@ body {
   padding: 3rem;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.user-light {
-  background: #FEFEFE;
 }
 
 .grid {
@@ -263,8 +267,4 @@ body {
 }
 .contact:hover {
   text-decoration: underline;
-}
-
-.icon--white {
-  filter: brightness(0) saturate(100%) invert(100%);
 }/*# sourceMappingURL=main.css.map */
