@@ -269,12 +269,9 @@ body {
 
 @media (max-width: 800px) {
   .grid {
-    width: -moz-max-content;
-    width: max-content;
-    display: grid;
     grid-template-columns: 7.31rem max-content;
     grid-template-rows: minmax(7.31rem, max-content) minmax(1.5rem, max-content) repeat(2, minmax(3rem, max-content));
-    grid-column-gap: 2.3125rem;
+    grid-column-gap: 2.5625rem;
   }
   .user-img {
     grid-column: 1/2;
@@ -298,14 +295,7 @@ body {
     grid-row: 2/3;
   }
   .user--numbers {
-    width: 30rem;
-    height: 5.3125rem;
-    display: flex;
-    align-items: center;
-    gap: 5.3125rem;
-    padding: 1rem 2rem;
     margin-bottom: 1.875rem;
-    border-radius: 0.625rem;
     grid-row: 3/4;
   }
   .user--contacts {
