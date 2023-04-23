@@ -197,10 +197,6 @@ body {
   grid-row: 1/-1;
 }
 
-.title {
-  font-size: 1.625rem;
-}
-
 .name {
   font-size: 1.625rem;
 }
@@ -273,14 +269,14 @@ body {
   width: max-content;
   gap: 1rem;
 }
+.contacts--divs a:hover {
+  text-decoration: underline;
+}
 
 .contact {
   font-size: 0.9375rem;
   text-decoration: none;
   color: inherit;
-}
-.contact:hover {
-  text-decoration: underline;
 }
 
 @media (max-width: 800px) {

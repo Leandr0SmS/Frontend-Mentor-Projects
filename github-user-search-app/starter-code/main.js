@@ -55,7 +55,7 @@ function App() {
                 .then(data => setData(data))
         }
     }, [data]);
-
+    console.log(data)
     return (
         <div className={colorMode ? "bg bg-light" : "bg-dark bg"}>
             <div className="app">
@@ -167,12 +167,11 @@ function App() {
                                     aria-hidden="false"
                                     role="img"
                                 />
-                                <a 
+                                <p 
                                     className="contact"
-                                    href={data.location ? data.location : ""}
                                 >
                                     {data.location ? data.location : "Not Available"}
-                                </a>
+                                </p>
                             </div>
                             <div 
                                 className="contacts--divs" 
@@ -223,7 +222,7 @@ function App() {
                                 />
                                 <a 
                                     className="contact"
-                                    href={data.company ? data.company : ""}
+                                    href={data.company ? `https://github.com/${data.company.replace(/[@]/g, '')}` : ""}
                                 >
                                     {data.company ? data.company : "Not Available"}
                                 </a>
