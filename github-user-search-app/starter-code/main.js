@@ -55,7 +55,7 @@ function App() {
                 .then(data => setData(data))
         }
     }, [data]);
-    console.log(data)
+
     return (
         <div className={colorMode ? "bg bg-light" : "bg-dark bg"}>
             <div className="app">
