@@ -197,6 +197,10 @@ body {
   grid-row: 1/-1;
 }
 
+.title {
+  font-size: 1.625rem;
+}
+
 .name {
   font-size: 1.625rem;
 }
