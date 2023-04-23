@@ -136,15 +136,15 @@ function App() {
                         <p className={colorMode ? "bio blue-gray-light" : "bio"}>{data.bio ? data.bio : "This profile has no bio"}</p>
                         <div className={colorMode ? "user--numbers bg-light" : "user--numbers bg-dark"}>
                             <div className="div--num">
-                                <p className={colorMode ? "blue-gray-light" : "font-dark"}>Repos</p>
+                                <p className={colorMode ? "number--text blue-gray-light" : "number--text font-dark"}>Repos</p>
                                 <p className="numbers">{data.public_repos}</p>
                             </div>
                             <div className="div--num">
-                                <p className={colorMode ? "blue-gray-light" : "font-dark"}>Followers</p>
+                                <p className={colorMode ? "number--text blue-gray-light" : "number--text font-dark"}>Followers</p>
                                 <p className="numbers">{data.followers}</p>
                             </div>
                             <div className="div--num">
-                                <p className={colorMode ? "blue-gray-light" : "font-dark"}>Following</p>
+                                <p className={colorMode ? "number--text blue-gray-light" : "number--text font-dark"}>Following</p>
                                 <p className="numbers">{data.following}</p>
                             </div>
                         </div>

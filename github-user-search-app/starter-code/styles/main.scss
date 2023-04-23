@@ -96,7 +96,7 @@ body {
 .input:focus + .btn {
     opacity: 0.5;
 }
-.input::placeholder {
+.input, .input::placeholder {
     font-weight: 400;
     font-size: 1.125rem;
 }
@@ -156,6 +156,9 @@ body {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
 }
+.name {
+     font-size: 1.625rem;   
+}
 .user--infos, .bio, .user--numbers, .user--contacts {
     grid-column: 2 / -1;
 }
@@ -167,6 +170,8 @@ body {
 }
 .user-a {
     color: $blue;
+    font-size: 1rem;
+    font-weight: 400;
 }
 .created--date {
     padding-top: 0.67em;
@@ -177,6 +182,7 @@ body {
     margin-bottom: 2rem;
     grid-row: 7 / 8;
     opacity: 0.75;
+    font-size: 0.9375rem;
 }
 .user--numbers {
     width: 30rem;
@@ -189,7 +195,11 @@ body {
     border-radius: 0.625rem;
     grid-row: 8 / 13;
 }
+.number--text {
+    font-size: 0.8125rem;
+}
 .numbers {
+    font-size: 1.375rem;
     font-weight: 700;
 }
 .user--contacts {
@@ -206,6 +216,7 @@ body {
     gap: 1rem;
 }
 .contact {
+    font-size: 0.9375rem;
     text-decoration: none;
     color: inherit;
     &:hover {
@@ -249,5 +260,79 @@ body {
     }
     .user--contacts {
         grid-row: 4 / 5;
+    }
+}
+
+@media (max-width: 610px) {
+    .input {
+        height: 3.75rem;
+        padding: 1rem 2.8125rem; 
+    }
+    .input, .input::placeholder {
+        font-size: 0.8125rem;
+    }
+    .magnifier-icon {
+        transform: translate(1rem, -50%);
+    }
+    .btn {
+        padding: 0.843em 1.125em;
+        font-size: 0.875rem;
+        transform: translate(-0.4375rem, -50%);
+    }
+    .user {
+        margin-top: 1rem;
+        padding: 2rem 1.5rem;
+    }
+    .grid {
+        grid-template-columns: 4.375rem max-content;
+        grid-template-rows: 
+            minmax(4.375rem, max-content)
+            minmax(1.5rem, max-content)
+            repeat(2, minmax(3rem, max-content));
+        grid-column-gap: 1.1875rem;
+    }
+    .user-img {
+        width: 4.375rem;
+        height: 4.375rem;
+    }
+    .name {
+        font-size: 1rem;
+    }
+    .user-a {
+        font-size: 0.8125rem;
+    }
+    .created--date {
+        padding-top: 0;
+        font-size: 0.8125rem;
+    }
+    .bio {
+        font-size: 0.8125rem;
+    }
+    .user--numbers {
+        width: 17.4375rem;
+        gap: 0;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .number--text {
+        font-size: 0.6875rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    .numbers {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .user--contacts {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+    }
+    .contacts--divs {
+        gap: 1.1875rem;
+    }
+    .contact {
+        font-size: 0.8125rem;
     }
 }
