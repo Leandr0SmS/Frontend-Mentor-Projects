@@ -32,7 +32,13 @@ This repository is to share my solutions of Frontend Mentor Challenges.
 
 11. [Single-page developer portfolio](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/single-page-developer-portfolio)
 
-12. [Advice generator app](https://github.com/Leandr0SmS/Frontend-Mentor-Projects)
+12. [Advice generator app](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/advice-generator-app-main)
+
+13. [Interactive card details](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/interactive-card-details-form-main)
+
+14. [Age calculator app](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/age-calculator-app)
+
+15. [GitHub user search app](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/github-user-search-app)
 
 
 
