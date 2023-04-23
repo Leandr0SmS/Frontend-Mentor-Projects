@@ -49,6 +49,7 @@ body {
     filter: brightness(0) saturate(100%) invert(100%);
 }
 
+//desktop view
 .bg {
     min-height: 100vh;
     display: flex;
@@ -226,6 +227,7 @@ body {
     }
 }
 
+//tablet view
 @media (max-width: 800px) {
     .grid {
         grid-template-columns: 7.31rem max-content;
@@ -265,6 +267,7 @@ body {
     }
 }
 
+//mobile view
 @media (max-width: 610px) {
     .input {
         height: 3.75rem;

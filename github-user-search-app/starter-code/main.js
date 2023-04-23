@@ -1,3 +1,4 @@
+//Adjust data format
 function dateFormat(inputDate) {
     const date = new Date(inputDate);
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -14,6 +15,7 @@ function App() {
     function handleColorMode() {
         setColorMode(p => !p);
     };
+
     // Looknig for color mode of the user
     React.useEffect(() => {
         const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -28,19 +30,23 @@ function App() {
     const [error, setError] = React.useState(false);
     // State to trigger fetch data from API
     const [get, setGet] = React.useState(0);
+
     function handleClick() {
         setGet(get => get + 1);
     };
+
     function handleInputChange(e) {
         setFormData(e.target.value);
         setError(false);
     };
+
     //Fetch data
     React.useEffect(() => {
         fetch(`https://api.github.com/users/${formData ? formData : "octocat"}`)
             .then(res => res.json())
             .then(data => setData(data))
     }, [get]);
+    //Handle error from fetch
     React.useEffect(() => {
         if (data.message === "Not Found") {
             setError(true);
@@ -49,6 +55,7 @@ function App() {
                 .then(data => setData(data))
         }
     }, [data]);
+
     return (
         <div className={colorMode ? "bg bg-light" : "bg-dark bg"}>
             <div className="app">
