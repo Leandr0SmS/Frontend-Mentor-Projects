@@ -28,6 +28,7 @@ Users should be able to:
 - Switch between light and dark themes
 - **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
 
+
 ### Screenshot
 
 ![](./starter-code/Screenshot-github.png)
@@ -50,15 +51,19 @@ Users should be able to:
 
 ### What I learned
 
-Find prefers-color-scheme of the user using JS.
-
-To see how you can add code snippets, see below:
-
+Find prefers-color-scheme of the user using JS:
 ```js
     React.useEffect(() => {
         const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
         mediaQuery.matches ? setColorMode(false) : setColorMode(true);
     }, []);
+```
+
+Change color of a svg file in a <img> tag:
+```CSS
+  .icon--white {
+      filter: brightness(0) saturate(100%) invert(100%);
+  }
 ```
 
 ### Continued development
