@@ -6,7 +6,7 @@
 * {
     margin: 0;
 }
-body {
+html, body, #root, .bg {
     height: 100%;
     font-family: 'Space Mono', monospace;
 }
@@ -51,8 +51,7 @@ body {
 
 //desktop view
 .bg {
-    min-height: 100vh;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
 }
