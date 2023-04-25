@@ -6,6 +6,29 @@
 * {
     margin: 0;
 }
-html {
+body {
     height: 100%;
+    min-height: 100vh;
+    background-color: $Light-grayish-cyan;
+    display: grid;
+}
+#root {
+    place-self: center;
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5.49125rem;
+}
+.logo {
+   width: 5.41625rem;
+}
+.calculator {
+    width: 57.5rem;
+    height: 30.0625rem;
+    background-color: $White;
+    box-shadow: 0rem 2rem 2.6875rem rgba(79, 166, 175, 0.200735);
+    border-radius: 1.5625rem;
 }
