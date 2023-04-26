@@ -17,7 +17,11 @@ Reset
 
 const Calculator = () => {
     return (
-        <div className="calculator"></div>
+        <div className="calculator">
+            <div className="form">
+                <input/>
+            </div>
+        </div>
     )
 }
 
