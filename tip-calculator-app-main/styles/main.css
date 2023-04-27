@@ -34,7 +34,9 @@ body {
 .calculator {
   width: 57.5rem;
   height: 30.0625rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
   gap: 3rem;
   padding: 2rem;
   background-color: #FFFFFF;
@@ -45,11 +47,14 @@ body {
 .form {
   width: 23.6875rem;
   height: 24.25rem;
+  justify-self: end;
+  align-self: center;
 }
 
 .results {
   width: 25.8125rem;
   height: 26.0625rem;
+  align-self: center;
   background-color: hsl(183, 100%, 15%);
   border-radius: 0.9375rem;
 }/*# sourceMappingURL=main.css.map */
