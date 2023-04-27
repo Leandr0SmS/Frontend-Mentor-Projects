@@ -19,7 +19,32 @@ const Calculator = () => {
     return (
         <div className="calculator">
             <div className="form">
-                <input/>
+                <div className="bill--div">
+                    <p className="label">Bill</p>
+                    <input
+                        className="bill--input"
+                        type="text"
+                        name="bill"
+                    />
+                </div>
+                <div className="tip--div">
+                    <p className="label">Select Tip %</p>
+                    <div className="tips">
+                        <div className="tip">5%</div>
+                        <div className="tip">10%</div>
+                        <div className="tip">15%</div>
+                        <div className="tip">25%</div>
+                        <div className="tip">50%</div>
+                        <div className="tip custom">
+                            <input
+                                className="tip--input"
+                                type="text"
+                                name="tip--custom"
+                                placeholder="Custom"
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
