@@ -51,6 +51,23 @@ body {
   align-self: center;
 }
 
+.label {
+  font-weight: 700;
+  color: #5E7A7D;
+}
+
+.input {
+  background-color: #F3F9FA;
+  border-radius: 0.3125rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dollar-icon {
+  width: 0.615rem;
+  height: 0.96625rem;
+}
+
 .results {
   width: 25.8125rem;
   height: 26.0625rem;

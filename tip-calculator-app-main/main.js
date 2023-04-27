@@ -22,7 +22,13 @@ const Calculator = () => {
                 <div className="bill--div">
                     <p className="label">Bill</p>
                     <div className="input">
-                        <img/>
+                        <img
+                            className="dollar-icon"
+                            src="./images/icon-dollar.svg"
+                            alt="dollar icon"
+                            aria-hidden="false"
+                            role="img"
+                        />
                         <input
                             className="bill--input"
                             type="text"
@@ -51,7 +57,13 @@ const Calculator = () => {
                 <div className="people--div">
                     <p className="label">Number of People</p>
                     <div className="input">
-                        <img/>
+                        <img
+                            className="person-icon"
+                            src="./images/icon-person.svg"
+                            alt="person icon"
+                            aria-hidden="false"
+                            role="img"
+                        />
                         <input
                             type="text"
                             placeholder="0"
@@ -60,7 +72,7 @@ const Calculator = () => {
                 </div>
             </div>
             <div className="results">
-                
+
             </div>
         </div>
     )

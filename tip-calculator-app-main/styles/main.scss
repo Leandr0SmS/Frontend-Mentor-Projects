@@ -34,20 +34,31 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100%;
     gap: 3rem;
-    
-
     padding: 2rem;
     background-color: $White;
     box-shadow: 0rem 2rem 2.6875rem rgba(79, 166, 175, 0.200735);
     border-radius: 1.5625rem;
 }
-
 .form {
     width: 23.6875rem; ////Delete
     height: 24.25rem; ////Delete
 
     justify-self: end;
     align-self: center;
+}
+.label {
+    font-weight: 700;
+    color: $Dark-grayish-cyan;
+}
+.input {
+    background-color: $input-bg;
+    border-radius: 0.3125rem;
+    display: flex;
+    justify-content: space-between;
+}
+.dollar-icon {
+    width: 0.615rem;
+    height: 0.96625rem;
 }
 
 .results {
