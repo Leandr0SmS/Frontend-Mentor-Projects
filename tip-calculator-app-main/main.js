@@ -21,11 +21,14 @@ const Calculator = () => {
             <div className="form">
                 <div className="bill--div">
                     <p className="label">Bill</p>
-                    <input
-                        className="bill--input"
-                        type="text"
-                        name="bill"
-                    />
+                    <div className="input">
+                        <img/>
+                        <input
+                            className="bill--input"
+                            type="text"
+                            placeholder="0"
+                        />
+                    </div>
                 </div>
                 <div className="tip--div">
                     <p className="label">Select Tip %</p>
@@ -43,6 +46,16 @@ const Calculator = () => {
                                 placeholder="Custom"
                             />
                         </div>
+                    </div>
+                </div>
+                <div className="people--div">
+                    <p className="label">Number of People</p>
+                    <div className="input">
+                        <img/>
+                        <input
+                            type="text"
+                            placeholder="0"
+                        />
                     </div>
                 </div>
             </div>

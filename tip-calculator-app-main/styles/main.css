@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -11,6 +12,7 @@ body {
   min-height: 100vh;
   background-color: #C5E4E7;
   display: grid;
+  font-family: "Space Mono", monospace;
 }
 
 #root {
