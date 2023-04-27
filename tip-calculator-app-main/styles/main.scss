@@ -27,9 +27,28 @@ body {
    width: 5.41625rem;
 }
 .calculator {
-    width: 57.5rem;
-    height: 30.0625rem;
+    width: 57.5rem; ////Delete
+    height: 30.0625rem; ////Delete
+
+    display: flex;
+    gap: 3rem;
+    padding: 2rem;
     background-color: $White;
     box-shadow: 0rem 2rem 2.6875rem rgba(79, 166, 175, 0.200735);
     border-radius: 1.5625rem;
+}
+
+.form {
+    width: 23.6875rem; ////Delete
+    height: 24.25rem; ////Delete
+
+
+}
+
+.results {
+    width: 25.8125rem; ////Delete
+    height: 26.0625rem; ////Delete
+ 
+    background-color: $Very-dark-cyan;
+    border-radius: 0.9375rem;
 }

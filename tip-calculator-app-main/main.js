@@ -59,6 +59,9 @@ const Calculator = () => {
                     </div>
                 </div>
             </div>
+            <div className="results">
+                
+            </div>
         </div>
     )
 }
