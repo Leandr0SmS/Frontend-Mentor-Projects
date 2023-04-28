@@ -56,7 +56,11 @@ const Calculator = () => {
                 </div>
             </div>
             <div className="results">
-
+                <div className="result--numbers--div">
+                    <div className="result--numbers">
+                        
+                    </div>
+                </div>
             </div>
         </div>
     )

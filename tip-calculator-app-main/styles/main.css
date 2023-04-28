@@ -78,10 +78,13 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
   color: #00474B;
+  opacity: 0.35;
 }
 .inputs:focus {
   outline: none;
   outline: 2px solid #26C2AE;
+  color: #00474B;
+  opacity: 1;
 }
 
 .input-icon {
