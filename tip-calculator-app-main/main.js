@@ -58,7 +58,37 @@ const Calculator = () => {
             <div className="results">
                 <div className="result--numbers--div">
                     <div className="result--numbers">
-                        
+                        <div className="result--label">
+                            <p className="result--label--text--01">Tip Amount</p>
+                            <p className="result--label--text--02">/ person</p>
+                        </div>
+                        <div className="result">
+                            <img
+                                className="result-icon"
+                                src="./images/icon-dollar.svg"
+                                alt="dollar icon"
+                                aria-hidden="false"
+                                role="img"
+                            />
+                            <h1>0.00</h1>
+                        </div>
+                    </div>
+                    <div className="result--numbers">
+                        <div className="result--label">
+                            <p className="result--label--text--01">Total</p>
+                            <p className="result--label--text--02">/ person</p>
+                        </div>
+                        <div className="result">
+                        <img/>
+                            <img
+                                className="result-icon"
+                                src="./images/icon-dollar.svg"
+                                alt="dollar icon"
+                                aria-hidden="false"
+                                role="img"
+                            />
+                            <h1>0.00</h1>
+                        </div>
                     </div>
                 </div>
             </div>
