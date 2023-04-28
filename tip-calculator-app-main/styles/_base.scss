@@ -16,3 +16,9 @@ $Very-light-grayish-cyan: hsl(189, 41%, 97%);
 $input-bg: #F3F9FA;
 $White: #FFFFFF;
 $custom: #547878;
+
+%flex--center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

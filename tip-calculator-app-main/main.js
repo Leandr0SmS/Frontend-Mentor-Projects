@@ -20,7 +20,7 @@ const Calculator = () => {
                     </div>
                 </div>
                 <div className="tip--div">
-                    <p className="label">Select Tip %</p>
+                    <p className="label label--tips">Select Tip %</p>
                     <div className="tips">
                         <div className="tip">5%</div>
                         <div className="tip">10%</div>
