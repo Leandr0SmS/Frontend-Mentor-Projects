@@ -138,7 +138,46 @@ body {
 .results {
   width: 25.8125rem;
   height: 26.0625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem;
   align-self: center;
   background-color: #00474B;
   border-radius: 0.9375rem;
+  color: #26C2AE;
+}
+
+.result--numbers--div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625rem;
+}
+
+.result--numbers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result--label--text--01 {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.result--label--text--02 {
+  color: #7F9D9F;
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
+
+.result {
+  display: flex;
+}
+
+.reset {
+  padding: 0.5625rem 0;
+  background-color: #0D686D;
+  color: #00474B;
+  border-radius: 0.3125rem;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

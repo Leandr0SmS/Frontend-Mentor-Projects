@@ -122,7 +122,40 @@ body {
     width: 25.8125rem; ////Delete
     height: 26.0625rem; ////Delete
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem;
     align-self: center;
     background-color: $Very-dark-cyan;
     border-radius: 0.9375rem;
+    color: $strong-cyan;
+}
+.result--numbers--div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem;
+}
+.result--numbers {
+    display: flex;
+    justify-content: space-between;
+}
+.result--label--text--01 {
+    color: $White;
+    font-weight: 700;
+}
+.result--label--text--02 {
+    color: $Grayish-cyan;
+    font-weight: 700;
+    font-size: 0.8125rem;
+}
+.result {
+    display: flex;
+}
+.reset {
+    padding: 0.5625rem 0;
+    background-color: $reset-off;
+    color: $Very-dark-cyan;
+    border-radius: 0.3125rem;
+    text-align: center;
 }

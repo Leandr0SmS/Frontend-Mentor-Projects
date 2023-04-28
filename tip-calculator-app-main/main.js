@@ -63,14 +63,7 @@ const Calculator = () => {
                             <p className="result--label--text--02">/ person</p>
                         </div>
                         <div className="result">
-                            <img
-                                className="result-icon"
-                                src="./images/icon-dollar.svg"
-                                alt="dollar icon"
-                                aria-hidden="false"
-                                role="img"
-                            />
-                            <h1>0.00</h1>
+                            <h1>$0.00</h1>
                         </div>
                     </div>
                     <div className="result--numbers">
@@ -80,16 +73,12 @@ const Calculator = () => {
                         </div>
                         <div className="result">
                         <img/>
-                            <img
-                                className="result-icon"
-                                src="./images/icon-dollar.svg"
-                                alt="dollar icon"
-                                aria-hidden="false"
-                                role="img"
-                            />
-                            <h1>0.00</h1>
+                            <h1>$0.00</h1>
                         </div>
                     </div>
+                </div>
+                <div className="reset">
+                    RESET
                 </div>
             </div>
         </div>
