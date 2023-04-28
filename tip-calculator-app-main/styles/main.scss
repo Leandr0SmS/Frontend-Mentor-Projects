@@ -66,7 +66,6 @@ body {
     font-weight: 700;
     font-size: 1.5rem;
     color: $Very-dark-cyan;
-    opacity: 0.35;
     &:focus {
         outline: 2px solid $strong-cyan;
         color: $Very-dark-cyan;
@@ -75,6 +74,7 @@ body {
 }
 .inputs::placeholder {
     color: $placeholder-color;
+    opacity: 0.35;
 }
 .input-icon {
     position: absolute;

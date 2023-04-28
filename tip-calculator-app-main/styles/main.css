@@ -79,7 +79,6 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
   color: #00474B;
-  opacity: 0.35;
 }
 .inputs:focus {
   outline: 2px solid #26C2AE;
@@ -89,10 +88,12 @@ body {
 
 .inputs::-moz-placeholder {
   color: #9EBBBD;
+  opacity: 0.35;
 }
 
 .inputs::placeholder {
   color: #9EBBBD;
+  opacity: 0.35;
 }
 
 .input-icon {

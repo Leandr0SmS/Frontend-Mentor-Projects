@@ -16,6 +16,7 @@ const Calculator = (props) => {
                             className="inputs"
                             type="text"
                             placeholder="0"
+                            name="bill"
                             value={props.billValue}
                             onChange={props.onChange}
                         />
@@ -80,7 +81,8 @@ const Calculator = (props) => {
                             className="inputs"
                             type="text"
                             placeholder="0"
-                            value={props.tipValue}
+                            name="people"
+                            value={props.peopleValue}
                             onChange={props.onChange}
                         />
                     </div>
@@ -125,7 +127,15 @@ const App = () => {
         "amout": 0,
         "total": 0
     })
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setData(p => ({
+            ...p,
+            [name]: value
+        }))
+    }
 
+    console.log(data)
     return (
         <div className="app">
             <img
@@ -135,7 +145,11 @@ const App = () => {
                 aria-hidden="false"
                 role="img"
             />
-            <Calculator/>
+            <Calculator
+                onChange={handleChange}
+                billValue={data.bill}
+                peopleValue={data.people}
+            />
         </div>
     )
 }
