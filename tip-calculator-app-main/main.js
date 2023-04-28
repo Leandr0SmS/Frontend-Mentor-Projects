@@ -1,36 +1,19 @@
-/*
-Bill
-Select Tip %
-5%
-10%
-15%
-25%
-50%
-Custom
-Number of People
-Tip Amount
-/ person
-Total
-/ person
-Reset
-*/
-
 const Calculator = () => {
     return (
         <div className="calculator">
             <div className="form">
                 <div className="bill--div">
                     <p className="label">Bill</p>
-                    <div className="input">
+                    <div className="input--div">
                         <img
-                            className="dollar-icon"
+                            className="input-icon"
                             src="./images/icon-dollar.svg"
                             alt="dollar icon"
                             aria-hidden="false"
                             role="img"
                         />
                         <input
-                            className="bill--input"
+                            className="inputs"
                             type="text"
                             placeholder="0"
                         />
@@ -56,15 +39,16 @@ const Calculator = () => {
                 </div>
                 <div className="people--div">
                     <p className="label">Number of People</p>
-                    <div className="input">
+                    <div className="input--div">
                         <img
-                            className="person-icon"
+                            className="input-icon"
                             src="./images/icon-person.svg"
                             alt="person icon"
                             aria-hidden="false"
                             role="img"
                         />
                         <input
+                            className="inputs"
                             type="text"
                             placeholder="0"
                         />
