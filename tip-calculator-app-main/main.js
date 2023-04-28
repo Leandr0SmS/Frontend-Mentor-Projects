@@ -27,7 +27,7 @@ const Calculator = () => {
                         <div className="tip">15%</div>
                         <div className="tip">25%</div>
                         <div className="tip">50%</div>
-                        <div className="tip custom">
+                        <div className="custom">
                             <input
                                 className="tip--input"
                                 type="text"
