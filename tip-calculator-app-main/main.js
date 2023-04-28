@@ -1,4 +1,4 @@
-const Calculator = () => {
+const Calculator = (props) => {
     return (
         <div className="calculator">
             <div className="form">
@@ -16,23 +16,52 @@ const Calculator = () => {
                             className="inputs"
                             type="text"
                             placeholder="0"
+                            value={props.billValue}
+                            onChange={props.onChange}
                         />
                     </div>
                 </div>
                 <div className="tip--div">
                     <p className="label label--tips">Select Tip %</p>
                     <div className="tips">
-                        <div className="tip">5%</div>
-                        <div className="tip">10%</div>
-                        <div className="tip">15%</div>
-                        <div className="tip">25%</div>
-                        <div className="tip">50%</div>
+                        <div 
+                            className="tip"
+                            name="5"
+                            value={5}
+                            onClick={props.handleTipClick}
+                        >5%</div>
+                        <div 
+                            className="tip"
+                            name="10"
+                            value={10}
+                            onClick={props.handleTipClick}
+                        >10%</div>
+                        <div 
+                            className="tip"
+                            name="15"
+                            value={15}
+                            onClick={props.handleTipClick}
+                        >15%</div>
+                        <div 
+                            className="tip"
+                            name="25"
+                            value={25}
+                            onClick={props.handleTipClick}
+                        >25%</div>
+                        <div 
+                            className="tip"
+                            name="50"
+                            value={50}
+                            onClick={props.handleTipClick}
+                        >50%</div>
                         <div className="custom">
                             <input
                                 className="tip--input"
                                 type="text"
                                 name="tip--custom"
                                 placeholder="Custom"
+                                value={props.tipCustomValue}
+                                onChange={props.onChange}
                             />
                         </div>
                     </div>
@@ -51,6 +80,8 @@ const Calculator = () => {
                             className="inputs"
                             type="text"
                             placeholder="0"
+                            value={props.tipValue}
+                            onChange={props.onChange}
                         />
                     </div>
                 </div>
@@ -86,6 +117,15 @@ const Calculator = () => {
 }
 
 const App = () => {
+
+    const [data, setData] = React.useState({
+        "bill": 0,
+        "tip": 0,
+        "people": 0,
+        "amout": 0,
+        "total": 0
+    })
+
     return (
         <div className="app">
             <img

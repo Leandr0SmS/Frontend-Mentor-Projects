@@ -142,6 +142,15 @@ body {
 .tip--input:focus {
   outline: none;
   outline: 2px solid #26C2AE;
+  font-family: "Space Mono", monospace;
+}
+
+.tip--input::-moz-placeholder {
+  font-family: "Space Mono", monospace;
+}
+
+.tip--input::placeholder {
+  font-family: "Space Mono", monospace;
 }
 
 .results {
@@ -166,6 +175,7 @@ body {
 .result--numbers {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .result--label--text--01 {
@@ -181,6 +191,7 @@ body {
 
 .result {
   display: flex;
+  font-size: 1.5rem;
 }
 
 .reset {
@@ -189,4 +200,5 @@ body {
   color: #00474B;
   border-radius: 0.3125rem;
   text-align: center;
+  font-size: 1.25rem;
 }/*# sourceMappingURL=main.css.map */
