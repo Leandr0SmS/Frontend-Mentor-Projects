@@ -71,7 +71,11 @@ body {
         outline: 2px solid $strong-cyan;
         color: $Very-dark-cyan;
         opacity: 1;
+        font-family: 'Space Mono', monospace;
     }
+}
+.inputs::placeholder {
+    font-family: 'Space Mono', monospace;
 }
 .input-icon {
     position: absolute;
