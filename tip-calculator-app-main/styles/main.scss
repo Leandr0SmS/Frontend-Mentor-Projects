@@ -99,6 +99,10 @@ body {
     font-size: 1.5rem;
     border-radius: 0.3125rem;
     @extend %flex--center;
+    cursor: pointer;
+}
+.tip-selected {
+    background-color: $strong-cyan;
 }
 .custom {
     background-color: transparent;
