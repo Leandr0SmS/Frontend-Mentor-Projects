@@ -160,7 +160,14 @@ body {
     display: flex;
     font-size: 1.5rem;
 }
-.reset {
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 1rem;
+}
+.btn {
     padding: 0.5625rem 0;
     background-color: $reset-off;
     color: $Very-dark-cyan;

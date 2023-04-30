@@ -15,7 +15,7 @@ const Calculator = (props) => {
                         <input
                             className="inputs"
                             type="text"
-                            placeholder="0"
+                            placeholder="0.00"
                             name="bill"
                             value={props.billValue}
                             onChange={props.onChange}
@@ -96,7 +96,7 @@ const Calculator = (props) => {
                             <p className="result--label--text--02">/ person</p>
                         </div>
                         <div className="result">
-                            <h1>$0.00</h1>
+                            <h1>${props.tipAmount}</h1>
                         </div>
                     </div>
                     <div className="result--numbers">
@@ -106,11 +106,15 @@ const Calculator = (props) => {
                         </div>
                         <div className="result">
                         <img/>
-                            <h1>$0.00</h1>
+                            <h1>${props.total}</h1>
                         </div>
                     </div>
                 </div>
-                <div className="reset">
+                <div className="buttons"></div>
+                <div className="btn" onClick={props.c}>
+                    C
+                </div>
+                <div className="btn" onClick={props.reset}>
                     RESET
                 </div>
             </div>
@@ -123,11 +127,11 @@ const App = () => {
     const [tipSelected, setTipSelected] = React.useState()
 
     const [data, setData] = React.useState({
-        "bill": 0,
-        "tip": 0,
-        "people": 0,
-        "amout": 0,
-        "total": 0
+        "bill": "",
+        "tip": 0.00,
+        "people": "",
+        "amout": 0.00,
+        "total": 0.00
     })
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -145,7 +149,29 @@ const App = () => {
         }))
     }
 
-    console.log(data)//------------------------>Delete
+    const calculation = (bill, tip, people) => {
+        const billFloat = parseFloat(bill);
+        let tipAmount = (billFloat/100) * parseFloat(tip);
+        let totalPerson = (billFloat + tipAmount) / people;
+        let tipAmountPerson = (tipAmount / people);
+        setData((p) => ({
+            ...p, 
+            "amout": tipAmountPerson, 
+            "total": totalPerson
+        }))
+    }
+
+    const reset = () => {
+        setData({
+            "bill": "",
+            "tip": 0.00,
+            "people": "",
+            "amout": 0.00,
+            "total": 0.00
+        })
+    }
+    console.log(data.amout)//------------------------>Delete
+
     return (
         <div className="app">
             <img
@@ -160,6 +186,10 @@ const App = () => {
                 handleTipClick={handleTipClick}
                 billValue={data.bill}
                 peopleValue={data.people}
+                tipAmount={data.amout.toFixed(2)}
+                total={data.total.toFixed(2)}
+                reset={reset}
+                c={() => calculation(data.bill, data.tip, data.people)}
             />
         </div>
     )
