@@ -26,9 +26,7 @@ body {
    width: 5.41625rem;
 }
 .calculator {
-    width: 57.5rem; ////Delete
-    height: 30.0625rem; ////Delete
-
+    width: 57.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100%;
@@ -128,9 +126,8 @@ body {
 }
 
 .results {
-    width: 25.8125rem; ////Delete
-    height: 26.0625rem; ////Delete
-
+    width: 25.8125rem; 
+    height: 26.0625rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -161,13 +158,13 @@ body {
 }
 .result {
     display: flex;
-    font-size: 1.5rem;
+    h1 {
+        font-size: 3rem;
+    }
 }
 .buttons {
     display: flex;
     flex-direction: column;
-    justify-content:center;
-    align-items: center;
     gap: 1rem;
 }
 .btn {
@@ -180,5 +177,45 @@ body {
     cursor: pointer;
     &:hover {
         background-color: $reset-active;
+    }
+}
+
+@media (max-width: 940px) {
+    .calculator {
+        width: 23.4375rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0rem 2rem 2.6875rem rgba(79, 166, 175, 0.200735);
+        border-radius: 1.5625rem 1.5625rem 0rem 0rem;
+    }
+    .form {
+        width: fit-content;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .tips {
+        grid-template-columns: repeat(auto-fill, 9.164375rem);
+        gap: 1rem;
+    }
+    .results {
+        width: 20.4375rem; 
+        height: fit-content;
+        padding: 1.5rem;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .result--numbers--div {
+        gap: 1.25rem;
+    }
+    .result {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    .btn {
+        padding: 0.4rem 0;
     }
 }

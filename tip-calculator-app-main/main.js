@@ -110,12 +110,13 @@ const Calculator = (props) => {
                         </div>
                     </div>
                 </div>
-                <div className="buttons"></div>
-                <div className="btn" onClick={props.c}>
-                    C
-                </div>
-                <div className="btn" onClick={props.reset}>
-                    RESET
+                <div className="buttons">
+                    <div className="btn" onClick={props.c}>
+                        C
+                    </div>
+                    <div className="btn" onClick={props.reset}>
+                        RESET
+                    </div>
                 </div>
             </div>
         </div>
