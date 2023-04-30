@@ -123,6 +123,9 @@ body {
   border-radius: 0.3125rem;
   cursor: pointer;
 }
+.tip:hover {
+  background-color: #9FE8DF;
+}
 
 .tip-selected {
   background-color: #26C2AE;
@@ -204,4 +207,8 @@ body {
   border-radius: 0.3125rem;
   text-align: center;
   font-size: 1.25rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #9FE8DF;
 }/*# sourceMappingURL=main.css.map */

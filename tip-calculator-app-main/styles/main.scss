@@ -100,6 +100,9 @@ body {
     border-radius: 0.3125rem;
     @extend %flex--center;
     cursor: pointer;
+    &:hover {
+        background-color: $reset-active;
+    }
 }
 .tip-selected {
     background-color: $strong-cyan;
@@ -174,4 +177,8 @@ body {
     border-radius: 0.3125rem;
     text-align: center;
     font-size: 1.25rem;
+    cursor: pointer;
+    &:hover {
+        background-color: $reset-active;
+    }
 }

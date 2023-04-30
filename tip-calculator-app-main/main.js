@@ -170,7 +170,7 @@ const App = () => {
             "total": 0.00
         })
     }
-    console.log(data.amout)//------------------------>Delete
+    console.log(data)//------------------------>Delete
 
     return (
         <div className="app">
