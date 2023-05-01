@@ -26,31 +26,31 @@ const Calculator = (props) => {
                     <p className="label label--tips">Select Tip %</p>
                     <div className="tips">
                         <div 
-                            className="tip"
+                            className={props.selected[5] ? "tip-selected tip" : "tip"}
                             name="5"
                             value={5}
                             onClick={props.handleTipClick}
                         >5%</div>
                         <div 
-                            className="tip"
+                            className={props.selected[10] ? "tip-selected tip" : "tip"}
                             name="10"
                             value={10}
                             onClick={props.handleTipClick}
                         >10%</div>
                         <div 
-                            className="tip"
+                            className={props.selected[15] ? "tip-selected tip" : "tip"}
                             name="15"
                             value={15}
                             onClick={props.handleTipClick}
                         >15%</div>
                         <div 
-                            className="tip"
+                            className={props.selected[25] ? "tip-selected tip" : "tip"}
                             name="25"
                             value={25}
                             onClick={props.handleTipClick}
                         >25%</div>
                         <div 
-                            className="tip"
+                            className={props.selected[50] ? "tip-selected tip" : "tip"}
                             name="50"
                             value={50}
                             onClick={props.handleTipClick}
@@ -206,6 +206,7 @@ const App = () => {
                 total={data.total.toFixed(2)}
                 reset={reset}
                 c={() => calculation(data.bill, data.tip, data.people)}
+                selected={tipSelected}
             />
         </div>
     )
