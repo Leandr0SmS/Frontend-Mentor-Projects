@@ -128,51 +128,62 @@ const Calculator = (props) => {
 
 const App = () => {
 
-    const [tipSelected, setTipSelected] = React.useState({
+    const tipObj = {
         "5": false,
         "10": false,
         "15": false,
         "25": false,
         "50": false,
         "custom": false,
-        "tipSelected": 0
-    })
+        "tipSelected": ""
+    };
 
-    const [data, setData] = React.useState({
+    const dataObj = {
         "bill": "",
         "tip": 0,
         "people": "",
         "amout": 0.00,
         "total": 0.00
-    })
+    };
+
+    const [tipSelected, setTipSelected] = React.useState(tipObj);
+
+    const [data, setData] = React.useState(dataObj);
+
     const handleChange = (e) => {
         const {name, value} = e.target;
         setData(p => ({
             ...p,
             [name]: value
         }))
-    }
-    //const ontipCustomChange = () => {
-    //    const {value} = e.target;
-    //    setTipSelected(p => ({
-    //        ...p,
-    //        "tipSelected": value
-    //    }))
-    //}
+    };
+
+    const onTipCustomChange = (e) => {
+        const {value} = e.target;
+        setTipSelected(p => ({
+            ...p,
+            "tipSelected": value
+        }))
+        setData(p => ({
+            ...p,
+            tip: value
+        }))
+    };
+
     const handleTipClick = (e) => {
         const value = e.target.getAttribute('value');
         const name = e.target.getAttribute('name');
         setData(p => ({
             ...p,
-            tip: value
+            tip: value,
         }));
         setTipSelected(prevState => ({
             ...Object.fromEntries(
                 Object.entries(prevState).map(
-                    ([key, value]) => [key, key === name ? !value : false]
+                    ([key, value]) => [key, key === name ? !value : key === "tipSelected" ? "" : false]
                 ))
         }));
-    }
+    };
 
     const calculation = (bill, tip, people) => {
         const billFloat = parseFloat(bill);
@@ -184,17 +195,13 @@ const App = () => {
             "amout": tipAmountPerson, 
             "total": totalPerson
         }))
-    }
+    };
 
     const reset = () => {
-        setData({
-            "bill": "",
-            "tip": 0.00,
-            "people": "",
-            "amout": 0.00,
-            "total": 0.00
-        })
-    }
+        setData(dataObj)
+        setTipSelected(tipObj)
+    };
+
     console.log(tipSelected)//------------------------>Delete
     console.log(data)//------------------------>Delete
 
@@ -214,8 +221,8 @@ const App = () => {
                 selected={tipSelected}
                 handleTipClick={handleTipClick}
                 peopleValue={data.people}
-                //tipCustomValue={tipSelected.tipSelected}
-                //ontipCustomChange={ontipCustomChange}
+                tipCustomValue={tipSelected.tipSelected}
+                ontipCustomChange={onTipCustomChange}
                 //resultes
                 tipAmount={data.amout.toFixed(2)}
                 total={data.total.toFixed(2)}
@@ -225,8 +232,8 @@ const App = () => {
             />
         </div>
     )
-}
+};
 
 const app = document.getElementById('root');
 const root = ReactDOM.createRoot(app);
-root.render(<App/>)
+root.render(<App/>);
