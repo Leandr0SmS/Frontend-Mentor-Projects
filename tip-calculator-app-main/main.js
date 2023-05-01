@@ -65,7 +65,7 @@ const Calculator = (props) => {
                                 name="custom"
                                 placeholder="Custom"
                                 value={props.tipCustomValue}
-                                onChange={props.onChange}
+                                onChange={props.ontipCustomChange}
                             />
                         </div>
                     </div>
@@ -135,11 +135,12 @@ const App = () => {
         "25": false,
         "50": false,
         "custom": false,
+        "tipSelected": 0
     })
 
     const [data, setData] = React.useState({
         "bill": "",
-        "tip": 0.00,
+        "tip": 0,
         "people": "",
         "amout": 0.00,
         "total": 0.00
@@ -151,17 +152,25 @@ const App = () => {
             [name]: value
         }))
     }
+    //const ontipCustomChange = () => {
+    //    const {value} = e.target;
+    //    setTipSelected(p => ({
+    //        ...p,
+    //        "tipSelected": value
+    //    }))
+    //}
     const handleTipClick = (e) => {
         const value = e.target.getAttribute('value');
         const name = e.target.getAttribute('name');
         setData(p => ({
             ...p,
-            [name]: value
+            tip: value
         }));
         setTipSelected(prevState => ({
             ...Object.fromEntries(
-              Object.entries(prevState).map(([key, value]) => [key, key === name])
-            )
+                Object.entries(prevState).map(
+                    ([key, value]) => [key, key === name ? !value : false]
+                ))
         }));
     }
 
@@ -187,6 +196,7 @@ const App = () => {
         })
     }
     console.log(tipSelected)//------------------------>Delete
+    console.log(data)//------------------------>Delete
 
     return (
         <div className="app">
@@ -198,15 +208,20 @@ const App = () => {
                 role="img"
             />
             <Calculator
-                onChange={handleChange}
-                handleTipClick={handleTipClick}
+                //inputs
                 billValue={data.bill}
+                onChange={handleChange}
+                selected={tipSelected}
+                handleTipClick={handleTipClick}
                 peopleValue={data.people}
+                //tipCustomValue={tipSelected.tipSelected}
+                //ontipCustomChange={ontipCustomChange}
+                //resultes
                 tipAmount={data.amout.toFixed(2)}
                 total={data.total.toFixed(2)}
-                reset={reset}
+                //buttons
                 c={() => calculation(data.bill, data.tip, data.people)}
-                selected={tipSelected}
+                reset={reset}
             />
         </div>
     )
