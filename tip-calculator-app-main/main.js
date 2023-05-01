@@ -27,39 +27,42 @@ const Calculator = (props) => {
                     <div className="tips">
                         <div 
                             className="tip"
-                            name="tip"
+                            name="5"
                             value={5}
                             onClick={props.handleTipClick}
                         >5%</div>
                         <div 
                             className="tip"
-                            name="tip"
+                            name="10"
                             value={10}
                             onClick={props.handleTipClick}
                         >10%</div>
                         <div 
                             className="tip"
-                            name="tip"
+                            name="15"
                             value={15}
                             onClick={props.handleTipClick}
                         >15%</div>
                         <div 
                             className="tip"
-                            name="tip"
+                            name="25"
                             value={25}
                             onClick={props.handleTipClick}
                         >25%</div>
                         <div 
                             className="tip"
-                            name="tip"
+                            name="50"
                             value={50}
                             onClick={props.handleTipClick}
                         >50%</div>
-                        <div className="custom">
+                        <div 
+                            className="custom"
+                            onClick={props.handleTipClick}
+                        >
                             <input
                                 className="tip--input"
                                 type="text"
-                                name="tip"
+                                name="custom"
                                 placeholder="Custom"
                                 value={props.tipCustomValue}
                                 onChange={props.onChange}
@@ -125,7 +128,14 @@ const Calculator = (props) => {
 
 const App = () => {
 
-    const [tipSelected, setTipSelected] = React.useState()
+    const [tipSelected, setTipSelected] = React.useState({
+        "5": false,
+        "10": false,
+        "15": false,
+        "25": false,
+        "50": false,
+        "custom": false,
+    })
 
     const [data, setData] = React.useState({
         "bill": "",
@@ -147,7 +157,12 @@ const App = () => {
         setData(p => ({
             ...p,
             [name]: value
-        }))
+        }));
+        setTipSelected(prevState => ({
+            ...Object.fromEntries(
+              Object.entries(prevState).map(([key, value]) => [key, key === name])
+            )
+        }));
     }
 
     const calculation = (bill, tip, people) => {
@@ -171,7 +186,7 @@ const App = () => {
             "total": 0.00
         })
     }
-    console.log(data)//------------------------>Delete
+    console.log(tipSelected)//------------------------>Delete
 
     return (
         <div className="app">

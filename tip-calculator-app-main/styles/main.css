@@ -144,6 +144,7 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
   color: #547878;
+  cursor: pointer;
 }
 .tip--input:focus {
   outline: none;
