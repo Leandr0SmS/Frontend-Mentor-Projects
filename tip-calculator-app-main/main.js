@@ -202,9 +202,6 @@ const App = () => {
         setTipSelected(tipObj)
     };
 
-    console.log(tipSelected)//------------------------>Delete
-    console.log(data)//------------------------>Delete
-
     return (
         <div className="app">
             <img
