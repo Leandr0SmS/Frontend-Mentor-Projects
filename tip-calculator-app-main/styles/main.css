@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
-.custom, .tip, .app {
+.custom, .tip {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,17 +18,12 @@ body {
   height: 100%;
   min-height: 100vh;
   background-color: #C5E4E7;
-  display: grid;
-  font-family: "Space Mono", monospace;
-}
-
-#root {
-  place-self: center;
-}
-
-.app {
+  display: flex;
   flex-direction: column;
   gap: 5.49125rem;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Mono", monospace;
 }
 
 .logo {
