@@ -111,7 +111,6 @@ const Calculator = (props) => {
                             <p className="result--label--text--02">/ person</p>
                         </div>
                         <div className="result">
-                        <img/>
                             <h1>${props.total}</h1>
                         </div>
                     </div>
