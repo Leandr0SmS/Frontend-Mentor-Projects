@@ -183,7 +183,11 @@ const App = () => {
         setTipSelected(prevState => ({
             ...Object.fromEntries(
                 Object.entries(prevState).map(
-                    ([key, value]) => [key, key === name ? !value : key === "tipSelected" ? "" : false]
+                    ([key, value]) => [key, key === name 
+                                            ? !value 
+                                            : key === "tipSelected" 
+                                            ? "" : false
+                                            ]
                 ))
         }));
     };
@@ -192,7 +196,7 @@ const App = () => {
         const peopleInt = parseInt(people);
         const billFloat = parseFloat(bill);
         if (peopleInt === 0) {
-            stop
+            stop;
         } else {
             let tipAmount = (billFloat/100) * parseFloat(tip);
             let totalPerson = (billFloat + tipAmount) / people;
@@ -210,7 +214,6 @@ const App = () => {
         setTipSelected(tipObj)
     };
 
-    console.log(data);//-----------------------DELETE
     return (
         <div className="app">
             <img
