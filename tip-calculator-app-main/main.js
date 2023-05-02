@@ -71,7 +71,10 @@ const Calculator = (props) => {
                     </div>
                 </div>
                 <div className="people--div">
-                    <p className="label">Number of People</p>
+                    <div className="label--error--div">
+                        <p className="label">Number of People</p>
+                        {props.peopleValue === "0" && <p className="error">Can't be zero</p>}
+                    </div>
                     <div className="input--div">
                         <img
                             className="input-icon"
@@ -186,15 +189,20 @@ const App = () => {
     };
 
     const calculation = (bill, tip, people) => {
+        const peopleInt = parseInt(people);
         const billFloat = parseFloat(bill);
-        let tipAmount = (billFloat/100) * parseFloat(tip);
-        let totalPerson = (billFloat + tipAmount) / people;
-        let tipAmountPerson = (tipAmount / people);
-        setData((p) => ({
-            ...p, 
-            "amout": tipAmountPerson, 
-            "total": totalPerson
-        }))
+        if (peopleInt === 0) {
+            stop
+        } else {
+            let tipAmount = (billFloat/100) * parseFloat(tip);
+            let totalPerson = (billFloat + tipAmount) / people;
+            let tipAmountPerson = (tipAmount / people);
+            setData((p) => ({
+                ...p, 
+                "amout": tipAmountPerson, 
+                "total": totalPerson
+            }))
+        }
     };
 
     const reset = () => {
@@ -202,6 +210,7 @@ const App = () => {
         setTipSelected(tipObj)
     };
 
+    console.log(data);//-----------------------DELETE
     return (
         <div className="app">
             <img

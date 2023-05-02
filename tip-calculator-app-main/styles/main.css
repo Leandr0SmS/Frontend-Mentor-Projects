@@ -64,6 +64,15 @@ body {
   margin-bottom: 0.375rem;
 }
 
+.label--error--div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  color: #E17457;
+}
+
 .input--div {
   position: relative;
 }
