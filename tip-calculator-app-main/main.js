@@ -117,7 +117,7 @@ const Calculator = (props) => {
                 </div>
                 <div className="buttons">
                     <div className="btn" onClick={props.c}>
-                        C
+                        Calculate
                     </div>
                     <div className="btn" onClick={props.reset}>
                         RESET
