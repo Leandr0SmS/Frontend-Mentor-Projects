@@ -1,0 +1,47 @@
+@import "./base";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+body {
+    height: 100%;
+    min-height: 100vh;
+    background-color: $Very-light-grayish-blue;
+}
+.app {
+    background: #FFFFFF;
+    box-shadow: 0rem 1.25rem 3.75rem rgba(73, 97, 168, 0.05);
+    border-radius: 0.9375rem;
+    padding: 1.875rem;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.notifications--count{
+    @extend %flex--center;
+    gap: 0.6875rem;
+    h1 {
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: $Very-dark-blue;
+    }
+    .count {
+        background-color: $Blue;
+        border-radius: 0.375rem;
+        color: #FFFFFF;
+        font-weight: 800;
+        width: 2rem;
+        height: 1.5625rem;
+        @extend %flex--center;
+    }
+}
+.all-read--div {
+    font-weight: 500;
+    text-align: right;
+}
