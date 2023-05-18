@@ -80,7 +80,7 @@ const Header = ({counter, handleAllReadClick}) => {
             </div>
             <div 
                 className="all-read--div"
-                onClick={handleAllReadClick}
+                onClick={onAllReadClick}
             >Mark all as read</div>
         </div>
     )
@@ -94,7 +94,7 @@ const List = ({children}) => {
     )
 }
 
-const Notification = ({name, src, action, action_id, element, time, unread}) => {
+const Notification = ({id, name, src, action, action_id, element, time, unread, onNotificationClick}) => {
 
     let actionsStatus = false, 
         actionClass = "action", 
@@ -129,7 +129,11 @@ const Notification = ({name, src, action, action_id, element, time, unread}) => 
     }
 
     return (
-        <div className={unread ? "notification unread" : "notification"}>
+        <div 
+            className={unread ? "notification unread" : "notification"}
+            id={id}
+            onClick={onNotificationClick}
+        >
             <img
                 className="avatar--img"
                 src={src}
@@ -143,6 +147,7 @@ const Notification = ({name, src, action, action_id, element, time, unread}) => 
                         <a 
                             className="user--name"
                             href=""
+                            target="_blank"
                         >{name} </a>
                         {action}
                         {(actionsStatus && !plusContent) && <a className={actionClass} href=""> {element}</a>}
@@ -184,17 +189,35 @@ const App = () => {
                 unread: false
             }))
         })
+    };
+
+    const handleNotificationClick = (e) => {
+        const {id} = e.target;
+        const nextNotifications = notifications.map(ntf => {
+            if (ntf.id === id) {
+                return {
+                    ...ntf,
+                    unread: false
+                }
+            } else {
+                return {
+                    ...ntf
+                }
+            }
+        });
+        setNotification(nextNotifications)
     }
 
     let counter = 0;
     notifications.map(ntf => {
         ntf.unread && counter ++
-    })
+    });
 
     const notificationsMaped = notifications.map(ntf => {
         return (
             <Notification
                 key={ntf.id}
+                id={ntf.id}
                 name={ntf.user}
                 src={ntf.img}
                 action={ntf.action}
@@ -202,15 +225,16 @@ const App = () => {
                 element={ntf.element}
                 time={ntf.time}
                 unread={ntf.unread}
+                onNotificationClick={handleNotificationClick}
             />
         )
-    })
+    });
 
     return (
         <React.Fragment>
             <Header
                 counter={counter}
-                handleAllReadClick={handleAllReadClick}
+                onAllReadClick={handleAllReadClick}
             />
             <List>
                 {notificationsMaped}
@@ -222,4 +246,4 @@ const App = () => {
 //Render
 const app = document.getElementById('root');
 const root = ReactDOM.createRoot(app);
-root.render(<App/>)
+root.render(<App/>);

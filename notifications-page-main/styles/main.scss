@@ -67,6 +67,7 @@ body {
     width: 2.8125rem;
     height: 2.8125rem;
     border: 1px solid rgba(0, 0, 0, 0.0463833);
+    border-radius: 50%;
 }
 .notification--content {
     @extend %flex--column;
@@ -128,6 +129,7 @@ body {
     margin-left: auto;
     &:hover {
         cursor: pointer;
+        opacity: 0.8;
     }
 }
 .unread {
