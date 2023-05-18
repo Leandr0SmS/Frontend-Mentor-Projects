@@ -58,6 +58,7 @@ body {
 }
 .avatar--img {
     width: 2.8125rem;
+    height: 2.8125rem;
     border: 1px solid rgba(0, 0, 0, 0.0463833);
 }
 .notification--content {
@@ -90,4 +91,19 @@ body {
 .group {
     color: $Blue;
     font-weight: 800; 
+}
+.message {
+    border: 1px solid $Light-grayish-blue-2;
+    border-radius: 0.3125rem;
+    padding: 1.25rem;
+    margin-top: 0.8125rem;
+    p {
+        font-weight: 500;
+        color: $Dark-grayish-blue;
+    }
+}
+.picture {
+    width: 2.8125rem;
+    height: 2.8125rem;
+    border-radius: 0.4375rem;
 }

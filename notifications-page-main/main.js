@@ -41,7 +41,7 @@ const notificationData = [
         img: "./assets/images/avatar-kimberly-smith.webp",
         action_id: "05",
         action: "commented on your picture",
-        element: "",
+        element: ["./assets/images/image-chess.webp", "playing chess"],
         time: "1 week ago"
     },
     {
@@ -86,7 +86,11 @@ const List = ({children}) => {
 
 const Notification = ({name, src, action, action_id, element, time}) => {
 
-    let actionsStatus, actionClass = "";
+    let actionsStatus = false, 
+        actionClass = "", 
+        plusContent = false,
+        message = false,
+        picture = false;
 
     switch (action_id) {
         case "01":
@@ -95,11 +99,20 @@ const Notification = ({name, src, action, action_id, element, time}) => {
             break;
         case "02":
             actionsStatus = false;
-            actionClass = ""
             break;
         case "03":
             actionsStatus = true;
             actionClass = "group"
+            break;
+        case "04":
+            actionsStatus = true;
+            plusContent = true;
+            message = true;
+            break;
+        case "05":
+            actionsStatus = true;
+            plusContent = true;
+            picture = true;
             break;
     }
 
@@ -117,12 +130,30 @@ const Notification = ({name, src, action, action_id, element, time}) => {
                     <p>
                         <span className="user--name">{name} </span>
                         {action}
-                        {actionsStatus && <span className={actionClass}> {element}</span>}
+                        {(actionsStatus && !plusContent) && <span className={actionClass}> {element}</span>}
                     </p>
                     <div className="unread"></div>
                 </div>
                 <p className="notification--time">{time}</p>
+                {
+                    message
+                    &&
+                    <div className="message">
+                        <p>{element}</p>
+                    </div>
+                }
             </div>
+            {
+                picture
+                &&
+                <img
+                    className="picture"
+                    src={element[0]}
+                    alt={`${element[1]}`}
+                    aria-hidden="false"
+                    role="img"
+                />
+            }
         </div>
     )
 }
