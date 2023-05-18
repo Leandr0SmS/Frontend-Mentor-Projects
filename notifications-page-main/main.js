@@ -3,6 +3,7 @@ const notificationData = [
         id: "01",
         user: "Mark Webber",
         img: "./assets/images/avatar-mark-webber.webp",
+        action_id: "01",
         action: "reacted to your recent post",
         element: "My first tournament today!",
         time: "1m ago"
@@ -11,6 +12,7 @@ const notificationData = [
         id: "02",
         user: "Angela Gray",
         img: "./assets/images/avatar-angela-gray.webp",
+        action_id: "02",
         action: "followed you",
         element: "",
         time: "5m ago"
@@ -19,6 +21,7 @@ const notificationData = [
         id: "03",
         user: "Jacob Thompson",
         img: "./assets/images/avatar-jacob-thompson.webp",
+        action_id: "03",
         action: "has joined your group",
         element: "Chess Club",
         time: "1 day ago"
@@ -27,6 +30,7 @@ const notificationData = [
         id: "04",
         user: "Rizky Hasanuddin",
         img: "./assets/images/avatar-rizky-hasanuddin.webp",
+        action_id: "04",
         action: "sent you a private message",
         element: "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
         time: "5 days ago"
@@ -35,6 +39,7 @@ const notificationData = [
         id: "05",
         user: "Kimberly Smith",
         img: "./assets/images/avatar-kimberly-smith.webp",
+        action_id: "05",
         action: "commented on your picture",
         element: "",
         time: "1 week ago"
@@ -43,6 +48,7 @@ const notificationData = [
         id: "06",
         user: "Nathan Peterson",
         img: "./assets/images/avatar-nathan-peterson.webp",
+        action_id: "01",
         action: "reacted to your recent post",
         element: "5 end-game strategies to increase your win rate",
         time: "2 weeks ago"
@@ -51,6 +57,7 @@ const notificationData = [
         id: "07",
         user: "Anna Kim",
         img: "./assets/images/avatar-anna-kim.webp",
+        action_id: "03",
         action: "left the group",
         element: "Chess Club",
         time: "2 weeks ago"
@@ -77,7 +84,25 @@ const List = ({children}) => {
     )
 }
 
-const Notification = ({name, src, action, time}) => {
+const Notification = ({name, src, action, action_id, element, time}) => {
+
+    let actionsStatus, actionClass = "";
+
+    switch (action_id) {
+        case "01":
+            actionsStatus = true;
+            actionClass = "post"
+            break;
+        case "02":
+            actionsStatus = false;
+            actionClass = ""
+            break;
+        case "03":
+            actionsStatus = true;
+            actionClass = "group"
+            break;
+    }
+
     return (
         <div className="notification">
             <img
@@ -92,7 +117,7 @@ const Notification = ({name, src, action, time}) => {
                     <p>
                         <span className="user--name">{name} </span>
                         {action}
-                        <span className="post"> My first tournament today!</span>
+                        {actionsStatus && <span className={actionClass}> {element}</span>}
                     </p>
                     <div className="unread"></div>
                 </div>
@@ -107,9 +132,12 @@ const App = () => {
     const notificationsMaped = notificationData.map(ntf => {
         return (
             <Notification
+                key={ntf.id}
                 name={ntf.user}
                 src={ntf.img}
                 action={ntf.action}
+                action_id={ntf.action_id}
+                element={ntf.element}
                 time={ntf.time}
             />
         )

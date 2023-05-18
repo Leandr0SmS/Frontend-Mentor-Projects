@@ -105,4 +105,9 @@ body {
 .post {
   color: hsl(219, 12%, 42%);
   font-weight: 800;
+}
+
+.group {
+  color: hsl(219, 85%, 26%);
+  font-weight: 800;
 }/*# sourceMappingURL=main.css.map */
