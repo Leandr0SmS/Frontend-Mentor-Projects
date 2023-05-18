@@ -97,7 +97,7 @@ const List = ({children}) => {
 const Notification = ({name, src, action, action_id, element, time, unread}) => {
 
     let actionsStatus = false, 
-        actionClass = "", 
+        actionClass = "action", 
         plusContent = false,
         message = false,
         picture = false
@@ -105,14 +105,14 @@ const Notification = ({name, src, action, action_id, element, time, unread}) => 
     switch (action_id) {
         case "01":
             actionsStatus = true;
-            actionClass = "post"
+            actionClass = "action post"
             break;
         case "02":
             actionsStatus = false;
             break;
         case "03":
             actionsStatus = true;
-            actionClass = "group"
+            actionClass = "action group"
             break;
         case "04":
             actionsStatus = true;
@@ -140,9 +140,12 @@ const Notification = ({name, src, action, action_id, element, time, unread}) => 
             <div className="notification--content">
                 <div className="content">
                     <p>
-                        <span className="user--name">{name} </span>
+                        <a 
+                            className="user--name"
+                            href=""
+                        >{name} </a>
                         {action}
-                        {(actionsStatus && !plusContent) && <span className={actionClass}> {element}</span>}
+                        {(actionsStatus && !plusContent) && <a className={actionClass} href=""> {element}</a>}
                     </p>
                     {unread && <div className="unread--icon"></div>}
                 </div>
@@ -150,14 +153,14 @@ const Notification = ({name, src, action, action_id, element, time, unread}) => 
                 {
                     message
                     &&
-                    <div className="message">
-                        <p>{element}</p>
-                    </div>
+                    <a className="message" href="">
+                        {element}
+                    </a>
                 }
             </div>
             {
                 picture
-                &&
+                && 
                 <img
                     className="picture"
                     src={element[0]}

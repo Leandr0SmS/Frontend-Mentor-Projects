@@ -77,9 +77,6 @@ body {
   display: flex;
   gap: 1.1875rem;
 }
-.notification:hover {
-  cursor: pointer;
-}
 
 .avatar--img {
   width: 2.8125rem;
@@ -104,12 +101,23 @@ body {
 .content .user--name {
   font-weight: 800;
   color: hsl(224, 21%, 14%);
+  text-decoration: none;
+}
+.content .user--name:hover {
+  color: hsl(219, 85%, 26%);
 }
 .content .unread--icon {
   width: 0.5rem;
   height: 0.5rem;
   background-color: hsl(1, 90%, 64%);
   border-radius: 50rem;
+}
+
+.action {
+  text-decoration: none;
+}
+.action:hover {
+  color: hsl(219, 85%, 26%);
 }
 
 .post {
@@ -127,10 +135,12 @@ body {
   border-radius: 0.3125rem;
   padding: 1.25rem;
   margin-top: 0.8125rem;
-}
-.message p {
+  text-decoration: none;
   font-weight: 500;
   color: hsl(219, 12%, 42%);
+}
+.message:hover {
+  background-color: hsl(211, 68%, 94%);
 }
 
 .picture {
@@ -138,6 +148,9 @@ body {
   height: 2.8125rem;
   border-radius: 0.4375rem;
   margin-left: auto;
+}
+.picture:hover {
+  cursor: pointer;
 }
 
 .unread {

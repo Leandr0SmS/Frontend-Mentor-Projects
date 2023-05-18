@@ -62,9 +62,6 @@ body {
     padding: 1.125rem 1.25rem;
     display: flex;
     gap: 1.1875rem;
-    &:hover {
-        cursor: pointer;
-    }
 }
 .avatar--img {
     width: 2.8125rem;
@@ -86,12 +83,22 @@ body {
     .user--name {
         font-weight: 800;
         color: $Very-dark-blue;
+        text-decoration: none;
+        &:hover {
+            color: $Blue;
+        }
     }
     .unread--icon {
         width: 0.5rem;
         height: 0.5rem;
         background-color: $Red;
         border-radius: 50rem;
+    }
+}
+.action {
+    text-decoration: none;
+    &:hover {
+        color: $Blue;
     }
 }
 .post {
@@ -107,9 +114,11 @@ body {
     border-radius: 0.3125rem;
     padding: 1.25rem;
     margin-top: 0.8125rem;
-    p {
-        font-weight: 500;
-        color: $Dark-grayish-blue;
+    text-decoration: none;
+    font-weight: 500;
+    color: $Dark-grayish-blue;
+    &:hover {
+        background-color: $Light-grayish-blue-1;
     }
 }
 .picture {
@@ -117,6 +126,9 @@ body {
     height: 2.8125rem;
     border-radius: 0.4375rem;
     margin-left: auto;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .unread {
     background-color: $Very-light-grayish-blue;
