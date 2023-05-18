@@ -1,6 +1,6 @@
 const notificationData = [
     {
-        id: 01,
+        id: "01",
         user: "Mark Webber",
         img: "./assets/images/avatar-mark-webber.webp",
         action: "reacted to your recent post",
@@ -8,7 +8,7 @@ const notificationData = [
         time: "1m ago"
     },
     {
-        id: 02,
+        id: "02",
         user: "Angela Gray",
         img: "./assets/images/avatar-angela-gray.webp",
         action: "followed you",
@@ -16,7 +16,7 @@ const notificationData = [
         time: "5m ago"
     },
     {
-        id: 03,
+        id: "03",
         user: "Jacob Thompson",
         img: "./assets/images/avatar-jacob-thompson.webp",
         action: "has joined your group",
@@ -24,7 +24,7 @@ const notificationData = [
         time: "1 day ago"
     },
     {
-        id: 04,
+        id: "04",
         user: "Rizky Hasanuddin",
         img: "./assets/images/avatar-rizky-hasanuddin.webp",
         action: "sent you a private message",
@@ -32,7 +32,7 @@ const notificationData = [
         time: "5 days ago"
     },
     {
-        id: 05,
+        id: "05",
         user: "Kimberly Smith",
         img: "./assets/images/avatar-kimberly-smith.webp",
         action: "commented on your picture",
@@ -40,7 +40,7 @@ const notificationData = [
         time: "1 week ago"
     },
     {
-        id: 06,
+        id: "06",
         user: "Nathan Peterson",
         img: "./assets/images/avatar-nathan-peterson.webp",
         action: "reacted to your recent post",
@@ -48,7 +48,7 @@ const notificationData = [
         time: "2 weeks ago"
     },
     {
-        id: 07,
+        id: "07",
         user: "Anna Kim",
         img: "./assets/images/avatar-anna-kim.webp",
         action: "left the group",
@@ -69,9 +69,35 @@ const Header = () => {
     )
 }
 
+const List = ({children}) => {
+    return (
+        <div className="notification--list">
+            {children}
+        </div>
+    )
+}
+
 const Notification = () => {
     return (
         <div className="notification">
+            <img
+                className="avatar--img"
+                src="./assets/images/avatar-mark-webber.webp"
+                alt="moon icon to dark colors mode"
+                aria-hidden="false"
+                role="img"
+            />
+            <div className="notification--content">
+                <div className="content">
+                    <p>
+                        <span className="user--name">Mark Webber </span>
+                        reacted to your recent post
+                        <span className="action"> My first tournament today!</span>
+                    </p>
+                    <div className="unread"></div>
+                </div>
+                <p className="notification--time">1m ago</p>
+            </div>
         </div>
     )
 }
@@ -80,6 +106,9 @@ const App = () => {
     return (
         <React.Fragment>
             <Header/>
+            <List>
+                <Notification/>
+            </List>
         </React.Fragment>
     )
 };
