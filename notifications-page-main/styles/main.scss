@@ -11,8 +11,10 @@ body {
     height: 100%;
     min-height: 100vh;
     background-color: $Very-light-grayish-blue;
+    @extend %flex--center;
 }
 .app {
+    width: 45.625rem;
     background: #FFFFFF;
     box-shadow: 0rem 1.25rem 3.75rem rgba(73, 97, 168, 0.05);
     border-radius: 0.9375rem;
@@ -22,6 +24,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1.9375rem;
 }
 .notifications--count{
     @extend %flex--center;
@@ -44,17 +47,24 @@ body {
 .all-read--div {
     font-weight: 500;
     text-align: right;
+    &:hover {
+        cursor: pointer;
+        color: $Blue;
+    }
 }
 .notification--list {
     @extend %flex--column;
     gap: 0.5rem;
 }
 .notification {
-    background: $Very-light-grayish-blue;
+    background: $White;
     border-radius: 0.5rem;
     padding: 1.125rem 1.25rem;
     display: flex;
     gap: 1.1875rem;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .avatar--img {
     width: 2.8125rem;
@@ -77,7 +87,7 @@ body {
         font-weight: 800;
         color: $Very-dark-blue;
     }
-    .unread {
+    .unread--icon {
         width: 0.5rem;
         height: 0.5rem;
         background-color: $Red;
@@ -107,4 +117,7 @@ body {
     height: 2.8125rem;
     border-radius: 0.4375rem;
     margin-left: auto;
+}
+.unread {
+    background-color: $Very-light-grayish-blue;
 }

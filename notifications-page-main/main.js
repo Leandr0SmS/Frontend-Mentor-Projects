@@ -6,7 +6,8 @@ const notificationData = [
         action_id: "01",
         action: "reacted to your recent post",
         element: "My first tournament today!",
-        time: "1m ago"
+        time: "1m ago",
+        unread: true
     },
     {
         id: "02",
@@ -15,7 +16,8 @@ const notificationData = [
         action_id: "02",
         action: "followed you",
         element: "",
-        time: "5m ago"
+        time: "5m ago",
+        unread: true
     },
     {
         id: "03",
@@ -24,7 +26,8 @@ const notificationData = [
         action_id: "03",
         action: "has joined your group",
         element: "Chess Club",
-        time: "1 day ago"
+        time: "1 day ago",
+        unread: true
     },
     {
         id: "04",
@@ -33,7 +36,8 @@ const notificationData = [
         action_id: "04",
         action: "sent you a private message",
         element: "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
-        time: "5 days ago"
+        time: "5 days ago",
+        unread: false
     },
     {
         id: "05",
@@ -42,7 +46,8 @@ const notificationData = [
         action_id: "05",
         action: "commented on your picture",
         element: ["./assets/images/image-chess.webp", "playing chess"],
-        time: "1 week ago"
+        time: "1 week ago",
+        unread: false
     },
     {
         id: "06",
@@ -51,7 +56,8 @@ const notificationData = [
         action_id: "01",
         action: "reacted to your recent post",
         element: "5 end-game strategies to increase your win rate",
-        time: "2 weeks ago"
+        time: "2 weeks ago",
+        unread: false
     },
     {
         id: "07",
@@ -60,18 +66,22 @@ const notificationData = [
         action_id: "03",
         action: "left the group",
         element: "Chess Club",
-        time: "2 weeks ago"
+        time: "2 weeks ago",
+        unread: false
     },
 ]
 
-const Header = () => {
+const Header = ({counter, handleAllReadClick}) => {
     return (
         <div className="header">
             <div className="notifications--count">
                 <h1>Notifications</h1>
-                <div className="count">3</div>
+                <div className="count">{counter}</div>
             </div>
-            <div className="all-read--div">Mark all as read</div>
+            <div 
+                className="all-read--div"
+                onClick={handleAllReadClick}
+            >Mark all as read</div>
         </div>
     )
 }
@@ -84,13 +94,13 @@ const List = ({children}) => {
     )
 }
 
-const Notification = ({name, src, action, action_id, element, time}) => {
+const Notification = ({name, src, action, action_id, element, time, unread}) => {
 
     let actionsStatus = false, 
         actionClass = "", 
         plusContent = false,
         message = false,
-        picture = false;
+        picture = false
 
     switch (action_id) {
         case "01":
@@ -119,7 +129,7 @@ const Notification = ({name, src, action, action_id, element, time}) => {
     }
 
     return (
-        <div className="notification">
+        <div className={unread ? "notification unread" : "notification"}>
             <img
                 className="avatar--img"
                 src={src}
@@ -134,7 +144,7 @@ const Notification = ({name, src, action, action_id, element, time}) => {
                         {action}
                         {(actionsStatus && !plusContent) && <span className={actionClass}> {element}</span>}
                     </p>
-                    <div className="unread"></div>
+                    {unread && <div className="unread--icon"></div>}
                 </div>
                 <p className="notification--time">{time}</p>
                 {
@@ -162,7 +172,23 @@ const Notification = ({name, src, action, action_id, element, time}) => {
 
 const App = () => {
 
-    const notificationsMaped = notificationData.map(ntf => {
+    const [notifications, setNotification] = React.useState(notificationData);
+
+    const handleAllReadClick = () => {
+        setNotification((n) => {
+            return n.map(ntf => ({
+                ...ntf,
+                unread: false
+            }))
+        })
+    }
+
+    let counter = 0;
+    notifications.map(ntf => {
+        ntf.unread && counter ++
+    })
+
+    const notificationsMaped = notifications.map(ntf => {
         return (
             <Notification
                 key={ntf.id}
@@ -172,13 +198,17 @@ const App = () => {
                 action_id={ntf.action_id}
                 element={ntf.element}
                 time={ntf.time}
+                unread={ntf.unread}
             />
         )
     })
 
     return (
         <React.Fragment>
-            <Header/>
+            <Header
+                counter={counter}
+                handleAllReadClick={handleAllReadClick}
+            />
             <List>
                 {notificationsMaped}
             </List>

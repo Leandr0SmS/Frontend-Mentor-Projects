@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
-.notifications--count .count, .notifications--count {
+.notifications--count .count, .notifications--count, body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,6 +26,7 @@ body {
 }
 
 .app {
+  width: 45.625rem;
   background: #FFFFFF;
   box-shadow: 0rem 1.25rem 3.75rem rgba(73, 97, 168, 0.05);
   border-radius: 0.9375rem;
@@ -36,6 +37,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1.9375rem;
 }
 
 .notifications--count {
@@ -59,17 +61,24 @@ body {
   font-weight: 500;
   text-align: right;
 }
+.all-read--div:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
 
 .notification--list {
   gap: 0.5rem;
 }
 
 .notification {
-  background: hsl(210, 60%, 98%);
+  background: hsl(0, 0%, 100%);
   border-radius: 0.5rem;
   padding: 1.125rem 1.25rem;
   display: flex;
   gap: 1.1875rem;
+}
+.notification:hover {
+  cursor: pointer;
 }
 
 .avatar--img {
@@ -96,7 +105,7 @@ body {
   font-weight: 800;
   color: hsl(224, 21%, 14%);
 }
-.content .unread {
+.content .unread--icon {
   width: 0.5rem;
   height: 0.5rem;
   background-color: hsl(1, 90%, 64%);
@@ -129,4 +138,8 @@ body {
   height: 2.8125rem;
   border-radius: 0.4375rem;
   margin-left: auto;
+}
+
+.unread {
+  background-color: hsl(210, 60%, 98%);
 }/*# sourceMappingURL=main.css.map */
