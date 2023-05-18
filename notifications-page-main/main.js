@@ -77,37 +77,49 @@ const List = ({children}) => {
     )
 }
 
-const Notification = () => {
+const Notification = ({name, src, action, time}) => {
     return (
         <div className="notification">
             <img
                 className="avatar--img"
-                src="./assets/images/avatar-mark-webber.webp"
-                alt="moon icon to dark colors mode"
+                src={src}
+                alt={`${name} image`}
                 aria-hidden="false"
                 role="img"
             />
             <div className="notification--content">
                 <div className="content">
                     <p>
-                        <span className="user--name">Mark Webber </span>
-                        reacted to your recent post
-                        <span className="action"> My first tournament today!</span>
+                        <span className="user--name">{name} </span>
+                        {action}
+                        <span className="post"> My first tournament today!</span>
                     </p>
                     <div className="unread"></div>
                 </div>
-                <p className="notification--time">1m ago</p>
+                <p className="notification--time">{time}</p>
             </div>
         </div>
     )
 }
 
 const App = () => {
+
+    const notificationsMaped = notificationData.map(ntf => {
+        return (
+            <Notification
+                name={ntf.user}
+                src={ntf.img}
+                action={ntf.action}
+                time={ntf.time}
+            />
+        )
+    })
+
     return (
         <React.Fragment>
             <Header/>
             <List>
-                <Notification/>
+                {notificationsMaped}
             </List>
         </React.Fragment>
     )

@@ -100,4 +100,9 @@ body {
   height: 0.5rem;
   background-color: hsl(1, 90%, 64%);
   border-radius: 50rem;
+}
+
+.post {
+  color: hsl(219, 12%, 42%);
+  font-weight: 800;
 }/*# sourceMappingURL=main.css.map */
