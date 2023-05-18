@@ -114,6 +114,8 @@ const Notification = ({name, src, action, action_id, element, time}) => {
             plusContent = true;
             picture = true;
             break;
+        default:
+            console.log(`data error`);
     }
 
     return (
