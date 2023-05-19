@@ -142,8 +142,8 @@ const Notification = ({id, name, src, action, action_id, element, time, unread, 
                 role="img"
             />
             <div className="notification--content" id={id}>
-                <div className="content" id={id}>
-                    <p id={id}>
+                <div className="content">
+                    <p>
                         <a 
                             className="user--name"
                             href=""
@@ -154,7 +154,7 @@ const Notification = ({id, name, src, action, action_id, element, time, unread, 
                         {unread && <span className="unread--icon"></span>}
                     </p>
                 </div>
-                <p className="notification--time" id={id}>{time}</p>
+                <p className="notification--time">{time}</p>
                 {
                     message
                     &&
