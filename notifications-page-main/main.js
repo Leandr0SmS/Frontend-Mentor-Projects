@@ -71,7 +71,7 @@ const notificationData = [
     },
 ]
 
-const Header = ({counter, handleAllReadClick}) => {
+const Header = ({counter, onAllReadClick}) => {
     return (
         <div className="header">
             <div className="notifications--count">
@@ -141,9 +141,9 @@ const Notification = ({id, name, src, action, action_id, element, time, unread, 
                 aria-hidden="false"
                 role="img"
             />
-            <div className="notification--content">
-                <div className="content">
-                    <p>
+            <div className="notification--content" id={id}>
+                <div className="content" id={id}>
+                    <p id={id}>
                         <a 
                             className="user--name"
                             href=""
@@ -151,10 +151,10 @@ const Notification = ({id, name, src, action, action_id, element, time, unread, 
                         >{name} </a>
                         {action}
                         {(actionsStatus && !plusContent) && <a className={actionClass} href=""> {element}</a>}
+                        {unread && <span><div className="unread--icon"></div></span>}
                     </p>
-                    {unread && <div className="unread--icon"></div>}
                 </div>
-                <p className="notification--time">{time}</p>
+                <p className="notification--time" id={id}>{time}</p>
                 {
                     message
                     &&
