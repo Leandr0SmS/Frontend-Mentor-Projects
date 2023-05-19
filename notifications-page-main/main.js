@@ -151,7 +151,7 @@ const Notification = ({id, name, src, action, action_id, element, time, unread, 
                         >{name} </a>
                         {action}
                         {(actionsStatus && !plusContent) && <a className={actionClass} href=""> {element}</a>}
-                        {unread && <span><div className="unread--icon"></div></span>}
+                        {unread && <span className="unread--icon"></span>}
                     </p>
                 </div>
                 <p className="notification--time" id={id}>{time}</p>
