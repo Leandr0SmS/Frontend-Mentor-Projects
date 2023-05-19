@@ -141,7 +141,7 @@ const Notification = ({id, name, src, action, action_id, element, time, unread, 
                 aria-hidden="false"
                 role="img"
             />
-            <div className="notification--content" id={id}>
+            <div className="notification--content">
                 <div className="content">
                     <p>
                         <a 
