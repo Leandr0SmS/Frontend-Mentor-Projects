@@ -1,17 +1,17 @@
+const { useState, useEffect } = React;
 
 function App() {
-    const [data, setData] = React.useState(
+    const [data, setData] = useState(
         {
             id: 117,
             advice: "It is easy to sit up and take notice, what's difficult is getting up and taking action."
         }
     );
-    const [get, setGet] = React.useState(0)
+    const [get, setGet] = useState(0);
     function handleClick() {
-        setGet(get => get + 1)
+        setGet(get => get ++)
     }
-    React.useEffect(() => {
-        console.log("fech data")///// Checkdata
+    useEffect(() => {
         fetch("https://api.adviceslip.com/advice")
             .then(res => res.json())
             .then(data => setData(data.slip))
