@@ -9,12 +9,22 @@ function App() {
     );
     const [get, setGet] = useState(0);
     function handleClick() {
-        setGet(get => get ++)
+        setGet(get => get + 1)
     }
     useEffect(() => {
-        fetch("https://api.adviceslip.com/advice")
-            .then(res => res.json())
-            .then(data => setData(data.slip))
+        const getData = async () => {
+            try {
+                const res = await fetch("https://api.adviceslip.com/advice");
+                if (res.ok) {
+                    const jsonRes = await res.json();
+                    setData(jsonRes.slip)
+                }
+                throw new Error('Request failed');
+            } catch (e) {
+                console.log(e);
+            }
+        }
+        getData()
     }, [get])
     console.log({get, data}) ///// Checkdata
     return (
