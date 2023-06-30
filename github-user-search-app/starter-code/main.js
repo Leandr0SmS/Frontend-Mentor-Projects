@@ -1,3 +1,5 @@
+const { useState, useEffect } = React;
+
 //Adjust data format
 function dateFormat(inputDate) {
     const date = new Date(inputDate);
@@ -11,25 +13,25 @@ function dateFormat(inputDate) {
 function App() {
 
     //State to dark mode
-    const [colorMode, setColorMode] = React.useState(true);
+    const [colorMode, setColorMode] = useState(true);
     function handleColorMode() {
         setColorMode(p => !p);
     };
 
     // Looknig for color mode of the user
-    React.useEffect(() => {
+    useEffect(() => {
         const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
         mediaQuery.matches ? setColorMode(false) : setColorMode(true);
     }, []);
 
     //Form State
-    const [formData, setFormData] = React.useState("");
+    const [formData, setFormData] = useState("");
     //Data State
-    const [data, setData] = React.useState("");
+    const [data, setData] = useState("");
     //Error state
-    const [error, setError] = React.useState(false);
+    const [error, setError] = useState(false);
     // State to trigger fetch data from API
-    const [get, setGet] = React.useState(0);
+    const [get, setGet] = useState(0);
 
     function handleClick() {
         setGet(get => get + 1);
@@ -41,13 +43,13 @@ function App() {
     };
 
     //Fetch data
-    React.useEffect(() => {
+    useEffect(() => {
         fetch(`https://api.github.com/users/${formData ? formData : "octocat"}`)
             .then(res => res.json())
             .then(data => setData(data))
     }, [get]);
     //Handle error from fetch
-    React.useEffect(() => {
+    useEffect(() => {
         if (data.message === "Not Found") {
             setError(true);
             fetch(`https://api.github.com/users/octocat`)
@@ -113,6 +115,7 @@ function App() {
                     {error && <p className="error--text">No results</p>}
                     <button
                         className="btn"
+                        type="button"
                         onClick={handleClick}
                     >
                         Search
