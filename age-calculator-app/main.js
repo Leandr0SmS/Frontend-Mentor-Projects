@@ -1,13 +1,15 @@
+const { useState } = React;
+
 function App() {
-    const [dayInput, setDayInput] = React.useState('');
-    const [monthInput, setMonthInput] = React.useState('');
-    const [yearInput, setYearInput] = React.useState('');
+    const [dayInput, setDayInput] = useState('');
+    const [monthInput, setMonthInput] = useState('');
+    const [yearInput, setYearInput] = useState('');
 
-    const [dayAge, setDayAge] = React.useState('');
-    const [monthAge, setMonthAge] = React.useState('');
-    const [yearAge, setYearAge] = React.useState('');
+    const [dayAge, setDayAge] = useState('');
+    const [monthAge, setMonthAge] = useState('');
+    const [yearAge, setYearAge] = useState('');
 
-    const [error, setError] = React.useState({
+    const [error, setError] = useState({
         dayValid: false,
         monthValid: false,
         yearValid: false,
