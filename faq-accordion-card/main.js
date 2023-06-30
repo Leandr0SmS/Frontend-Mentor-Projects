@@ -1,3 +1,5 @@
+const { useState } = React;
+
 const faqData = [
   {
     id: 1,
@@ -32,23 +34,23 @@ const faqData = [
 ]
 
 
-function Questions(props) {
+function Questions({ handleClick, on, question, answer }) {
   return (
     <div className="questions--div">
       <div 
         className="question"
-        onClick={props.handleClick}
+        onClick={handleClick}
       >
-        <h3 id={props.on && "question--active"}>
-          {props.question}
+        <h3 id={on ? "question--active" : undefined}>
+          {question}
         </h3>
         <img 
           src=".\images\icon-arrow-down.svg" 
           alt="Arrow icon"
-          className={props.on && "rotate"}
+          className={on ? "rotate" : undefined}
         />
       </div>
-      <p className="answer">{props.answer}</p>
+      <p className="answer">{answer}</p>
       <hr/>
     </div>
   )
@@ -57,7 +59,7 @@ function Questions(props) {
 //App
 function App() {
 
-  const [faqState, setFaqstate] = React.useState(faqData);
+  const [faqState, setFaqstate] = useState(faqData);
 
   function toggleOn(id) {
     setFaqstate((prevState) => {
@@ -82,7 +84,7 @@ function App() {
   return (
     <div className="faq--card">
       <picture className="image--div">
-            <source media="(max-width:1040px)" srcset=".\images\illustration-woman-online-mobile.svg" alt="Woman working on a board with a box" />
+            <source media="(max-width:1040px)" srcSet=".\images\illustration-woman-online-mobile.svg" alt="Woman working on a board with a box" />
             <img 
               src=".\images\illustration-box-desktop.svg" 
               alt="Cardboard box with an '@' on top"
