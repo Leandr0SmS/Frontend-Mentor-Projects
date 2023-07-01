@@ -1,4 +1,4 @@
-
+const { useState } = React;
 
 const projectsData = [
     {
@@ -57,9 +57,9 @@ const projectsData = [
     }
 ]
 
-function NameLinks(props) {
+function NameLinks({class_Name}) {
     return (
-        <div className={props.class}>
+        <div className={class_Name}>
             <h3>adamkeyes</h3>
             <div className="icon--div">
                 <a 
@@ -115,7 +115,7 @@ function Header() {
     return (
         <header className="header">
             <NameLinks 
-                class="name--links top--header"
+                class_Name="name--links top--header"
             />
             <div className="profile--div">
                 <div className="profile--div--inner">
@@ -199,15 +199,25 @@ function Experience() {
         </aside>
     )
 }
-function View(props) {
+function View({Ishovered, live, code}) {
     return (
-        <div className={props.Ishovered ? 'active view--div' : 'view--div'}>
-            <a href={props.live}>View project</a>
-            <a href={props.code}>View code</a>
+        <div className={Ishovered ? 'active view--div' : 'view--div'}>
+            <a href={live}>View project</a>
+            <a href={code}>View code</a>
         </div>
     )
 }
-function Project(props) {
+function Project({
+                    img, 
+                    title, 
+                    id, 
+                    tools, 
+                    live, 
+                    code, 
+                    handleMouseEnter, 
+                    handleMouseLeave,
+                    Ishovered,
+                }) {
     const screenWidth = window.innerWidth;
     if (screenWidth < 1211) {
         return (
@@ -217,18 +227,18 @@ function Project(props) {
                 >
                     <img
                         className="project--img"
-                        src={`./assets/images/${props.img}`}
-                        alt={props.title}
+                        src={`./assets/images/${img}`}
+                        alt={title}
                         aria-hidden="false"
                         role="img"
-                        id={props.id}
+                        id={id}
                     />
                 </div>          
-                <h3>{props.title}</h3>
-                <div className="tool--div">{props.tools}</div>
+                <h3>{title}</h3>
+                <div className="tool--div">{tools}</div>
                 <View 
-                        live={props.live}
-                        code={props.code}
+                        live={live}
+                        code={code}
                         Ishovered={true}
                 />
             </div>
@@ -238,29 +248,29 @@ function Project(props) {
         <div className="project--div">
             <div 
                 className="my-image-container"
-                onMouseEnter={props.handleMouseEnter}
-                onMouseLeave={props.handleMouseLeave}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
             >
                 <img
-                    className={props.Ishovered ? 'img--active project--img' : 'project--img'}
-                    src={`./assets/images/${props.img}`}
-                    alt={props.title}
+                    className={Ishovered ? 'img--active project--img' : 'project--img'}
+                    src={`./assets/images/${img}`}
+                    alt={title}
                     aria-hidden="false"
                     role="img"
-                    id={props.id}
+                    id={id}
                 />
                 <View 
-                    live={props.live}
-                    code={props.code}
-                    Ishovered={props.Ishovered}
+                    live={live}
+                    code={code}
+                    Ishovered={Ishovered}
                 />
             </div>          
-            <h3>{props.title}</h3>
-            <div className="tool--div">{props.tools}</div>
+            <h3>{title}</h3>
+            <div className="tool--div">{tools}</div>
         </div>
     )
 }
-function Projects(props) {
+function Projects({projectsStateMap}) {
     return (
         <main className="main">
             <div className="projects--header">
@@ -272,13 +282,23 @@ function Projects(props) {
                 </a>
             </div>
             <div className="projects--grid">
-                {props.projectsStateMap}
+                {projectsStateMap}
             </div>
         </main>
     )
 }
 
-function Footer(props) {
+function Footer({
+                    handleSubmit, 
+                    nameError, 
+                    name, 
+                    handleChange, 
+                    emailError, 
+                    email, 
+                    messageError, 
+                    textarea, 
+                    formValidation
+                }) {
     return (
         <footer className="footer">
             <div className="contact--form--div">
@@ -291,20 +311,20 @@ function Footer(props) {
                 </div>
                 <form 
                     className="form"
-                    onSubmit={props.handleSubmit}
+                    onSubmit={handleSubmit}
                 >
                     <div className="inputs--div">
                         <input 
                             className="inputs"
-                            id={props.nameError ? "error--input" : "name-input"}
+                            id={nameError ? "error--input" : "name-input"}
                             type="text"
                             name="name"
-                            value={props.name}
-                            onChange={props.handleChange}
+                            value={name}
+                            onChange={handleChange}
                             placeholder="name"
                         ></input>
                         {
-                            props.nameError
+                            nameError
                             && 
                             <img 
                                 className="error--icon" 
@@ -313,7 +333,7 @@ function Footer(props) {
                             />
                         }
                         {
-                            props.nameError
+                            nameError
                             &&
                             <p className="error--text">Please, tell me your name</p>
                         }
@@ -322,15 +342,15 @@ function Footer(props) {
                     <div className="inputs--div">
                         <input 
                             className="inputs"
-                            id={props.emailError ? "error--input" : "email-input"} 
+                            id={emailError ? "error--input" : "email-input"} 
                             type="text"
                             name="email"
-                            value={props.email}
-                            onChange={props.handleChange}
+                            value={email}
+                            onChange={handleChange}
                             placeholder="email"
                         ></input>
                         {
-                            props.emailError
+                            emailError
                             && 
                             <img 
                                 className="error--icon" 
@@ -339,7 +359,7 @@ function Footer(props) {
                             />
                         }
                         {
-                            props.emailError
+                            emailError
                             &&
                             <p className="error--text">Sorry, invalid format here</p>
                         }
@@ -348,15 +368,15 @@ function Footer(props) {
                     <div className="inputs--div">
                         <textarea
                             className="inputs"
-                            id={props.messageError ? "error--input" : "message-input"}
+                            id={messageError ? "error--input" : "message-input"}
                             type="text"
                             name="message"
-                            value={props.textarea}
-                            onChange={props.handleChange}
+                            value={textarea}
+                            onChange={handleChange}
                             placeholder="message"
                         ></textarea>
                         {
-                            props.messageError
+                            messageError
                             && 
                             <img 
                                 className="error--icon" 
@@ -365,7 +385,7 @@ function Footer(props) {
                             />
                         }
                         {
-                            props.messageError
+                            messageError
                             &&
                             <p className="error--text">Tell me about your project</p>
                         }        
@@ -373,7 +393,8 @@ function Footer(props) {
 
                     <button
                         className="form--btn"
-                        onClick={props.formValidation}
+                        type="button"
+                        onClick={formValidation}
                     >
                         Send message
                     </button>
@@ -387,7 +408,19 @@ function Footer(props) {
 }
 function Page() {
     //Projects handle state
-    const [projectState, setProjectState] = React.useState(projectsData);
+    const [projectState, setProjectState] = useState(projectsData);
+        //Form handle state
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: ""
+    })
+    //Form error handle state
+    const [error, setError] = useState({
+        name: false,
+        email: false,
+        message: false
+    });
     function handleMouseEnter(id) {
         setProjectState((prevProjectState) => {
             return prevProjectState.map(project => {
@@ -425,18 +458,6 @@ function Page() {
             />
         )
     })
-    //Form handle state
-    const [formData, setFormData] = React.useState({
-        name: "",
-        email: "",
-        message: ""
-    })
-    //Form error handle state
-    const [error, setError] = React.useState({
-        name: false,
-        email: false,
-        message: false
-    });
     function handleSubmit(e) {
         e.preventDefault();
     }
