@@ -25,7 +25,7 @@ const data = [
 
 //  Components
 
-function Price_Time (props) {
+function Price_Time ({ price, time }) {
     return (
         <div className="price-time">
             <div className="price-div">
@@ -34,7 +34,7 @@ function Price_Time (props) {
                     aria-hidden="false"
                     role="img"
                 />
-                <p>{props.price} ETH</p>
+                <p>{price} ETH</p>
             </div>
             <div className="time-div">
                 <img 
@@ -42,13 +42,13 @@ function Price_Time (props) {
                     aria-hidden="false"
                     role="img"
                 />
-                <p>{props.time} days left</p>
+                <p>{time} days left</p>
             </div>
         </div>
     )
 }
 
-function Avatar (props) {
+function Avatar ({ avatarName }) {
     return (
         <div className="avatar-div">
             <img 
@@ -59,13 +59,13 @@ function Avatar (props) {
             />
             <p className="avatar-text">
                 Creation of     
-                <span>{` ${props.avatarName}`}</span>
+                <span>{` ${avatarName}`}</span>
             </p>
         </div>
     )
 }
 
-function Main (props) {
+function Main ({ item }) {
     //extract data creating jsx Price_Time element
     const priceTimeData = data.map((obj) => {
         return <Price_Time 
@@ -98,8 +98,8 @@ function Main (props) {
                         role="img"
                     />
                 </div>
-                <h1 className="heading">{props.item.main.heading}</h1>
-                <p className="text">{props.item.main.text}</p>
+                <h1 className="heading">{item.main.heading}</h1>
+                <p className="text">{item.main.text}</p>
                 {priceTimeData}
                 {avatarData}
             </div>
@@ -107,11 +107,11 @@ function Main (props) {
     )
 };
 
-function Footer (props) {
+function Footer ({ name }) {
     return (
         <footer className="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-            Coded by <a href="#">{props.name}</a>.
+            Coded by <a href="#">{name}</a>.
         </footer>
     )
 }
