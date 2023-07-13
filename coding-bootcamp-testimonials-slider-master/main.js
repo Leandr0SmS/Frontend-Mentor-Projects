@@ -10,6 +10,18 @@
   starting up as a professional developer. ”
 
   John Tarkpor
-  Junior Front-end Developer */
+  Junior Front-end Developer 
+*/
+const { useState } = React;
+const { createRoot } = ReactDOM;
 
-  
+const App = () => {
+  return (
+      <h1>Hey</h1>
+  )
+};
+
+//Render
+const app = document.getElementById('root');
+const root = createRoot(app);
+root.render(<App/>);
