@@ -6,6 +6,8 @@ const Slide = ({ text, image_src, user_name, role }) => {
     <React.Fragment>
             <div className="text">
                 <p className="testemonial">{text}</p>
+                <p className="name">{user_name}</p>
+                <p className="role">{role}</p>
             </div>
             <div className="hero-img-div">
                 <img
@@ -23,12 +25,19 @@ const App = () => {
 
     const [slide, setSlide] = useState(0);
 
+    const handleNextClick = (e) => setSlide(s => s + 1);
+
+    const handlePrevClick = (e) => setSlide(s => s == 0 ? 0 : s - 1);
+
+    console.log(slide)
+
     return (
-          <div id="app">
+        <div id="app">
             <div id="btns">
                 <button
-                    id="prev-btn"
+                    id="prev"
                     type="button"
+                    onClick={handlePrevClick}
                 >
                     <img
                         id="prev-icon"
@@ -39,8 +48,9 @@ const App = () => {
                     />
                 </button>
                 <button
-                    id="next-btn"
+                    id="next"
                     type="button"
+                    onClick={handleNextClick}
                 >
                     <img
                         id="next-icon"
@@ -51,7 +61,7 @@ const App = () => {
                     />
                 </button>
             </div>
-          </div>
+        </div>
     )
 };
 
