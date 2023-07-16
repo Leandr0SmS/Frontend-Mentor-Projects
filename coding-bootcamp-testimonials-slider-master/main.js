@@ -7,8 +7,7 @@ const Slide = ({ slide_text, slide_image_src, slide_user_name, slide_role }) => 
         <React.Fragment>
             <div className="text">
                 <p className="testemonial">{slide_text}</p>
-                <p className="name">{slide_user_name}</p>
-                <p className="role">{slide_role}</p>
+                <p className="name">{slide_user_name}<span className="role">{slide_role}</span></p>
             </div>
             <div className="hero-img-div">
                 <img
