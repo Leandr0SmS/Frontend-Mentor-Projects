@@ -1,3 +1,5 @@
+@import "./base";
+
 *, *::after, *::before {
     box-sizing: border-box;
 }
@@ -7,4 +9,30 @@
 body {
     height: 100%;
     min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+.testemonial {
+    color: $Dark-blue;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 2.75rem;
+    &::before {
+        content: '“ ';
+    }
+    &::after {
+        content: ' “';
+    }
+}
+.name {
+    color: $Dark-blue;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 2.375rem;
+}
+.role {
+    color: $Grayish_blue;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2.375rem;
+    margin-left: 1rem;
 }
