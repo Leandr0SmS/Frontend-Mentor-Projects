@@ -2,23 +2,25 @@ import { users_data } from "./data/data.js";
 const { useState } = React;
 const { createRoot } = ReactDOM;
 
-const Slide = ({ text, image_src, user_name, role }) => {
-    <React.Fragment>
+const Slide = ({ slide_text, slide_image_src, slide_user_name, slide_role }) => {
+    return (
+        <React.Fragment>
             <div className="text">
-                <p className="testemonial">{text}</p>
-                <p className="name">{user_name}</p>
-                <p className="role">{role}</p>
+                <p className="testemonial">{slide_text}</p>
+                <p className="name">{slide_user_name}</p>
+                <p className="role">{slide_role}</p>
             </div>
             <div className="hero-img-div">
                 <img
                     className="hero-img"
-                    src={`./images/${image_src}`}
-                    alt={`image of ${user_name}`}
+                    src={`./images/${slide_image_src}`}
+                    alt={`image of ${slide_user_name}`}
                     aria-hidden="false"
                     role="img"
                 />
             </div>
-    </React.Fragment>
+        </React.Fragment>
+    )
 }
 
 const App = () => {
@@ -29,10 +31,22 @@ const App = () => {
 
     const handlePrevClick = (e) => setSlide(s => s == 0 ? 0 : s - 1);
 
-    console.log(slide)
+    const sliders = users_data.map(data => {
+        return (
+            <Slide
+                slide_text={data.text}
+                slide_user_name={data.user_name}
+                slide_role={data.role}
+                slide_image_src={data.src}
+            />
+        )
+    })
+
+    console.log(sliders)
 
     return (
         <div id="app">
+            {sliders[slide]}
             <div id="btns">
                 <button
                     id="prev"
