@@ -49,6 +49,7 @@ const App = () => {
             <div id="btns">
                 <button
                     id="prev"
+                    className="btn"
                     type="button"
                     onClick={handlePrevClick}
                 >
@@ -62,6 +63,7 @@ const App = () => {
                 </button>
                 <button
                     id="next"
+                    className="btn"
                     type="button"
                     onClick={handleNextClick}
                 >
