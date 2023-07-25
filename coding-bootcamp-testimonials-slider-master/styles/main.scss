@@ -11,11 +11,19 @@ body {
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
 }
+.text {
+    background-image: url(../images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: 5.94rem 0;
+    width: 39.6875rem;
+    padding-top: 4rem;
+}
 .testemonial {
     color: $Dark-blue;
     font-size: 2rem;
     font-weight: 300;
     line-height: 2.75rem;
+    margin-bottom: 2rem;
     &::before {
         content: '“ ';
     }
@@ -40,7 +48,6 @@ body {
     width: 3.5rem;
     height: 3.5rem;
     border: none;
-    border-radius: 25px 0 0 25px;
 }
 #prev {
     border-radius: 25px 0 0 25px;
