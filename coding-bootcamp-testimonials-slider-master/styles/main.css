@@ -12,6 +12,16 @@ body {
   height: 100%;
   min-height: 100vh;
   font-family: "Inter", sans-serif;
+  background-image: url(../images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-items: center;
+  width: 100%;
 }
 
 .text {
@@ -63,4 +73,9 @@ body {
 
 #next {
   border-radius: 0 25px 25px 0;
+}
+
+.hero-img {
+  width: 33.75rem;
+  height: 33.75rem;
 }/*# sourceMappingURL=main.css.map */
