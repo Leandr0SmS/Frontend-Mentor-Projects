@@ -13,6 +13,12 @@ body {
     background-image: url(../images/pattern-curve.svg);
     background-repeat: no-repeat;
     background-position: left bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#app {
+    width: 75.13rem;
 }
 .container {
     display: grid;
@@ -21,11 +27,14 @@ body {
     width: 100%;
 }
 .text {
+    position: relative;
+    z-index: 2;
     background-image: url(../images/pattern-quotes.svg);
     background-repeat: no-repeat;
     background-position: 5.94rem 0;
     width: 39.6875rem;
     padding-top: 4rem;
+    margin-left: 8rem;
 }
 .testemonial {
     color: $Dark-blue;
@@ -63,6 +72,13 @@ body {
 }
 #next {
     border-radius: 0 25px 25px 0;
+}
+.hero-img-div {
+    position: relative;
+    z-index: 1;
+    padding: 3.95rem 5.94rem;
+    background-image: url(../images/pattern-bg.svg);
+    background-repeat: no-repeat;
 }
 .hero-img {
     width: 33.75rem;
