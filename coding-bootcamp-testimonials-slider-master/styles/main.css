@@ -71,20 +71,6 @@ body {
   margin-left: 1rem;
 }
 
-.btn {
-  width: 3.5rem;
-  height: 3.5rem;
-  border: none;
-}
-
-#prev {
-  border-radius: 25px 0 0 25px;
-}
-
-#next {
-  border-radius: 0 25px 25px 0;
-}
-
 .hero-img-div {
   position: relative;
   z-index: 1;
@@ -96,4 +82,30 @@ body {
 .hero-img {
   width: 33.75rem;
   height: 33.75rem;
+  box-shadow: 0rem 2rem 1.875rem -0.625rem rgba(39, 54, 109, 0.199);
+}
+
+.btns {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  z-index: 3;
+  top: 80%;
+  left: 56%;
+  box-shadow: 0rem 1rem 1.875rem -0.625rem rgba(70, 96, 187, 0.198567);
+}
+
+.btn {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: none;
+  background-color: #fff;
+}
+
+#prev {
+  border-radius: 25px 0 0 25px;
+}
+
+#next {
+  border-radius: 0 25px 25px 0;
 }/*# sourceMappingURL=main.css.map */

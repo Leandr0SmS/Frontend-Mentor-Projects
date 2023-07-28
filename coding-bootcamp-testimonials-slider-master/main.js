@@ -46,7 +46,7 @@ const App = () => {
     return (
         <div id="app">
             {sliders[slide]}
-            <div id="btns">
+            <div className="btns">
                 <button
                     id="prev"
                     className="btn"
