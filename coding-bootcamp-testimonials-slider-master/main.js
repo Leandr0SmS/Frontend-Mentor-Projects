@@ -26,7 +26,7 @@ const App = () => {
 
     const [slide, setSlide] = useState(0);
 
-    const handleNextClick = (e) => setSlide(s => s + 1);
+    const handleNextClick = (e) => setSlide(s => s == (users_data.length - 1) ? s : s + 1);
 
     const handlePrevClick = (e) => setSlide(s => s == 0 ? 0 : s - 1);
 
