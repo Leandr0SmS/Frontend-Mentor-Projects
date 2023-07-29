@@ -94,3 +94,43 @@ body {
 #next {
     border-radius: 0 25px 25px 0;
 }
+
+@media (max-width: 1135px) {
+    #app {
+        width: 60rem;
+    }
+    .text {
+        background-position: 5.94rem 0;
+        width: 31rem;
+        padding-top: 3rem;
+        margin-left: 15rem;
+    }
+    .testemonial {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .name {
+        font-size: 1rem;
+    }
+    .role {
+        font-size: 1.25rem;
+        line-height: 2.375rem;
+        margin-left: 1rem;
+    }
+    .hero-img-div {
+        padding: 2rem 4rem;
+        background-size: 90%;
+    }
+    .hero-img {
+        width: 22.5rem;
+        height: 22.5rem;
+    }
+    .btns {
+        top: 80%;
+        left: 65%;
+    }
+    .btn {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
