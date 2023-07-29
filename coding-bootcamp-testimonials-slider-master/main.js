@@ -55,6 +55,7 @@ const App = () => {
                 >
                     <img
                         id="prev-icon"
+                        className="btn-icon"
                         src="./images/icon-prev.svg"
                         alt="preview icon"
                         aria-hidden="false"
@@ -69,6 +70,7 @@ const App = () => {
                 >
                     <img
                         id="next-icon"
+                        className="btn-icon"
                         src="./images/icon-next.svg"
                         alt="next icon"
                         aria-hidden="false"
