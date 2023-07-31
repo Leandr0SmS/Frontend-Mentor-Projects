@@ -2,7 +2,44 @@ import { users_data } from "./data/data.js";
 const { useState } = React;
 const { createRoot } = ReactDOM;
 
-const Slide = ({ slide_text, slide_image_src, slide_user_name, slide_role }) => {
+const Buttons = ({ handlePrevClick, handleNextClick }) => {
+    return (
+        <div className="btns">
+            <button
+                id="prev"
+                className="btn"
+                type="button"
+                onClick={handlePrevClick}
+            >
+                <img
+                    id="prev-icon"
+                    className="btn-icon"
+                    src="./images/icon-prev.svg"
+                    alt="preview icon"
+                    aria-hidden="false"
+                    role="img"
+                />
+            </button>
+            <button
+                id="next"
+                className="btn"
+                type="button"
+                onClick={handleNextClick}
+            >
+                <img
+                    id="next-icon"
+                    className="btn-icon"
+                    src="./images/icon-next.svg"
+                    alt="next icon"
+                    aria-hidden="false"
+                    role="img"
+                />
+            </button>
+        </div>
+    )
+};
+
+const Slide = ({ slide_text, slide_image_src, slide_user_name, slide_role, children }) => {
     return (
         <div className="container">
             <div className="text">
@@ -17,6 +54,7 @@ const Slide = ({ slide_text, slide_image_src, slide_user_name, slide_role }) => 
                     aria-hidden="false"
                     role="img"
                 />
+                {children}
             </div>
         </div>
     )
@@ -37,47 +75,18 @@ const App = () => {
                 slide_user_name={data.user_name}
                 slide_role={data.role}
                 slide_image_src={data.src}
-            />
+            >
+                <Buttons
+                    handlePrevClick={handlePrevClick}
+                    handleNextClick={handleNextClick}
+                />
+            </Slide>
         )
     })
-
-    console.log(sliders)
 
     return (
         <div id="app">
             {sliders[slide]}
-            <div className="btns">
-                <button
-                    id="prev"
-                    className="btn"
-                    type="button"
-                    onClick={handlePrevClick}
-                >
-                    <img
-                        id="prev-icon"
-                        className="btn-icon"
-                        src="./images/icon-prev.svg"
-                        alt="preview icon"
-                        aria-hidden="false"
-                        role="img"
-                    />
-                </button>
-                <button
-                    id="next"
-                    className="btn"
-                    type="button"
-                    onClick={handleNextClick}
-                >
-                    <img
-                        id="next-icon"
-                        className="btn-icon"
-                        src="./images/icon-next.svg"
-                        alt="next icon"
-                        aria-hidden="false"
-                        role="img"
-                    />
-                </button>
-            </div>
         </div>
     )
 };

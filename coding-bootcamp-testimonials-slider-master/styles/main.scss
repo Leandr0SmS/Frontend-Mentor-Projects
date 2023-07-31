@@ -78,8 +78,8 @@ body {
     width: fit-content;
     position: absolute;
     z-index: 3;
-    top: 80%;
-    left: 56%;
+    top: 85%;
+    left: 25%;
     box-shadow: 0rem 1rem 1.875rem -0.625rem rgba(70, 96, 187, 0.198567);
 }
 .btn {
@@ -124,10 +124,6 @@ body {
     .hero-img {
         width: 22.5rem;
         height: 22.5rem;
-    }
-    .btns {
-        top: 80%;
-        left: 65%;
     }
     .btn {
         width: 2.5rem;
@@ -185,18 +181,10 @@ body {
         height: 15.875rem;
     }
     .btn {
-        width: 1.5rem;
-        height: 0.5rem;
+        width: 2rem;
+        height: 2rem;
     }
     .btn-icon {
         width: 0.5rem;
-    }
-    .btns {
-        top: 18rem;
-        left: 30vw;
-    }
-    .btn {
-        width: 3.5rem;
-        height: 3.5rem;
     }
 }
