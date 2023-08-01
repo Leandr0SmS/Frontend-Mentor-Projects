@@ -40,7 +40,7 @@ This repository is to share my solutions of Frontend Mentor Challenges.
 
 15. [GitHub user search app](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/github-user-search-app)
 
-
+15. [Coding bootcamp testimonials slider solution](https://github.com/Leandr0SmS/Frontend-Mentor-Projects/tree/main/coding-bootcamp-testimonials-slider-master)
 
 <br>
 
