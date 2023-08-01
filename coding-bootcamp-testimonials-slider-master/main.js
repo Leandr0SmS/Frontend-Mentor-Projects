@@ -1,5 +1,5 @@
 import { users_data } from "./data/data.js";
-const { useState } = React;
+const { useState, useEffect } = React;
 const { createRoot } = ReactDOM;
 
 const Buttons = ({ handlePrevClick, handleNextClick }) => {
@@ -10,6 +10,7 @@ const Buttons = ({ handlePrevClick, handleNextClick }) => {
                 className="btn"
                 type="button"
                 onClick={handlePrevClick}
+                onTouchStart={handlePrevClick}
             >
                 <img
                     id="prev-icon"
@@ -25,6 +26,7 @@ const Buttons = ({ handlePrevClick, handleNextClick }) => {
                 className="btn"
                 type="button"
                 onClick={handleNextClick}
+                onTouchStart={handleNextClick}
             >
                 <img
                     id="next-icon"
@@ -64,9 +66,21 @@ const App = () => {
 
     const [slide, setSlide] = useState(0);
 
-    const handleNextClick = (e) => setSlide(s => s == (users_data.length - 1) ? s : s + 1);
+    const handleNextClick = () => setSlide(s => s == (users_data.length - 1) ? s : s + 1);
 
-    const handlePrevClick = (e) => setSlide(s => s == 0 ? 0 : s - 1);
+    const handlePrevClick = () => setSlide(s => s == 0 ? 0 : s - 1);
+
+    const handleKeyDown = (e) => {
+        if (e.key == 'ArrowRight') handleNextClick();
+        if (e.key == 'ArrowLeft') handlePrevClick();
+    };
+
+    useEffect(() => {
+        document.addEventListener("keydown", handleKeyDown);
+        return () => {
+          document.removeEventListener("keydown", handleKeyDown);
+        };
+      }, []);
 
     const sliders = users_data.map(data => {
         return (
@@ -79,13 +93,15 @@ const App = () => {
                 <Buttons
                     handlePrevClick={handlePrevClick}
                     handleNextClick={handleNextClick}
+                    handleKeyDown={handleKeyDown}
                 />
             </Slide>
         )
     })
 
     return (
-        <div id="app">
+        <div id="app"
+        >
             {sliders[slide]}
         </div>
     )
