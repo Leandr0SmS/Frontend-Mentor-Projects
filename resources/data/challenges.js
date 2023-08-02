@@ -1,36 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="./skilled-elearning-landing-page/assets/favicon-32x32.png">
+const challenges = [
+    {
+        link: "/skilled-elearning-landing-page/index.html",
+        img: "preview.jpg",
+        title: "Skilled e-learning landing page"
+    },
+    {
+        link: "/qr-code-component/index.html",
+        img: "desktop-design-qr-code.jpg",
+        title: "QR-Code Component"
+    },
+    {
+        link: "/order-summary-component-main/index.html",
+        img: "desktop-design-order-summary.jpg",
+        title: "Order Summary Component"
+    },
+    {
+        link: "./skilled-elearning-landing-page/index.html",
+        img: "preview.jpg",
+        title: "Skilled e-learning landing page"
+    },
 
-    <title>Frontend Mentor Challenges</title>
+]
 
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <link rel="stylesheet" href="./resources/styles/styles.css">
-</head>
-    <body>
-        <header>
-            <h1 class="heading">Frontend Mentor Challenges</h1>
-            <h2 class="heading">Leandro Simões</h2>
-        </header>
-        <main>
-            <div class="challenge-card">
-                <a class="project-link" href="./skilled-elearning-landing-page/index.html" target="_blank">
-                    <img class="project-img" src="./sources/preview.jpg">
-                    <p class="project-title">Skilled e-learning landing page</p>
-                </a>
-            </div>
-            <div class="challenge-card">
-                <a class="project-link" href="./qr-code-component/index.html" target="_blank">
-                    <img class="project-img" src="./sources/desktop-design-qr-code.jpg">
-                    <p class="project-title">QR-Code Component</p>
-                </a>
-            </div>
+
             <div class="challenge-card">
                 <a class="project-link" href="./order-summary-component-main/index.html" target="_blank">
                     <img class="project-img" src="./sources/desktop-design-order-summary.jpg">
@@ -127,7 +119,3 @@
                     <p class="project-title">Coding bootcamp testimonials slider solution</p>
                 </a>
             </div>
-        </main>
-    <script src="./main.js" type="text/babel" data-type="module"></script>
-    </body>
-</html>
