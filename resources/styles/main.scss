@@ -1,24 +1,27 @@
-:root {
-    --background: #3b3b4f;
-    --div: #1b1b32;
-    --font: #f5f6f7;
-    --background-mouseover: #5f5f6e;
-    --div-mouseover: #31313f;
+@import "./base";
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 * {
-    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    min-height: 100vh;
 }
 
 body {
     margin: 0 auto;
-    background-color: var(--background);
-    color: var(--font);
+    background-color: $background;
+    color: $font;
     font-family: monospace, Arial, Helvetica, sans-serif;
 }
 
 header {
-    background-color: var(--div);
+    background-color: $div;
     padding: 1rem 3rem 1rem;
 }
 
@@ -36,7 +39,7 @@ main {
 }
 
 .challenge-card {
-    background-color: var(--div);
+    background-color: $div;
     padding: 10%;
     width: 100%;
     border-radius: 1rem;
@@ -64,7 +67,7 @@ main {
 
 .project-title {
     text-decoration: none;
-    color: var(--font);
+    color: $font;
     text-align: center;
     margin: 0;
     margin-top: 1%;

@@ -1,0 +1,84 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0 auto;
+  background-color: #3b3b4f;
+  color: #f5f6f7;
+  font-family: monospace, Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #1b1b32;
+  padding: 1rem 3rem 1rem;
+}
+
+main {
+  max-width: 90rem;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(15rem, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+}
+
+.heading {
+  margin: 0;
+}
+
+.challenge-card {
+  background-color: #1b1b32;
+  padding: 10%;
+  width: 100%;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.project-link > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 90%;
+}
+
+.project-link {
+  text-decoration: none;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.project-img:hover {
+  border: 3px solid red;
+}
+
+.project-title {
+  text-decoration: none;
+  color: #f5f6f7;
+  text-align: center;
+  margin: 0;
+  margin-top: 1%;
+}
+
+@media (max-width: 585px) {
+  header {
+    padding: 1rem 1rem 1rem;
+  }
+  main {
+    margin: 1rem;
+    grid-template-columns: repeat(1, minmax(15rem, 1fr));
+    gap: 1rem;
+  }
+}/*# sourceMappingURL=main.css.map */
