@@ -1,35 +1,56 @@
 import { challengesData } from "./resources/data/challenges.js";
 const { createRoot } = ReactDOM;
+const { useState } = React;
 
-const Challenges = () => {
-    const challengesDivs = challengesData.map((c) => {
-        return (
-            <div 
-                className="challenge-card"
-                key={c.title}    
-            >
-                <a className="project-link" href={`.${c.link}`} target="_blank">
-                    <img className="project-img" src={`./resources/images/${c.img}`}/>
-                    <p className="project-title">{c.title}</p>
-                </a>
-            </div>
-        )
-    });
+const Challenges = ({ title, link, img }) => {
     return (
-        <main>
-            {challengesDivs}
-        </main>
+        <div 
+            className="challenge-card"
+            key={title}    
+        >
+            <a className="project-link" href={`.${link}`} target="_blank">
+                <img className="project-img" src={`./resources/images/${img}`}/>
+                <p className="project-title">{title}</p>
+            </a>
+        </div>
     )
 };
 
 const App = () => {
+
+    const [slideIndex, setSlideIndex] = useState(0);
+
+    const handleNextClick = () => setSlideIndex(i => i == (challengesData.length - 1) ? i : i + 1);
+
+    const handlePrevClick = () => setSlideIndex(i => i == 0 ? 0 : i - 1);
+
+    const {title, img, link} = challengesData[slideIndex];
+
+    console.log(title)
+
     return (
         <React.Fragment>
-            <header>
-                <h1 className="heading">Frontend Mentor Challenges</h1>
-                <h2 className="heading">Leandro Simões</h2>
-            </header>
-            <Challenges/>
+            <div id="slides--div"> 
+                <Challenges
+                    title={title}
+                    link={link}
+                    img={img}
+                />
+            </div>
+            <button
+                type="button"
+                className="btn"
+                onClick={handlePrevClick}
+            >
+                {'<'}
+            </button>
+            <button
+                type="button"
+                className="btn"
+                onClick={handleNextClick}
+            >
+                {'>'}
+            </button>
         </React.Fragment>
     )
 };
