@@ -27,10 +27,47 @@ header {
   margin: 0;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#slides--div {
+  position: relative;
+  width: 50%;
+  margin-top: 2rem;
+}
+
+.btn {
+  position: absolute;
+  padding: 5% 2.5%;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 50%;
+  background-color: #f5f6f7;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #b6b6b6;
+}
+
+#btn--prev {
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+}
+
+#btn--next {
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+
 .challenge-card {
   background-color: #1b1b32;
-  padding: 10%;
-  width: 100%;
+  padding: 5%;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
@@ -39,7 +76,6 @@ header {
 .project-link > img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 90%;
 }
 
 .project-link {
@@ -49,8 +85,8 @@ header {
 .project-img {
   width: 100%;
   border-radius: 1rem;
+  border: 3px solid #1b1b32;
 }
-
 .project-img:hover {
   border: 3px solid red;
 }

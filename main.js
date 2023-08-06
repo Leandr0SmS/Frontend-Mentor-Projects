@@ -9,7 +9,11 @@ const Challenges = ({ title, link, img }) => {
             key={title}    
         >
             <a className="project-link" href={`.${link}`} target="_blank">
-                <img className="project-img" src={`./resources/images/${img}`}/>
+                <img 
+                    className="project-img" 
+                    src={`./resources/images/${img}`}
+                    alt={{title}}
+                />
                 <p className="project-title">{title}</p>
             </a>
         </div>
@@ -31,26 +35,29 @@ const App = () => {
     return (
         <React.Fragment>
             <div id="slides--div"> 
+                <button
+                    type="button"
+                    className="btn"
+                    id="btn--prev"
+                    onClick={handlePrevClick}
+                >
+                    {'<'}
+                </button>
+                <button
+                    type="button"
+                    className="btn"
+                    id="btn--next"
+                    onClick={handleNextClick}
+                >
+                    {'>'}
+                </button>
                 <Challenges
                     title={title}
                     link={link}
                     img={img}
                 />
             </div>
-            <button
-                type="button"
-                className="btn"
-                onClick={handlePrevClick}
-            >
-                {'<'}
-            </button>
-            <button
-                type="button"
-                className="btn"
-                onClick={handleNextClick}
-            >
-                {'>'}
-            </button>
+
         </React.Fragment>
     )
 };
