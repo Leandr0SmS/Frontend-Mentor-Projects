@@ -24,13 +24,13 @@ const App = () => {
 
     const [slideIndex, setSlideIndex] = useState(0);
 
-    const handleNextClick = () => setSlideIndex(i => i == (challengesData.length - 1) ? i : i + 1);
+    const handleNextClick = () => setSlideIndex(i => 
+        i == (challengesData.length - 1) ? i : i + 1);
 
-    const handlePrevClick = () => setSlideIndex(i => i == 0 ? 0 : i - 1);
+    const handlePrevClick = () => setSlideIndex(i => 
+        i == 0 ? 0 : i - 1);
 
     const {title, img, link} = challengesData[slideIndex];
-
-    console.log(title)
 
     return (
         <React.Fragment>
