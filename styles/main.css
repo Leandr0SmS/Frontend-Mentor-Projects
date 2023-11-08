@@ -34,6 +34,9 @@ main {
 #slides--div {
   position: relative;
   width: 50%;
+  min-width: 20rem;
+  max-width: 55rem;
+  min-height: 30rem;
   margin-top: 2rem;
 }
 
@@ -64,15 +67,11 @@ main {
 
 .challenge-card {
   background-color: #1b1b32;
+  height: 100%;
   padding: 5%;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
-}
-
-.project-link > img {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .project-link {
@@ -81,7 +80,12 @@ main {
 
 .project-img {
   width: 100%;
+  min-width: 15rem;
   max-width: 50rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: auto;
+  display: block;
   border-radius: 1rem;
   border: 3px solid #1b1b32;
 }
