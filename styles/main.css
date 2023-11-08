@@ -8,16 +8,18 @@
 
 body {
   margin: 0 auto;
-  background-color: #3b3b4f;
-  color: #f5f6f7;
+  background-color: #024281;
+  color: #DBE8E1;
   font-family: monospace, Arial, Helvetica, sans-serif;
   height: 100%;
   min-height: 100vh;
+  background-image: linear-gradient(62deg, #024281 0%, #13171f 100%);
 }
 
 header {
-  background-color: #1b1b32;
+  background-color: #CC5500;
   padding: 1rem 3rem 1rem;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
 }
 
 .heading {
@@ -36,7 +38,7 @@ main {
   width: 50%;
   min-width: 20rem;
   max-width: 55rem;
-  min-height: 30rem;
+  min-height: 20rem;
   margin-top: 2rem;
 }
 
@@ -46,7 +48,7 @@ main {
   font-size: 1.5em;
   border: none;
   border-radius: 15%;
-  background-color: #f5f6f7;
+  background-color: #DBE8E1;
 }
 .btn:hover {
   cursor: pointer;
@@ -66,7 +68,7 @@ main {
 }
 
 .challenge-card {
-  background-color: #1b1b32;
+  background-color: #13171f;
   height: 100%;
   padding: 5%;
   border-radius: 1rem;
@@ -82,12 +84,13 @@ main {
   width: 100%;
   min-width: 15rem;
   max-width: 50rem;
+  min-height: 20rem;
   -o-object-fit: contain;
      object-fit: contain;
   height: auto;
   display: block;
   border-radius: 1rem;
-  border: 3px solid #1b1b32;
+  border: 3px solid #13171f;
 }
 .project-img:hover {
   border: 3px solid red;
@@ -95,7 +98,7 @@ main {
 
 .project-title {
   text-decoration: none;
-  color: #f5f6f7;
+  color: #DBE8E1;
   text-align: center;
   margin: 0;
   margin-top: 1%;
