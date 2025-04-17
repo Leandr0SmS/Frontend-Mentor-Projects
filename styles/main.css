@@ -78,22 +78,27 @@ main {
 
 .project-link {
   text-decoration: none;
+  display: block;
+  width: 100%;
+  min-width: 15rem;
+  max-width: 50rem;
+  height: 60dvh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
 }
 
 .project-img {
   width: 100%;
-  min-width: 15rem;
-  max-width: 50rem;
-  min-height: 20rem;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  height: auto;
   display: block;
-  border-radius: 1rem;
   border: 3px solid #13171f;
+  transition: border-color 0.3s ease;
 }
 .project-img:hover {
-  border: 3px solid red;
+  border-color: red;
 }
 
 .project-title {

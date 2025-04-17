@@ -70,19 +70,26 @@ main {
 }
 .project-link {
     text-decoration: none;
-}
-.project-img {
+    display: block;
     width: 100%;
     min-width: 15rem;
     max-width: 50rem;
-    min-height: 20rem;
-    object-fit: contain;
-    height: auto;
-    display: block;
+    height: 60dvh;
+    position: relative;
+    overflow: hidden;
     border-radius: 1rem;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    display: block;
     border: 3px solid $cornflower;
+    transition: border-color 0.3s ease;
+    
     &:hover {
-        border: 3px solid red;
+        border-color: red;
     }
 }
 .project-title {
